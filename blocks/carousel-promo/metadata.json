@@ -1,0 +1,20 @@
+{
+  "variantName": "carousel-promo",
+  "baseBlock": "carousel",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "minimal",
+    "purpose": "homepage-promo-banner",
+    "imagePattern": "full-bleed",
+    "structure": "linked image + arrows + dots"
+  },
+  "contentPattern": "One row per slide: cell 1 = slide image (linked to slide destination); cell 2 = empty or a link only (text is baked into the image). Drop countdown timer.",
+  "usage": {
+    "pagesUsing": ["https://www.alc.ca/content/alc/en.html"],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-15"
+  },
+  "options": [],
+  "memberVariantIds": ["carousel-promo"]
+}

@@ -1,0 +1,165 @@
+/* carousel-promo: full-bleed linked image slides with an overlaid control bar (alc.ca hero) */
+.carousel-promo {
+  position: relative;
+}
+
+.carousel-promo .carousel-promo-slides-container {
+  position: relative;
+}
+
+.carousel-promo .carousel-promo-slides,
+.carousel-promo .carousel-promo-indicators {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-promo .carousel-promo-slides {
+  display: flex;
+  overflow: scroll clip;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.carousel-promo .carousel-promo-slides::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-promo .carousel-promo-slide {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  height: 375px;
+  scroll-snap-align: start;
+}
+
+.carousel-promo .carousel-promo-slide-image,
+.carousel-promo .carousel-promo-slide-image a,
+.carousel-promo .carousel-promo-slide-image picture {
+  display: block;
+  height: 100%;
+  line-height: 0;
+}
+
+/* source renders the slide as a bottom-centred background image at natural size */
+.carousel-promo .carousel-promo-slide-image img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 100%;
+}
+
+/* control bar: overlays the bottom 52px of the slide, prev arrow | dots | next arrow */
+.carousel-promo .carousel-promo-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  height: 52px;
+  padding: 0 max(5px, calc(50% - 595px));
+  background-color: rgb(255 255 255 / 90%);
+}
+
+.carousel-promo .carousel-promo-controls nav {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-promo .carousel-promo-indicators {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-promo .carousel-promo-indicator {
+  line-height: 0;
+}
+
+.carousel-promo .carousel-promo-indicator button {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 44px;
+  height: 24px;
+  margin: 0 4px;
+  padding: 1px 6px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.carousel-promo .carousel-promo-indicator button::after {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 22px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--alc-grey);
+  transform: translate(-5px, -5px);
+}
+
+.carousel-promo .carousel-promo-indicator button[aria-current='true'] {
+  cursor: default;
+}
+
+.carousel-promo .carousel-promo-indicator button[aria-current='true']::after {
+  background-color: var(--alc-sky);
+}
+
+.carousel-promo .carousel-promo-prev,
+.carousel-promo .carousel-promo-next {
+  position: relative;
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  width: 40px;
+  height: 52px;
+  margin: 0;
+  padding: 1px 6px;
+  border: 0;
+  background: transparent;
+  color: var(--alc-sky);
+  cursor: pointer;
+}
+
+/* Material Icons chevron_left / chevron_right glyphs at 28px */
+.carousel-promo .carousel-promo-prev::after,
+.carousel-promo .carousel-promo-next::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 28px;
+  height: 28px;
+  background-color: currentcolor;
+  transform: translate(-50%, -50%);
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>') center / 100% 100% no-repeat;
+}
+
+.carousel-promo .carousel-promo-next::after {
+  mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>');
+}
+
+.carousel-promo .carousel-promo-prev:focus-visible,
+.carousel-promo .carousel-promo-next:focus-visible,
+.carousel-promo .carousel-promo-indicator button:focus-visible {
+  outline: 2px solid var(--alc-sky);
+  outline-offset: -2px;
+}
+
+@media (width >= 768px) {
+  .carousel-promo .carousel-promo-slide {
+    height: 525px;
+  }
+}

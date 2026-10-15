@@ -1,0 +1,430 @@
+/* carousel-winners: values from alc.ca .winners-carousel computed styles */
+.carousel-winners {
+  position: relative;
+  padding-bottom: 5px;
+  background-color: var(--alc-sky-light);
+  color: #fff;
+  font-family: var(--body-font-family);
+}
+
+.carousel-winners .carousel-winners-slides-container {
+  position: relative;
+}
+
+.carousel-winners .carousel-winners-slides,
+.carousel-winners .carousel-winners-indicators {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-winners .carousel-winners-slides {
+  display: flex;
+  overflow: scroll clip;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.carousel-winners .carousel-winners-slides::-webkit-scrollbar {
+  display: none;
+}
+
+/* slide (mobile): photo, info and prize stacked and centred */
+.carousel-winners .carousel-winners-slide {
+  position: relative;
+  flex: 0 0 100%;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 20px 0;
+  background: url('images/bg-mobile.png') 50% 50% no-repeat;
+  text-align: center;
+  scroll-snap-align: start;
+}
+
+/* decorative province map behind the winner */
+.carousel-winners .carousel-winners-slide[data-province]::before {
+  content: '';
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 250px;
+  height: 181px;
+  background: 0 0 / contain no-repeat;
+  pointer-events: none;
+}
+
+.carousel-winners .carousel-winners-slide[data-province='ns']::before {
+  background-image: url('images/map-ns.png');
+}
+
+.carousel-winners .carousel-winners-slide[data-province='nb']::before {
+  background-image: url('images/map-nb.png');
+}
+
+.carousel-winners .carousel-winners-slide[data-province='nl']::before {
+  background-image: url('images/map-nl.png');
+}
+
+.carousel-winners .carousel-winners-slide[data-province='pe']::before {
+  background-image: url('images/map-pe.png');
+}
+
+/* winner photo: white ring + soft blue shadow */
+.carousel-winners .carousel-winners-photo {
+  position: relative;
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  width: 162px;
+  height: 162px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 3px 18px 0 rgb(0 82 155 / 50%);
+  overflow: hidden;
+  line-height: 0;
+}
+
+.carousel-winners .carousel-winners-photo picture,
+.carousel-winners .carousel-winners-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-winners .carousel-winners-photo img {
+  object-fit: cover;
+}
+
+/* name, location, CTA */
+.carousel-winners .carousel-winners-info {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.carousel-winners .carousel-winners-info > * {
+  margin: 0;
+}
+
+.carousel-winners .carousel-winners-info .carousel-winners-name {
+  margin: 20px 0 10px;
+  color: #fff;
+  font-family: var(--heading-font-family);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 19.8px;
+}
+
+.carousel-winners .carousel-winners-location {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 24.2px;
+}
+
+.carousel-winners .carousel-winners-info .carousel-winners-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+main .carousel-winners .carousel-winners-cta a.button:any-link {
+  min-width: 216px;
+}
+
+/* prize: game logo + red "Winner" ribbon, digit boxes below */
+.carousel-winners .carousel-winners-prize {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.carousel-winners .carousel-winners-prize > * {
+  margin: 0;
+}
+
+.carousel-winners .carousel-winners-prize-head {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.carousel-winners .carousel-winners-prize-head > * {
+  margin: 0;
+}
+
+.carousel-winners .carousel-winners-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 54px;
+  height: 54px;
+  line-height: 0;
+}
+
+.carousel-winners .carousel-winners-logo picture,
+.carousel-winners .carousel-winners-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-winners .carousel-winners-prize-head .carousel-winners-label {
+  display: inline-block;
+  margin: 15px 20px 0 10px;
+  padding: 0 25px 0 110px;
+  border-radius: 5px;
+  background-color: #ec2f2d;
+  color: #fff;
+  font-family: var(--heading-font-family);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28.5714px;
+}
+
+.carousel-winners .carousel-winners-amount {
+  margin-bottom: 10px;
+  color: #00529b;
+}
+
+.carousel-winners .carousel-winners-digits {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+}
+
+.carousel-winners .carousel-winners-digit-group {
+  position: relative;
+  box-sizing: border-box;
+  height: 37px;
+  padding: 9px 5px 0;
+  border: 1px solid var(--alc-grey-disabled);
+  border-radius: 5px;
+  background-color: #fff;
+  color: #00529b;
+  font-family: var(--body-font-family);
+  font-size: 35px;
+  font-weight: 800;
+  line-height: 26px;
+  overflow: hidden;
+}
+
+/* split-flap line across the digits */
+.carousel-winners .carousel-winners-digit-group::after {
+  content: '';
+  position: absolute;
+  top: 17.5px;
+  left: 1px;
+  right: 1px;
+  box-sizing: border-box;
+  height: 2px;
+  border-bottom: 2px solid rgb(255 255 255 / 50%);
+}
+
+.carousel-winners .carousel-winners-currency {
+  display: inline-block;
+  font-size: 15px;
+  line-height: 0;
+  vertical-align: 17px;
+}
+
+.carousel-winners .carousel-winners-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* thin chevron arrows at the edges */
+.carousel-winners .carousel-winners-prev,
+.carousel-winners .carousel-winners-next {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  width: 22px;
+  height: 96px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: 50% 50% no-repeat transparent;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.carousel-winners .carousel-winners-prev {
+  left: 22px;
+  background-image: url('images/arrow-prev.png');
+}
+
+.carousel-winners .carousel-winners-next {
+  right: 22px;
+  background-image: url('images/arrow-next.png');
+}
+
+/* dots: hidden on mobile like the source */
+.carousel-winners .carousel-winners-nav {
+  display: none;
+}
+
+.carousel-winners .carousel-winners-indicators {
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-winners .carousel-winners-indicator {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+}
+
+.carousel-winners .carousel-winners-indicator button {
+  display: block;
+  box-sizing: border-box;
+  width: 8px;
+  height: 8px;
+  margin: 7px;
+  padding: 0;
+  border: 2px solid rgb(179 221 251);
+  border-radius: 8px;
+  background-color: rgb(179 221 251);
+  opacity: 0.25;
+  cursor: pointer;
+}
+
+.carousel-winners .carousel-winners-indicator button[aria-current='true'] {
+  border-color: #fff;
+  background-color: rgb(242 148 0);
+  opacity: 0.75;
+  cursor: default;
+}
+
+/* tablet / small desktop: photo | info | prize on the content container grid */
+@media (width >= 768px) {
+  .carousel-winners {
+    padding-bottom: 0;
+  }
+
+  .carousel-winners .carousel-winners-slide {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 4fr) minmax(0, 5fr);
+    align-items: start;
+    min-height: 245px;
+    padding: 20px calc((100% - var(--container-width)) / 2 + 10px) 0;
+    background-image: url('images/bg.png');
+    text-align: start;
+  }
+
+  .carousel-winners .carousel-winners-slide[data-province]::before {
+    top: 7px;
+    left: calc((100% - var(--container-width)) / 2 + 172px);
+  }
+
+  .carousel-winners .carousel-winners-photo {
+    justify-self: center;
+    left: 20px;
+    margin-top: 25px;
+  }
+
+  .carousel-winners .carousel-winners-info {
+    padding: 0 10px 0 35px;
+  }
+
+  .carousel-winners .carousel-winners-info .carousel-winners-cta {
+    justify-content: flex-start;
+    margin-left: -10px;
+  }
+
+  .carousel-winners .carousel-winners-prize {
+    margin: 38px 0 0 -15px;
+  }
+
+  .carousel-winners .carousel-winners-prize-head .carousel-winners-label {
+    margin: 15px 20px 0 40px;
+  }
+
+  .carousel-winners .carousel-winners-amount {
+    margin: 3px 0 10px 40px;
+  }
+
+  .carousel-winners .carousel-winners-digits {
+    justify-content: flex-start;
+  }
+
+  .carousel-winners .carousel-winners-digit-group {
+    height: 47px;
+    padding: 14px 8px 5px;
+    font-size: 40px;
+  }
+
+  .carousel-winners .carousel-winners-digit-group::after {
+    top: 22.5px;
+  }
+
+  .carousel-winners .carousel-winners-currency {
+    font-size: 18px;
+    vertical-align: 16px;
+  }
+
+  .carousel-winners .carousel-winners-nav {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 8px;
+    z-index: 2;
+  }
+}
+
+/* large desktop */
+@media (width >= 1200px) {
+  .carousel-winners .carousel-winners-slide[data-province]::before {
+    left: calc((100% - var(--container-width)) / 2 + 252px);
+  }
+
+  .carousel-winners .carousel-winners-photo {
+    width: 204px;
+    height: 204px;
+    margin-top: 2px;
+  }
+
+  .carousel-winners .carousel-winners-prize {
+    margin: 15px 0 0;
+  }
+
+  .carousel-winners .carousel-winners-logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .carousel-winners .carousel-winners-prize-head .carousel-winners-label {
+    margin-top: 20px;
+    font-size: 24px;
+    line-height: 34.2857px;
+  }
+
+  .carousel-winners .carousel-winners-amount {
+    margin-top: 16px;
+  }
+
+  .carousel-winners .carousel-winners-digit-group {
+    height: 72px;
+    padding: 12px 8px 0;
+    font-size: 72px;
+    line-height: 58px;
+  }
+
+  .carousel-winners .carousel-winners-digit-group::after {
+    top: 35px;
+  }
+
+  .carousel-winners .carousel-winners-currency {
+    font-size: 30px;
+    vertical-align: 28px;
+  }
+}

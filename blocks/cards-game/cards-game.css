@@ -1,0 +1,373 @@
+/* cards-game: alc.ca featured game tiles (.cmp-container--game-tiles) */
+
+/*
+ * Mobile (< 768px): one tile per view, horizontal swipe track with prev/next + dots,
+ * tiles span the full viewport (the section container gutter is cancelled out).
+ */
+.cards-game > ul {
+  display: flex;
+  margin: -5px -10px 0;
+  padding: 5px 0 0;
+  list-style: none;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.cards-game > ul::-webkit-scrollbar {
+  display: none;
+}
+
+.cards-game .cards-game-card {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 100%;
+  flex-direction: column;
+  margin: 0 0 27px;
+  padding: 0 10px;
+  color: var(--alc-grey);
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  line-height: 19.2px;
+  scroll-snap-align: start;
+}
+
+/* image (690x185 rendition shown centred, cropped to the tile) */
+.cards-game .cards-game-card-image {
+  position: relative;
+  flex: 0 0 auto;
+  height: 185px;
+  line-height: 0;
+}
+
+.cards-game .cards-game-card-image > p {
+  margin: 0;
+}
+
+.cards-game .cards-game-card-image picture,
+.cards-game .cards-game-card-image img {
+  display: block;
+  width: 100%;
+  height: 185px;
+}
+
+.cards-game .cards-game-card-image img {
+  border-radius: 8px 8px 0 0;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+/* lotto jackpot strip: dark prize bar | gold/blue diagonal | blue "max plus" bar */
+.cards-game .cards-game-card-image .cards-game-jackpot {
+  box-sizing: border-box;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  height: 36px;
+  margin: 0;
+  border: 1px solid rgb(229 197 36);
+  background-color: rgb(6 85 170);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 34px;
+  white-space: nowrap;
+}
+
+.cards-game .cards-game-jackpot strong {
+  position: relative;
+  flex: 0 0 40%;
+  margin-right: 24px;
+  background-color: rgb(1 21 43);
+  color: rgb(255 255 27);
+  font-weight: 700;
+  text-align: center;
+}
+
+.cards-game .cards-game-jackpot strong::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 24px;
+  height: 34px;
+  background-image: linear-gradient(to right bottom, rgb(1 21 43) 0, rgb(1 21 43) 49%, rgb(229 197 36) 50%, rgb(6 85 170) 52%, rgb(6 85 170) 100%);
+}
+
+/* single-amount strip (e.g. LOTTO 6/49) uses the lighter gold, regular weight */
+.cards-game .cards-game-jackpot:not(:has(em)) strong {
+  color: rgb(242 220 30);
+  font-weight: 400;
+}
+
+.cards-game .cards-game-jackpot em {
+  flex: 1 1 auto;
+  overflow: hidden;
+  color: #fff;
+  font-style: normal;
+  font-weight: 700;
+  text-align: center;
+  text-overflow: ellipsis;
+}
+
+/* "NEW" corner ribbon */
+.cards-game .cards-game-card-image .cards-game-badge {
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  right: 20px;
+  width: 58px;
+  height: 30px;
+  margin: 0;
+  background-color: rgb(242 148 0);
+  box-shadow: 0 2px 1px rgb(0 0 0 / 30%);
+  color: #fff;
+  font-family: var(--heading-font-family);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.cards-game .cards-game-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -9px;
+  border-bottom: 5px solid rgb(255 90 0);
+  border-left: 9px solid transparent;
+}
+
+/*
+ * text body: title | 50px description | 43px next-draw band | CTA
+ * (as on alc.ca the draw lines overlay the band, so the CTA sits at the same height on every tile
+ * and only moves down when the title wraps)
+ */
+.cards-game .cards-game-card-body {
+  box-sizing: border-box;
+  display: grid;
+  flex: 0 0 auto;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto 50px 43px auto;
+  align-content: start;
+  height: 220px;
+  padding: 0 30px 22px;
+  border: 1px solid var(--alc-grey-disabled);
+  border-radius: 0 0 8px 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px -2px rgb(0 0 0 / 45%);
+}
+
+.cards-game .cards-game-card-body > * {
+  grid-column: 1;
+  margin: 0;
+}
+
+.cards-game .cards-game-card-body .cards-game-title {
+  grid-row: 1;
+  margin: 20px 0 10px;
+  color: var(--alc-grey);
+  font-family: var(--body-font-family);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+.cards-game .cards-game-card-body p {
+  color: var(--alc-grey);
+  font-size: 16px;
+  line-height: 19.2px;
+}
+
+/* description: fixed 50px box, overflow clipped like the source */
+.cards-game .cards-game-title + p:not(.cards-game-cta) {
+  grid-row: 2;
+  overflow: hidden;
+}
+
+/* next-draw / jackpot lines */
+.cards-game .cards-game-title + p ~ p:not(.cards-game-cta) {
+  grid-row: 3;
+  align-self: start;
+  color: rgb(25 135 84);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.cards-game .cards-game-title + p ~ p:not(.cards-game-cta) + p:not(.cards-game-cta) {
+  margin-top: 19.2px;
+  font-weight: 700;
+}
+
+/* inline "Read more" link */
+.cards-game .cards-game-card-body p:not(.cards-game-cta) a:any-link {
+  position: relative;
+  margin-right: 16px;
+  color: var(--alc-blue);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.cards-game .cards-game-card-body p:not(.cards-game-cta) a:any-link::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -12px;
+  width: 5px;
+  height: 5px;
+  border-top: 2px solid currentcolor;
+  border-right: 2px solid currentcolor;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.cards-game .cards-game-card-body p:not(.cards-game-cta) a:any-link:hover {
+  text-decoration: underline;
+}
+
+/* CTA pill */
+.cards-game .cards-game-card-body .cards-game-cta {
+  grid-row: 4;
+}
+
+main .cards-game a.cards-game-cta-link:any-link {
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: none;
+  height: 45px;
+  margin: 0;
+  padding: 0 45px 0 15px;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  background-color: var(--alc-blue);
+  box-shadow: 0 3px 5px 0 rgb(0 82 155 / 10%);
+  color: #fff;
+  font-family: var(--heading-font-family);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 41px;
+  text-align: left;
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+main .cards-game a.cards-game-cta-link:any-link::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  right: 4px;
+  width: 35px;
+  height: 35px;
+  border-radius: 30px;
+  background: url('../../icons/arrow-circle.svg') 0 0 / 35px 35px no-repeat transparent;
+}
+
+main .cards-game a.cards-game-cta-link:hover,
+main .cards-game a.cards-game-cta-link:focus-visible {
+  background-color: var(--alc-blue-hover);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* mobile carousel controls */
+.cards-game .cards-game-controls {
+  display: flex;
+  align-items: flex-start;
+  height: 30px;
+  margin: 33px -10px 0;
+  padding: 0 10px;
+}
+
+.cards-game .cards-game-prev,
+.cards-game .cards-game-next {
+  position: relative;
+  flex: 0 0 40px;
+  width: 40px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #767676;
+  border-radius: 2px;
+  background-color: rgb(239 239 239);
+  color: var(--alc-grey);
+  cursor: pointer;
+}
+
+.cards-game .cards-game-prev::before,
+.cards-game .cards-game-next::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  border-top: 2px solid currentcolor;
+  border-left: 2px solid currentcolor;
+  transform: translate(-30%, -50%) rotate(-45deg);
+}
+
+.cards-game .cards-game-next::before {
+  transform: translate(-70%, -50%) rotate(135deg);
+}
+
+.cards-game .cards-game-dots {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+}
+
+.cards-game .cards-game-dot {
+  position: relative;
+  width: 31px;
+  height: 24px;
+  margin: 0 4px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.cards-game .cards-game-dot::after {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 15.5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--alc-grey);
+}
+
+.cards-game .cards-game-dot.active::after {
+  background-color: var(--alc-sky);
+}
+
+/* tablet / desktop: static 2-column grid, no carousel */
+@media (width >= 768px) {
+  .cards-game > ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    scroll-snap-type: none;
+  }
+
+  .cards-game .cards-game-card-body {
+    padding: 0 40px 22px;
+  }
+
+  .cards-game .cards-game-controls {
+    display: none;
+  }
+}

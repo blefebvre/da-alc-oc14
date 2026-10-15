@@ -1,0 +1,85 @@
+{
+  "metadata": {
+    "projectType": "da"
+  },
+  "templates": [
+    {
+      "name": "homepage",
+      "urls": [
+        "https://www.alc.ca/content/alc/en.html"
+      ],
+      "representativeUrl": "https://www.alc.ca/content/alc/en.html",
+      "description": "ALC English homepage",
+      "urlPattern": "/content/alc/en.html",
+      "blocks": [
+        {
+          "name": "carousel-promo",
+          "instances": [
+            ".carousel.list.parbase.hero"
+          ]
+        },
+        {
+          "name": "carousel-winners",
+          "instances": [
+            ".winners-carousel.carousel.panelcontainer"
+          ]
+        },
+        {
+          "name": "cards-game",
+          "instances": [
+            ".alc-container.cmp-container--game-tiles"
+          ]
+        },
+        {
+          "name": "cards-promo",
+          "instances": [
+            ".alc-container.cmp-container--hide-column-gutters"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "1",
+          "name": "hero-carousel",
+          "selector": [
+            ".carousel.list.parbase.hero"
+          ],
+          "style": null,
+          "blocks": [
+            "carousel-promo"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "2",
+          "name": "recent-winners",
+          "selector": [
+            ".section-header.cmp-section-header--alc-blue"
+          ],
+          "style": "winners",
+          "blocks": [
+            "carousel-winners"
+          ],
+          "defaultContent": [
+            ".cmp-section-header--alc-blue .cmp-section-header__title"
+          ]
+        },
+        {
+          "id": "3",
+          "name": "featured-games",
+          "selector": [
+            ".section-header.cmp-section-header--alc-green"
+          ],
+          "style": "featured, sidebar",
+          "blocks": [
+            "cards-game",
+            "cards-promo"
+          ],
+          "defaultContent": [
+            ".cmp-section-header--alc-green .cmp-section-header__title"
+          ]
+        }
+      ]
+    }
+  ]
+}
