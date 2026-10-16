@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/video-lottery/bao-zhu-zhao-fu.html",
+  "path": "en/our-games/video-lottery/bao-zhu-zhao-fu",
+  "timestamp": "2026-10-16T19:55:02.819Z",
+  "title": "Bao Zhu Zhao Fu",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

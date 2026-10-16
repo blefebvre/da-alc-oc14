@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/lucky-stars-scatter-reactors.html",
+  "path": "en/play-online/casino/lucky-stars-scatter-reactors",
+  "timestamp": "2026-10-16T19:47:30.242Z",
+  "title": "Lucky Stars Scatter Reactors",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

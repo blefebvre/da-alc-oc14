@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/scratch-n-win/4121.html",
+  "path": "en/our-games/scratch-n-win/4121",
+  "timestamp": "2026-10-16T19:51:59.431Z",
+  "title": "90s",
+  "template": "ticket-detail",
+  "blocks": [
+    "columns-ticket",
+    "accordion-bar"
+  ]
+}

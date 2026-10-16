@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/video-lottery/bierhaus.html",
+  "path": "en/our-games/video-lottery/bierhaus",
+  "timestamp": "2026-10-16T19:55:15.107Z",
+  "title": "Bierhaus",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

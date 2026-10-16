@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/video-lottery/Hot-Hot-Blazing-Lock.html",
+  "path": "en/our-games/video-lottery/hot-hot-blazing-lock",
+  "timestamp": "2026-10-16T19:53:54.428Z",
+  "title": "Hot Hot Blazing Lock",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

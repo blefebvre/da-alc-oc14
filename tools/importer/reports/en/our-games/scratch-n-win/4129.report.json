@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/scratch-n-win/4129.html",
+  "path": "en/our-games/scratch-n-win/4129",
+  "timestamp": "2026-10-16T19:52:51.118Z",
+  "title": "Holiday Pack",
+  "template": "ticket-detail",
+  "blocks": [
+    "columns-ticket",
+    "accordion-bar"
+  ]
+}

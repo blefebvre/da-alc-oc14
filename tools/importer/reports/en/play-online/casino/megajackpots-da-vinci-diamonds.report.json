@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/megajackpots-da-vinci-diamonds.html",
+  "path": "en/play-online/casino/megajackpots-da-vinci-diamonds",
+  "timestamp": "2026-10-16T19:52:07.917Z",
+  "title": "MegaJackpots Da Vinci Diamonds",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

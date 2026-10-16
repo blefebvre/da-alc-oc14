@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/lucky-larrys-lobstermania.html",
+  "path": "en/play-online/casino/lucky-larrys-lobstermania",
+  "timestamp": "2026-10-16T19:46:56.258Z",
+  "title": "Lucky Larry's Lobstermania",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

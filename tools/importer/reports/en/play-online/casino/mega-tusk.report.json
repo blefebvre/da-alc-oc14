@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/mega-tusk.html",
+  "path": "en/play-online/casino/mega-tusk",
+  "timestamp": "2026-10-16T19:50:09.429Z",
+  "title": "Mega Tusk",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

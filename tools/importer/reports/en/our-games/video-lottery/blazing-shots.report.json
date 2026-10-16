@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/video-lottery/blazing-shots.html",
+  "path": "en/our-games/video-lottery/blazing-shots",
+  "timestamp": "2026-10-16T19:56:24.639Z",
+  "title": "Blazing Shots",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

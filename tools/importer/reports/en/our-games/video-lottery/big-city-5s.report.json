@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/video-lottery/big-city-5s.html",
+  "path": "en/our-games/video-lottery/big-city-5s",
+  "timestamp": "2026-10-16T19:55:27.014Z",
+  "title": "Big City 5s",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

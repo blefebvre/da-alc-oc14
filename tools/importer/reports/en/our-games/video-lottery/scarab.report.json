@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/video-lottery/Scarab.html",
+  "path": "en/our-games/video-lottery/scarab",
+  "timestamp": "2026-10-16T19:54:27.414Z",
+  "title": "Scarab",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

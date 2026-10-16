@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/scratch-n-win/4124.html",
+  "path": "en/our-games/scratch-n-win/4124",
+  "timestamp": "2026-10-16T19:52:25.322Z",
+  "title": "Holiday Cash",
+  "template": "ticket-detail",
+  "blocks": [
+    "columns-ticket",
+    "accordion-bar"
+  ]
+}

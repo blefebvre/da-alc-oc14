@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/mega-money-machine-lightning-blitz.html",
+  "path": "en/play-online/casino/mega-money-machine-lightning-blitz",
+  "timestamp": "2026-10-16T19:49:51.528Z",
+  "title": "Mega Money Machine Lightning Blitz",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

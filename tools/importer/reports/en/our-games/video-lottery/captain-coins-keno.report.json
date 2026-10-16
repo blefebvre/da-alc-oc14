@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/video-lottery/captain-coins-keno.html",
+  "path": "en/our-games/video-lottery/captain-coins-keno",
+  "timestamp": "2026-10-16T19:57:15.454Z",
+  "title": "Captain Coins Keno",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/scratch-n-win/4108.html",
+  "path": "en/our-games/scratch-n-win/4108",
+  "timestamp": "2026-10-16T19:49:20.720Z",
+  "title": "A Gift for You",
+  "template": "ticket-detail",
+  "blocks": [
+    "columns-ticket",
+    "accordion-bar"
+  ]
+}

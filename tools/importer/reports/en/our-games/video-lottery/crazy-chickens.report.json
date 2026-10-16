@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/video-lottery/Crazy-Chickens.html",
+  "path": "en/our-games/video-lottery/crazy-chickens",
+  "timestamp": "2026-10-16T19:53:30.237Z",
+  "title": "Crazy Chickens",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

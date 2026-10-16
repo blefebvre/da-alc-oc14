@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/money-gong-emperor.html",
+  "path": "en/play-online/casino/money-gong-emperor",
+  "timestamp": "2026-10-16T19:54:43.141Z",
+  "title": "Money Gong Emperor",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

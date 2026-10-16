@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/money-raid-kodiak.html",
+  "path": "en/play-online/casino/money-raid-kodiak",
+  "timestamp": "2026-10-16T19:56:23.327Z",
+  "title": "Money Raid Kodiak",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

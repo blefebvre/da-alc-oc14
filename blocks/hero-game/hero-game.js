@@ -1,15 +1,42 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 
 /**
- * Game detail banner: a full-bleed banner image (row 1) and a CTA bar (row 2).
- * Bold links are already turned into `a.button.primary` by decorateButtons in scripts.js;
- * any remaining plain links become secondary chevron text links.
+ * Hides a failed image's container; collapses the whole block when nothing else is left.
+ * @param {HTMLImageElement} img
+ * @param {HTMLElement} target element to remove when the image fails
+ * @param {HTMLElement} block
+ */
+function removeOnError(img, target, block) {
+  const fail = () => {
+    target.remove();
+    if (!block.querySelector('img, a[href]')) {
+      const wrapper = block.closest('.hero-game-wrapper') || block;
+      wrapper.hidden = true;
+    }
+  };
+  if (img.complete && img.naturalWidth === 0 && img.getAttribute('src')) fail();
+  else img.addEventListener('error', fail, { once: true });
+}
+
+/**
+ * Game detail banner: a full-bleed banner image (row 1) plus either
+ * - a CTA bar (online games, row 2 = links): bold links are already `a.button.primary`
+ *   (decorateButtons in scripts.js), remaining plain links become secondary chevron links; or
+ * - a game logo (video lottery, row 2 = a picture and no links), centred over the banner.
  * Authors may omit either row, or put the CTAs in the same row as the image.
  * @param {HTMLElement} block
  */
 export default function decorate(block) {
   const rows = [...block.querySelectorAll(':scope > div')];
   const img = block.querySelector('img');
+  const bgRow = img ? rows.find((row) => row.contains(img)) : null;
+
+  // video lottery: an image-only row after the banner holds the game logo
+  const logoRow = rows.find((row) => row !== bgRow
+    && row.querySelector('img')
+    && !row.querySelector('a[href]'));
+  const logoImg = logoRow?.querySelector('img');
+  const logoPicture = logoImg?.closest('picture') || logoImg;
 
   const media = document.createElement('div');
   media.className = 'hero-game-image';
@@ -20,6 +47,15 @@ export default function decorate(block) {
     ]);
     picture.querySelector('img').setAttribute('fetchpriority', 'high');
     media.append(picture);
+  }
+
+  let logo;
+  if (logoPicture) {
+    logo = document.createElement('div');
+    logo.className = 'hero-game-logo';
+    logo.append(logoPicture);
+    media.append(logo);
+    block.classList.add('hero-game-has-logo');
   }
 
   const bar = document.createElement('div');
@@ -50,4 +86,9 @@ export default function decorate(block) {
   if (inner.children.length) children.push(bar);
   block.replaceChildren(...children);
   if (!img) block.classList.add('hero-game-no-image');
+
+  // broken banner/logo URLs (some alc.ca teasers 404): drop the image rather than show alt text
+  if (logo) removeOnError(logoImg, logo, block);
+  const bgImg = media.querySelector(':scope > picture > img');
+  if (bgImg) removeOnError(bgImg, media, block);
 }

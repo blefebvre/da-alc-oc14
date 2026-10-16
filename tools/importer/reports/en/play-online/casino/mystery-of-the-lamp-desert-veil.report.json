@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/mystery-of-the-lamp-desert-veil.html",
+  "path": "en/play-online/casino/mystery-of-the-lamp-desert-veil",
+  "timestamp": "2026-10-16T19:57:29.528Z",
+  "title": "Mystery of The Lamp Desert Veil",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

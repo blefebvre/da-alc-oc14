@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/video-lottery/Mo-Mummy.html",
+  "path": "en/our-games/video-lottery/mo-mummy",
+  "timestamp": "2026-10-16T19:54:15.138Z",
+  "title": "Mo Mummy",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

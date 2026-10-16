@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/magic-treasures-tiger.html",
+  "path": "en/play-online/casino/magic-treasures-tiger",
+  "timestamp": "2026-10-16T19:48:14.965Z",
+  "title": "Magic Treasures Tiger",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

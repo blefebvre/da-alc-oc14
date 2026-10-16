@@ -581,10 +581,12 @@ main > .section.ticket-detail > .default-content-wrapper:has(+ .columns-ticket-w
 
 /*
  * Game detail title bar: the page H1 (plus an optional cost-range paragraph, e.g. "$0.10 - $20")
- * right before the carousel-thumbnails block renders as the top of the screenshot card,
+ * right before the carousel-thumbnails block renders as the top of the screenshot card
+ * (in .section-main, or directly in the section on video lottery .vlt pages, which have no rail),
  * over the light diagonal header band. The block below drops its top border to join it.
  */
-main .section.game-detail .section-main > .default-content-wrapper:first-child:has(+ .carousel-thumbnails-wrapper) {
+main .section.game-detail .section-main > .default-content-wrapper:first-child:has(+ .carousel-thumbnails-wrapper),
+main > .section.game-detail.vlt > .default-content-wrapper:first-child:has(+ .carousel-thumbnails-wrapper) {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -604,24 +606,28 @@ main .section.game-detail .section-main > .default-content-wrapper:first-child:h
   text-align: center;
 }
 
-main .section.game-detail .section-main > .default-content-wrapper:first-child:has(+ .carousel-thumbnails-wrapper) > h1 {
+main .section.game-detail .section-main > .default-content-wrapper:first-child:has(+ .carousel-thumbnails-wrapper) > h1,
+main > .section.game-detail.vlt > .default-content-wrapper:first-child:has(+ .carousel-thumbnails-wrapper) > h1 {
   margin: 0 0 10px;
   color: inherit;
   font: inherit;
 }
 
-main .section.game-detail .section-main > .default-content-wrapper:first-child:has(+ .carousel-thumbnails-wrapper) > p {
+main .section.game-detail .section-main > .default-content-wrapper:first-child:has(+ .carousel-thumbnails-wrapper) > p,
+main > .section.game-detail.vlt > .default-content-wrapper:first-child:has(+ .carousel-thumbnails-wrapper) > p {
   margin: 0;
 }
 
-main .section.game-detail .section-main > .default-content-wrapper:first-child + .carousel-thumbnails-wrapper > .carousel-thumbnails {
+main .section.game-detail .section-main > .default-content-wrapper:first-child + .carousel-thumbnails-wrapper > .carousel-thumbnails,
+main > .section.game-detail.vlt > .default-content-wrapper:first-child + .carousel-thumbnails-wrapper > .carousel-thumbnails {
   border-top: 0;
   border-radius: 0 0 6px 6px;
   clip-path: inset(0 -10px -10px);
 }
 
 @media (width >= 768px) {
-  main .section.game-detail .section-main > .default-content-wrapper:first-child:has(+ .carousel-thumbnails-wrapper) {
+  main .section.game-detail .section-main > .default-content-wrapper:first-child:has(+ .carousel-thumbnails-wrapper),
+  main > .section.game-detail.vlt > .default-content-wrapper:first-child:has(+ .carousel-thumbnails-wrapper) {
     flex-direction: row;
     padding: 40px 20px;
     font-size: 28px;
@@ -629,7 +635,8 @@ main .section.game-detail .section-main > .default-content-wrapper:first-child +
     text-align: left;
   }
 
-  main .section.game-detail .section-main > .default-content-wrapper:first-child:has(+ .carousel-thumbnails-wrapper) > p {
+  main .section.game-detail .section-main > .default-content-wrapper:first-child:has(+ .carousel-thumbnails-wrapper) > p,
+  main > .section.game-detail.vlt > .default-content-wrapper:first-child:has(+ .carousel-thumbnails-wrapper) > p {
     text-align: right;
   }
 }
@@ -724,3 +731,68 @@ main .section.game-detail.instant .section-main > .default-content-wrapper:not(:
     margin-left: 20px;
   }
 }
+
+/*
+ * Video lottery game detail (alc.ca .video-lottery-info-page.body-content): no rail split, the
+ * section's wrappers stack directly. The H1 title bar and the description card are wrappers
+ * themselves, so they take the inner (gutter-less) width of the carousel card between them.
+ * From 1200px all content sits in the left 2/3 column, like the source's col-lg-8.
+ */
+
+/* stylelint-disable no-descending-specificity -- .vlt sections have no .section-main, so these
+   never compete with the .section-main game-detail rules above */
+main > .section.game-detail.vlt {
+  display: flow-root;
+}
+
+main > .section.game-detail.vlt > .default-content-wrapper:first-child:has(+ .carousel-thumbnails-wrapper),
+main > .section.game-detail.vlt > .default-content-wrapper:not(:first-child):has(> h2) {
+  width: calc(var(--container-width) - 2 * var(--container-gutter));
+  max-width: calc(100% - 2 * var(--container-gutter));
+}
+
+/* description + Game Summary: white outlined panel, left-aligned text */
+main > .section.game-detail.vlt > .default-content-wrapper:not(:first-child):has(> h2) {
+  margin: 0 auto 28px;
+  border: 1px solid #aebbc7;
+  border-radius: 6px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: rgb(37 100 144 / 12%) 0 3px 8px 0;
+}
+
+main > .section.game-detail.vlt > .default-content-wrapper:not(:first-child):has(> h2) > h2 {
+  margin: -5px 0 10px;
+  color: var(--alc-sky);
+  font-family: var(--heading-font-family);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 24.2px;
+}
+
+main > .section.game-detail.vlt > .default-content-wrapper:not(:first-child):has(> h2) > p {
+  margin: 0 0 10px;
+  font-size: 16px;
+  line-height: 22.8571px;
+  text-align: left;
+}
+
+@media (width >= 1200px) {
+  /* stays a single block column (the generic game-detail section turns flex here) */
+  main > .section.game-detail.vlt {
+    display: flow-root;
+  }
+
+  main > .section.game-detail.vlt > div:not(.hero-game-wrapper) {
+    width: calc(var(--container-width) * 2 / 3);
+    margin-left: calc((100% - var(--container-width)) / 2);
+  }
+
+  main > .section.game-detail.vlt > .default-content-wrapper:first-child:has(+ .carousel-thumbnails-wrapper),
+  main > .section.game-detail.vlt > .default-content-wrapper:not(:first-child):has(> h2) {
+    width: calc(var(--container-width) * 2 / 3 - 2 * var(--container-gutter));
+    margin-left: calc((100% - var(--container-width)) / 2 + var(--container-gutter));
+  }
+}
+
+/* stylelint-enable no-descending-specificity */

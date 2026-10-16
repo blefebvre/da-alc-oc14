@@ -21,16 +21,22 @@ main > .section > .hero-game-wrapper {
   padding: 0 10px;
 }
 
+/* video lottery banners (game logo variant) run edge to edge */
+.hero-game.hero-game-has-logo .hero-game-image {
+  position: relative;
+  padding: 0;
+}
+
 /* instant-win game banners run edge to edge (page body section carries the "instant" style) */
 main:has(.section.game-detail.instant) .hero-game .hero-game-image {
   padding: 0;
 }
 
-.hero-game .hero-game-image picture {
+.hero-game .hero-game-image > picture {
   display: block;
 }
 
-.hero-game .hero-game-image img {
+.hero-game .hero-game-image > picture > img {
   display: block;
   width: 100%;
   height: 200px;
@@ -111,13 +117,57 @@ main .hero-game a.hero-game-link:focus-visible {
   mask: url('../../icons/header-chevron.svg') center / 13px 13px no-repeat;
 }
 
+/*
+ * Video lottery banner (alc.ca .alc-game-details-header--vlt): edge-to-edge background with the
+ * game logo centred near the top, orange bottom rule. Heights 245 / 350 / 405px.
+ */
+.hero-game.hero-game-has-logo {
+  border-bottom-color: #f29400;
+}
+
+.hero-game.hero-game-has-logo .hero-game-image > picture > img {
+  height: 245px;
+}
+
+.hero-game .hero-game-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  width: var(--container-width);
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 25px 20px 0;
+  text-align: center;
+}
+
+.hero-game .hero-game-logo picture {
+  display: inline;
+}
+
+.hero-game.hero-game-has-logo .hero-game-image > .hero-game-logo img {
+  display: inline-block;
+  width: auto;
+  max-width: 90%;
+  height: auto;
+  max-height: 130px;
+  margin-top: 45px;
+  vertical-align: middle;
+}
+
+/* a second banner inside the page body (e.g. Big City 5's Keno) has no bottom rule */
+main > .section.game-detail .hero-game {
+  border-bottom: 0;
+}
+
 /* no banner: the bar sits in normal flow */
 .hero-game.hero-game-no-image .hero-game-cta {
   position: static;
 }
 
 @media (width >= 427px) {
-  .hero-game .hero-game-image img {
+  .hero-game .hero-game-image > picture > img {
     height: 341.129px;
   }
 
@@ -140,14 +190,38 @@ main .hero-game a.hero-game-link:focus-visible {
   }
 }
 
+@media (width >= 481px) {
+  .hero-game.hero-game-has-logo .hero-game-image > picture > img {
+    height: 350px;
+  }
+
+  .hero-game.hero-game-has-logo .hero-game-image > .hero-game-logo img {
+    max-width: 100%;
+    max-height: 185px;
+  }
+}
+
 @media (width >= 768px) {
   .hero-game .hero-game-cta-inner > p + p {
     margin-left: 24px;
   }
+
+  .hero-game.hero-game-has-logo .hero-game-image > picture > img {
+    height: 405px;
+  }
+
+  .hero-game .hero-game-logo {
+    padding-top: 75px;
+  }
+
+  .hero-game.hero-game-has-logo .hero-game-image > .hero-game-logo img {
+    max-height: 250px;
+    margin-top: 0;
+  }
 }
 
 @media (width >= 1900px) {
-  .hero-game .hero-game-image img {
+  .hero-game .hero-game-image > picture > img {
     height: 455px;
   }
 }

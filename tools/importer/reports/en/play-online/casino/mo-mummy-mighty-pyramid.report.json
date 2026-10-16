@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/mo-mummy-mighty-pyramid.html",
+  "path": "en/play-online/casino/mo-mummy-mighty-pyramid",
+  "timestamp": "2026-10-16T19:54:25.625Z",
+  "title": "Mo Mummy Mighty Pyramid",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}
