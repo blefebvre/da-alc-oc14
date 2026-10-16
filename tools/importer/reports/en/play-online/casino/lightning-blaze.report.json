@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/lightning-blaze.html",
+  "path": "en/play-online/casino/lightning-blaze",
+  "timestamp": "2026-10-16T16:30:28.608Z",
+  "title": "Lightning Blaze | Casino Slot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -11,11 +11,16 @@
   },
   "contentPattern": "Row 1: banner image (alt empty or game name). Row 2: CTA paragraph(s): a bold link '**[Play now](...)**' as the primary pill button and a plain link '[TRY DEMO](...)' as a secondary chevron text link. Live-casino pages use a single bold '**[Browse Games](...)**' link. Breadcrumbs are not authored; scripts.js overlays them when page metadata 'Breadcrumbs: true'.",
   "usage": {
-    "pagesUsing": ["https://www.alc.ca/content/alc/en/play-online/casino/10000-wolves-10k-ways.html"],
-    "reuseCount": 1,
+    "pagesUsing": [
+      "https://www.alc.ca/content/alc/en/play-online/casino/10000-wolves-10k-ways.html",
+      "/content/alc/en/our-games/video-lottery/cash-spin"
+    ],
+    "reuseCount": 2,
     "lastUsed": "2026-10-16"
   },
-  "reuseGuidance": "Use for game detail pages (casino, instant-win, live-casino) with a banner image and play/demo CTAs. Use the plain hero for banners with a heading.",
+  "reuseGuidance": "Use for game detail pages (casino, instant-win, live-casino) with a banner image and play/demo CTAs. Use the plain hero for banners with a heading. Also used for video lottery detail banners: background image + optional overlaid logo image, no CTA row.",
   "options": [],
-  "memberVariantIds": ["hero-game"]
+  "memberVariantIds": [
+    "hero-game"
+  ]
 }

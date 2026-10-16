@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/breakopen/7132.html",
+  "path": "en/our-games/breakopen/7132",
+  "timestamp": "2026-10-16T16:28:40.904Z",
+  "title": "Peppermint",
+  "template": "ticket-detail",
+  "blocks": [
+    "columns-ticket",
+    "accordion-bar"
+  ]
+}

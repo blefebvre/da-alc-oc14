@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/jewel-boom-super-drop.html",
+  "path": "en/play-online/casino/jewel-boom-super-drop",
+  "timestamp": "2026-10-16T16:27:47.122Z",
+  "title": "Jewel Boom Super Drop",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

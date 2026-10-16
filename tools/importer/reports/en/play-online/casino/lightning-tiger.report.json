@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/lightning-tiger.html",
+  "path": "en/play-online/casino/lightning-tiger",
+  "timestamp": "2026-10-16T16:33:29.498Z",
+  "title": "Lightning Tiger",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

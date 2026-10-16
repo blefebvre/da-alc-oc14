@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/scratch-n-win/3359.html",
+  "path": "en/our-games/scratch-n-win/3359",
+  "timestamp": "2026-10-16T16:29:57.098Z",
+  "title": "Triple Cherries",
+  "template": "ticket-detail",
+  "blocks": [
+    "columns-ticket",
+    "accordion-bar"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/lion-link-wealth-of-the-dragon.html",
+  "path": "en/play-online/casino/lion-link-wealth-of-the-dragon",
+  "timestamp": "2026-10-16T16:35:16.513Z",
+  "title": "Lion Link Wealth of the Dragon",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -133,8 +133,15 @@ const DETAIL_PAGE_CHROME_SELECTORS = [
   '.cmp-notification',
 ];
 
+// Video lottery pages also carry a section.alc-game-details-header(--vlt), so they are
+// excluded here and handled by cleanupVideoLotteryPage() instead.
 function isGameDetailPage(root) {
-  return !!root.querySelector('section.alc-game-details-header, div.digital-instants-info-page');
+  return !isVideoLotteryPage(root)
+    && !!root.querySelector('section.alc-game-details-header, div.digital-instants-info-page');
+}
+
+function isVideoLotteryPage(root) {
+  return !!root.querySelector('div.video-lottery-info-page');
 }
 
 // Extra page metadata to merge into the importer's Metadata block, keyed by <main>.
@@ -350,12 +357,120 @@ function cleanupTicketDetailPage(element) {
   });
 }
 
+/* ------------------------------------------------------------------------------------------
+ * Video lottery detail pages (template "video-lottery-detail", /en/our-games/video-lottery/<game>).
+ * Every rule is guarded by isVideoLotteryPage() (div.video-lottery-info-page). Verified against
+ * migration-work/cleaned.html (cash-spin) and the live American-Original-Canadian-Cash,
+ * big-city-5s-keno, Mo-Mummy, blazing-hot-celebrations and 7s-wild-gold pages.
+ * The banner .cmp-teaser.alc-custom-teaser keeps its inline background-image style (read by
+ * the hero-game parser); only the decorative body background (--bg) is stripped.
+ * ---------------------------------------------------------------------------------------- */
+
+const VLT_SUMMARY_HEADING = /^game summary:?$/i;
+
+function normText(el) {
+  return (el ? el.textContent : '').replace(/[\s ]+/g, ' ').trim();
+}
+
+// No text and no media: layout spacers (empty div.alc-container.section, empty div.cfm.section,
+// empty in-cfm header section when the banner lives in a sibling div.teaser.section, ...)
+function isEmptyContainer(el) {
+  return !normText(el) && !el.querySelector('img, picture, video, iframe, [style*="url"]');
+}
+
+function cleanupVideoLotteryPage(element) {
+  const doc = element.ownerDocument;
+
+  WebImporter.DOMUtils.remove(element, [
+    ...DETAIL_PAGE_CHROME_SELECTORS,
+    // Duplicate thumbnail strip: carousel-thumbnails parser only reads .slideshow-main
+    '.alc-carousel.slideshow-thumbnails',
+    // Empty tracking div
+    '.video-lottery-info-page .impress',
+    // Decorative background image and title-bar logo
+    'div.video-lottery-info-page > img',
+    '.alc-image-browser__heading > img',
+  ]);
+
+  // Source breadcrumb (Home / Our Games / Video Lottery / <game>): auto-generated in EDS.
+  element.querySelectorAll('.cmp-breadcrumb').forEach((bc) => {
+    const wrapper = bc.closest('section.hidden-xs') || bc.closest('.cmp-breadcrumb--alc') || bc;
+    wrapper.remove();
+  });
+
+  // Decorative page background: style="--bg:url(.../alc-images/background.jpg)"
+  element.querySelectorAll('div.video-lottery-info-page').forEach((body) => {
+    if (/background|--bg/i.test(body.getAttribute('style') || '')) body.removeAttribute('style');
+  });
+
+  // Mo-Mummy: div.page-faqs holds a duplicated <head> (meta/link/script/title) and a bare
+  // "FAQ" H1 - not visible content. Keep it as default content only if it has real text.
+  element.querySelectorAll('div.page-faqs').forEach((faqs) => {
+    WebImporter.DOMUtils.remove(faqs, ['meta', 'link', 'script', 'noscript', 'style', 'title']);
+    const text = normText(faqs);
+    if (!text || /^faqs?$/i.test(text)) {
+      faqs.remove();
+      return;
+    }
+    faqs.querySelectorAll('h1').forEach((h) => renameTag(h, 'h2'));
+    const nodes = [...faqs.querySelectorAll('h2, h3, h4, h5, h6, p, ul, ol')]
+      .filter((n) => !n.parentElement.closest('p, ul, ol') && normText(n));
+    faqs.replaceWith(...nodes);
+  });
+
+  // Empty right rail, empty in-cfm header section (banner in a sibling div.teaser.section),
+  // empty div.alc-container.section / div.cfm.section spacers.
+  element.querySelectorAll('.video-lottery-info-page aside').forEach((aside) => {
+    if (isEmptyContainer(aside)) aside.remove();
+  });
+  element.querySelectorAll('section.alc-game-details-header--vlt').forEach((header) => {
+    if (!header.querySelector('.cmp-teaser') && isEmptyContainer(header)) header.remove();
+  });
+  element.querySelectorAll('div.alc-container.section, div.cfm.section').forEach((container) => {
+    if (isEmptyContainer(container)) container.remove();
+  });
+
+  // H1 game title: <div class="alc-image-browser__heading"><h1><p>Cash Spin</p></h1></div> -> <h1>Cash Spin</h1>
+  element.querySelectorAll('.video-lottery-info-page .alc-image-browser__heading').forEach((heading) => {
+    const title = normText(heading.querySelector('h1'));
+    if (!title) {
+      heading.remove();
+      return;
+    }
+    const h1 = doc.createElement('h1');
+    h1.textContent = title;
+    heading.replaceWith(h1);
+  });
+
+  // Description card: section.alc-game-details__summary > .video-lottery-game-summary > .panel > #gameSummary
+  // -> paragraphs + <h2>Game Summary</h2> (source: <h3>, <p> or <p><b>) ; <b> -> <strong>, <i> -> <em>
+  element.querySelectorAll('.video-lottery-game-summary').forEach((summary) => {
+    const outer = summary.closest('section.alc-game-details__summary') || summary;
+    const inner = summary.querySelector('#gameSummary') || summary.querySelector('section') || summary;
+    inner.querySelectorAll('b').forEach((b) => renameTag(b, 'strong'));
+    inner.querySelectorAll('i').forEach((i) => renameTag(i, 'em'));
+    inner.querySelectorAll(':scope > h1, :scope > h2, :scope > h3, :scope > h4, :scope > h5, :scope > h6, :scope > p')
+      .forEach((el) => {
+        if (VLT_SUMMARY_HEADING.test(normText(el))) {
+          const h2 = doc.createElement('h2');
+          h2.textContent = 'Game Summary';
+          el.replaceWith(h2);
+        }
+      });
+    const nodes = [...inner.childNodes].filter((n) => n.nodeType === 1 || (n.nodeType === 3 && n.textContent.trim()));
+    outer.replaceWith(...nodes);
+  });
+}
+
 // Many alc.ca pages use the URL slug (or, on ticket pages, the numeric game id) as <title>.
 // Prefer og:title when the title is slug-like. With h1Root (ticket pages only), fall back to
 // the ticket-name H1 when og:title is missing or is just the id/slug again.
-function fixSlugTitle(doc, h1Root) {
+// anyCase (video lottery pages only): also treat mixed-case slugs ("Mo-Mummy",
+// "American-Original-Canadian-Cash") as slug-like.
+function fixSlugTitle(doc, h1Root, anyCase) {
   const title = (doc.title || '').trim();
-  if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(title)) return;
+  const slugRe = anyCase ? /^[a-z0-9]+(-[a-z0-9]+)*$/i : /^[a-z0-9]+(-[a-z0-9]+)*$/;
+  if (!slugRe.test(title)) return;
   const ogTitle = doc.querySelector('meta[property="og:title"], meta[name="og:title"]');
   const og = ogTitle ? (ogTitle.content || '').trim() : '';
   const ogIsReal = og && og !== title && !/^\d+$/.test(og);
@@ -382,6 +497,10 @@ export default function transform(hookName, element, payload) {
     if (isTicketDetailPage(element)) {
       fixSlugTitle(doc, element.querySelector('div.game-detail-scratch'));
       cleanupTicketDetailPage(element);
+      registerPageMetadata(element, { Breadcrumbs: 'true' });
+    } else if (isVideoLotteryPage(element)) {
+      fixSlugTitle(doc, null, true);
+      cleanupVideoLotteryPage(element);
       registerPageMetadata(element, { Breadcrumbs: 'true' });
     } else {
       fixSlugTitle(doc, null);

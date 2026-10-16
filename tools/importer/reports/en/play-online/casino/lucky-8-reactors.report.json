@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/lucky-8-reactors.html",
+  "path": "en/play-online/casino/lucky-8-reactors",
+  "timestamp": "2026-10-16T16:39:37.324Z",
+  "title": "Lucky 8 Reactors",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

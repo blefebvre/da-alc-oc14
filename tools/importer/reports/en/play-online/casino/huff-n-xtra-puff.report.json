@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/huff-n-xtra-puff.html",
+  "path": "en/play-online/casino/huff-n-xtra-puff",
+  "timestamp": "2026-10-16T16:24:54.141Z",
+  "title": "Huff N Xtra Puff",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

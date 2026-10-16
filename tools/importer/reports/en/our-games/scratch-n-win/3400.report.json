@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/scratch-n-win/3400.html",
+  "path": "en/our-games/scratch-n-win/3400",
+  "timestamp": "2026-10-16T16:40:00.803Z",
+  "title": "Super Crossword",
+  "template": "ticket-detail",
+  "blocks": [
+    "columns-ticket",
+    "accordion-bar"
+  ]
+}

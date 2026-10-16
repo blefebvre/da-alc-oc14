@@ -178,7 +178,8 @@ function decorateSectionMetadata(main) {
  * @param {Element} main The main element
  */
 function decorateRailSections(main) {
-  main.querySelectorAll(':scope > .section.game-detail').forEach((section) => {
+  // video lottery pages (.vlt) have no rail
+  main.querySelectorAll(':scope > .section.game-detail:not(.vlt)').forEach((section) => {
     const last = section.lastElementChild;
     if (!last || section.children.length < 2) return;
     const prev = last.previousElementSibling;

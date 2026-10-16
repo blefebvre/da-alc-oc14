@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/huff-n-puff-high-rise.html",
+  "path": "en/play-online/casino/huff-n-puff-high-rise",
+  "timestamp": "2026-10-16T16:24:22.797Z",
+  "title": "Huff N Puff High Rise",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

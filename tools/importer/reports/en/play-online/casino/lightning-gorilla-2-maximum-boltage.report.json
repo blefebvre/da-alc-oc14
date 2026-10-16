@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/lightning-gorilla-2-maximum-boltage.html",
+  "path": "en/play-online/casino/lightning-gorilla-2-maximum-boltage",
+  "timestamp": "2026-10-16T16:32:05.989Z",
+  "title": "Lightning Gorilla 2 Maximum Boltage",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -18,6 +18,12 @@
  * Live-casino pages have a single "Browse Games" button (opens a lobby modal) -> live casino lobby.
  *
  * Output: row 1 = banner image; row 2 = **[Play now](...)** + [TRY DEMO](...) (or **[Browse Games](...)**).
+ *
+ * VLT branch (video-lottery-detail), selector: .cmp-teaser.alc-custom-teaser
+ *   div.cmp-teaser.alc-custom-teaser[style="background-image: url(...backgroundImage.img.jpg/...)"]
+ *     .cmp-teaser__logo > img[src=...logoImage.img.png/...]
+ *   Only one (desktop) background rendition exists in the source.
+ *   Output: row 1 = background banner image; row 2 = logo image only (no CTAs). No logo -> row 1 only.
  */
 const ORIGIN = 'https://www.alc.ca';
 const LIVE_CASINO_LOBBY = '/content/alc/en/play-online/casino.html#live-casino';
@@ -49,7 +55,49 @@ function linkParagraph(document, href, text, strong) {
   return p;
 }
 
+function bgUrl(el) {
+  const style = (el && el.getAttribute('style')) || '';
+  const m = style.match(/background-image\s*:\s*url\(\s*['"]?([^'")]+)['"]?\s*\)/i);
+  return m ? m[1] : '';
+}
+
+function parseVltTeaser(element, document) {
+  const cells = [];
+  let bg = bgUrl(element);
+  if (!bg) {
+    const styled = [...element.querySelectorAll('[style*="background-image"]')].find((el) => bgUrl(el));
+    bg = bgUrl(styled);
+  }
+  const title = element.getAttribute('data-gtm-variant') || '';
+  if (bg) {
+    const img = document.createElement('img');
+    img.src = absolutize(bg);
+    img.alt = title;
+    cells.push([img]);
+  }
+  const logoEl = element.querySelector('.cmp-teaser__logo img, .cmp-teaser__content img, img');
+  if (logoEl && logoEl.getAttribute('src')) {
+    const logo = document.createElement('img');
+    logo.src = absolutize(logoEl.getAttribute('src'));
+    logo.alt = logoEl.getAttribute('alt') || title;
+    cells.push([logo]);
+  }
+  if (!cells.length) {
+    element.remove();
+    return;
+  }
+  const block = WebImporter.Blocks.createBlock(document, { name: 'hero-game', cells });
+  element.replaceWith(block);
+}
+
 export default function parse(element, { document }) {
+  // VLT banner teaser (video-lottery-detail); online-game-detail uses section.alc-game-details-header
+  if (element.classList.contains('alc-custom-teaser')
+    && !element.querySelector('.alc-game-details-header__cta-wrapper')) {
+    parseVltTeaser(element, document);
+    return;
+  }
+
   const cells = [];
 
   // ---- Row 1: banner image (desktop; the source has no separate mobile rendition)

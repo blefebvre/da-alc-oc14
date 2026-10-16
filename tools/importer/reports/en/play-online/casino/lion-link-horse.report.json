@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/lion-link-horse.html",
+  "path": "en/play-online/casino/lion-link-horse",
+  "timestamp": "2026-10-16T16:34:31.411Z",
+  "title": "Lion Link Horse",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

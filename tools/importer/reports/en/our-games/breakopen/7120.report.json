@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/breakopen/7120.html",
+  "path": "en/our-games/breakopen/7120",
+  "timestamp": "2026-10-16T16:26:30.812Z",
+  "title": "Ruby",
+  "template": "ticket-detail",
+  "blocks": [
+    "columns-ticket",
+    "accordion-bar"
+  ]
+}

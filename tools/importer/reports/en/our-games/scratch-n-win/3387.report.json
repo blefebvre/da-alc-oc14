@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/scratch-n-win/3387.html",
+  "path": "en/our-games/scratch-n-win/3387",
+  "timestamp": "2026-10-16T16:37:15.782Z",
+  "title": "Peppermint",
+  "template": "ticket-detail",
+  "blocks": [
+    "columns-ticket",
+    "accordion-bar"
+  ]
+}

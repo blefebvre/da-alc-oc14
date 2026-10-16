@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/jewel-boom-xxx.html",
+  "path": "en/play-online/casino/jewel-boom-xxx",
+  "timestamp": "2026-10-16T16:28:19.120Z",
+  "title": "Jewel Boom XXX",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

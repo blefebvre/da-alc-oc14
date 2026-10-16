@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/live-poker.html",
+  "path": "en/play-online/casino/live-poker",
+  "timestamp": "2026-10-16T16:37:47.831Z",
+  "title": "Live Poker",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

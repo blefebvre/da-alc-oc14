@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/breakopen/7124.html",
+  "path": "en/our-games/breakopen/7124",
+  "timestamp": "2026-10-16T16:27:15.597Z",
+  "title": "Match 3",
+  "template": "ticket-detail",
+  "blocks": [
+    "columns-ticket",
+    "accordion-bar"
+  ]
+}

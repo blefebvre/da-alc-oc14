@@ -8,6 +8,7 @@
  * Source structure (validated in block-context/carousel-thumbnails/source*.html):
  *   div.alc-carousel.slideshow-main > ul.slides > li.slide > img[src][alt]
  *   Live-casino pages render the container empty (no ul.slides).
+ *   Video-lottery pages use the same markup (li.slide.active + li.slide, no clones).
  *   The thumbnail strip (#slideshow-thumbnails) is built by the block, not authored.
  *
  * Output: one row per unique slide image, single cell with the <img>. No slides -> element removed.

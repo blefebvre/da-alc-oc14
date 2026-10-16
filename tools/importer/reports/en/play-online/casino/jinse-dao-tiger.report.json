@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/jinse-dao-tiger.html",
+  "path": "en/play-online/casino/jinse-dao-tiger",
+  "timestamp": "2026-10-16T16:28:50.039Z",
+  "title": "Jinse Dao Tiger",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/lucky-bonus-draw-keno.html",
+  "path": "en/play-online/casino/lucky-bonus-draw-keno",
+  "timestamp": "2026-10-16T16:39:55.308Z",
+  "title": "Lucky Bonus Draw Keno",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

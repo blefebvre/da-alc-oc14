@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/lightning-box-keno.html",
+  "path": "en/play-online/casino/lightning-box-keno",
+  "timestamp": "2026-10-16T16:31:26.522Z",
+  "title": "Lightning Box Keno",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

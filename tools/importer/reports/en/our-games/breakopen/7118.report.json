@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/breakopen/7118.html",
+  "path": "en/our-games/breakopen/7118",
+  "timestamp": "2026-10-16T16:25:59.430Z",
+  "title": "Flaming 7's",
+  "template": "ticket-detail",
+  "blocks": [
+    "columns-ticket",
+    "accordion-bar"
+  ]
+}

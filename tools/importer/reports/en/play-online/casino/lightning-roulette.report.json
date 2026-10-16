@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/lightning-roulette.html",
+  "path": "en/play-online/casino/lightning-roulette",
+  "timestamp": "2026-10-16T16:32:36.704Z",
+  "title": "Lightning Roulette",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

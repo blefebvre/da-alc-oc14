@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/hyper-respins.html",
+  "path": "en/play-online/casino/hyper-respins",
+  "timestamp": "2026-10-16T16:25:24.012Z",
+  "title": "Hyper Respins",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

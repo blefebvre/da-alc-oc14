@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/huff-n-lots-of-puff-goals.html",
+  "path": "en/play-online/casino/huff-n-lots-of-puff-goals",
+  "timestamp": "2026-10-16T16:23:22.651Z",
+  "title": "Huff N Lots of Puff Goals!",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

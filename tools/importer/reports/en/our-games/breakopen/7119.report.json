@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/breakopen/7119.html",
+  "path": "en/our-games/breakopen/7119",
+  "timestamp": "2026-10-16T16:26:13.406Z",
+  "title": "Lucky Lemons",
+  "template": "ticket-detail",
+  "blocks": [
+    "columns-ticket",
+    "accordion-bar"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/huff-n-even-more-puff-grand.html",
+  "path": "en/play-online/casino/huff-n-even-more-puff-grand",
+  "timestamp": "2026-10-16T16:15:14.448Z",
+  "title": "Huff N Even More Puff Grand",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

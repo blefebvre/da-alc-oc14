@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/live-roulette.html",
+  "path": "en/play-online/casino/live-roulette",
+  "timestamp": "2026-10-16T16:38:03.222Z",
+  "title": "Live Roulette",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

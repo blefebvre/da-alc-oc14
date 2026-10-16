@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/lightning-zap.html",
+  "path": "en/play-online/casino/lightning-zap",
+  "timestamp": "2026-10-16T16:33:52.822Z",
+  "title": "Lightning Zap",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

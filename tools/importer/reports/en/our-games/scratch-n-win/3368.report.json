@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/scratch-n-win/3368.html",
+  "path": "en/our-games/scratch-n-win/3368",
+  "timestamp": "2026-10-16T16:31:30.212Z",
+  "title": "Winners Circle",
+  "template": "ticket-detail",
+  "blocks": [
+    "columns-ticket",
+    "accordion-bar"
+  ]
+}

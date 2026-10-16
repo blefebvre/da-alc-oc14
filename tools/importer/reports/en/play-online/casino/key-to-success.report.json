@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/key-to-success.html",
+  "path": "en/play-online/casino/key-to-success",
+  "timestamp": "2026-10-16T16:29:21.781Z",
+  "title": "Key to Success | Casino Slot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}
