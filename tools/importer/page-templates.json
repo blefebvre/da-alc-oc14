@@ -1721,8 +1721,67 @@
         "https://www.alc.ca/content/alc/en/play-online/instant-win-games/zombieville.html"
       ],
       "coverageGaps": [],
-      "description": "Game banner with play/demo CTA bar, screenshot carousel card, game summary card, how-to-play/prizes tabs, and right cross-sell rail of game cards",
-      "blocks": []
+      "description": "Online casino / instant-win game detail: game banner with CTA bar, screenshot carousel, game summary, how-to-play/prizes tabs, and Have you tried rail",
+      "blocks": [
+        {
+          "name": "hero-game",
+          "instances": [
+            "section.alc-game-details-header"
+          ]
+        },
+        {
+          "name": "carousel-thumbnails",
+          "instances": [
+            ".alc-image-browser .alc-carousel.slideshow-main"
+          ]
+        },
+        {
+          "name": "tabs-boxed",
+          "instances": [
+            ".cmp-tabs.cmp-tabs--alc"
+          ]
+        },
+        {
+          "name": "cards-game",
+          "instances": [
+            "section.alc-hyt"
+          ]
+        }
+      ],
+      "representativeUrl": "https://www.alc.ca/content/alc/en/play-online/casino/10000-wolves-10k-ways.html",
+      "sections": [
+        {
+          "id": "1",
+          "name": "game-banner",
+          "selector": [
+            "section.alc-game-details-header"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-game"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "2",
+          "name": "game-body",
+          "selector": [
+            "div.digital-instants-info-page.body-content",
+            "div.body-content"
+          ],
+          "style": "game-detail",
+          "blocks": [
+            "carousel-thumbnails",
+            "tabs-boxed",
+            "cards-game"
+          ],
+          "defaultContent": [
+            ".alc-image-browser__heading h1",
+            ".digital-instants-game-summary",
+            "#haveYouTriedTitle h2"
+          ]
+        }
+      ]
     },
     {
       "name": "casino-game-simple",

@@ -1,0 +1,21 @@
+{
+  "variantName": "hero-game",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "image + light-grey bar",
+    "density": "minimal",
+    "purpose": "game-detail-banner",
+    "imagePattern": "full-bleed banner (1900x405)",
+    "structure": "image row + CTA bar (primary pill + secondary chevron link)"
+  },
+  "contentPattern": "Row 1: banner image (alt empty or game name). Row 2: CTA paragraph(s): a bold link '**[Play now](...)**' as the primary pill button and a plain link '[TRY DEMO](...)' as a secondary chevron text link. Live-casino pages use a single bold '**[Browse Games](...)**' link. Breadcrumbs are not authored; scripts.js overlays them when page metadata 'Breadcrumbs: true'.",
+  "usage": {
+    "pagesUsing": ["https://www.alc.ca/content/alc/en/play-online/casino/10000-wolves-10k-ways.html"],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-16"
+  },
+  "reuseGuidance": "Use for game detail pages (casino, instant-win, live-casino) with a banner image and play/demo CTAs. Use the plain hero for banners with a heading.",
+  "options": [],
+  "memberVariantIds": ["hero-game"]
+}

@@ -12,6 +12,14 @@
  * winners header share the same AEM container (#container-8dc56c521a), so the <hr> is
  * inserted directly before each section-start element rather than per container.
  *
+ * Template "online-game-detail" (731 casino / instant-win / live-casino pages):
+ *   1: section.alc-game-details-header                  (no style -> no leading <hr>)
+ *   2: div.digital-instants-info-page.body-content      (style "game-detail")
+ * Result: hero-game | <hr> | Section Metadata(game-detail), H1, [cost p], carousel-thumbnails,
+ * Game Summary H2 + paragraphs, tabs-boxed, H2 "Have you tried...", cards-game. No template-
+ * specific code is needed here; the H1 / summary / rail-heading normalisation lives in
+ * alc-cleanup.js.
+ *
  * Breaks are inserted in beforeTransform (before parsers replace elements); metadata is
  * anchored to marker <hr>s in afterTransform. The cleanup transformer replaces
  * .section-header with a plain H2 in afterTransform, so the marker is the reliable anchor.

@@ -391,3 +391,184 @@ main .cards-game a.cards-game-cta-link:focus-visible {
     display: none;
   }
 }
+
+/*
+ * Rail tiles: "Have you tried..." (alc.ca section.alc-hyt) in a game-detail section rail.
+ * White card | 185px image | title | optional cost range | tagline | Learn More ›
+ * | centred Play now pill | centred TRY DEMO ›. Stacked 1-up on phones; 2-up wherever the rail
+ * is wide enough for two 340px cards (alc.ca col-sm-6), 1-up in the narrow desktop column.
+ * Selectors carry five classes so they win over the homepage tile body rules above.
+ */
+.section-rail .cards-game > ul {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0 20px;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  scroll-snap-type: none;
+}
+
+.section-rail .cards-game .cards-game-controls {
+  display: none;
+}
+
+.section-rail .cards-game .cards-game-card {
+  box-sizing: border-box;
+  min-height: 425px;
+  margin: 0 0 28px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #aebbc7;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 3px 8px 0 rgb(37 100 144 / 15%);
+  color: var(--alc-grey);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.section-rail .cards-game .cards-game-card-image img {
+  border-radius: 0;
+}
+
+/* flex column like alc.ca, so the paragraph margins add up instead of collapsing */
+.section-rail .cards-game .cards-game-card .cards-game-card-body {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.section-rail .cards-game .cards-game-card .cards-game-card-body .cards-game-title {
+  margin: 10px 10px 5px;
+  color: var(--alc-grey);
+  font-family: var(--body-font-family);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+/* tagline (and any other copy) */
+.section-rail .cards-game .cards-game-card .cards-game-card-body > p:not(.cards-game-cta) {
+  align-self: stretch;
+  overflow: visible;
+  margin: 5px 10px;
+  color: var(--alc-grey);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+/* instant-win cost range, e.g. "$0.50 - $5"; the tagline under it is sky blue as on alc.ca */
+.section-rail .cards-game .cards-game-card .cards-game-card-body > p.cards-game-price {
+  margin: 10px 10px 3px;
+  color: var(--alc-sky);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.section-rail .cards-game .cards-game-card .cards-game-card-body > .cards-game-price ~ p {
+  color: var(--alc-sky);
+}
+
+/* "Learn More ›" */
+.section-rail .cards-game .cards-game-card .cards-game-card-body > p.cards-game-more {
+  margin: 0;
+}
+
+main .section-rail .cards-game .cards-game-card .cards-game-more a:any-link {
+  display: inline-block;
+  position: relative;
+  margin: 5px 20px 5px 10px;
+  color: var(--alc-blue);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: none;
+}
+
+/* chevron_right glyph, drawn at the link's font size right after the text */
+main .section-rail .cards-game .cards-game-card .cards-game-more a:any-link::after,
+main .section-rail .cards-game .cards-game-card .cards-game-demo a:any-link::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: auto;
+  left: 100%;
+  width: 14px;
+  height: 20px;
+  margin-left: 2px;
+  border: 0;
+  background-color: currentcolor;
+  transform: none;
+  mask: url('../../icons/chevron-right.svg') center / 14px 14px no-repeat;
+}
+
+/* "TRY DEMO ›" (the favourite heart beside it on alc.ca is not migrated) */
+.section-rail .cards-game .cards-game-card .cards-game-card-body > p.cards-game-demo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  margin: 0;
+  padding: 10px;
+  font-weight: 700;
+}
+
+main .section-rail .cards-game .cards-game-card .cards-game-demo a:any-link {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 8px 16px 8px 0;
+  color: var(--alc-blue);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22.857px;
+  text-transform: uppercase;
+}
+
+main .section-rail .cards-game .cards-game-card .cards-game-demo a:any-link::after {
+  top: 8px;
+  left: calc(100% - 16px);
+  width: 16px;
+  height: 22.857px;
+  mask-size: 16px 16px;
+}
+
+/* centred "Play now" pill */
+.section-rail .cards-game .cards-game-card .cards-game-card-body > .cards-game-cta {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+main .section-rail .cards-game a.cards-game-cta-link:any-link {
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+  height: 46px;
+  padding: 0 50px 0 20px;
+  box-shadow: 0 2px 5px 0 rgb(0 40 75 / 20%);
+  font-size: 19px;
+  line-height: 43px;
+}
+
+main .section-rail .cards-game a.cards-game-cta-link:any-link::after {
+  right: 5px;
+}
+
+@media (width >= 768px) {
+  .section-rail .cards-game > ul {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+  }
+
+  main .section-rail .cards-game a.cards-game-cta-link:any-link {
+    font-size: 18px;
+  }
+}

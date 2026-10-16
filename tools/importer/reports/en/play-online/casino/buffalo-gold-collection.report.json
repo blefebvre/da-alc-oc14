@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/buffalo-gold-collection.html",
+  "path": "en/play-online/casino/buffalo-gold-collection",
+  "timestamp": "2026-10-16T15:32:54.972Z",
+  "title": "Buffalo Gold Collection",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

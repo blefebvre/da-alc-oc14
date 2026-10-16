@@ -1,0 +1,153 @@
+/*
+ * hero-game: alc.ca game details header (section.alc-game-details-header).
+ * Banner image inset 10px left/right, a translucent white CTA bar overlaid on its bottom
+ * edge (static below the image on narrow phones) and a sky-blue bottom rule.
+ */
+
+/* full-bleed: the block spans the viewport, not the section container */
+main > .section > .hero-game-wrapper {
+  width: 100%;
+  max-width: none;
+  padding: 0;
+}
+
+.hero-game {
+  position: relative;
+  border-bottom: 1px solid var(--alc-sky);
+}
+
+/* banner */
+.hero-game .hero-game-image {
+  padding: 0 10px;
+}
+
+/* instant-win game banners run edge to edge (page body section carries the "instant" style) */
+main:has(.section.game-detail.instant) .hero-game .hero-game-image {
+  padding: 0;
+}
+
+.hero-game .hero-game-image picture {
+  display: block;
+}
+
+.hero-game .hero-game-image img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+/* CTA bar */
+.hero-game .hero-game-cta {
+  width: 100%;
+  padding: 10px 0;
+  background-color: rgb(255 255 255 / 80%);
+}
+
+.hero-game .hero-game-cta-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: var(--container-width);
+  max-width: 100%;
+  min-height: 45px;
+  margin: 0 auto;
+  padding: 0 var(--container-gutter);
+}
+
+.hero-game .hero-game-cta-inner p {
+  margin: 0;
+}
+
+/* nudge the small link 2px below the bar's centre line, as on alc.ca */
+.hero-game .hero-game-cta-inner p.hero-game-link-wrapper {
+  padding-top: 4px;
+}
+
+.hero-game .hero-game-cta-inner > p + p {
+  margin-left: 14px;
+}
+
+/* primary pill: global a.button plus the source's 180px minimum width */
+main .hero-game a.button:any-link {
+  display: block;
+  min-width: 180px;
+}
+
+/* TRY DEMO: small bold uppercase underlined link with a trailing chevron */
+main .hero-game a.hero-game-link:any-link {
+  display: inline-block;
+  position: relative;
+  margin: 0 0 1px;
+  border-bottom: 1px solid var(--alc-blue);
+  color: var(--alc-blue);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18.5714px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+main .hero-game a.hero-game-link:hover,
+main .hero-game a.hero-game-link:focus-visible {
+  border-bottom: 2px solid var(--link-hover-color);
+  color: var(--link-hover-color);
+  text-decoration: none;
+}
+
+.hero-game a.hero-game-link::after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  bottom: -6.4375px;
+  width: 13px;
+  height: 25px;
+  margin-left: 2px;
+  background-color: currentcolor;
+  mask: url('../../icons/header-chevron.svg') center / 13px 13px no-repeat;
+}
+
+/* no banner: the bar sits in normal flow */
+.hero-game.hero-game-no-image .hero-game-cta {
+  position: static;
+}
+
+@media (width >= 427px) {
+  .hero-game .hero-game-image img {
+    height: 341.129px;
+  }
+
+  .hero-game .hero-game-cta {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  .hero-game .hero-game-cta-inner {
+    justify-content: flex-start;
+  }
+
+  .hero-game .hero-game-cta-inner > p + p {
+    margin-left: 4px;
+  }
+
+  .hero-game .hero-game-cta-inner > p:first-child {
+    margin-left: 30px;
+  }
+}
+
+@media (width >= 768px) {
+  .hero-game .hero-game-cta-inner > p + p {
+    margin-left: 24px;
+  }
+}
+
+@media (width >= 1900px) {
+  .hero-game .hero-game-image img {
+    height: 455px;
+  }
+}

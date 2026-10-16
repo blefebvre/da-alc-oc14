@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/10000-bass-lightning-blitz.html",
+  "path": "en/play-online/casino/10000-bass-lightning-blitz",
+  "timestamp": "2026-10-16T15:36:59.597Z",
+  "title": "10000 Bass Lightning Blitz",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

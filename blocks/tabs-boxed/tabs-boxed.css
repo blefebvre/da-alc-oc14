@@ -1,0 +1,94 @@
+/*
+ * tabs-boxed: alc.ca boxed tabs (.cmp-tabs--alc) — equal-row tab strip over a bordered panel.
+ * Active tab is white and joins the panel; inactive tabs are dark grey with white text.
+ */
+.tabs-boxed {
+  margin: 28px 0;
+  border-radius: 8px;
+  box-shadow: rgb(106 115 124 / 13%) 0 3px 4px 0;
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 22.8571px;
+}
+
+.tabs-boxed .tabs-boxed-list {
+  display: flex;
+}
+
+.tabs-boxed .tabs-boxed-tab {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  border: 1px solid var(--alc-grey-disabled);
+  border-radius: 0;
+  padding: 14px 15px 12px;
+  background-color: var(--alc-grey);
+  color: #fff;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22.4px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.tabs-boxed .tabs-boxed-tab + .tabs-boxed-tab {
+  border-left-width: 0;
+}
+
+.tabs-boxed .tabs-boxed-tab:first-child {
+  border-top-left-radius: 4px;
+}
+
+.tabs-boxed .tabs-boxed-tab:last-child {
+  border-top-right-radius: 4px;
+}
+
+.tabs-boxed .tabs-boxed-tab:hover {
+  background-color: rgb(249 249 250);
+  color: var(--alc-grey);
+}
+
+.tabs-boxed .tabs-boxed-tab[aria-selected="true"] {
+  border-bottom-color: transparent;
+  background-color: #fff;
+  color: var(--alc-grey);
+}
+
+.tabs-boxed .tabs-boxed-tab:focus-visible {
+  outline: 2px solid var(--alc-sky);
+  outline-offset: -2px;
+}
+
+/* alc.ca renders panel copy as one paragraph with <br> lines and a 10px trailing margin */
+.tabs-boxed .tabs-boxed-panel {
+  border: 1px solid var(--alc-grey-disabled);
+  border-top: 0;
+  border-radius: 0 0 8px 8px;
+  padding: 10px 15px 20px;
+  background-color: #fff;
+}
+
+.tabs-boxed .tabs-boxed-panel[hidden] {
+  display: none;
+}
+
+.tabs-boxed .tabs-boxed-panel > * {
+  margin: 0;
+}
+
+.tabs-boxed .tabs-boxed-panel ul {
+  padding: 0;
+  list-style: none;
+}
+
+.tabs-boxed .tabs-boxed-panel li::before {
+  content: '· ';
+}
+
+.tabs-boxed .tabs-boxed-panel a:any-link {
+  color: var(--link-color);
+}

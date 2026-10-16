@@ -380,6 +380,86 @@ main > .section.mobile-banner > div {
   padding: 0;
 }
 
+/*
+ * Breadcrumbs (injected by scripts.js when page metadata "Breadcrumbs: true"): a white
+ * rounded box overlaid on the top-left of the first section's hero, aligned to the content
+ * container. alc.ca hides it on phones (hidden-xs).
+ */
+main > .section.has-breadcrumbs {
+  position: relative;
+}
+
+main > .section > .breadcrumbs-wrapper {
+  display: none;
+}
+
+@media (width >= 768px) {
+  main > .section > .breadcrumbs-wrapper {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    pointer-events: none;
+  }
+}
+
+main .breadcrumbs ol {
+  display: inline-block;
+  margin: 5px 0 10px;
+  border-radius: 4px;
+  padding: 5px 12px;
+  background-color: #fff;
+  font-size: 16px;
+  line-height: 22.8571px;
+  list-style: none;
+  pointer-events: auto;
+}
+
+main .breadcrumbs li {
+  display: inline;
+  margin: 0 4px;
+  color: var(--alc-sky);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+/* alc.ca's markup has whitespace between items and inside links; replicate its spacing */
+main .breadcrumbs li + li {
+  margin-left: 8px;
+}
+
+/* Material Icons chevron_right separator */
+main .breadcrumbs li:not(:last-child)::after {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-left: 6px;
+  background-color: currentcolor;
+  vertical-align: middle;
+  mask: url('../icons/header-chevron.svg') center / 16px 16px no-repeat;
+}
+
+main .breadcrumbs li[aria-current] {
+  color: var(--alc-grey);
+}
+
+main .breadcrumbs a:any-link {
+  border-bottom: 1px solid var(--alc-blue);
+  color: var(--alc-blue);
+  text-decoration: none;
+}
+
+main .breadcrumbs a:hover,
+main .breadcrumbs a:focus-visible {
+  border-bottom: 2px solid var(--link-hover-color);
+  text-decoration: none;
+}
+
 /* mobile-only promo banner (e.g. "Check winning numbers") above the hero */
 @media (width >= 768px) {
   main > .section.mobile-banner {
@@ -412,5 +492,147 @@ main > .section.featured {
 
   main > .section.sidebar > div:not(.default-content-wrapper):last-child {
     width: calc(var(--container-width) / 3);
+  }
+}
+
+/*
+ * Game detail title bar: the page H1 (plus an optional cost-range paragraph, e.g. "$0.10 - $20")
+ * right before the carousel-thumbnails block renders as the top of the screenshot card,
+ * over the light diagonal header band. The block below drops its top border to join it.
+ */
+main .section.game-detail .section-main > .default-content-wrapper:first-child:has(+ .carousel-thumbnails-wrapper) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+  border: 1px solid var(--alc-grey-disabled);
+  border-bottom: 0;
+  border-radius: 6px 6px 0 0;
+  padding: 20px;
+  background: #fff url("https://www.alc.ca/content/dam/alc/images/static/alc-images/scratch-game-title-bg.png") 0 0 / cover no-repeat;
+  box-shadow: rgb(0 82 155 / 10%) 0 3px 5px 0;
+  clip-path: inset(-10px -10px 0);
+  color: var(--alc-sky);
+  font-family: var(--heading-font-family);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 12px;
+  text-align: center;
+}
+
+main .section.game-detail .section-main > .default-content-wrapper:first-child:has(+ .carousel-thumbnails-wrapper) > h1 {
+  margin: 0 0 10px;
+  color: inherit;
+  font: inherit;
+}
+
+main .section.game-detail .section-main > .default-content-wrapper:first-child:has(+ .carousel-thumbnails-wrapper) > p {
+  margin: 0;
+}
+
+main .section.game-detail .section-main > .default-content-wrapper:first-child + .carousel-thumbnails-wrapper > .carousel-thumbnails {
+  border-top: 0;
+  border-radius: 0 0 6px 6px;
+  clip-path: inset(0 -10px -10px);
+}
+
+@media (width >= 768px) {
+  main .section.game-detail .section-main > .default-content-wrapper:first-child:has(+ .carousel-thumbnails-wrapper) {
+    flex-direction: row;
+    padding: 40px 20px;
+    font-size: 28px;
+    line-height: 20.16px;
+    text-align: left;
+  }
+
+  main .section.game-detail .section-main > .default-content-wrapper:first-child:has(+ .carousel-thumbnails-wrapper) > p {
+    text-align: right;
+  }
+}
+
+/*
+ * Game detail section (alc.ca .digital-instants-info-page.body-content): light-blue page
+ * background image behind a translucent white content container. scripts.js
+ * (decorateRailSections) splits the section into .section-main and .section-rail, which
+ * stack on phones/tablets and sit side by side (2/3 + 1/3) from 1200px.
+ */
+main > .section.game-detail {
+  padding-top: 20px;
+  background:
+    linear-gradient(rgb(255 255 255 / 50%), rgb(255 255 255 / 50%)) center top / var(--container-width) 100% no-repeat,
+    url('https://www.alc.ca/content/dam/alc/images/static/alc-images/background.jpg') 0 0 / 100% auto no-repeat;
+}
+
+/* each column is its own formatting context, like alc.ca's floated bootstrap columns */
+main > .section.game-detail > .section-main,
+main > .section.game-detail > .section-rail {
+  display: flow-root;
+}
+
+/* "Have you tried..." rail heading */
+main .section.game-detail .section-rail > .default-content-wrapper > h2 {
+  margin: 20px 0 10px;
+  color: var(--alc-sky);
+  font-family: var(--heading-font-family);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+/* Game Summary: white outlined card between the screenshot carousel and the tabs */
+main .section.game-detail .section-main > .default-content-wrapper:not(:first-child):has(> h2:first-child) {
+  border: 1px solid #aebbc7;
+  border-radius: 6px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: rgb(37 100 144 / 12%) 0 3px 8px 0;
+}
+
+main .section.game-detail .section-main > .default-content-wrapper:not(:first-child):has(> h2:first-child) > h2 {
+  margin: -5px 0 10px;
+  color: var(--alc-sky);
+  font-family: var(--heading-font-family);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+main .section.game-detail .section-main > .default-content-wrapper:not(:first-child):has(> h2:first-child) > p {
+  margin: 0 0 10px;
+  font-size: 16px;
+  line-height: 22.8571px;
+  text-align: center;
+}
+
+/* instant-win games: summary lines are left-aligned on the source */
+main .section.game-detail.instant .section-main > .default-content-wrapper:not(:first-child):has(> h2:first-child) > p {
+  text-align: left;
+}
+
+@media (width >= 768px) {
+  main .section.game-detail .section-rail > .default-content-wrapper > h2 {
+    font-size: 22px;
+  }
+}
+
+@media (width >= 1200px) {
+  main > .section.game-detail {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  main > .section.game-detail > .section-main {
+    width: calc(var(--container-width) * 2 / 3);
+    margin: 0;
+  }
+
+  main > .section.game-detail > .section-rail {
+    width: calc(var(--container-width) / 3);
+    margin: 0;
+  }
+
+  main .section.game-detail .section-rail > .default-content-wrapper > h2 {
+    margin-left: 20px;
   }
 }

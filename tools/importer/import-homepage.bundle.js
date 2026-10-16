@@ -278,7 +278,74 @@ var CustomImportScript = (() => {
   function clean(text) {
     return (text || "").replace(/[​-‍﻿]/g, "").replace(/ /g, " ").replace(/\s+/g, " ").trim();
   }
+  function linkParagraph(document2, href, text, strong) {
+    const p = document2.createElement("p");
+    const a = document2.createElement("a");
+    a.href = href;
+    a.textContent = text;
+    if (strong) {
+      const s = document2.createElement("strong");
+      s.append(a);
+      p.append(s);
+    } else {
+      p.append(a);
+    }
+    return p;
+  }
+  function parseHaveYouTried(element, document2) {
+    const cells = [];
+    element.querySelectorAll(".alc-hyt__container").forEach((card) => {
+      const title = clean(card.querySelector(".hyt-game-title") && card.querySelector(".hyt-game-title").textContent);
+      const imageCell = [];
+      const imgHolder = card.querySelector(".hyt-game-image");
+      const imgEl = imgHolder && imgHolder.querySelector("img[src]");
+      const src = imgEl ? imgEl.getAttribute("src") : bgUrl3(imgHolder);
+      if (src) {
+        const img = document2.createElement("img");
+        img.src = absolutize3(src);
+        img.alt = imgEl && imgEl.getAttribute("alt") || title;
+        imageCell.push(img);
+      }
+      const body = [];
+      if (title) {
+        const h3 = document2.createElement("h3");
+        h3.textContent = title;
+        body.push(h3);
+      }
+      const prize = clean(card.querySelector(".hyt-game-prize") && card.querySelector(".hyt-game-prize").textContent);
+      if (prize) {
+        const p = document2.createElement("p");
+        p.textContent = prize;
+        body.push(p);
+      }
+      const desc = clean(card.querySelector(".hyt-game-description") && card.querySelector(".hyt-game-description").textContent);
+      if (desc) {
+        const p = document2.createElement("p");
+        p.textContent = desc;
+        body.push(p);
+      }
+      const learn = card.querySelector(".hyt-learn-more a[href]");
+      if (learn) body.push(linkParagraph(document2, learn.getAttribute("href"), clean(learn.textContent) || "Learn More", false));
+      const play = card.querySelector('.hyt-game-cta a[href], a[class*="hyt-play-url"][href]');
+      if (play) body.push(linkParagraph(document2, play.getAttribute("href"), clean(play.textContent) || "Play now", true));
+      const demo = card.querySelector('.hyt-try-demo a[href], a[class*="hyt-demo-url"][href]');
+      if (demo) body.push(linkParagraph(document2, demo.getAttribute("href"), clean(demo.textContent) || "Try Demo", false));
+      if (!imageCell.length && !body.length) return;
+      cells.push([imageCell.length ? imageCell : "", body.length ? body : ""]);
+    });
+    return cells;
+  }
   function parse3(element, { document: document2 }) {
+    if (element.matches(".alc-hyt") || !element.querySelector(".game-tile") && element.querySelector(".alc-hyt__container")) {
+      const hytCells = parseHaveYouTried(element, document2);
+      if (!hytCells.length) {
+        element.remove();
+        return;
+      }
+      const hytBlock = WebImporter.Blocks.createBlock(document2, { name: "cards-game", cells: hytCells });
+      element.replaceWith(hytBlock);
+      return;
+    }
     let tiles = [...element.querySelectorAll("article.game-tile")];
     if (!tiles.length) tiles = [...element.querySelectorAll(".game-tile")].filter((t) => !t.querySelector(".game-tile"));
     const cells = [];
@@ -586,12 +653,26 @@ var CustomImportScript = (() => {
     const isRelative = raw.startsWith("/") && !raw.startsWith("//");
     if (!isRelative && !ALC_HOSTS.includes(url.hostname)) return href;
     let path = url.pathname;
-    if (!path.startsWith("/content/alc")) {
-      return isRelative ? href : href;
+    const isAsset = path.startsWith("/content/dam/");
+    const isGameLauncher = /\/game\.html$/.test(path) && url.searchParams.has("gameId");
+    if (isAsset || isGameLauncher || !path.startsWith("/content/alc")) {
+      if (path.startsWith("/etc.clientlibs")) return href;
+      return `${ORIGIN5}${path}${url.search}${url.hash || ""}`;
     }
     path = path.replace(/^\/content\/alc/, "") || "/";
     path = path.replace(/\.html$/, "");
     if (path === "" || path === "/en" || path === "/en/") path = "/";
+    if (path !== "/") {
+      path = path.split("/").map((seg) => {
+        if (!seg) return seg;
+        let s = seg;
+        try {
+          s = decodeURIComponent(s);
+        } catch (e) {
+        }
+        return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+      }).join("/");
+    }
     const params = new URLSearchParams(url.search);
     [...params.keys()].forEach((key) => {
       if (/^(itm_|utm_)/i.test(key)) params.delete(key);
@@ -599,8 +680,164 @@ var CustomImportScript = (() => {
     const query = params.toString();
     return `${path}${query ? `?${query}` : ""}${url.hash || ""}`;
   }
+  function isGameDetailPage(root) {
+    return !!root.querySelector("section.alc-game-details-header, div.digital-instants-info-page");
+  }
+  var PENDING_METADATA = /* @__PURE__ */ new WeakMap();
+  function registerPageMetadata(main, extra) {
+    const rules = WebImporter && WebImporter.rules;
+    if (!rules || typeof rules.createMetadata !== "function") return;
+    if (!rules.createMetadata.alcMetadataWrapped) {
+      const original = rules.createMetadata;
+      const wrapped = function createMetadataWithExtras(m, doc) {
+        const extras = PENDING_METADATA.get(m);
+        if (!extras) return original.call(this, m, doc);
+        PENDING_METADATA.delete(m);
+        const base = WebImporter.Blocks && typeof WebImporter.Blocks.getMetadata === "function" ? WebImporter.Blocks.getMetadata(doc) : {};
+        const meta = __spreadValues(__spreadValues({}, base), extras);
+        m.append(WebImporter.Blocks.createBlock(doc, { name: "Metadata", cells: meta }));
+        return meta;
+      };
+      wrapped.alcMetadataWrapped = true;
+      try {
+        rules.createMetadata = wrapped;
+      } catch (e) {
+        return;
+      }
+    }
+    PENDING_METADATA.set(main, __spreadValues(__spreadValues({}, PENDING_METADATA.get(main) || {}), extra));
+  }
+  function removeSdiComments(root) {
+    const walker = root.ownerDocument.createTreeWalker(
+      root,
+      128
+      /* NodeFilter.SHOW_COMMENT */
+    );
+    const comments = [];
+    while (walker.nextNode()) {
+      if (/SDI include/i.test(walker.currentNode.nodeValue || "")) comments.push(walker.currentNode);
+    }
+    comments.forEach((c) => c.remove());
+  }
+  function renameTag(el, tagName) {
+    const next = el.ownerDocument.createElement(tagName);
+    next.append(...el.childNodes);
+    el.replaceWith(next);
+    return next;
+  }
+  function cleanupGameDetailPage(element) {
+    const doc = element.ownerDocument;
+    const header = element.querySelector("section.alc-game-details-header");
+    const unavailable = element.querySelector("#gameUnavailable");
+    if (header && unavailable) {
+      ["data-game-lobby-url", "data-gameid", "data-game-type"].forEach((attr) => {
+        const v = unavailable.getAttribute(attr);
+        if (v && !header.hasAttribute(attr)) header.setAttribute(attr, v);
+      });
+    }
+    element.querySelectorAll(".cmp-breadcrumb").forEach((bc) => {
+      const wrapper = bc.closest("section.hidden-xs") || bc.closest(".cmp-breadcrumb--alc") || bc;
+      wrapper.remove();
+    });
+    WebImporter.DOMUtils.remove(element, [
+      // Game pages have no div.experiencefragment wrapper: the global header is
+      // <div role="banner"><div class="xfpage page basicpage">...<header>...</header> (plus the
+      // #loginFlow MFA modal) and the footer is a bare <footer class="main-footer">.
+      '[role="banner"]',
+      "div.xfpage",
+      "#loginFlow",
+      "header",
+      // Header parts that sit outside <header> (siblings of .xfpage in the cleaned snapshot):
+      // signed-in dashboard, top nav + off-canvas mobile nav, collapsible header promo.
+      ".logged-in-info-wrapper",
+      ".topnav",
+      "#nav-mobile",
+      "#collapsible-promo",
+      "footer.main-footer",
+      // Browser-upgrade modal (sibling of .common-modals on game pages)
+      ".modal-browser-check",
+      // Site-wide alert/notification banners (<section data-bind="if: message"><div class="alert-area">)
+      'section[data-bind="if: message"]',
+      ".alert-area",
+      ".notification.section",
+      ".cmp-notification",
+      // Live-casino lobby launch button + modal popup
+      "#live-casino-component",
+      "#live-casino-modal",
+      // Hidden "Bonus Offer" rewards banner (filled client-side)
+      "section.rewards-section",
+      // Hidden "Game currently unavailable" message
+      "#gameUnavailable",
+      // Duplicate thumbnail strip: carousel-thumbnails parser only reads .slideshow-main
+      ".alc-carousel.slideshow-thumbnails",
+      // Favourite heart (account feature)
+      ".alc-game-details-header__favourite",
+      // Decorative background image (static/alc-images/background.jpg) and title logo
+      "div.digital-instants-info-page > img",
+      ".alc-image-browser__heading > img"
+    ]);
+    const body = element.querySelector("div.digital-instants-info-page");
+    if (body && /background/i.test(body.getAttribute("style") || "")) body.removeAttribute("style");
+    element.querySelectorAll(".alc-image-browser__heading").forEach((heading) => {
+      const h1src = heading.querySelector("h1");
+      if (!h1src) return;
+      const prize = h1src.querySelector(".alc-image-browser__game-prize");
+      const prizeText = prize ? prize.textContent.replace(/\s+/g, " ").trim() : "";
+      if (prize) prize.remove();
+      const title = h1src.textContent.replace(/\s+/g, " ").trim();
+      const nodes = [];
+      if (title) {
+        const h1 = doc.createElement("h1");
+        h1.textContent = title;
+        nodes.push(h1);
+      }
+      if (prizeText) {
+        const p = doc.createElement("p");
+        p.textContent = prizeText;
+        nodes.push(p);
+      }
+      heading.replaceWith(...nodes);
+    });
+    element.querySelectorAll(".digital-instants-game-summary").forEach((summary) => {
+      const inner = summary.querySelector("#gameSummary") || summary.querySelector("section") || summary;
+      inner.querySelectorAll("b").forEach((b) => renameTag(b, "strong"));
+      inner.querySelectorAll("i").forEach((i) => renameTag(i, "em"));
+      const nodes = [...inner.childNodes].filter((n) => n.nodeType === 1 || n.nodeType === 3 && n.textContent.trim());
+      if (!nodes.some((n) => n.nodeType === 1 && /^H[1-6]$/.test(n.tagName))) {
+        const h2 = doc.createElement("h2");
+        h2.textContent = "Game Summary";
+        nodes.unshift(h2);
+      }
+      summary.replaceWith(...nodes);
+    });
+    let titleSeen = false;
+    element.querySelectorAll('[id="haveYouTriedTitle"]').forEach((title) => {
+      if (title.matches(".alc-hyt") || title.querySelector(".alc-hyt, .alc-hyt__container")) {
+        title.removeAttribute("id");
+        return;
+      }
+      if (titleSeen) {
+        title.remove();
+        return;
+      }
+      titleSeen = true;
+      const text = (title.querySelector("h1, h2, h3, h4, h5, h6") || title).textContent.replace(/\s+/g, " ").trim();
+      if (!text) {
+        title.remove();
+        return;
+      }
+      const h2 = doc.createElement("h2");
+      h2.textContent = text;
+      title.replaceWith(h2);
+    });
+  }
   function transform(hookName, element, payload) {
     if (hookName === TransformHook.beforeTransform) {
+      if (isGameDetailPage(element)) {
+        cleanupGameDetailPage(element);
+        registerPageMetadata(element, { Breadcrumbs: "true" });
+      }
+      removeSdiComments(element);
       WebImporter.DOMUtils.remove(element, [
         // Global header experience fragment (contains nav, login/MFA modals, session timer) - migrated as nav fragment
         "div.experiencefragment",

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/buffalo.html",
+  "path": "en/play-online/casino/buffalo",
+  "timestamp": "2026-10-16T15:33:24.386Z",
+  "title": "Buffalo",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

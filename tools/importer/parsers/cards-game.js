@@ -44,7 +44,89 @@ function clean(text) {
     .trim();
 }
 
+function linkParagraph(document, href, text, strong) {
+  const p = document.createElement('p');
+  const a = document.createElement('a');
+  a.href = href;
+  a.textContent = text;
+  if (strong) {
+    const s = document.createElement('strong');
+    s.append(a);
+    p.append(s);
+  } else {
+    p.append(a);
+  }
+  return p;
+}
+
+/**
+ * "Have you tried..." rail on game detail pages.
+ * Selector: section.alc-hyt (validated in block-context/cards-game/source*.html)
+ *   .alc-hyt__container
+ *     .hyt-game-image[style="background-image:url(...)"]
+ *     .hyt-game-title, [.hyt-game-prize "$0.50 - $5" (instant-win)], .hyt-game-description
+ *     .hyt-learn-more a, .hyt-game-cta a (Play now), .hyt-try-demo a (Try Demo)
+ * Output: one row per game -> [image, h3 + prize + description + Learn More + **Play now** + Try Demo]
+ */
+function parseHaveYouTried(element, document) {
+  const cells = [];
+  element.querySelectorAll('.alc-hyt__container').forEach((card) => {
+    const title = clean(card.querySelector('.hyt-game-title') && card.querySelector('.hyt-game-title').textContent);
+
+    const imageCell = [];
+    const imgHolder = card.querySelector('.hyt-game-image');
+    const imgEl = imgHolder && imgHolder.querySelector('img[src]');
+    const src = imgEl ? imgEl.getAttribute('src') : bgUrl(imgHolder);
+    if (src) {
+      const img = document.createElement('img');
+      img.src = absolutize(src);
+      img.alt = (imgEl && imgEl.getAttribute('alt')) || title;
+      imageCell.push(img);
+    }
+
+    const body = [];
+    if (title) {
+      const h3 = document.createElement('h3');
+      h3.textContent = title;
+      body.push(h3);
+    }
+    const prize = clean(card.querySelector('.hyt-game-prize') && card.querySelector('.hyt-game-prize').textContent);
+    if (prize) {
+      const p = document.createElement('p');
+      p.textContent = prize;
+      body.push(p);
+    }
+    const desc = clean(card.querySelector('.hyt-game-description') && card.querySelector('.hyt-game-description').textContent);
+    if (desc) {
+      const p = document.createElement('p');
+      p.textContent = desc;
+      body.push(p);
+    }
+    const learn = card.querySelector('.hyt-learn-more a[href]');
+    if (learn) body.push(linkParagraph(document, learn.getAttribute('href'), clean(learn.textContent) || 'Learn More', false));
+    const play = card.querySelector('.hyt-game-cta a[href], a[class*="hyt-play-url"][href]');
+    if (play) body.push(linkParagraph(document, play.getAttribute('href'), clean(play.textContent) || 'Play now', true));
+    const demo = card.querySelector('.hyt-try-demo a[href], a[class*="hyt-demo-url"][href]');
+    if (demo) body.push(linkParagraph(document, demo.getAttribute('href'), clean(demo.textContent) || 'Try Demo', false));
+
+    if (!imageCell.length && !body.length) return;
+    cells.push([imageCell.length ? imageCell : '', body.length ? body : '']);
+  });
+  return cells;
+}
+
 export default function parse(element, { document }) {
+  if (element.matches('.alc-hyt') || (!element.querySelector('.game-tile') && element.querySelector('.alc-hyt__container'))) {
+    const hytCells = parseHaveYouTried(element, document);
+    if (!hytCells.length) {
+      element.remove();
+      return;
+    }
+    const hytBlock = WebImporter.Blocks.createBlock(document, { name: 'cards-game', cells: hytCells });
+    element.replaceWith(hytBlock);
+    return;
+  }
+
   let tiles = [...element.querySelectorAll('article.game-tile')];
   if (!tiles.length) tiles = [...element.querySelectorAll('.game-tile')].filter((t) => !t.querySelector('.game-tile'));
 

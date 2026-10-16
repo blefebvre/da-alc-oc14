@@ -26,11 +26,29 @@ function decorateImageCell(cell) {
   });
 }
 
+const PRICE_PATTERN = /^\$[\d.,]+(\s*[-\u2013]\s*\$[\d.,]+)?$/;
+
+/**
+ * The tile's play CTA: the link-only paragraph whose link is bold (authored as **Play now**,
+ * already turned into a.button.primary by decorateButtons, or still wrapped in <strong>).
+ * Tiles without a bold link (homepage) fall back to the last link-only paragraph.
+ * @returns {{ el: Element, authored: boolean } | null}
+ */
+function findCta(linkOnly) {
+  const bold = linkOnly.find((el) => el.querySelector('a.button.primary, strong a, a strong'));
+  if (bold) return { el: bold, authored: true };
+  const last = linkOnly[linkOnly.length - 1];
+  return last ? { el: last, authored: false } : null;
+}
+
 /**
  * Decorates the text cell of a game tile:
  * - heading -> title
  * - a short "New" paragraph -> badge (returned so it can sit on the image)
- * - the last link-only paragraph -> CTA button
+ * - a "$0.50 - $5" paragraph -> cost range
+ * - the bold link paragraph (or, failing that, the last link-only paragraph) -> CTA button
+ * - with a bold CTA, the other link-only paragraphs become chevron text links:
+ *   before the CTA "Learn More", after it "Try Demo"
  * - anything else stays in order as description / draw info
  */
 function decorateBody(body) {
@@ -38,21 +56,37 @@ function decorateBody(body) {
   let badge = null;
 
   [...body.children].forEach((el) => {
+    const text = el.textContent.trim();
     if (/^H[1-6]$/.test(el.tagName)) {
       el.classList.add('cards-game-title');
-    } else if (!badge && BADGE_PATTERN.test(el.textContent.trim()) && !el.querySelector('a, picture')) {
+    } else if (!badge && BADGE_PATTERN.test(text) && !el.querySelector('a, picture')) {
       badge = el;
       badge.className = 'cards-game-badge';
       badge.remove();
+    } else if (PRICE_PATTERN.test(text) && !el.querySelector('a, picture')) {
+      el.classList.add('cards-game-price');
     }
   });
 
   const linkOnly = [...body.children].filter((el) => isLinkOnly(el));
-  const ctaParagraph = linkOnly[linkOnly.length - 1];
-  if (ctaParagraph) {
-    ctaParagraph.classList.add('cards-game-cta');
-    const link = ctaParagraph.querySelector('a');
-    link.classList.add('cards-game-cta-link');
+  const cta = findCta(linkOnly);
+  if (!cta) return badge;
+
+  const { el: ctaParagraph, authored } = cta;
+  ctaParagraph.classList.add('cards-game-cta');
+  const link = ctaParagraph.querySelector('a');
+  const strong = link.closest('strong') || link.querySelector('strong');
+  if (strong && ctaParagraph.contains(strong)) strong.replaceWith(...strong.childNodes);
+  link.classList.add('cards-game-cta-link');
+
+  if (authored) {
+    // keep the authored order: Learn More | Play now | Try Demo
+    const ctaIndex = linkOnly.indexOf(ctaParagraph);
+    linkOnly.forEach((el, i) => {
+      if (el === ctaParagraph) return;
+      el.classList.add(i < ctaIndex ? 'cards-game-more' : 'cards-game-demo');
+    });
+  } else {
     // CTA always sits at the bottom of the tile
     body.append(ctaParagraph);
   }
@@ -154,5 +188,6 @@ export default function decorate(block) {
   });
 
   block.replaceChildren(ul);
-  if (ul.children.length > 1) decorateControls(block, ul);
+  // rail tiles ("Have you tried...") stack instead of swiping
+  if (ul.children.length > 1 && !block.closest('.section-rail')) decorateControls(block, ul);
 }

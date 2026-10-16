@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/bloomin-bunnies.html",
+  "path": "en/play-online/casino/bloomin-bunnies",
+  "timestamp": "2026-10-16T15:31:45.845Z",
+  "title": "Bloomin Bunnies",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

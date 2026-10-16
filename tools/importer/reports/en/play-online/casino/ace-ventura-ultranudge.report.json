@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/ace-ventura-ultranudge.html",
+  "path": "en/play-online/casino/ace-ventura-ultranudge",
+  "timestamp": "2026-10-16T15:23:17.596Z",
+  "title": "Ace Ventura Ultranudge",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "variantName": "tabs-boxed",
+  "baseBlock": "tabs",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light with dark-grey inactive tab",
+    "density": "medium",
+    "purpose": "game-instructions-and-odds",
+    "imagePattern": "none",
+    "structure": "2 equal-width tabs + bordered panel"
+  },
+  "contentPattern": "One row per tab: cell 1 = tab label ('How to Play', 'Prizes & Odds'); cell 2 = panel content (paragraphs, PDF download links, lists). Keep every tab and its label even when a panel is empty or only says 'SEE IN GAME FOR PRIZE STRUCTURE'. Drop empty paragraph/line-break fillers.",
+  "usage": {
+    "pagesUsing": ["https://www.alc.ca/content/alc/en/play-online/casino/10000-wolves-10k-ways.html"],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-16"
+  },
+  "reuseGuidance": "Use for short sets of equal-width tabs inside a bordered box (game How to Play / Prizes & Odds). Tab count is driven by the number of rows.",
+  "options": [],
+  "memberVariantIds": ["tabs-boxed"]
+}

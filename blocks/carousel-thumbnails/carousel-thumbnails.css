@@ -1,0 +1,151 @@
+/*
+ * carousel-thumbnails: game screenshot gallery (alc.ca .alc-image-browser).
+ * White card, main image (5:3 viewport, top-aligned crop), thumbnail strip with
+ * 4 visible thumbnails, orange active underline and sky-blue chevrons overlaid at the edges.
+ * When the page H1 sits right before the block (game-detail sections), styles/styles.css
+ * turns that heading into the card's title bar and joins the two.
+ */
+.carousel-thumbnails {
+  --carousel-thumbnails-indicator: #ffa500;
+  --carousel-thumbnails-arrow: var(--alc-sky);
+
+  position: relative;
+  margin: 0 0 28px;
+  border: 1px solid var(--alc-grey-disabled);
+  border-radius: 6px;
+  box-shadow: rgb(0 82 155 / 10%) 0 3px 5px 0;
+  background-color: #fff;
+  color: var(--text-color);
+}
+
+.carousel-thumbnails ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.carousel-thumbnails picture,
+.carousel-thumbnails img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* main image: fixed 5:3 viewport, slides cross-fade */
+.carousel-thumbnails .carousel-thumbnails-slides {
+  position: relative;
+  aspect-ratio: 5 / 3;
+  overflow: hidden;
+}
+
+.carousel-thumbnails .carousel-thumbnails-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.carousel-thumbnails .carousel-thumbnails-slide.active {
+  z-index: 1;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* thumbnail strip */
+.carousel-thumbnails .carousel-thumbnails-nav {
+  position: relative;
+  margin: 10px 0;
+}
+
+.carousel-thumbnails .carousel-thumbnails-track {
+  display: flex;
+  padding: 10px 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+
+  /* only the 4 thumbnails inside the side padding show; the chevrons sit in that padding */
+  clip-path: inset(0 20px);
+}
+
+.carousel-thumbnails .carousel-thumbnails-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-thumbnails .carousel-thumbnails-track > li {
+  flex: 0 0 calc(25% - 20px);
+  margin: 0 10px;
+}
+
+.carousel-thumbnails .carousel-thumbnails-thumb {
+  display: block;
+  width: 100%;
+  margin: 0;
+  border: 0;
+  border-bottom: 5px solid transparent;
+  border-radius: 0;
+  padding: 0 0 5px;
+  background: #efefef content-box;
+  cursor: pointer;
+}
+
+.carousel-thumbnails .carousel-thumbnails-thumb.active {
+  border-bottom-color: var(--carousel-thumbnails-indicator);
+}
+
+.carousel-thumbnails .carousel-thumbnails-thumb:focus-visible {
+  outline: 2px solid var(--alc-blue);
+  outline-offset: 2px;
+}
+
+/* chevrons: 30x40 hit areas over the strip edges, vertically centred */
+.carousel-thumbnails .carousel-thumbnails-prev,
+.carousel-thumbnails .carousel-thumbnails-next {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  width: 30px;
+  height: 40px;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  background: none;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.carousel-thumbnails .carousel-thumbnails-prev {
+  left: 0;
+}
+
+.carousel-thumbnails .carousel-thumbnails-next {
+  right: 0;
+}
+
+.carousel-thumbnails .carousel-thumbnails-prev::after,
+.carousel-thumbnails .carousel-thumbnails-next::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  box-sizing: border-box;
+  width: 13px;
+  height: 13px;
+  border-top: 3.5px solid var(--carousel-thumbnails-arrow);
+  border-right: 3.5px solid var(--carousel-thumbnails-arrow);
+}
+
+.carousel-thumbnails .carousel-thumbnails-prev::after {
+  transform: translate(-30%, -50%) rotate(-135deg);
+}
+
+.carousel-thumbnails .carousel-thumbnails-next::after {
+  transform: translate(-70%, -50%) rotate(45deg);
+}
+
+.carousel-thumbnails .carousel-thumbnails-prev:disabled,
+.carousel-thumbnails .carousel-thumbnails-next:disabled {
+  opacity: 0.25;
+  cursor: default;
+}

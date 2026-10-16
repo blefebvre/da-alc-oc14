@@ -11,6 +11,7 @@ import {
   loadCSS,
   buildBlock,
   readBlockConfig,
+  getMetadata,
   toCamelCase,
   toClassName,
 } from './aem.js';
@@ -171,6 +172,77 @@ function decorateSectionMetadata(main) {
 }
 
 /**
+ * Splits a "game-detail" section into a main column and a right rail. The rail holds the
+ * section's trailing block plus the heading wrapper right before it ("Have you tried...").
+ * Runs after decorateBlocks so block discovery (section > wrapper > block) is unaffected.
+ * @param {Element} main The main element
+ */
+function decorateRailSections(main) {
+  main.querySelectorAll(':scope > .section.game-detail').forEach((section) => {
+    const last = section.lastElementChild;
+    if (!last || section.children.length < 2) return;
+    const prev = last.previousElementSibling;
+    const railItems = prev && prev.classList.contains('default-content-wrapper') ? [prev, last] : [last];
+    const mainCol = document.createElement('div');
+    mainCol.className = 'section-main';
+    const rail = document.createElement('div');
+    rail.className = 'section-rail';
+    [...section.children].forEach((child) => {
+      (railItems.includes(child) ? rail : mainCol).append(child);
+    });
+    section.append(mainCol, rail);
+  });
+}
+
+/**
+ * Builds a breadcrumb trail from the URL path when the page sets "Breadcrumbs: true".
+ * Segment labels come from the path; the last crumb is the page's H1 (or title).
+ * @param {Element} main The main element
+ */
+function buildBreadcrumbs(main) {
+  const flag = getMetadata('breadcrumbs') || getMetadata('Breadcrumbs');
+  if (flag.toLowerCase() !== 'true') return;
+  const firstSection = main.querySelector(':scope > .section');
+  if (!firstSection) return;
+  // local preview serves content under /content/; the locale segment is not a crumb
+  const segments = window.location.pathname.split('/').filter(Boolean);
+  const offset = segments[0] === 'content' ? 1 : 0;
+  const locale = segments[offset];
+  const crumbs = [{ label: 'Home', href: '/' }];
+  let href = `/${locale}`;
+  segments.slice(offset + 1, -1).forEach((seg) => {
+    href += `/${seg}`;
+    crumbs.push({ label: seg.replace(/-/g, ' '), href });
+  });
+  const h1 = main.querySelector('h1');
+  crumbs.push({ label: (h1 ? h1.textContent : document.title).trim() });
+
+  const nav = document.createElement('nav');
+  nav.className = 'breadcrumbs';
+  nav.setAttribute('aria-label', 'Breadcrumb');
+  const ol = document.createElement('ol');
+  crumbs.forEach((crumb) => {
+    const li = document.createElement('li');
+    if (crumb.href) {
+      const a = document.createElement('a');
+      a.href = crumb.href;
+      a.textContent = crumb.label;
+      li.append(a);
+    } else {
+      li.textContent = crumb.label;
+      li.setAttribute('aria-current', 'page');
+    }
+    ol.append(li);
+  });
+  nav.append(ol);
+  const wrapper = document.createElement('div');
+  wrapper.className = 'breadcrumbs-wrapper';
+  wrapper.append(nav);
+  firstSection.prepend(wrapper);
+  firstSection.classList.add('has-breadcrumbs');
+}
+
+/**
  * Decorates the main element.
  * @param {Element} main The main element
  */
@@ -182,6 +254,8 @@ export function decorateMain(main) {
   decorateSectionMetadata(main);
   decorateBlocks(main);
   decorateButtons(main);
+  decorateRailSections(main);
+  buildBreadcrumbs(main);
 }
 
 /**

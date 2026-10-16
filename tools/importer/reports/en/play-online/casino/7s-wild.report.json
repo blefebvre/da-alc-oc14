@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/7s-wild.html",
+  "path": "en/play-online/casino/7s-wild",
+  "timestamp": "2026-10-16T15:38:50.369Z",
+  "title": "7s Wild | Casino Slot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

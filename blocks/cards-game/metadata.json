@@ -12,10 +12,15 @@
   },
   "contentPattern": "One row per tile: cell 1 = tile image; cell 2 = H3 title, description paragraph (may include Read more link), optional next-draw/jackpot paragraphs, CTA link. NEW badge expressed as an emphasized \"New\" paragraph or omitted (decorative).",
   "usage": {
-    "pagesUsing": ["https://www.alc.ca/content/alc/en.html"],
-    "reuseCount": 1,
-    "lastUsed": "2026-10-15"
+    "pagesUsing": [
+      "/content/alc/en/play-online/casino/10000-wolves-10k-ways",
+      "https://www.alc.ca/content/alc/en.html"
+    ],
+    "reuseCount": 2,
+    "lastUsed": "2026-10-16"
   },
   "options": [],
-  "memberVariantIds": ["cards-game"]
+  "memberVariantIds": [
+    "cards-game"
+  ]
 }

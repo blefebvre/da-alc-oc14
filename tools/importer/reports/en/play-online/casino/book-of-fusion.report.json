@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/book-of-fusion.html",
+  "path": "en/play-online/casino/book-of-fusion",
+  "timestamp": "2026-10-16T15:32:27.327Z",
+  "title": "Book of Fusion | Casino Slot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

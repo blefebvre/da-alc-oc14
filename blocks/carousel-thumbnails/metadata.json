@@ -1,0 +1,21 @@
+{
+  "variantName": "carousel-thumbnails",
+  "baseBlock": "carousel",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light (inside a white card)",
+    "density": "minimal",
+    "purpose": "game-screenshot-gallery",
+    "imagePattern": "large screenshot + thumbnail strip",
+    "structure": "image-only slides, thumbnail nav with orange active underline, chevron arrows"
+  },
+  "contentPattern": "One row per screenshot, a single cell with the image (with its alt text). No text cell. The block builds the thumbnail strip from the same images; do not author thumbnails separately.",
+  "usage": {
+    "pagesUsing": ["https://www.alc.ca/content/alc/en/play-online/casino/10000-wolves-10k-ways.html"],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-16"
+  },
+  "reuseGuidance": "Use for image-only galleries that need a thumbnail picker (game screenshots). For linked promo banners use carousel-promo; for photo + text slides use carousel-winners.",
+  "options": [],
+  "memberVariantIds": ["carousel-thumbnails"]
+}

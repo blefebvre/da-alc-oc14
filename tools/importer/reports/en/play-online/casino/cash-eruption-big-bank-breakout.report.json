@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/cash-eruption-big-bank-breakout.html",
+  "path": "en/play-online/casino/cash-eruption-big-bank-breakout",
+  "timestamp": "2026-10-16T15:34:53.360Z",
+  "title": "Cash Eruption Big Bank Breakout",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

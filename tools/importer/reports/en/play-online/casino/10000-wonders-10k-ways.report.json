@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/10000-wonders-10k-ways.html",
+  "path": "en/play-online/casino/10000-wonders-10k-ways",
+  "timestamp": "2026-10-16T15:37:28.279Z",
+  "title": "10,000 Wonders 10k Ways | Casino Slot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}
