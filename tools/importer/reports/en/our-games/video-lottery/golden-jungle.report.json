@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/video-lottery/golden-jungle.html",
+  "path": "en/our-games/video-lottery/golden-jungle",
+  "timestamp": "2026-10-16T20:01:01.653Z",
+  "title": "Golden Jungle",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

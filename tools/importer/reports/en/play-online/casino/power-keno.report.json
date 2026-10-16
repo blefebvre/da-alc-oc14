@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/power-keno.html",
+  "path": "en/play-online/casino/power-keno",
+  "timestamp": "2026-10-16T20:02:32.430Z",
+  "title": "Power Keno",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

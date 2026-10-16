@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/pay-pig.html",
+  "path": "en/play-online/casino/pay-pig",
+  "timestamp": "2026-10-16T19:59:31.740Z",
+  "title": "Pay Pig",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

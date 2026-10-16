@@ -1,3 +1,5 @@
+import { normalizeFragment } from '../../scripts/fragment-utils.js';
+
 /*
  * Header block
  *
@@ -81,12 +83,10 @@ async function fetchNav() {
   if (!resp.ok) return null;
   const template = document.createElement('template');
   template.innerHTML = await resp.text();
-  // resolve relative media against the fragment location, not the current page
-  template.content.querySelectorAll('img[src]').forEach((img) => {
-    const url = new URL(img.getAttribute('src'), resp.url);
-    img.setAttribute('src', url.origin === window.location.origin ? url.pathname : url.href);
-    img.setAttribute('loading', 'lazy');
-  });
+  // DA/EDS-served fragments wrap images in <picture> and list links in <p>, with media URLs
+  // relative to the fragment: normalise back to the authored structure
+  normalizeFragment(template.content, resp.url);
+  template.content.querySelectorAll('img[src]').forEach((img) => img.setAttribute('loading', 'lazy'));
   return template.content;
 }
 

@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/video-lottery/hong-fu-dao.html",
+  "path": "en/our-games/video-lottery/hong-fu-dao",
+  "timestamp": "2026-10-16T20:01:26.955Z",
+  "title": "Hong Fu Dao",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

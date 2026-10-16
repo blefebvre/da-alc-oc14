@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/pirate-pays.html",
+  "path": "en/play-online/casino/pirate-pays",
+  "timestamp": "2026-10-16T20:01:40.734Z",
+  "title": "Pirate Pays",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

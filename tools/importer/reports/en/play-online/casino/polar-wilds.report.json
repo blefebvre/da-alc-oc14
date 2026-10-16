@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/polar-wilds.html",
+  "path": "en/play-online/casino/polar-wilds",
+  "timestamp": "2026-10-16T20:02:16.518Z",
+  "title": "Polar Wilds",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

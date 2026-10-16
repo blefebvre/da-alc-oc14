@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/video-lottery/fireball-keno.html",
+  "path": "en/our-games/video-lottery/fireball-keno",
+  "timestamp": "2026-10-16T19:59:43.116Z",
+  "title": "Fireball Keno",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

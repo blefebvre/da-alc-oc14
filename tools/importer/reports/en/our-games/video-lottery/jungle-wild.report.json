@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/video-lottery/jungle-wild.html",
+  "path": "en/our-games/video-lottery/jungle-wild",
+  "timestamp": "2026-10-16T20:02:00.524Z",
+  "title": "Jungle Wild",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

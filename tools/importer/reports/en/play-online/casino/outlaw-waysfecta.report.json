@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/outlaw-waysfecta.html",
+  "path": "en/play-online/casino/outlaw-waysfecta",
+  "timestamp": "2026-10-16T19:59:14.409Z",
+  "title": "Outlaw Waysfecta",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

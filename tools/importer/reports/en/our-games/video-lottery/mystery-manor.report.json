@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/video-lottery/mystery-manor.html",
+  "path": "en/our-games/video-lottery/mystery-manor",
+  "timestamp": "2026-10-16T20:03:18.155Z",
+  "title": "Mystery Manor",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

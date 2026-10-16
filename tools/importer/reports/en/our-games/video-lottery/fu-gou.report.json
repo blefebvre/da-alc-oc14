@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/video-lottery/fu-gou.html",
+  "path": "en/our-games/video-lottery/fu-gou",
+  "timestamp": "2026-10-16T20:00:32.822Z",
+  "title": "Fu Gou",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

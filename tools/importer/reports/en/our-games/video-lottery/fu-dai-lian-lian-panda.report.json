@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/video-lottery/fu-dai-lian-lian-panda.html",
+  "path": "en/our-games/video-lottery/fu-dai-lian-lian-panda",
+  "timestamp": "2026-10-16T20:00:22.550Z",
+  "title": "Fu Dai Lian Lian Panda",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

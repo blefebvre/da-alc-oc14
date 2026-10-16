@@ -149,3 +149,42 @@
   opacity: 0.25;
   cursor: default;
 }
+
+/*
+ * Video lottery pages (alc.ca .video-lottery-info-page): the screenshot is shown at its own
+ * size (never upscaled), centred and top-aligned in the main area, which is 60% of the width
+ * on phones, then a fixed 430px / 565px / 450px tall from 768px / 992px / 1200px.
+ * Thumbnails grow to fill the strip when there are fewer than 4.
+ */
+.section.vlt .carousel-thumbnails .carousel-thumbnails-slide img {
+  width: auto;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.section.vlt .carousel-thumbnails .carousel-thumbnails-track > li {
+  flex-grow: 1;
+}
+
+.section.vlt .carousel-thumbnails .carousel-thumbnails-thumb img {
+  border-radius: 5%;
+}
+
+@media (width >= 768px) {
+  .section.vlt .carousel-thumbnails .carousel-thumbnails-slides {
+    height: 430px;
+    aspect-ratio: auto;
+  }
+}
+
+@media (width >= 992px) {
+  .section.vlt .carousel-thumbnails .carousel-thumbnails-slides {
+    height: 565px;
+  }
+}
+
+@media (width >= 1200px) {
+  .section.vlt .carousel-thumbnails .carousel-thumbnails-slides {
+    height: 450px;
+  }
+}

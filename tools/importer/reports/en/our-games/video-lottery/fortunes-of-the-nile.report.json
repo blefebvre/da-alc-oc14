@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/video-lottery/fortunes-of-the-nile.html",
+  "path": "en/our-games/video-lottery/fortunes-of-the-nile",
+  "timestamp": "2026-10-16T20:00:14.418Z",
+  "title": "Fortunes Of The Nile",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

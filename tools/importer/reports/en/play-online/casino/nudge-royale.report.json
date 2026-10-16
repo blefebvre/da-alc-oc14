@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/nudge-royale.html",
+  "path": "en/play-online/casino/nudge-royale",
+  "timestamp": "2026-10-16T19:58:34.006Z",
+  "title": "Nudge Royale",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

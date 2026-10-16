@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/video-lottery/miss-kitty.html",
+  "path": "en/our-games/video-lottery/miss-kitty",
+  "timestamp": "2026-10-16T20:02:44.947Z",
+  "title": "Miss Kitty",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

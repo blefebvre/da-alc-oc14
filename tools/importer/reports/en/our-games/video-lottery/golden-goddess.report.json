@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/video-lottery/golden-goddess.html",
+  "path": "en/our-games/video-lottery/golden-goddess",
+  "timestamp": "2026-10-16T20:00:45.648Z",
+  "title": "Golden Goddess",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

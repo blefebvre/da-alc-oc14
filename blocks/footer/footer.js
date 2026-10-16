@@ -1,3 +1,5 @@
+import { normalizeFragment } from '../../scripts/fragment-utils.js';
+
 /*
  * Footer block (content-first).
  *
@@ -26,14 +28,10 @@ async function fetchFooterFragment() {
   if (!resp.ok) return null;
   const root = document.createElement('div');
   root.innerHTML = await resp.text();
-  const base = new URL(resp.url || '/footer.plain.html', window.location.href);
-  root.querySelectorAll('img[src]').forEach((img) => {
-    img.src = new URL(img.getAttribute('src'), base).href;
-    img.loading = 'lazy';
-  });
-  root.querySelectorAll('source[srcset]').forEach((source) => {
-    source.srcset = new URL(source.getAttribute('srcset'), base).href;
-  });
+  // DA/EDS-served fragments wrap images in <picture> and list links in <p>, with media URLs
+  // relative to the fragment: normalise back to the authored structure
+  normalizeFragment(root, resp.url || '/footer.plain.html');
+  root.querySelectorAll('img[src]').forEach((img) => { img.loading = 'lazy'; });
   return root;
 }
 

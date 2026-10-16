@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/perfect-peacock-coin-combo.html",
+  "path": "en/play-online/casino/perfect-peacock-coin-combo",
+  "timestamp": "2026-10-16T19:59:48.730Z",
+  "title": "Perfect Peacock Coin Combo",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

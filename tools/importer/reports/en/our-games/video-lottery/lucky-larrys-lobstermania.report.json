@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/video-lottery/lucky-larrys-lobstermania.html",
+  "path": "en/our-games/video-lottery/lucky-larrys-lobstermania",
+  "timestamp": "2026-10-16T20:02:22.745Z",
+  "title": "Lucky Larry's Lobstermania",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

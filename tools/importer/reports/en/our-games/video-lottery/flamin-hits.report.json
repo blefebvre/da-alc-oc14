@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/video-lottery/flamin-hits.html",
+  "path": "en/our-games/video-lottery/flamin-hits",
+  "timestamp": "2026-10-16T19:59:53.360Z",
+  "title": "Flamin Hits",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}
