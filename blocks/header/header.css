@@ -277,6 +277,7 @@ header .nav-tool a:hover {
 }
 
 header .nav-tool-help-redirect a:any-link {
+  margin-left: 4px;
   padding: 0 16px;
   text-decoration: underline;
 }
@@ -292,7 +293,7 @@ header .nav-tool-help-redirect a::before {
 
 header .nav-tool-register-account a:any-link {
   display: inline-block;
-  margin: 1px 0 1px 5px;
+  margin: 1px 0 1px 9px;
   border-bottom: 1px solid var(--link-color);
   color: var(--link-color);
   font-weight: 700;
@@ -1013,6 +1014,12 @@ header .nav-drawer-links .nav-tool-help-redirect a::before {
     display: block;
   }
 
+  header .nav-tool-fr,
+  header .nav-tool-help-redirect {
+    position: relative;
+    top: 2px;
+  }
+
   header .nav-tools .nav-tool-cart {
     flex-basis: auto;
     margin: 0;
@@ -1266,7 +1273,7 @@ header .nav-drawer-links .nav-tool-help-redirect a::before {
 
   header .nav-tools .nav-tool-cart {
     flex-basis: 100%;
-    margin-top: 5px;
+    margin-top: 2px;
   }
 
   header .nav-list {

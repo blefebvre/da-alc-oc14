@@ -30,9 +30,17 @@ const PAGE_TEMPLATE = {
     { name: 'carousel-promo', instances: ['.carousel.list.parbase.hero'] },
     { name: 'carousel-winners', instances: ['.winners-carousel.carousel.panelcontainer'] },
     { name: 'cards-game', instances: ['.alc-container.cmp-container--game-tiles'] },
-    { name: 'cards-promo', instances: ['.alc-container.cmp-container--hide-column-gutters'] },
+    { name: 'cards-promo', instances: ['.alc-container.cmp-container--hide-column-gutters', '.html-promo'] },
   ],
   sections: [
+    {
+      id: '0',
+      name: 'mobile-banner',
+      selector: ['.html-promo'],
+      style: 'mobile-banner',
+      blocks: ['cards-promo'],
+      defaultContent: [],
+    },
     {
       id: '1',
       name: 'hero-carousel',

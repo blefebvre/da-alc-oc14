@@ -4,11 +4,13 @@
 /**
  * Transformer: alc.ca section breaks + Section Metadata.
  * Section boundaries come from payload.template.sections (page-templates.json):
+ *   0: .html-promo                                      (style "mobile-banner")
  *   1: .carousel.list.parbase.hero                      (no style)
  *   2: .section-header.cmp-section-header--alc-blue     (style "winners")
  *   3: .section-header.cmp-section-header--alc-green    (style "featured, sidebar")
- * Sections 1 and 2 share the same AEM container (#container-8dc56c521a), so the
- * <hr> is inserted directly before the section-start element rather than per container.
+ * .html-promo is a top-level grid sibling preceding the hero's container; the hero and the
+ * winners header share the same AEM container (#container-8dc56c521a), so the <hr> is
+ * inserted directly before each section-start element rather than per container.
  *
  * Breaks are inserted in beforeTransform (before parsers replace elements); metadata is
  * anchored to marker <hr>s in afterTransform. The cleanup transformer replaces
@@ -66,5 +68,13 @@ export default function transform(hookName, element, payload) {
         if (i === 0) marker.remove();
       }
     }
+
+    // Guard: never open the page with an empty section (e.g. first section missing on a page).
+    let first = element.firstElementChild;
+    while (first && first.tagName !== 'HR' && !first.textContent.trim()
+      && !first.querySelector('img, picture, table, hr')) {
+      first = first.nextElementSibling;
+    }
+    if (first && first.tagName === 'HR') first.remove();
   }
 }

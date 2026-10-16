@@ -11,7 +11,7 @@
  *         > span[data-media][data-src]  (imageM / imageT / imageD -> mobile/tablet/desktop)
  *         > div.container > div.next-draw-timer (skipped)
  *
- * Output: one row per slide -> [image, link]
+ * Output: one row per slide -> [desktop image + mobile image (imageM), link]
  */
 const ORIGIN = 'https://www.alc.ca';
 
@@ -28,7 +28,9 @@ function bgUrl(el) {
   const m = style.match(/background-image:\s*url\((['"]?)(.*?)\1\)/i)
     || style.match(/url\((?:&quot;|['"])?(.*?)(?:&quot;|['"])?\)/i);
   if (!m) return '';
-  return (m[2] || m[1] || '').replace(/&quot;/g, '');
+  // url('') must yield '' (not the quote character captured by the first group)
+  const value = (m.length > 2 ? m[2] : m[1]) || '';
+  return value.replace(/&quot;/g, '').replace(/^['"]+|['"]+$/g, '').trim();
 }
 
 // Prefer the largest (desktop) source: span with the highest min-width, then <picture> sources, then bg.
@@ -53,6 +55,26 @@ function desktopImageUrl(slide) {
   if (img) return img.getAttribute('src');
   const bgEl = slide.querySelector('[style*="background-image"]');
   return bgUrl(bgEl);
+}
+
+// Mobile (imageM, min-width:320px) source: imageM by name, else smallest min-width span / <picture> source.
+function mobileImageUrl(slide) {
+  const candidates = [
+    ...[...slide.querySelectorAll('span[data-src]')].map((s) => ({
+      src: s.getAttribute('data-src'), media: s.getAttribute('data-media') || '',
+    })),
+    ...[...slide.querySelectorAll('picture source[srcset]')].map((s) => ({
+      src: s.getAttribute('srcset').split(',')[0].trim().split(/\s+/)[0], media: s.getAttribute('media') || '',
+    })),
+  ].filter((c) => c.src);
+  if (!candidates.length) return '';
+  const byName = candidates.find((c) => /\/imageM\./.test(c.src));
+  if (byName) return byName.src;
+  const ranked = candidates.map((c) => {
+    const mw = c.media.match(/min-width:\s*(\d+)/);
+    return { src: c.src, w: mw ? parseInt(mw[1], 10) : 0 };
+  }).sort((a, b) => a.w - b.w);
+  return ranked[0].src;
 }
 
 // Derive a short descriptive label from the destination path, e.g.
@@ -98,6 +120,20 @@ export default function parse(element, { document }) {
       img.src = absolutize(src);
       img.alt = label;
       imgCell.push(img);
+      // Second image: mobile crop (imageM) with the text arranged for small screens
+      // span[data-src] may be stripped in the import pipeline: derive imageM from the
+      // desktop/tablet rendition URL (AEM serves it regardless of the timestamp suffix).
+      let mobileSrc = absolutize(mobileImageUrl(slide));
+      if (!/\/imageM\.img\./.test(mobileSrc)) {
+        const derived = img.src.replace(/\/image[DT]\.img\./, '/imageM.img.');
+        if (derived !== img.src) mobileSrc = derived;
+      }
+      if (mobileSrc && mobileSrc !== img.src) {
+        const mImg = document.createElement('img');
+        mImg.src = mobileSrc;
+        mImg.alt = label;
+        imgCell.push(mImg);
+      }
     }
 
     const linkCell = [];

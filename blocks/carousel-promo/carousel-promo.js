@@ -87,10 +87,47 @@ function bindEvents(block) {
   getSlides(block).forEach((slide) => observer.observe(slide));
 }
 
+const MOBILE_MEDIA = '(max-width: 767px)';
+
+/**
+ * Builds a single responsive <picture> for a slide: the desktop image from 768px up and,
+ * when authored, the mobile crop below 768px.
+ * @param {HTMLImageElement} desktopImg first authored image (desktop crop)
+ * @param {HTMLImageElement} [mobileImg] optional second authored image (mobile crop)
+ * @param {boolean} eager whether this is the first (LCP) slide
+ * @returns {HTMLPictureElement}
+ */
+function buildSlidePicture(desktopImg, mobileImg, eager) {
+  const picture = createOptimizedPicture(
+    desktopImg.src,
+    desktopImg.alt,
+    eager,
+    [{ media: '(min-width: 768px)', width: '2000' }, { width: '900' }],
+  );
+
+  if (mobileImg && mobileImg.src) {
+    const mobile = createOptimizedPicture(mobileImg.src, mobileImg.alt, eager, [{ width: '750' }]);
+    const mobileSources = [...mobile.querySelectorAll('source')];
+    const mobileFallback = mobile.querySelector('img');
+    if (mobileFallback) {
+      const source = document.createElement('source');
+      source.setAttribute('srcset', mobileFallback.getAttribute('src'));
+      mobileSources.push(source);
+    }
+    mobileSources.forEach((source) => source.setAttribute('media', MOBILE_MEDIA));
+    picture.prepend(...mobileSources);
+  }
+
+  const img = picture.querySelector('img');
+  if (eager) img.setAttribute('fetchpriority', 'high');
+  return picture;
+}
+
 /**
  * Builds one slide from an authored row.
- * Cell 1: image (optionally already linked). Cell 2 (optional): a link to the destination,
- * used to wrap the image when the image is not linked itself.
+ * Cell 1: desktop image, optionally followed by a mobile image (either may be linked).
+ * Cell 2 (optional): a link to the destination, used to wrap the image when the image
+ * is not linked itself.
  */
 function createSlide(row, slideIndex, id) {
   const slide = document.createElement('li');
@@ -98,8 +135,9 @@ function createSlide(row, slideIndex, id) {
   slide.dataset.slideIndex = slideIndex;
   slide.id = `carousel-promo-${id}-slide-${slideIndex}`;
 
-  const picture = row.querySelector('picture');
-  if (!picture) {
+  const images = [...row.querySelectorAll('img')];
+  const img = images[0];
+  if (!img) {
     // No image: keep any authored content so nothing is lost.
     const content = document.createElement('div');
     content.className = 'carousel-promo-slide-content';
@@ -108,16 +146,9 @@ function createSlide(row, slideIndex, id) {
     return slide;
   }
 
-  const img = picture.querySelector('img');
-  const optimized = createOptimizedPicture(
-    img.src,
-    img.alt,
-    slideIndex === 0,
-    [{ media: '(min-width: 900px)', width: '2000' }, { width: '900' }],
-  );
-  if (slideIndex === 0) optimized.querySelector('img').setAttribute('fetchpriority', 'high');
+  const optimized = buildSlidePicture(img, images[1], slideIndex === 0);
 
-  let link = picture.closest('a');
+  let link = img.closest('a');
   if (!link) {
     const links = [...row.querySelectorAll('a[href]')];
     if (links.length) {

@@ -25,6 +25,24 @@
   object-fit: cover;
 }
 
+/* mobile banner (source .html-promo): full-bleed 75px strip, image at natural size, centered
+   (source renders it as background-position: center; background-size: auto) */
+.mobile-banner .cards-promo > ul > li {
+  margin-top: 0;
+}
+
+.mobile-banner .cards-promo .cards-promo-card-image {
+  height: 75px;
+  overflow: hidden;
+}
+
+.mobile-banner .cards-promo .cards-promo-card-image img {
+  width: 100%;
+  height: 75px;
+  object-fit: none;
+  object-position: center center;
+}
+
 /* tablet: rail sits below the main content; each promo spans half the row, left aligned */
 @media (width >= 768px) {
   .cards-promo > ul {

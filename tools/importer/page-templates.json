@@ -33,11 +33,24 @@
         {
           "name": "cards-promo",
           "instances": [
-            ".alc-container.cmp-container--hide-column-gutters"
+            ".alc-container.cmp-container--hide-column-gutters",
+            ".html-promo"
           ]
         }
       ],
       "sections": [
+        {
+          "id": "0",
+          "name": "mobile-banner",
+          "selector": [
+            ".html-promo"
+          ],
+          "style": "mobile-banner",
+          "blocks": [
+            "cards-promo"
+          ],
+          "defaultContent": []
+        },
         {
           "id": "1",
           "name": "hero-carousel",

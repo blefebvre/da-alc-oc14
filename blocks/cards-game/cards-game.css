@@ -3,7 +3,13 @@
 /*
  * Mobile (< 768px): one tile per view, horizontal swipe track with prev/next + dots,
  * tiles span the full viewport (the section container gutter is cancelled out).
+ * flow-root stops the track's -5px top margin (room for the "NEW" ribbon) collapsing
+ * through the block, so the block box starts at the tile top like alc.ca (495px tall).
  */
+.cards-game {
+  display: flow-root;
+}
+
 .cards-game > ul {
   display: flex;
   margin: -5px -10px 0;
@@ -94,6 +100,20 @@
   width: 24px;
   height: 34px;
   background-image: linear-gradient(to right bottom, rgb(1 21 43) 0, rgb(1 21 43) 49%, rgb(229 197 36) 50%, rgb(6 85 170) 52%, rgb(6 85 170) 100%);
+}
+
+/*
+ * "est." suffix: alc.ca .prize-bar > sub is 10px/700 with line-height 24px; there it is a
+ * centred flex item nudged down 2.5px (bottom: -0.25em), which lands its baseline ~1px
+ * below the amount's baseline. Inline here, so align to the baseline and offset by 1px.
+ */
+.cards-game .cards-game-jackpot strong sub {
+  position: relative;
+  top: 1px;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 24px;
+  vertical-align: baseline;
 }
 
 /* single-amount strip (e.g. LOTTO 6/49) uses the lighter gold, regular weight */

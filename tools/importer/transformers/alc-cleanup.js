@@ -37,6 +37,20 @@ function fixImages(element) {
     const srcset = el.getAttribute('srcset');
     if (srcset) el.setAttribute('srcset', absolutizeSrcset(srcset));
   });
+  // picturefill-background images (e.g. .html-promo banner):
+  // <span data-media="(min-width: 320px)" data-src="/content/alc/.../imageM.img.jpg/...">
+  element.querySelectorAll('[data-src]').forEach((el) => {
+    const dataSrc = el.getAttribute('data-src');
+    if (dataSrc && (dataSrc.startsWith('/') || dataSrc.startsWith('//'))) {
+      el.setAttribute('data-src', absolutizeUrl(dataSrc));
+    }
+  });
+  // style="background-image:url(/content/alc/...)"
+  element.querySelectorAll('[style*="url"]').forEach((el) => {
+    const style = el.getAttribute('style');
+    const next = style.replace(/url\((['"]?)(\/[^'")]+)\1\)/g, (m, q, u) => `url(${q}${absolutizeUrl(u)}${q})`);
+    if (next !== style) el.setAttribute('style', next);
+  });
 }
 
 // Internal alc.ca links: strip "/content/alc" prefix and ".html" suffix, drop itm_* / utm_* params.
@@ -84,8 +98,8 @@ export default function transform(hookName, element, payload) {
       '.cmp-experiencefragment--footer',
       // Site-wide modals (jackpot modal, browser-upgrade modal)
       '.common-modals',
-      // Mobile-only "winning numbers / download our app" promo banner
-      '.html-promo',
+      // NOTE: .html-promo (mobile-only "Check winning numbers" banner) is real content and is
+      // converted by the cards-promo parser - do not remove it or strip its attributes here.
       // Skip-to-main-content link
       '.cmp-page__skiptomaincontent',
       // Qualtrics intercept container (<div id="ZN_3Eu2u7P45FmpwJ5">)

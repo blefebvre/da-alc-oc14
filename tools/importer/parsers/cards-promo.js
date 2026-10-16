@@ -33,6 +33,75 @@ function desktopSrc(picture, img) {
   return img ? img.getAttribute('src') : '';
 }
 
+// Mobile (imageM, min-width:320px) source: imageM by name, else the smallest min-width source.
+function mobileSrc(picture) {
+  const sources = [...(picture ? picture.querySelectorAll('source[srcset]') : [])].map((s) => {
+    const mw = (s.getAttribute('media') || '').match(/min-width:\s*(\d+)/);
+    return { src: s.getAttribute('srcset').split(',')[0].trim().split(/\s+/)[0], w: mw ? parseInt(mw[1], 10) : 0 };
+  }).filter((s) => s.src);
+  if (!sources.length) return '';
+  const byName = sources.find((s) => /\/imageM\./.test(s.src));
+  if (byName) return byName.src;
+  return sources.sort((a, b) => a.w - b.w)[0].src;
+}
+
+// /imageD.img.png/123.png or /imageT.img.jpg/123.jpg -> /imageM.img.<ext>/<same suffix>
+function toMobile(url) {
+  return (url || '').replace(/\/image[DT]\.img\./, '/imageM.img.');
+}
+
+function bgUrl(el) {
+  const style = (el && el.getAttribute('style')) || '';
+  const m = style.match(/url\(\s*(?:&quot;|["'])?(.*?)(?:&quot;|["'])?\s*\)/i);
+  return m && m[1] ? m[1] : '';
+}
+
+/**
+ * .html-promo (mobile-only "Check winning numbers" banner):
+ *   article.html-promo-full-link > a.html-promo-image-container[href]
+ *     > span[data-media="(min-width: 320px)"][data-src=".../imageM..."] (+ 768 imageT, 1200 imageD)
+ * Output: single row -> [imageM, link "Check winning numbers"]
+ */
+function parseHtmlPromo(element, document) {
+  const link = element.querySelector('a[href]') || (element.matches('a[href]') ? element : null);
+  const spans = [...element.querySelectorAll('[data-src]')].map((s) => {
+    const mw = (s.getAttribute('data-media') || '').match(/min-width:\s*(\d+)/);
+    return { src: s.getAttribute('data-src'), w: mw ? parseInt(mw[1], 10) : 0 };
+  }).filter((s) => s.src);
+  const byName = spans.find((s) => /\/imageM\./.test(s.src));
+  const smallest = spans.sort((a, b) => a.w - b.w)[0];
+  const bgEl = element.querySelector('[style*="url("]');
+  const imgEl = element.querySelector('img[src]');
+  // Always output the mobile rendition (imageM). The spans may be stripped in the import
+  // pipeline; the inline background-image is then imageD/imageT (imageD .png 404s), so derive.
+  const rawSrc = (byName && byName.src) || (smallest && smallest.src) || bgUrl(bgEl) || (imgEl && imgEl.getAttribute('src')) || '';
+  const src = toMobile(rawSrc);
+
+  const label = 'Check winning numbers';
+  const cells = [];
+  const imageCell = [];
+  if (src) {
+    const image = document.createElement('img');
+    image.src = absolutize(src);
+    image.alt = label;
+    imageCell.push(image);
+  }
+  const linkCell = [];
+  if (link) {
+    const a = document.createElement('a');
+    a.href = link.getAttribute('href');
+    a.textContent = label;
+    linkCell.push(a);
+  }
+  if (!imageCell.length && !linkCell.length) {
+    element.remove();
+    return;
+  }
+  cells.push([imageCell.length ? imageCell : '', linkCell.length ? linkCell : '']);
+  const block = WebImporter.Blocks.createBlock(document, { name: 'cards-promo', cells });
+  element.replaceWith(block);
+}
+
 // e.g. /content/alc/en/corporate/giving-back/sponsorships.html -> "Sponsorships"
 function labelFromHref(href) {
   try {
@@ -46,6 +115,11 @@ function labelFromHref(href) {
 }
 
 export default function parse(element, { document }) {
+  if (element.matches('.html-promo') || (element.querySelector('.html-promo-image-container') && !element.querySelector('.cmp-image'))) {
+    parseHtmlPromo(element, document);
+    return;
+  }
+
   let items = [...element.querySelectorAll('.cmp-image')].filter((el) => el.querySelector('picture, img'));
   if (!items.length) {
     // Fallback: any linked picture outside the mobile app banner
@@ -85,7 +159,21 @@ export default function parse(element, { document }) {
       linkCell.push(a);
     }
 
-    cells.push([image, linkCell.length ? linkCell : '']);
+    // Second image: mobile crop (imageM)
+    const imageCell = [image];
+    let mSrc = absolutize(mobileSrc(picture));
+    if (!/\/imageM\.img\./.test(mSrc)) {
+      const derived = toMobile(image.src);
+      if (derived !== image.src) mSrc = derived;
+    }
+    if (mSrc && mSrc !== image.src) {
+      const mImage = document.createElement('img');
+      mImage.src = mSrc;
+      mImage.alt = image.alt;
+      imageCell.push(mImage);
+    }
+
+    cells.push([imageCell, linkCell.length ? linkCell : '']);
   });
 
   if (!cells.length) {

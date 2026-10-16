@@ -54,7 +54,8 @@ var CustomImportScript = (() => {
     const style = (el == null ? void 0 : el.getAttribute("style")) || "";
     const m = style.match(/background-image:\s*url\((['"]?)(.*?)\1\)/i) || style.match(/url\((?:&quot;|['"])?(.*?)(?:&quot;|['"])?\)/i);
     if (!m) return "";
-    return (m[2] || m[1] || "").replace(/&quot;/g, "");
+    const value = (m.length > 2 ? m[2] : m[1]) || "";
+    return value.replace(/&quot;/g, "").replace(/^['"]+|['"]+$/g, "").trim();
   }
   function desktopImageUrl(slide) {
     const spans = [...slide.querySelectorAll("span[data-src]")];
@@ -77,6 +78,26 @@ var CustomImportScript = (() => {
     if (img) return img.getAttribute("src");
     const bgEl = slide.querySelector('[style*="background-image"]');
     return bgUrl(bgEl);
+  }
+  function mobileImageUrl(slide) {
+    const candidates = [
+      ...[...slide.querySelectorAll("span[data-src]")].map((s) => ({
+        src: s.getAttribute("data-src"),
+        media: s.getAttribute("data-media") || ""
+      })),
+      ...[...slide.querySelectorAll("picture source[srcset]")].map((s) => ({
+        src: s.getAttribute("srcset").split(",")[0].trim().split(/\s+/)[0],
+        media: s.getAttribute("media") || ""
+      }))
+    ].filter((c) => c.src);
+    if (!candidates.length) return "";
+    const byName = candidates.find((c) => /\/imageM\./.test(c.src));
+    if (byName) return byName.src;
+    const ranked = candidates.map((c) => {
+      const mw = c.media.match(/min-width:\s*(\d+)/);
+      return { src: c.src, w: mw ? parseInt(mw[1], 10) : 0 };
+    }).sort((a, b) => a.w - b.w);
+    return ranked[0].src;
   }
   function labelFromHref(href) {
     try {
@@ -111,6 +132,17 @@ var CustomImportScript = (() => {
         img.src = absolutize(src);
         img.alt = label;
         imgCell.push(img);
+        let mobileSrc2 = absolutize(mobileImageUrl(slide));
+        if (!/\/imageM\.img\./.test(mobileSrc2)) {
+          const derived = img.src.replace(/\/image[DT]\.img\./, "/imageM.img.");
+          if (derived !== img.src) mobileSrc2 = derived;
+        }
+        if (mobileSrc2 && mobileSrc2 !== img.src) {
+          const mImg = document2.createElement("img");
+          mImg.src = mobileSrc2;
+          mImg.alt = label;
+          imgCell.push(mImg);
+        }
       }
       const linkCell = [];
       if (href) {
@@ -269,10 +301,42 @@ var CustomImportScript = (() => {
       if (left) {
         const p = document2.createElement("p");
         const strong = document2.createElement("strong");
-        strong.textContent = left;
+        const subEl = prizeBar.querySelector("sub");
+        const subText = clean(subEl && subEl.textContent);
+        if (subText) {
+          const amount = clean([...prizeBar.childNodes].filter((n) => n !== subEl).map((n) => n.textContent).join(" "));
+          if (amount) strong.append(document2.createTextNode(`${amount} `));
+          const sub = document2.createElement("sub");
+          sub.textContent = subText;
+          strong.append(sub);
+        } else {
+          strong.textContent = left;
+        }
         p.append(strong);
         const rightEl = imageContainer.querySelector(".max-plus-bar, .gold-ball-bar, .prize-bar-right");
-        const right = clean(rightEl && [...rightEl.querySelectorAll("span")].map((s) => s.textContent).join(" ")) || clean(rightEl && rightEl.textContent);
+        const joinParts = (el) => clean([...el.childNodes].map((n) => n.textContent).join(" "));
+        let right = clean(rightEl && [...rightEl.querySelectorAll("span")].map((s) => s.textContent).join(" "));
+        if (rightEl && !/^\+/.test(right)) {
+          const full = joinParts(rightEl);
+          if (/^\+/.test(full) || !right) right = full;
+        }
+        right = clean(right.replace(/\s*×\s*/g, " \xD7 ").replace(/^\+\s*/, "+ "));
+        if (rightEl && rightEl.classList.contains("max-plus-bar") && right && !/^\+/.test(right)) {
+          const attrCount = (rightEl.getAttribute("data-count") || rightEl.getAttribute("data-max-plus") || tile.getAttribute("data-max-plus") || "").trim();
+          const prizeText = clean(rightEl.querySelector(".prize-text") && rightEl.querySelector(".prize-text").textContent) || right;
+          const amountMatch = prizeText.match(/\$[\d,]+/);
+          let count = /^\d+$/.test(attrCount) ? attrCount : "";
+          if (!count && amountMatch) {
+            const re = new RegExp(`(\\d+)\\s*[x\xD7]\\s*\\${amountMatch[0]}`, "i");
+            const scopes = [tile.textContent, document2.body && document2.body.textContent || ""];
+            scopes.some((t) => {
+              const m = clean(t).match(re);
+              if (m) count = m[1];
+              return !!m;
+            });
+          }
+          if (count) right = `+ ${count} ${right}`;
+        }
         if (right) {
           p.append(document2.createTextNode(" "));
           const em = document2.createElement("em");
@@ -351,6 +415,60 @@ var CustomImportScript = (() => {
     if (sources.length && sources[0].src) return sources[0].src;
     return img ? img.getAttribute("src") : "";
   }
+  function mobileSrc(picture) {
+    const sources = [...picture ? picture.querySelectorAll("source[srcset]") : []].map((s) => {
+      const mw = (s.getAttribute("media") || "").match(/min-width:\s*(\d+)/);
+      return { src: s.getAttribute("srcset").split(",")[0].trim().split(/\s+/)[0], w: mw ? parseInt(mw[1], 10) : 0 };
+    }).filter((s) => s.src);
+    if (!sources.length) return "";
+    const byName = sources.find((s) => /\/imageM\./.test(s.src));
+    if (byName) return byName.src;
+    return sources.sort((a, b) => a.w - b.w)[0].src;
+  }
+  function toMobile(url) {
+    return (url || "").replace(/\/image[DT]\.img\./, "/imageM.img.");
+  }
+  function bgUrl4(el) {
+    const style = el && el.getAttribute("style") || "";
+    const m = style.match(/url\(\s*(?:&quot;|["'])?(.*?)(?:&quot;|["'])?\s*\)/i);
+    return m && m[1] ? m[1] : "";
+  }
+  function parseHtmlPromo(element, document2) {
+    const link = element.querySelector("a[href]") || (element.matches("a[href]") ? element : null);
+    const spans = [...element.querySelectorAll("[data-src]")].map((s) => {
+      const mw = (s.getAttribute("data-media") || "").match(/min-width:\s*(\d+)/);
+      return { src: s.getAttribute("data-src"), w: mw ? parseInt(mw[1], 10) : 0 };
+    }).filter((s) => s.src);
+    const byName = spans.find((s) => /\/imageM\./.test(s.src));
+    const smallest = spans.sort((a, b) => a.w - b.w)[0];
+    const bgEl = element.querySelector('[style*="url("]');
+    const imgEl = element.querySelector("img[src]");
+    const rawSrc = byName && byName.src || smallest && smallest.src || bgUrl4(bgEl) || imgEl && imgEl.getAttribute("src") || "";
+    const src = toMobile(rawSrc);
+    const label = "Check winning numbers";
+    const cells = [];
+    const imageCell = [];
+    if (src) {
+      const image = document2.createElement("img");
+      image.src = absolutize4(src);
+      image.alt = label;
+      imageCell.push(image);
+    }
+    const linkCell = [];
+    if (link) {
+      const a = document2.createElement("a");
+      a.href = link.getAttribute("href");
+      a.textContent = label;
+      linkCell.push(a);
+    }
+    if (!imageCell.length && !linkCell.length) {
+      element.remove();
+      return;
+    }
+    cells.push([imageCell.length ? imageCell : "", linkCell.length ? linkCell : ""]);
+    const block = WebImporter.Blocks.createBlock(document2, { name: "cards-promo", cells });
+    element.replaceWith(block);
+  }
   function labelFromHref2(href) {
     try {
       const url = new URL(href, ORIGIN4);
@@ -362,6 +480,10 @@ var CustomImportScript = (() => {
     }
   }
   function parse4(element, { document: document2 }) {
+    if (element.matches(".html-promo") || element.querySelector(".html-promo-image-container") && !element.querySelector(".cmp-image")) {
+      parseHtmlPromo(element, document2);
+      return;
+    }
     let items = [...element.querySelectorAll(".cmp-image")].filter((el) => el.querySelector("picture, img"));
     if (!items.length) {
       items = [...element.querySelectorAll("a[href] picture")].filter((p) => !p.closest(".banner")).map((p) => p.closest("a").parentElement);
@@ -393,7 +515,19 @@ var CustomImportScript = (() => {
         a.textContent = label;
         linkCell.push(a);
       }
-      cells.push([image, linkCell.length ? linkCell : ""]);
+      const imageCell = [image];
+      let mSrc = absolutize4(mobileSrc(picture));
+      if (!/\/imageM\.img\./.test(mSrc)) {
+        const derived = toMobile(image.src);
+        if (derived !== image.src) mSrc = derived;
+      }
+      if (mSrc && mSrc !== image.src) {
+        const mImage = document2.createElement("img");
+        mImage.src = mSrc;
+        mImage.alt = image.alt;
+        imageCell.push(mImage);
+      }
+      cells.push([imageCell, linkCell.length ? linkCell : ""]);
     });
     if (!cells.length) {
       element.replaceWith(...element.childNodes);
@@ -426,6 +560,17 @@ var CustomImportScript = (() => {
       if (src && src.startsWith("/")) el.setAttribute("src", absolutizeUrl(src));
       const srcset = el.getAttribute("srcset");
       if (srcset) el.setAttribute("srcset", absolutizeSrcset(srcset));
+    });
+    element.querySelectorAll("[data-src]").forEach((el) => {
+      const dataSrc = el.getAttribute("data-src");
+      if (dataSrc && (dataSrc.startsWith("/") || dataSrc.startsWith("//"))) {
+        el.setAttribute("data-src", absolutizeUrl(dataSrc));
+      }
+    });
+    element.querySelectorAll('[style*="url"]').forEach((el) => {
+      const style = el.getAttribute("style");
+      const next = style.replace(/url\((['"]?)(\/[^'")]+)\1\)/g, (m, q, u) => `url(${q}${absolutizeUrl(u)}${q})`);
+      if (next !== style) el.setAttribute("style", next);
     });
   }
   function rewriteLink(href) {
@@ -465,8 +610,8 @@ var CustomImportScript = (() => {
         ".cmp-experiencefragment--footer",
         // Site-wide modals (jackpot modal, browser-upgrade modal)
         ".common-modals",
-        // Mobile-only "winning numbers / download our app" promo banner
-        ".html-promo",
+        // NOTE: .html-promo (mobile-only "Check winning numbers" banner) is real content and is
+        // converted by the cards-promo parser - do not remove it or strip its attributes here.
         // Skip-to-main-content link
         ".cmp-page__skiptomaincontent",
         // Qualtrics intercept container (<div id="ZN_3Eu2u7P45FmpwJ5">)
@@ -553,6 +698,11 @@ var CustomImportScript = (() => {
           if (i === 0) marker.remove();
         }
       }
+      let first = element.firstElementChild;
+      while (first && first.tagName !== "HR" && !first.textContent.trim() && !first.querySelector("img, picture, table, hr")) {
+        first = first.nextElementSibling;
+      }
+      if (first && first.tagName === "HR") first.remove();
     }
   }
 
@@ -573,9 +723,17 @@ var CustomImportScript = (() => {
       { name: "carousel-promo", instances: [".carousel.list.parbase.hero"] },
       { name: "carousel-winners", instances: [".winners-carousel.carousel.panelcontainer"] },
       { name: "cards-game", instances: [".alc-container.cmp-container--game-tiles"] },
-      { name: "cards-promo", instances: [".alc-container.cmp-container--hide-column-gutters"] }
+      { name: "cards-promo", instances: [".alc-container.cmp-container--hide-column-gutters", ".html-promo"] }
     ],
     sections: [
+      {
+        id: "0",
+        name: "mobile-banner",
+        selector: [".html-promo"],
+        style: "mobile-banner",
+        blocks: ["cards-promo"],
+        defaultContent: []
+      },
       {
         id: "1",
         name: "hero-carousel",

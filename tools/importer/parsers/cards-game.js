@@ -72,10 +72,52 @@ export default function parse(element, { document }) {
     if (left) {
       const p = document.createElement('p');
       const strong = document.createElement('strong');
-      strong.textContent = left;
+      // Source renders "est." in a smaller <sub>: "$90,000,000 <sub>est.</sub>"
+      const subEl = prizeBar.querySelector('sub');
+      const subText = clean(subEl && subEl.textContent);
+      if (subText) {
+        const amount = clean([...prizeBar.childNodes]
+          .filter((n) => n !== subEl)
+          .map((n) => n.textContent)
+          .join(' '));
+        if (amount) strong.append(document.createTextNode(`${amount} `));
+        const sub = document.createElement('sub');
+        sub.textContent = subText;
+        strong.append(sub);
+      } else {
+        strong.textContent = left;
+      }
       p.append(strong);
       const rightEl = imageContainer.querySelector('.max-plus-bar, .gold-ball-bar, .prize-bar-right');
-      const right = clean(rightEl && [...rightEl.querySelectorAll('span')].map((s) => s.textContent).join(' ')) || clean(rightEl && rightEl.textContent);
+      // Join every child part (spans or bare text, in case spans were unwrapped) with a single
+      // space so "+ 90" and "× $100,000" never collapse into "+ 90× $100,000".
+      const joinParts = (el) => clean([...el.childNodes].map((n) => n.textContent).join(' '));
+      let right = clean(rightEl && [...rightEl.querySelectorAll('span')].map((s) => s.textContent).join(' '));
+      if (rightEl && !/^\+/.test(right)) {
+        const full = joinParts(rightEl);
+        if (/^\+/.test(full) || !right) right = full;
+      }
+      // Ensure a space before "×" / after the count (e.g. "+ 90×$100,000" -> "+ 90 × $100,000")
+      right = clean(right.replace(/\s*×\s*/g, ' × ').replace(/^\+\s*/, '+ '));
+      // "+ 90" may be bound late (Knockout/Vue) and missing: recover the count from
+      // data attributes or nearby "90 x $100,000" copy on the tile/page.
+      if (rightEl && rightEl.classList.contains('max-plus-bar') && right && !/^\+/.test(right)) {
+        const attrCount = (rightEl.getAttribute('data-count') || rightEl.getAttribute('data-max-plus')
+          || tile.getAttribute('data-max-plus') || '').trim();
+        const prizeText = clean(rightEl.querySelector('.prize-text') && rightEl.querySelector('.prize-text').textContent) || right;
+        const amountMatch = prizeText.match(/\$[\d,]+/);
+        let count = /^\d+$/.test(attrCount) ? attrCount : '';
+        if (!count && amountMatch) {
+          const re = new RegExp(`(\\d+)\\s*[x×]\\s*\\${amountMatch[0]}`, 'i');
+          const scopes = [tile.textContent, (document.body && document.body.textContent) || ''];
+          scopes.some((t) => {
+            const m = clean(t).match(re);
+            if (m) count = m[1];
+            return !!m;
+          });
+        }
+        if (count) right = `+ ${count} ${right}`;
+      }
       if (right) {
         p.append(document.createTextNode(' '));
         const em = document.createElement('em');
