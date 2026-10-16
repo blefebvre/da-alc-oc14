@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/dyn-a-miners.html",
+  "path": "en/play-online/casino/dyn-a-miners",
+  "timestamp": "2026-10-16T16:05:22.828Z",
+  "title": "Dyn A Miners",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

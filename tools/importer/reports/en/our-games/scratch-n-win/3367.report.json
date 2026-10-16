@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/scratch-n-win/3367.html",
+  "path": "en/our-games/scratch-n-win/3367",
+  "timestamp": "2026-10-16T15:59:13.192Z",
+  "title": "Lucky 7",
+  "template": "ticket-detail",
+  "blocks": [
+    "columns-ticket",
+    "accordion-bar"
+  ]
+}

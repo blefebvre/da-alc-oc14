@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/coin-trio-fortune-trails.html",
+  "path": "en/play-online/casino/coin-trio-fortune-trails",
+  "timestamp": "2026-10-16T15:57:08.875Z",
+  "title": "Coin Trio Fortune Trails",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

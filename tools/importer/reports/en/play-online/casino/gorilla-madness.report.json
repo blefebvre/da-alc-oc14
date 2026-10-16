@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/gorilla-madness.html",
+  "path": "en/play-online/casino/gorilla-madness",
+  "timestamp": "2026-10-16T16:12:49.822Z",
+  "title": "Gorilla Madness",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

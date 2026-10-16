@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/family-feud-multi-drop.html",
+  "path": "en/play-online/casino/family-feud-multi-drop",
+  "timestamp": "2026-10-16T16:08:05.183Z",
+  "title": "Family Feud Multi Drop",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

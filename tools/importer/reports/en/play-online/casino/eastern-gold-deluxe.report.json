@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/eastern-gold-deluxe.html",
+  "path": "en/play-online/casino/eastern-gold-deluxe",
+  "timestamp": "2026-10-16T16:05:33.524Z",
+  "title": "Eastern Gold Deluxe",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

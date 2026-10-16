@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/double-top-dollar.html",
+  "path": "en/play-online/casino/double-top-dollar",
+  "timestamp": "2026-10-16T16:02:42.776Z",
+  "title": "Double Top Dollar",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

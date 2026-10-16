@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/dancing-drums-link-fortune.html",
+  "path": "en/play-online/casino/dancing-drums-link-fortune",
+  "timestamp": "2026-10-16T15:59:00.529Z",
+  "title": "Dancing Drums Link Fortune",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

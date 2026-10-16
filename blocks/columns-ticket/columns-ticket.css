@@ -1,0 +1,167 @@
+/*
+ * columns-ticket: Scratch 'n Win / Breakopen ticket details card (alc.ca .game-details-info
+ * .details). Ticket image with a rotated "Game #n" label on the left (5/12), rule-separated
+ * prize info on the right (7/12). Stacks on phones. The H1 + price title bar above it is
+ * section default content (see .section.ticket-detail in styles/styles.css).
+ */
+.columns-ticket {
+  overflow: hidden;
+  border: 1px solid var(--alc-grey-disabled);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 20px 0 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 22.8571px;
+}
+
+.columns-ticket p {
+  margin: 0;
+}
+
+/* ticket image column */
+.columns-ticket .columns-ticket-media {
+  position: relative;
+  border-bottom: 1px solid var(--alc-grey-disabled);
+  padding: 5px 10px 0;
+}
+
+/* "Game #n": reads bottom-to-top, text ends 100px below the image top */
+.columns-ticket .columns-ticket-label {
+  position: absolute;
+  top: 4px;
+  left: 11px;
+  height: 100px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  white-space: nowrap;
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 22.8571px;
+}
+
+.columns-ticket .columns-ticket-image {
+  margin-left: 35px;
+}
+
+.columns-ticket .columns-ticket-image img {
+  display: block;
+  width: 230px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* prize info column */
+.columns-ticket .columns-ticket-info > p {
+  padding: 20px;
+}
+
+.columns-ticket .columns-ticket-info strong {
+  font-weight: 700;
+}
+
+.columns-ticket .columns-ticket-top-prize {
+  border-bottom: 1px solid var(--alc-grey-disabled);
+  color: var(--alc-sky);
+}
+
+/* "Prizes Available:" label sits on its own line */
+.columns-ticket .columns-ticket-item:not(.columns-ticket-top-prize, .columns-ticket-odds) strong {
+  display: block;
+}
+
+.columns-ticket .columns-ticket-odds {
+  border-top: 1px solid var(--alc-grey-disabled);
+  border-bottom: 1px solid var(--alc-grey-disabled);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.columns-ticket .columns-ticket-info > .columns-ticket-link {
+  padding: 10px 20px 20px;
+}
+
+main .columns-ticket .columns-ticket-link a:any-link {
+  position: relative;
+  border-bottom: 2px solid transparent;
+  color: var(--link-color);
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* Material Icons chevron_right */
+main .columns-ticket .columns-ticket-link a:any-link::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  right: -18px;
+  width: 16px;
+  height: 16px;
+  background-color: currentcolor;
+  mask: url('../../icons/chevron-right.svg') center / 16px 16px no-repeat;
+}
+
+main .columns-ticket .columns-ticket-link a:hover,
+main .columns-ticket .columns-ticket-link a:focus-visible {
+  border-bottom-color: var(--link-hover-color);
+  color: var(--link-hover-color);
+  text-decoration: none;
+}
+
+@media (width >= 768px) {
+  /* alc.ca floats the columns past the bottom padding, so the card ends at the image */
+  .columns-ticket {
+    padding: 20px 15px 0;
+  }
+
+  .columns-ticket .columns-ticket-row {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .columns-ticket .columns-ticket-media {
+    box-sizing: border-box;
+    flex: 0 0 calc(100% * 5 / 12);
+    border-bottom: 0;
+  }
+
+  .columns-ticket .columns-ticket-label {
+    left: 16px;
+  }
+
+  .columns-ticket .columns-ticket-image {
+    margin-left: 60px;
+  }
+
+  .columns-ticket .columns-ticket-image img {
+    width: 190px;
+  }
+
+  .columns-ticket .columns-ticket-info {
+    box-sizing: border-box;
+    flex: 0 0 calc(100% * 7 / 12);
+    padding: 20px 40px 0 0;
+  }
+
+  .columns-ticket .columns-ticket-info > p {
+    margin: 0 0 10px;
+    padding: 0;
+  }
+
+  .columns-ticket .columns-ticket-info > .columns-ticket-top-prize {
+    padding-bottom: 5px;
+  }
+
+  .columns-ticket .columns-ticket-info > .columns-ticket-odds {
+    margin: 10px 0;
+    padding: 15px 0;
+  }
+
+  .columns-ticket .columns-ticket-info > .columns-ticket-link {
+    margin: 0;
+    padding: 5px 0 0;
+  }
+}

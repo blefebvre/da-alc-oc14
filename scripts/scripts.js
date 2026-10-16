@@ -194,6 +194,16 @@ function decorateRailSections(main) {
   });
 }
 
+// Display names for URL segments whose label can't be derived from the slug
+const BREADCRUMB_LABELS = {
+  'scratch-n-win': "Scratch 'N Win",
+  'instant-win-games': 'Instant Win Games',
+  'about-atlantic-lottery': 'About Atlantic Lottery',
+  'are-you-a-winner': 'Are You a Winner?',
+  playwise: 'PlayWise',
+  proline: 'PROLINE',
+};
+
 /**
  * Builds a breadcrumb trail from the URL path when the page sets "Breadcrumbs: true".
  * Segment labels come from the path; the last crumb is the page's H1 (or title).
@@ -212,7 +222,7 @@ function buildBreadcrumbs(main) {
   let href = `/${locale}`;
   segments.slice(offset + 1, -1).forEach((seg) => {
     href += `/${seg}`;
-    crumbs.push({ label: seg.replace(/-/g, ' '), href });
+    crumbs.push({ label: BREADCRUMB_LABELS[seg] || seg.replace(/-/g, ' '), href });
   });
   const h1 = main.querySelector('h1');
   crumbs.push({ label: (h1 ? h1.textContent : document.title).trim() });

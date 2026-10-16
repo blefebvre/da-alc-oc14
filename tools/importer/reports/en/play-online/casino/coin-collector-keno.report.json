@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/coin-collector-keno.html",
+  "path": "en/play-online/casino/coin-collector-keno",
+  "timestamp": "2026-10-16T15:56:55.660Z",
+  "title": "Coin Collector Keno",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/duo-fu-duo-cai-flower-of-riches.html",
+  "path": "en/play-online/casino/duo-fu-duo-cai-flower-of-riches",
+  "timestamp": "2026-10-16T16:04:54.435Z",
+  "title": "Duo Fu Duo Cai Flower of Riches",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

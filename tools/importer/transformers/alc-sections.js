@@ -39,7 +39,9 @@ function querySection(root, selectors) {
 
 export default function transform(hookName, element, payload) {
   const sections = (payload && payload.template && payload.template.sections) || [];
-  if (sections.length < 2) return;
+  // A single section still needs its Section Metadata when it is styled (template
+  // "ticket-detail": one "ticket-detail" section); unstyled single sections are a no-op below.
+  if (!sections.length) return;
 
   if (hookName === 'beforeTransform') {
     for (let i = sections.length - 1; i >= 0; i -= 1) {

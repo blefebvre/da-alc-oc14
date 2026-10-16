@@ -108,6 +108,31 @@ function rewriteLink(href) {
  * game pages (verified in migration-work/cleaned.html and the instant-win / live variations).
  * ---------------------------------------------------------------------------------------- */
 
+// Global chrome on detail pages (online game + ticket pages). These pages have no
+// div.experiencefragment wrapper: the global header is
+// <div role="banner"><div class="xfpage page basicpage">...<header>...</header> (plus the
+// #loginFlow MFA modal) and the footer is a bare <footer class="main-footer">.
+const DETAIL_PAGE_CHROME_SELECTORS = [
+  '[role="banner"]',
+  'div.xfpage',
+  '#loginFlow',
+  'header',
+  // Header parts that sit outside <header> (siblings of .xfpage in the cleaned snapshot):
+  // signed-in dashboard, top nav + off-canvas mobile nav, collapsible header promo.
+  '.logged-in-info-wrapper',
+  '.topnav',
+  '#nav-mobile',
+  '#collapsible-promo',
+  'footer.main-footer',
+  // Browser-upgrade modal (sibling of .common-modals on detail pages)
+  '.modal-browser-check',
+  // Site-wide alert/notification banners (<section data-bind="if: message"><div class="alert-area">)
+  'section[data-bind="if: message"]',
+  '.alert-area',
+  '.notification.section',
+  '.cmp-notification',
+];
+
 function isGameDetailPage(root) {
   return !!root.querySelector('section.alc-game-details-header, div.digital-instants-info-page');
 }
@@ -184,27 +209,7 @@ function cleanupGameDetailPage(element) {
   });
 
   WebImporter.DOMUtils.remove(element, [
-    // Game pages have no div.experiencefragment wrapper: the global header is
-    // <div role="banner"><div class="xfpage page basicpage">...<header>...</header> (plus the
-    // #loginFlow MFA modal) and the footer is a bare <footer class="main-footer">.
-    '[role="banner"]',
-    'div.xfpage',
-    '#loginFlow',
-    'header',
-    // Header parts that sit outside <header> (siblings of .xfpage in the cleaned snapshot):
-    // signed-in dashboard, top nav + off-canvas mobile nav, collapsible header promo.
-    '.logged-in-info-wrapper',
-    '.topnav',
-    '#nav-mobile',
-    '#collapsible-promo',
-    'footer.main-footer',
-    // Browser-upgrade modal (sibling of .common-modals on game pages)
-    '.modal-browser-check',
-    // Site-wide alert/notification banners (<section data-bind="if: message"><div class="alert-area">)
-    'section[data-bind="if: message"]',
-    '.alert-area',
-    '.notification.section',
-    '.cmp-notification',
+    ...DETAIL_PAGE_CHROME_SELECTORS,
     // Live-casino lobby launch button + modal popup
     '#live-casino-component',
     '#live-casino-modal',
@@ -286,13 +291,100 @@ function cleanupGameDetailPage(element) {
   });
 }
 
+/* ------------------------------------------------------------------------------------------
+ * Ticket detail pages (template "ticket-detail": Scratch 'N Win / Breakopen tickets,
+ * e.g. /en/our-games/scratch-n-win/4099). Every rule is guarded by isTicketDetailPage() and
+ * only targets elements inside div.game-detail-scratch (verified in migration-work/cleaned.html
+ * and the live 4099 / 7115 / 3367 pages).
+ * ---------------------------------------------------------------------------------------- */
+
+function isTicketDetailPage(root) {
+  return !!root.querySelector('div.game-detail-scratch');
+}
+
+function cleanupTicketDetailPage(element) {
+  const doc = element.ownerDocument;
+  const scratch = element.querySelector('div.game-detail-scratch');
+
+  WebImporter.DOMUtils.remove(element, DETAIL_PAGE_CHROME_SELECTORS);
+
+  // Source breadcrumb (Home / Our Games / Scratch 'N Win / 4099) + its trailing
+  // <!-- /.breadcrumb-container --> comment. Auto-generated in EDS ("Breadcrumbs: true").
+  scratch.querySelectorAll('div.breadcrumb-container').forEach((bc) => {
+    const next = bc.nextSibling && bc.nextSibling.nodeType === 3 ? bc.nextSibling.nextSibling : bc.nextSibling;
+    if (next && next.nodeType === 8 && /breadcrumb-container/.test(next.nodeValue || '')) next.remove();
+    bc.remove();
+  });
+
+  // Decorative images: page background (alc-images/background.jpg) and title-bar
+  // background (scratch-game-title-bg.png). Both are supplied by the section style CSS.
+  WebImporter.DOMUtils.remove(scratch, [
+    'section.body-content > img',
+    'div.game-details-info > div.heading > img',
+  ]);
+
+  // Empty right rail (<div class="sidebar col-xs-12 col-lg-4"><div class="row"><div class="cmp-container">)
+  scratch.querySelectorAll('div.sidebar').forEach((sidebar) => {
+    if (!sidebar.textContent.trim() && !sidebar.querySelector('img, picture, video, iframe, a')) sidebar.remove();
+  });
+
+  // Title bar: <div class="heading"><div class="col-xs-9"><h1 class="name">Set for Life</h1></div>
+  //   <div class="col-xs-3"><h1 class="price">$4</h1></div></div>  ->  <h1>Set for Life</h1><p>$4</p>
+  scratch.querySelectorAll('div.game-details-info > div.heading').forEach((heading) => {
+    const text = (el) => (el ? el.textContent.replace(/\s+/g, ' ').trim() : '');
+    const nameEl = heading.querySelector('h1.name') || heading.querySelector('h1:not(.price)');
+    const name = text(nameEl);
+    const price = text(heading.querySelector('.price'));
+    const nodes = [];
+    if (name) {
+      const h1 = doc.createElement('h1');
+      h1.textContent = name;
+      nodes.push(h1);
+    }
+    if (price) {
+      const p = doc.createElement('p');
+      p.textContent = price;
+      nodes.push(p);
+    }
+    heading.replaceWith(...nodes);
+  });
+}
+
+// Many alc.ca pages use the URL slug (or, on ticket pages, the numeric game id) as <title>.
+// Prefer og:title when the title is slug-like. With h1Root (ticket pages only), fall back to
+// the ticket-name H1 when og:title is missing or is just the id/slug again.
+function fixSlugTitle(doc, h1Root) {
+  const title = (doc.title || '').trim();
+  if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(title)) return;
+  const ogTitle = doc.querySelector('meta[property="og:title"], meta[name="og:title"]');
+  const og = ogTitle ? (ogTitle.content || '').trim() : '';
+  const ogIsReal = og && og !== title && !/^\d+$/.test(og);
+  if (h1Root && !ogIsReal) {
+    const h1 = h1Root.querySelector('div.game-details-info h1.name') || h1Root.querySelector('h1');
+    const h1Text = h1 ? h1.textContent.replace(/\s+/g, ' ').trim() : '';
+    if (h1Text) {
+      doc.title = h1Text;
+      // getMetadata() emits a separate "og:title" row when it differs from the title; the
+      // id-only og:title ("4099") is not a real title, so align it with the H1.
+      if (ogTitle) ogTitle.setAttribute('content', h1Text);
+      return;
+    }
+  }
+  // Original behaviour (homepage / game pages): og:title wins over a slug-like title
+  if (og) doc.title = og;
+}
+
 export default function transform(hookName, element, payload) {
   if (hookName === TransformHook.beforeTransform) {
-    // Many alc.ca pages use the URL slug as <title>; prefer og:title when the title is slug-like
     const doc = (payload && payload.document) || document;
-    const ogTitle = doc.querySelector('meta[property="og:title"], meta[name="og:title"]');
-    if (ogTitle && /^[a-z0-9]+(-[a-z0-9]+)*$/.test((doc.title || '').trim()) && ogTitle.content.trim()) {
-      doc.title = ogTitle.content.trim();
+    // Ticket detail pages: title from H1 must be read before the header chrome (which has
+    // no H1 on these pages) is removed and before the heading is rewritten.
+    if (isTicketDetailPage(element)) {
+      fixSlugTitle(doc, element.querySelector('div.game-detail-scratch'));
+      cleanupTicketDetailPage(element);
+      registerPageMetadata(element, { Breadcrumbs: 'true' });
+    } else {
+      fixSlugTitle(doc, null);
     }
     // Online game detail pages (guarded; no-op on the homepage)
     if (isGameDetailPage(element)) {

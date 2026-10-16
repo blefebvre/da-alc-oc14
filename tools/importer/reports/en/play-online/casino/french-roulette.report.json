@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/french-roulette.html",
+  "path": "en/play-online/casino/french-roulette",
+  "timestamp": "2026-10-16T16:09:20.564Z",
+  "title": "French Roulette",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

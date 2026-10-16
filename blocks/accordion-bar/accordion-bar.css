@@ -1,0 +1,78 @@
+/*
+ * accordion-bar: alc.ca "How to play this card" panel (#accordion .panel). Grey rounded
+ * title bar with blue Ubuntu label and a Material Icons expand chevron; the open panel body
+ * sits on the page background below the bar.
+ */
+.accordion-bar {
+  margin-bottom: 20px;
+}
+
+.accordion-bar .accordion-bar-item {
+  border-radius: 4px;
+  box-shadow: rgb(0 0 0 / 5%) 0 1px 1px 0;
+}
+
+.accordion-bar .accordion-bar-item + .accordion-bar-item {
+  margin-top: 5px;
+}
+
+.accordion-bar .accordion-bar-label {
+  position: relative;
+  display: block;
+  border-radius: 8px;
+  padding: 10px 43px 10px 15px;
+  background-color: var(--alc-grey-disabled);
+  color: var(--alc-sky);
+  font-family: var(--heading-font-family);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 17.6px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.accordion-bar .accordion-bar-label::-webkit-details-marker {
+  display: none;
+}
+
+/* Material Icons keyboard_arrow_down (28px), flipped when open */
+.accordion-bar .accordion-bar-label::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 28px;
+  height: 30.8px;
+  background-color: currentcolor;
+  mask: url('../../icons/header-expand.svg') center / 28px 28px no-repeat;
+}
+
+.accordion-bar .accordion-bar-item[open] > .accordion-bar-label::after {
+  transform: rotate(180deg);
+}
+
+.accordion-bar .accordion-bar-label:focus-visible {
+  outline: 2px solid var(--alc-sky);
+  outline-offset: 2px;
+}
+
+.accordion-bar .accordion-bar-body {
+  padding: 30px 0 10px;
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 22.8571px;
+}
+
+.accordion-bar .accordion-bar-body > * {
+  margin: 0 0 10px;
+  padding: 0 15px;
+}
+
+.accordion-bar .accordion-bar-body > :is(ul, ol) {
+  padding: 0 15px 0 35px;
+}
+
+.accordion-bar .accordion-bar-body strong,
+.accordion-bar .accordion-bar-body b {
+  font-weight: 700;
+}

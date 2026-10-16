@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/family-feud.html",
+  "path": "en/play-online/casino/family-feud",
+  "timestamp": "2026-10-16T16:08:18.134Z",
+  "title": "Family Feud",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

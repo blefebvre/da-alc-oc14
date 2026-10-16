@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/eternal-link-warriors-empire.html",
+  "path": "en/play-online/casino/eternal-link-warriors-empire",
+  "timestamp": "2026-10-16T16:07:40.567Z",
+  "title": "Eternal Link Warrior's Empire",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

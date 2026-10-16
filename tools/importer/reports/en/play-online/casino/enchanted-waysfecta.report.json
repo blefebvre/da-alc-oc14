@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/enchanted-waysfecta.html",
+  "path": "en/play-online/casino/enchanted-waysfecta",
+  "timestamp": "2026-10-16T16:07:02.563Z",
+  "title": "Enchanted Waysfecta | Casino Slot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/game-king-video-poker-jackpot.html",
+  "path": "en/play-online/casino/game-king-video-poker-jackpot",
+  "timestamp": "2026-10-16T16:10:52.746Z",
+  "title": "Game King Video Poker Jackpot",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

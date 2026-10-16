@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/cheers.html",
+  "path": "en/play-online/casino/cheers",
+  "timestamp": "2026-10-16T15:54:13.483Z",
+  "title": "Cheers",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

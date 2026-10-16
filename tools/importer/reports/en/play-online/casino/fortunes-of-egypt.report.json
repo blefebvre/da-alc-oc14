@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/fortunes-of-egypt.html",
+  "path": "en/play-online/casino/fortunes-of-egypt",
+  "timestamp": "2026-10-16T16:09:07.961Z",
+  "title": "Fortunes of Egypt | Casino Slot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

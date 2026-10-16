@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/eternal-link-shogun-empire.html",
+  "path": "en/play-online/casino/eternal-link-shogun-empire",
+  "timestamp": "2026-10-16T16:07:28.957Z",
+  "title": "Eternal Link Shogun Empire",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

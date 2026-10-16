@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/fu-gui-hao-men-glorious-fortunes.html",
+  "path": "en/play-online/casino/fu-gui-hao-men-glorious-fortunes",
+  "timestamp": "2026-10-16T16:10:39.677Z",
+  "title": "Fu Gui Hao Men Glorious Fortunes",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "variantName": "columns-ticket",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light (white card under a grey title bar)",
+    "density": "medium",
+    "purpose": "lottery-ticket-details",
+    "imagePattern": "portrait ticket image (5/12) with rotated vertical game-number label",
+    "structure": "image cell | info cell of label:value rows separated by grey rules + optional chevron link"
+  },
+  "contentPattern": "One row, two cells. Cell 1: <p>Game #{n}</p> (rendered as a rotated vertical label) followed by the ticket image (alt = ticket name). Cell 2: one paragraph per info row, label in <strong>: '<p><strong>Top prize:</strong> $675,000</p>', '<p><strong>Prizes Available:</strong> $4, $6, ...</p>', '<p><strong>Overall chance of winning a prize:</strong> 1 in 3.74</p>', then optionally '<p><a href=\"/content/alc/en/our-games/scratch-n-win/top-prizes-remaining\">SEE ALL TOP PRIZES REMAINING</a></p>'. Any row may be omitted.",
+  "usage": {
+    "pagesUsing": [
+      "https://www.alc.ca/content/alc/en/our-games/scratch-n-win/4099.html"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-16"
+  },
+  "reuseGuidance": "Use for Scratch 'n Win ticket detail pages: ticket image with vertical game number beside rule-separated prize info. Place in a section styled ticket-detail directly after the H1 + price default content.",
+  "options": [],
+  "memberVariantIds": [
+    "columns-ticket"
+  ]
+}

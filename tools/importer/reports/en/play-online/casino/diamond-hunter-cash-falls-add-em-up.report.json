@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/diamond-hunter-cash-falls-add-em-up.html",
+  "path": "en/play-online/casino/diamond-hunter-cash-falls-add-em-up",
+  "timestamp": "2026-10-16T16:00:58.252Z",
+  "title": "Diamond Hunter Cash Falls Add Em Up",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

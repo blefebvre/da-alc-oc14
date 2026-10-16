@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/cheeky-fruits-6-deluxe.html",
+  "path": "en/play-online/casino/cheeky-fruits-6-deluxe",
+  "timestamp": "2026-10-16T15:54:02.165Z",
+  "title": "Cheeky Fruits 6 Deluxe",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/double-jackpot-gems-grand-wheel.html",
+  "path": "en/play-online/casino/double-jackpot-gems-grand-wheel",
+  "timestamp": "2026-10-16T16:02:01.674Z",
+  "title": "Double Jackpot Gems Grand Wheel",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

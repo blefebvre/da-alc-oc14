@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/dream-wheeler.html",
+  "path": "en/play-online/casino/dream-wheeler",
+  "timestamp": "2026-10-16T16:04:41.481Z",
+  "title": "Dream Wheeler",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

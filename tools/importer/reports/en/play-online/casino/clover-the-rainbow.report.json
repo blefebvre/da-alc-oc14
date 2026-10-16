@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/clover-the-rainbow.html",
+  "path": "en/play-online/casino/clover-the-rainbow",
+  "timestamp": "2026-10-16T15:56:41.430Z",
+  "title": "Clover the Rainbow",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

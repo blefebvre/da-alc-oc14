@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/dragon-palace.html",
+  "path": "en/play-online/casino/dragon-palace",
+  "timestamp": "2026-10-16T16:03:13.233Z",
+  "title": "Dragon Palace | Casino Slot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

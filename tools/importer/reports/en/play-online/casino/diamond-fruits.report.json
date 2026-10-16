@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/diamond-fruits.html",
+  "path": "en/play-online/casino/diamond-fruits",
+  "timestamp": "2026-10-16T16:00:31.668Z",
+  "title": "Diamond Fruits | Casino Slot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

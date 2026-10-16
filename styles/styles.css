@@ -496,6 +496,90 @@ main > .section.featured {
 }
 
 /*
+ * Ticket detail section (alc.ca .game-detail-scratch .body-content, Scratch 'n Win and
+ * Breakopen tickets): same light-blue page background as .game-detail (shared rule below). Content
+ * is one column: full container width on phones/tablets, the left 2/3 from 1200px. The
+ * leading H1 + price default content is the title bar of the columns-ticket card below it.
+ */
+main > .section.ticket-detail {
+  display: flow-root;
+  padding-top: 30px;
+}
+
+main > .section.ticket-detail > :not(.breadcrumbs-wrapper) {
+  width: auto;
+  margin: 0 25px;
+  padding: 0;
+}
+
+main > .section.ticket-detail > .accordion-bar-wrapper {
+  margin: 0 20px;
+}
+
+main > .section.ticket-detail > .default-content-wrapper:has(+ .columns-ticket-wrapper) {
+  display: flex;
+  align-items: flex-start;
+  border: 1px solid var(--alc-grey-disabled);
+  border-radius: 8px 8px 0 0;
+  background: #fff url("https://www.alc.ca/content/dam/alc/images/static/alc-images/scratch-game-title-bg.png") center / cover no-repeat;
+}
+
+main > .section.ticket-detail > .default-content-wrapper:has(+ .columns-ticket-wrapper) > :is(h1, p) {
+  box-sizing: border-box;
+  flex: 0 0 75%;
+  margin: 10px 0;
+  padding: 0 10px;
+  color: var(--alc-sky);
+  font-family: var(--heading-font-family);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 33px;
+}
+
+main > .section.ticket-detail > .default-content-wrapper:has(+ .columns-ticket-wrapper) > p {
+  flex-basis: 25%;
+  text-align: right;
+}
+
+main > .section.ticket-detail > .default-content-wrapper:has(+ .columns-ticket-wrapper) + .columns-ticket-wrapper > .columns-ticket {
+  border-top: 0;
+  border-radius: 0 0 8px 8px;
+}
+
+@media (width >= 768px) {
+  main > .section.ticket-detail.has-breadcrumbs {
+    padding-top: 0;
+  }
+
+  /* breadcrumbs sit above the card (no hero to overlay) */
+  main > .section.ticket-detail > .breadcrumbs-wrapper {
+    position: static;
+    padding: 10px;
+  }
+
+  main > .section.ticket-detail > :not(.breadcrumbs-wrapper) {
+    width: calc(var(--container-width) - 20px);
+    margin: 0 auto;
+  }
+
+  main > .section.ticket-detail > .accordion-bar-wrapper {
+    padding: 0 10px;
+  }
+
+  main > .section.ticket-detail > .default-content-wrapper:has(+ .columns-ticket-wrapper) > :is(h1, p) {
+    font-size: 28px;
+    line-height: 30.8px;
+  }
+}
+
+@media (width >= 1200px) {
+  main > .section.ticket-detail > :not(.breadcrumbs-wrapper) {
+    width: calc((var(--container-width) - 30px) * 2 / 3);
+    margin-left: calc((100% - var(--container-width)) / 2 + 30px);
+  }
+}
+
+/*
  * Game detail title bar: the page H1 (plus an optional cost-range paragraph, e.g. "$0.10 - $20")
  * right before the carousel-thumbnails block renders as the top of the screenshot card,
  * over the light diagonal header band. The block below drops its top border to join it.
@@ -558,6 +642,10 @@ main .section.game-detail .section-main > .default-content-wrapper:first-child +
  */
 main > .section.game-detail {
   padding-top: 20px;
+}
+
+main > .section.game-detail,
+main > .section.ticket-detail {
   background:
     linear-gradient(rgb(255 255 255 / 50%), rgb(255 255 255 / 50%)) center top / var(--container-width) 100% no-repeat,
     url('https://www.alc.ca/content/dam/alc/images/static/alc-images/background.jpg') 0 0 / 100% auto no-repeat;

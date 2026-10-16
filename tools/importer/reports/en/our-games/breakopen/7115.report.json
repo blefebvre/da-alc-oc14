@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/breakopen/7115.html",
+  "path": "en/our-games/breakopen/7115",
+  "timestamp": "2026-10-16T15:59:01.325Z",
+  "title": "Super Bar",
+  "template": "ticket-detail",
+  "blocks": [
+    "columns-ticket",
+    "accordion-bar"
+  ]
+}

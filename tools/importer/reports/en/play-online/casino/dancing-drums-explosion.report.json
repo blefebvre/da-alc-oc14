@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/dancing-drums-explosion.html",
+  "path": "en/play-online/casino/dancing-drums-explosion",
+  "timestamp": "2026-10-16T15:58:44.264Z",
+  "title": "Dancing Drums Explosion | Casino Slot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

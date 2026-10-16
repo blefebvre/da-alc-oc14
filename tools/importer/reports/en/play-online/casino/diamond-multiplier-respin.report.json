@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/diamond-multiplier-respin.html",
+  "path": "en/play-online/casino/diamond-multiplier-respin",
+  "timestamp": "2026-10-16T16:01:22.217Z",
+  "title": "Diamond Multiplier Respin",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/double-jackpot-gems.html",
+  "path": "en/play-online/casino/double-jackpot-gems",
+  "timestamp": "2026-10-16T16:02:16.158Z",
+  "title": "Double Jackpot Gems | Casino Slot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

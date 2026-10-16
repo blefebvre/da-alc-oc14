@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/egglink-golden-yak.html",
+  "path": "en/play-online/casino/egglink-golden-yak",
+  "timestamp": "2026-10-16T16:06:48.870Z",
+  "title": "Egglink Golden Yak",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

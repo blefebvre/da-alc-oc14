@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/scratch-n-win/4099.html",
+  "path": "en/our-games/scratch-n-win/4099",
+  "timestamp": "2026-10-16T15:58:46.197Z",
+  "title": "Set for Life",
+  "template": "ticket-detail",
+  "blocks": [
+    "columns-ticket",
+    "accordion-bar"
+  ]
+}

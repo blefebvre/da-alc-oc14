@@ -1,0 +1,25 @@
+{
+  "variantName": "accordion-bar",
+  "baseBlock": "accordion",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light grey-blue bar, blue text",
+    "density": "minimal",
+    "purpose": "how-to-play-instructions",
+    "imagePattern": "none",
+    "structure": "single collapsible row: title bar with chevron + paragraph body"
+  },
+  "contentPattern": "One row per collapsible item: cell 1 = label text ('How to play this card'); cell 2 = rich-text body (paragraphs, bold text, ordered/unordered lists). Items render collapsed by default.",
+  "usage": {
+    "pagesUsing": [
+      "https://www.alc.ca/content/alc/en/our-games/scratch-n-win/4099.html"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-16"
+  },
+  "reuseGuidance": "Use for one or a few full-width collapsible bars (e.g. 'How to play this card' on ticket detail pages). Built on native <details>/<summary>, so it is keyboard and screen-reader accessible without extra script.",
+  "options": [],
+  "memberVariantIds": [
+    "accordion-bar"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/gong-xi-fa-cai-grand.html",
+  "path": "en/play-online/casino/gong-xi-fa-cai-grand",
+  "timestamp": "2026-10-16T16:12:34.876Z",
+  "title": "Gong Xi Fa Cai Grand",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

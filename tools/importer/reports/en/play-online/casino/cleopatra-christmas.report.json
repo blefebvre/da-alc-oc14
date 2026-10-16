@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/cleopatra-christmas.html",
+  "path": "en/play-online/casino/cleopatra-christmas",
+  "timestamp": "2026-10-16T15:55:26.335Z",
+  "title": "Cleopatra Christmas",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}
