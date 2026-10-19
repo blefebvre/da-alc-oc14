@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/megajackpots-wheel-of-fortune-on-air.html",
+  "path": "en/play-online/casino/megajackpots-wheel-of-fortune-on-air",
+  "timestamp": "2026-10-19T20:14:33.050Z",
+  "title": "Megajackpots Wheel of Fortune On Air",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

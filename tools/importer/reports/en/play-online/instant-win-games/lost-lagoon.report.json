@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/lost-lagoon.html",
+  "path": "en/play-online/instant-win-games/lost-lagoon",
+  "timestamp": "2026-10-19T21:03:32.827Z",
+  "title": "Lost Lagoon",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

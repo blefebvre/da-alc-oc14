@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/griffins-throne.html",
+  "path": "en/play-online/casino/griffins-throne",
+  "timestamp": "2026-10-19T20:09:38.864Z",
+  "title": "Griffin's Throne | Casino Slot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

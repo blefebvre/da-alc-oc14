@@ -12,6 +12,9 @@ const LOG = path.join(ROOT, 'migration-work/publisher.log');
 const PUBLISH = path.join(ROOT, 'tools/importer/publish-to-da.sh');
 // stale artefacts that must never be published (old homepage path before it moved to /index)
 const SKIP = new Set(['en']);
+// pages that are empty shells on alc.ca (retired games/tickets): never publish
+const SHELLS = path.join(ROOT, 'migration-work/empty-shells.txt');
+if (fs.existsSync(SHELLS)) fs.readFileSync(SHELLS, 'utf8').split('\n').filter(Boolean).forEach((p) => SKIP.add(p.trim()));
 const once = process.argv.includes('--once');
 
 const state = fs.existsSync(STATE) ? JSON.parse(fs.readFileSync(STATE, 'utf8')) : {};

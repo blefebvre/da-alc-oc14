@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/springtime-combos.html",
+  "path": "en/play-online/instant-win-games/springtime-combos",
+  "timestamp": "2026-10-19T21:18:03.945Z",
+  "title": "Springtime Combos",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

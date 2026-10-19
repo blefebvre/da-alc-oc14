@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/beach-bonanza.html",
+  "path": "en/play-online/instant-win-games/beach-bonanza",
+  "timestamp": "2026-10-19T20:38:50.244Z",
+  "title": "Beach Bonanza",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

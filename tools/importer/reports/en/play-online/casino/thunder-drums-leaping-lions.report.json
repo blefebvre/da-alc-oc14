@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/thunder-drums-leaping-lions.html",
+  "path": "en/play-online/casino/thunder-drums-leaping-lions",
+  "timestamp": "2026-10-19T19:59:58.256Z",
+  "title": "Thunder Drums Leaping Lions",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/alc-super-cash-buster.html",
+  "path": "en/play-online/instant-win-games/alc-super-cash-buster",
+  "timestamp": "2026-10-19T20:34:09.791Z",
+  "title": "Super Cash Buster | Online Gambling Game Atlantic Canada | ALC",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

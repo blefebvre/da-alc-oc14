@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/rising-rockets-emperor.html",
+  "path": "en/play-online/casino/rising-rockets-emperor",
+  "timestamp": "2026-10-19T19:46:16.359Z",
+  "title": "Rising Rockets Emperor",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

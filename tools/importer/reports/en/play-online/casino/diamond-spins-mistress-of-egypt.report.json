@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/diamond-spins-mistress-of-egypt.html",
+  "path": "en/play-online/casino/diamond-spins-mistress-of-egypt",
+  "timestamp": "2026-10-19T20:30:34.314Z",
+  "title": "Diamond Spins Mistress of Egypt",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

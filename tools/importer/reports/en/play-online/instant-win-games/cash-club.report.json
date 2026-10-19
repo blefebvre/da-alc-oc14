@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/cash-club.html",
+  "path": "en/play-online/instant-win-games/cash-club",
+  "timestamp": "2026-10-19T20:45:24.770Z",
+  "title": "Cash Club | Online Gambling Game Atlantic Canada | ALC",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

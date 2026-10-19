@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/lucky-tree.html",
+  "path": "en/play-online/casino/lucky-tree",
+  "timestamp": "2026-10-19T20:13:09.391Z",
+  "title": "Lucky Tree | Casino Slot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

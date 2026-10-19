@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/wild-hot-wasabi.html",
+  "path": "en/play-online/casino/wild-hot-wasabi",
+  "timestamp": "2026-10-19T20:13:41.734Z",
+  "title": "Wild Hot Wasabi | Casino Slot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

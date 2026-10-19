@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/powerbucks-gong-xi-fa-cai.html",
+  "path": "en/play-online/casino/powerbucks-gong-xi-fa-cai",
+  "timestamp": "2026-10-19T20:35:19.828Z",
+  "title": "Powerbucks Gong Xi Fa Cai",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

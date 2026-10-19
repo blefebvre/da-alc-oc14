@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/powerbucks-wheel-of-fortune-shimmering-sapphires.html",
+  "path": "en/play-online/casino/powerbucks-wheel-of-fortune-shimmering-sapphires",
+  "timestamp": "2026-10-19T20:36:38.425Z",
+  "title": "POWERBUCK$ Wheel of Fortune Shimmering Sapphires",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/vegas-cash-countdown.html",
+  "path": "en/play-online/instant-win-games/vegas-cash-countdown",
+  "timestamp": "2026-10-19T21:22:36.189Z",
+  "title": "Vegas Cash Countdown",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

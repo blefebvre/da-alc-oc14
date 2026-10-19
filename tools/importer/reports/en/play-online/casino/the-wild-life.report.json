@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/the-wild-life.html",
+  "path": "en/play-online/casino/the-wild-life",
+  "timestamp": "2026-10-19T20:23:39.493Z",
+  "title": "The Wild Life | Casino Slot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

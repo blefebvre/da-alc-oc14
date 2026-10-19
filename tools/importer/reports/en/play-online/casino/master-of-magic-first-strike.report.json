@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/master-of-magic-first-strike.html",
+  "path": "en/play-online/casino/master-of-magic-first-strike",
+  "timestamp": "2026-10-19T20:31:53.131Z",
+  "title": "Master of Magic First Strike",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/megajackpots-golden-goddess.html",
+  "path": "en/play-online/casino/megajackpots-golden-goddess",
+  "timestamp": "2026-10-19T20:32:50.892Z",
+  "title": "MegaJackpots Golden Goddess | Casino Jackpot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

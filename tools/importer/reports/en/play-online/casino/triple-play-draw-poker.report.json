@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/triple-play-draw-poker.html",
+  "path": "en/play-online/casino/triple-play-draw-poker",
+  "timestamp": "2026-10-19T20:24:25.129Z",
+  "title": "Triple Play Draw Poker | Casino Video Poker | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/lightning-horseman.html",
+  "path": "en/play-online/casino/lightning-horseman",
+  "timestamp": "2026-10-19T20:12:06.533Z",
+  "title": "Lightning Horseman | Casino Slot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/fantastic-fireworks.html",
+  "path": "en/play-online/casino/fantastic-fireworks",
+  "timestamp": "2026-10-19T20:06:55.987Z",
+  "title": "Fantastic Fireworks | Casino Slot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

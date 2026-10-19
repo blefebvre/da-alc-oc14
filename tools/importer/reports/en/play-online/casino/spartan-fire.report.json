@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/spartan-fire.html",
+  "path": "en/play-online/casino/spartan-fire",
+  "timestamp": "2026-10-19T19:52:13.030Z",
+  "title": "Spartan Fire | Casino Slot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

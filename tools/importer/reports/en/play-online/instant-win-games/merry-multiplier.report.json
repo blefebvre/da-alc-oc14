@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/merry-multiplier.html",
+  "path": "en/play-online/instant-win-games/merry-multiplier",
+  "timestamp": "2026-10-19T21:06:45.562Z",
+  "title": "Merry Multiplier | Online Gambling Game Atlantic Canada | ALC",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

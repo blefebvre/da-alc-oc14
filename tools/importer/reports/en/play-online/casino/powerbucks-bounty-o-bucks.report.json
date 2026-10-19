@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/powerbucks-bounty-o-bucks.html",
+  "path": "en/play-online/casino/powerbucks-bounty-o-bucks",
+  "timestamp": "2026-10-19T20:34:50.610Z",
+  "title": "Powerbucks Bounty O'Bucks",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

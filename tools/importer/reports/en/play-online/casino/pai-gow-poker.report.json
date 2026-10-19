@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/pai-gow-poker.html",
+  "path": "en/play-online/casino/pai-gow-poker",
+  "timestamp": "2026-10-19T20:16:08.441Z",
+  "title": "Pai Gow Poker | Casino Table Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

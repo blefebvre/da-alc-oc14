@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/alc-multiprice-capitol-cash.html",
+  "path": "en/play-online/instant-win-games/alc-multiprice-capitol-cash",
+  "timestamp": "2026-10-19T20:28:13.448Z",
+  "title": "Capitol Cash | Online Gambling Game Atlantic Canada | ALC",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

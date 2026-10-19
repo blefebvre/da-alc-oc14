@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/set-for-life-cascade.html",
+  "path": "en/play-online/instant-win-games/set-for-life-cascade",
+  "timestamp": "2026-10-19T21:15:26.143Z",
+  "title": "Set for Life Cascade",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

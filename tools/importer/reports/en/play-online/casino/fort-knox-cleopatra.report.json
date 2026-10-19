@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/fort-knox-cleopatra.html",
+  "path": "en/play-online/casino/fort-knox-cleopatra",
+  "timestamp": "2026-10-19T20:07:12.641Z",
+  "title": "Fort Knox Cleopatra",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

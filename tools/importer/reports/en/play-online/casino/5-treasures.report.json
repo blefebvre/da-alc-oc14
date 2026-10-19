@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/5-treasures.html",
+  "path": "en/play-online/casino/5-treasures",
+  "timestamp": "2026-10-19T19:56:53.408Z",
+  "title": "5 Treasures | Casino Slot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

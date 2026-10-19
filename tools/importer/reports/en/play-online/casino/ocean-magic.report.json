@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/ocean-magic.html",
+  "path": "en/play-online/casino/ocean-magic",
+  "timestamp": "2026-10-19T20:15:50.993Z",
+  "title": "Ocean Magic | Casino Slot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

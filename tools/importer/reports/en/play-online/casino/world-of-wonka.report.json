@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/world-of-wonka.html",
+  "path": "en/play-online/casino/world-of-wonka",
+  "timestamp": "2026-10-19T20:16:52.301Z",
+  "title": "World of Wonka",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

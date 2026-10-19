@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/star-trek-the-next-generation.html",
+  "path": "en/play-online/casino/star-trek-the-next-generation",
+  "timestamp": "2026-10-19T19:52:40.135Z",
+  "title": "Star Trek The Next Generation",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

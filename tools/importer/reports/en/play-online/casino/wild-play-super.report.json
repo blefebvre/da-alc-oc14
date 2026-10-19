@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/wild-play-super.html",
+  "path": "en/play-online/casino/wild-play-super",
+  "timestamp": "2026-10-19T20:27:07.198Z",
+  "title": "Wildplay Superbet | Casino Slot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

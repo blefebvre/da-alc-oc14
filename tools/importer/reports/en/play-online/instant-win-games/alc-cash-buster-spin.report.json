@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/alc-cash-buster-spin.html",
+  "path": "en/play-online/instant-win-games/alc-cash-buster-spin",
+  "timestamp": "2026-10-19T20:20:18.747Z",
+  "title": "Cash Buster Spin | Online Gambling Game Atlantic Canada | ALC",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

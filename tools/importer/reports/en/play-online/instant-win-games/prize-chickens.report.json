@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/prize-chickens.html",
+  "path": "en/play-online/instant-win-games/prize-chickens",
+  "timestamp": "2026-10-19T21:11:26.400Z",
+  "title": "Prize Chickens",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

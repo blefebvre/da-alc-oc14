@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/galactic-bucks.html",
+  "path": "en/play-online/instant-win-games/galactic-bucks",
+  "timestamp": "2026-10-19T20:47:31.653Z",
+  "title": "Galactic Bucks",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/stellar-cash-dragon-palace.html",
+  "path": "en/play-online/casino/stellar-cash-dragon-palace",
+  "timestamp": "2026-10-19T19:53:25.285Z",
+  "title": "Stellar Cash Dragon Palace",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

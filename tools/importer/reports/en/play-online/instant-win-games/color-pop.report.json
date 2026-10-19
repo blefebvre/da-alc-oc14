@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/color-pop.html",
+  "path": "en/play-online/instant-win-games/color-pop",
+  "timestamp": "2026-10-19T20:49:56.626Z",
+  "title": "Color Pop",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

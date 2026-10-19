@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/the-hot-offer-deluxe.html",
+  "path": "en/play-online/casino/the-hot-offer-deluxe",
+  "timestamp": "2026-10-19T19:58:05.495Z",
+  "title": "The Hot Offer Deluxe",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

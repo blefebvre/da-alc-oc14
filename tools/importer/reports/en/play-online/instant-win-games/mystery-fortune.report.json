@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/mystery-fortune.html",
+  "path": "en/play-online/instant-win-games/mystery-fortune",
+  "timestamp": "2026-10-19T21:08:39.687Z",
+  "title": "Mystery Fortune",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

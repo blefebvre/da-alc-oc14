@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/doubleplay-superbet.html",
+  "path": "en/play-online/casino/doubleplay-superbet",
+  "timestamp": "2026-10-19T20:06:05.985Z",
+  "title": "DoublePlay Superbet | Casino Slot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

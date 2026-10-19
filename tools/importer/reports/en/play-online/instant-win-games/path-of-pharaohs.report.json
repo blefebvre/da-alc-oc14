@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/path-of-pharaohs.html",
+  "path": "en/play-online/instant-win-games/path-of-pharaohs",
+  "timestamp": "2026-10-19T20:39:49.535Z",
+  "title": "Path of Pharaohs",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

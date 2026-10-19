@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/davinci-diamonds-dual-play.html",
+  "path": "en/play-online/casino/davinci-diamonds-dual-play",
+  "timestamp": "2026-10-19T20:04:21.848Z",
+  "title": "Davinci Diamonds Dual Play | Casino Slot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

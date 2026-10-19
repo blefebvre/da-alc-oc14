@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/stinkin-rich.html",
+  "path": "en/play-online/casino/stinkin-rich",
+  "timestamp": "2026-10-19T19:53:38.908Z",
+  "title": "Stinkin' Rich",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

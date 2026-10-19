@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/treasure-box-kingdom.html",
+  "path": "en/play-online/casino/treasure-box-kingdom",
+  "timestamp": "2026-10-19T20:04:08.604Z",
+  "title": "Treasure Box Kingdom",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

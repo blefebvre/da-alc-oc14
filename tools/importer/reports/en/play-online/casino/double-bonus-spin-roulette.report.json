@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/double-bonus-spin-roulette.html",
+  "path": "en/play-online/casino/double-bonus-spin-roulette",
+  "timestamp": "2026-10-19T20:05:11.854Z",
+  "title": "Double Bonus Spin Roulette | Casino Table Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

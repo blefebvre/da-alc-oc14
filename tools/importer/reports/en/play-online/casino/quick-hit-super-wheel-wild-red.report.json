@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/quick-hit-super-wheel-wild-red.html",
+  "path": "en/play-online/casino/quick-hit-super-wheel-wild-red",
+  "timestamp": "2026-10-19T20:18:20.341Z",
+  "title": "Quick Hit Super Wheel Wild Red | Casino Slot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

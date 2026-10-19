@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/sweet-fortune.html",
+  "path": "en/play-online/instant-win-games/sweet-fortune",
+  "timestamp": "2026-10-19T21:19:21.098Z",
+  "title": "Sweet Fortune",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

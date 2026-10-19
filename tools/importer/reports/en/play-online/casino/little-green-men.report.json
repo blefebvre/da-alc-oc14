@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/little-green-men.html",
+  "path": "en/play-online/casino/little-green-men",
+  "timestamp": "2026-10-19T20:12:36.931Z",
+  "title": "Little Green Men Nova Wilds | Casino Slot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

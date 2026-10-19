@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/mystery-multiplier.html",
+  "path": "en/play-online/instant-win-games/mystery-multiplier",
+  "timestamp": "2026-10-19T21:08:50.950Z",
+  "title": "Mystery Multiplier",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

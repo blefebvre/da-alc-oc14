@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/ragnar-first-strike.html",
+  "path": "en/play-online/casino/ragnar-first-strike",
+  "timestamp": "2026-10-19T20:36:54.103Z",
+  "title": "Ragnar First Strike",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

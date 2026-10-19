@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/rocket-eruption-megaways.html",
+  "path": "en/play-online/casino/rocket-eruption-megaways",
+  "timestamp": "2026-10-19T19:46:55.466Z",
+  "title": "Rocket Eruption Megaways",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

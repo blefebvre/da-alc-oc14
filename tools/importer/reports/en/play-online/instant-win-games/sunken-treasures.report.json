@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/sunken-treasures.html",
+  "path": "en/play-online/instant-win-games/sunken-treasures",
+  "timestamp": "2026-10-19T21:18:36.611Z",
+  "title": "Sunken Treasures | Online Gambling Game Atlantic Canada | ALC",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

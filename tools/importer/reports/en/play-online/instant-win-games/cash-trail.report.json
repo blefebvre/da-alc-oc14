@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/cash-trail.html",
+  "path": "en/play-online/instant-win-games/cash-trail",
+  "timestamp": "2026-10-19T20:46:17.002Z",
+  "title": "Cash Trail",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

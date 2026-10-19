@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/powerbucks-wheel-of-fortune-exotic-far-east.html",
+  "path": "en/play-online/casino/powerbucks-wheel-of-fortune-exotic-far-east",
+  "timestamp": "2026-10-19T20:36:05.433Z",
+  "title": "POWERBUCK$ Wheel of Fortune Exotic Far East | Casino Jackpot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

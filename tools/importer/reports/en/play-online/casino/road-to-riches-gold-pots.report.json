@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/road-to-riches-gold-pots.html",
+  "path": "en/play-online/casino/road-to-riches-gold-pots",
+  "timestamp": "2026-10-19T19:46:43.089Z",
+  "title": "Road to Riches Gold Pots | Casino Slot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

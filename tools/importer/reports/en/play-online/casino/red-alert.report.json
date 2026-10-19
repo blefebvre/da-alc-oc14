@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/red-alert.html",
+  "path": "en/play-online/casino/red-alert",
+  "timestamp": "2026-10-19T20:19:25.987Z",
+  "title": "Red Alert",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/foxin-wins.html",
+  "path": "en/play-online/casino/foxin-wins",
+  "timestamp": "2026-10-19T20:08:04.535Z",
+  "title": "Foxin Wins | Casino Slot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

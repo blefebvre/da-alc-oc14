@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/holiday-stacked-cash.html",
+  "path": "en/play-online/instant-win-games/holiday-stacked-cash",
+  "timestamp": "2026-10-19T21:00:56.497Z",
+  "title": "Holiday Stacked Cash",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/drop-the-beat.html",
+  "path": "en/play-online/instant-win-games/drop-the-beat",
+  "timestamp": "2026-10-19T20:54:50.588Z",
+  "title": "Drop The Beat",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

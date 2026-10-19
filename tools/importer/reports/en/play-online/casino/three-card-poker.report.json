@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/three-card-poker.html",
+  "path": "en/play-online/casino/three-card-poker",
+  "timestamp": "2026-10-19T20:23:52.993Z",
+  "title": "Three Card Poker | Casino Table Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

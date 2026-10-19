@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/emoti-collect-vacation-riches.html",
+  "path": "en/play-online/instant-win-games/emoti-collect-vacation-riches",
+  "timestamp": "2026-10-19T20:55:03.643Z",
+  "title": "EmotiCollect Vacation Riches",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

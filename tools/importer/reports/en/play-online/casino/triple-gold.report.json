@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/triple-gold.html",
+  "path": "en/play-online/casino/triple-gold",
+  "timestamp": "2026-10-19T20:58:32.128Z",
+  "title": "Triple Gold | Casino Slot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

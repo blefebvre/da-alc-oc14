@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/vip-fortune.html",
+  "path": "en/play-online/instant-win-games/vip-fortune",
+  "timestamp": "2026-10-19T21:23:33.845Z",
+  "title": "VIP Fortune",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

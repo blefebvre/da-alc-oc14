@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/pixies-of-the-forest.html",
+  "path": "en/play-online/instant-win-games/pixies-of-the-forest",
+  "timestamp": "2026-10-19T21:10:37.449Z",
+  "title": "Pixies of the Forest",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

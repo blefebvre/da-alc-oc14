@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/smokin-hot-gems.html",
+  "path": "en/play-online/casino/smokin-hot-gems",
+  "timestamp": "2026-10-19T19:51:29.307Z",
+  "title": "Smokin Hot Gems",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

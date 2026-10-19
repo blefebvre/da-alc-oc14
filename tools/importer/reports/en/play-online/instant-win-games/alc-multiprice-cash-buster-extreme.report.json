@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/alc-multiprice-cash-buster-extreme.html",
+  "path": "en/play-online/instant-win-games/alc-multiprice-cash-buster-extreme",
+  "timestamp": "2026-10-19T20:28:27.936Z",
+  "title": "Cash Buster Extreme | Online Gambling Game Atlantic Canada | ALC",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/bankers-bonus-payout.html",
+  "path": "en/play-online/instant-win-games/bankers-bonus-payout",
+  "timestamp": "2026-10-19T20:40:52.846Z",
+  "title": "Banker's Bonus Payout",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

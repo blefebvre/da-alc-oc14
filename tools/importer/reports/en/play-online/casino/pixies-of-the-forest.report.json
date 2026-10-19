@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/pixies-of-the-forest.html",
+  "path": "en/play-online/casino/pixies-of-the-forest",
+  "timestamp": "2026-10-19T20:16:20.554Z",
+  "title": "Pixies of the Forest | Casino Slot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

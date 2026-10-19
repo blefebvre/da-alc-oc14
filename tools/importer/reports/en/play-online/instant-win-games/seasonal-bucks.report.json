@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/seasonal-bucks.html",
+  "path": "en/play-online/instant-win-games/seasonal-bucks",
+  "timestamp": "2026-10-19T21:15:13.632Z",
+  "title": "Seasonal Bucks",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

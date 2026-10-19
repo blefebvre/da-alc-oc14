@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/powerbucks-wheel-of-fortune-lucky-coins-on-stage.html",
+  "path": "en/play-online/casino/powerbucks-wheel-of-fortune-lucky-coins-on-stage",
+  "timestamp": "2026-10-19T20:17:12.813Z",
+  "title": "PowerBuck$ Wheel of Fortune Lucky Coins on Stage",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

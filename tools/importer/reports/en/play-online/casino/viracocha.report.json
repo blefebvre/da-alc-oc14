@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/viracocha.html",
+  "path": "en/play-online/casino/viracocha",
+  "timestamp": "2026-10-19T20:11:06.341Z",
+  "title": "Viracocha",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

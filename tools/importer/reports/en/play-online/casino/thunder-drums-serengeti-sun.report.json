@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/thunder-drums-serengeti-sun.html",
+  "path": "en/play-online/casino/thunder-drums-serengeti-sun",
+  "timestamp": "2026-10-19T20:00:48.552Z",
+  "title": "Thunder Drums Serengeti Sun",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

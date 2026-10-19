@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/vegas-showtime-jackpot.html",
+  "path": "en/play-online/instant-win-games/vegas-showtime-jackpot",
+  "timestamp": "2026-10-19T20:55:51.537Z",
+  "title": "Vegas Showtime Jackpot",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

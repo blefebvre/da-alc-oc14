@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/wheel-of-fortune-triple-gold-gold-spin.html",
+  "path": "en/play-online/casino/wheel-of-fortune-triple-gold-gold-spin",
+  "timestamp": "2026-10-19T20:12:33.587Z",
+  "title": "Wheel of Fortune Triple Gold Gold Spin",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

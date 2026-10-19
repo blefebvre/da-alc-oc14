@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/bucks-family.html",
+  "path": "en/play-online/instant-win-games/bucks-family",
+  "timestamp": "2026-10-19T20:42:52.339Z",
+  "title": "Bucks Family",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

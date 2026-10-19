@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/red-hot-tamales.html",
+  "path": "en/play-online/casino/red-hot-tamales",
+  "timestamp": "2026-10-19T20:19:45.842Z",
+  "title": "Red Hot Tamales",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

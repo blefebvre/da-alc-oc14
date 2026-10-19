@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/keystone-kops.html",
+  "path": "en/play-online/casino/keystone-kops",
+  "timestamp": "2026-10-19T20:31:03.887Z",
+  "title": "Keystone Kops",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

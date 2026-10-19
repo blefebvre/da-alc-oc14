@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/super-88-fortunes.html",
+  "path": "en/play-online/casino/super-88-fortunes",
+  "timestamp": "2026-10-19T19:54:05.102Z",
+  "title": "Super 88 Fortunes",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

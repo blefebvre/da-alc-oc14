@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/cash-countdown.html",
+  "path": "en/play-online/instant-win-games/cash-countdown",
+  "timestamp": "2026-10-19T20:45:36.291Z",
+  "title": "Cash Countdown",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

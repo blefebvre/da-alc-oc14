@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/ruler-of-elemental-riches.html",
+  "path": "en/play-online/instant-win-games/ruler-of-elemental-riches",
+  "timestamp": "2026-10-19T20:57:34.631Z",
+  "title": "Ruler of Elemental Riches",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

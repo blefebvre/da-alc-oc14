@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/scratchin-7s.html",
+  "path": "en/play-online/instant-win-games/scratchin-7s",
+  "timestamp": "2026-10-19T21:14:38.065Z",
+  "title": "Scratchin 7s",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

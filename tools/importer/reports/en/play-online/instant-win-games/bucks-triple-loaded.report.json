@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/bucks-triple-loaded.html",
+  "path": "en/play-online/instant-win-games/bucks-triple-loaded",
+  "timestamp": "2026-10-19T20:41:46.294Z",
+  "title": "Bucks Triple Loaded",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

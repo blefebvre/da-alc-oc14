@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/xiao-fu-bao.html",
+  "path": "en/play-online/casino/xiao-fu-bao",
+  "timestamp": "2026-10-19T20:17:08.002Z",
+  "title": "Xiao Fu Bao",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

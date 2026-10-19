@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/alc-crossword-deluxe.html",
+  "path": "en/play-online/instant-win-games/alc-crossword-deluxe",
+  "timestamp": "2026-10-19T20:22:03.888Z",
+  "title": "Crossword Deluxe | Online Gambling Game Atlantic Canada | ALC",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

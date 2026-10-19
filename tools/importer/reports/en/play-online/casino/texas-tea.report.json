@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/texas-tea.html",
+  "path": "en/play-online/casino/texas-tea",
+  "timestamp": "2026-10-19T19:56:34.801Z",
+  "title": "Texas Tea",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/monopoly-progressive-jackpots.html",
+  "path": "en/play-online/instant-win-games/monopoly-progressive-jackpots",
+  "timestamp": "2026-10-19T20:50:45.029Z",
+  "title": "Monopoly Progressive Jackpots",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

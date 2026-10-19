@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/pirates-quest.html",
+  "path": "en/play-online/instant-win-games/pirates-quest",
+  "timestamp": "2026-10-19T21:10:24.998Z",
+  "title": "Pirate's Quest",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

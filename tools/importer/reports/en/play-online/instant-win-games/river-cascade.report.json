@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/river-cascade.html",
+  "path": "en/play-online/instant-win-games/river-cascade",
+  "timestamp": "2026-10-19T21:13:19.668Z",
+  "title": "River Cascade | Online Gambling Game Atlantic Canada | ALC",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

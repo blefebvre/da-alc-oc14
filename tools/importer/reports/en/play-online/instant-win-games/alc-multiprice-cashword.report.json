@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/alc-multiprice-cashword.html",
+  "path": "en/play-online/instant-win-games/alc-multiprice-cashword",
+  "timestamp": "2026-10-19T20:28:38.299Z",
+  "title": "Cashword Bonus | Online Gambling Game Atlantic Canada | ALC",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

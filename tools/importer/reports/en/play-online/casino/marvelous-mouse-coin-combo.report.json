@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/marvelous-mouse-coin-combo.html",
+  "path": "en/play-online/casino/marvelous-mouse-coin-combo",
+  "timestamp": "2026-10-19T20:13:44.891Z",
+  "title": "Marvelous Mouse Coin Combo | Casino Slot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

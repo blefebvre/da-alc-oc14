@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/the-wizard-of-oz-over-the-rainbow.html",
+  "path": "en/play-online/casino/the-wizard-of-oz-over-the-rainbow",
+  "timestamp": "2026-10-19T19:59:11.294Z",
+  "title": "The Wizard of Oz: Over the Rainbow",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

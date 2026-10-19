@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/big-foot-bucks.html",
+  "path": "en/play-online/instant-win-games/big-foot-bucks",
+  "timestamp": "2026-10-19T20:41:09.201Z",
+  "title": "Big Foot Bucks",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

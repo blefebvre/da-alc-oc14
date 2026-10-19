@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/double-ruby.html",
+  "path": "en/play-online/casino/double-ruby",
+  "timestamp": "2026-10-19T20:05:48.403Z",
+  "title": "Double Ruby | Casino Slot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

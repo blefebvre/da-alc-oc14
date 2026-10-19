@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/20x-fortune.html",
+  "path": "en/play-online/instant-win-games/20x-fortune",
+  "timestamp": "2026-10-19T20:18:03.098Z",
+  "title": "20x Fortune",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

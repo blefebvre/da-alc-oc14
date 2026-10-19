@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/precious-pearls.html",
+  "path": "en/play-online/instant-win-games/precious-pearls",
+  "timestamp": "2026-10-19T21:11:15.146Z",
+  "title": "Precious Pearls",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

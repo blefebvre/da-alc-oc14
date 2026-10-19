@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/powerbucks-wheel-of-fortune-diamonds-deluxe-date-night.html",
+  "path": "en/play-online/casino/powerbucks-wheel-of-fortune-diamonds-deluxe-date-night",
+  "timestamp": "2026-10-19T20:35:34.795Z",
+  "title": "Powerbucks Wheel of Fortune Diamonds Deluxe Date Night",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

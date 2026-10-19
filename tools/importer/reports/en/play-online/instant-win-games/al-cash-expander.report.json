@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/al-cash-expander.html",
+  "path": "en/play-online/instant-win-games/al-cash-expander",
+  "timestamp": "2026-10-19T20:40:04.301Z",
+  "title": "AL Cash Expander",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/triple-cash-eruption-the-western.html",
+  "path": "en/play-online/casino/triple-cash-eruption-the-western",
+  "timestamp": "2026-10-19T20:05:31.498Z",
+  "title": "Triple Cash Eruption The Western",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

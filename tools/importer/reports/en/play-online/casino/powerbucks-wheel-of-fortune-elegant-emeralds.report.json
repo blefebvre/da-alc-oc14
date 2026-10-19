@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/powerbucks-wheel-of-fortune-elegant-emeralds.html",
+  "path": "en/play-online/casino/powerbucks-wheel-of-fortune-elegant-emeralds",
+  "timestamp": "2026-10-19T20:35:50.216Z",
+  "title": "POWERBUCK$ Wheel of Fortune Elegant Emeralds",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

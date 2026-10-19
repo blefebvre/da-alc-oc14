@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/tiger-and-dragon-multiplier.html",
+  "path": "en/play-online/casino/tiger-and-dragon-multiplier",
+  "timestamp": "2026-10-19T20:03:20.953Z",
+  "title": "Tiger and Dragon Multiplier",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

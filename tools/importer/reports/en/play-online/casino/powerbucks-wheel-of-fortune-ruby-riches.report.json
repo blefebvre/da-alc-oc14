@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/powerbucks-wheel-of-fortune-ruby-riches.html",
+  "path": "en/play-online/casino/powerbucks-wheel-of-fortune-ruby-riches",
+  "timestamp": "2026-10-19T20:17:27.843Z",
+  "title": "Powerbuck$ Wheel of Fortune Ruby Riches",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

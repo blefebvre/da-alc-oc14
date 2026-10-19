@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/candy-smash-cash.html",
+  "path": "en/play-online/instant-win-games/candy-smash-cash",
+  "timestamp": "2026-10-19T20:42:02.940Z",
+  "title": "Candy Smash Cash",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

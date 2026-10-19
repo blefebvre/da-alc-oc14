@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/vegas-jackpots.html",
+  "path": "en/play-online/instant-win-games/vegas-jackpots",
+  "timestamp": "2026-10-19T20:55:32.024Z",
+  "title": "Vegas Jackpots",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/shes-a-rich-girl.html",
+  "path": "en/play-online/casino/shes-a-rich-girl",
+  "timestamp": "2026-10-19T20:20:49.246Z",
+  "title": "She's a Rich Girl | Casino Slot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

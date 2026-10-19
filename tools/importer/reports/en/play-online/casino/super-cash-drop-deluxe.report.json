@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/super-cash-drop-deluxe.html",
+  "path": "en/play-online/casino/super-cash-drop-deluxe",
+  "timestamp": "2026-10-19T19:54:31.093Z",
+  "title": "Super Cash Drop Deluxe",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

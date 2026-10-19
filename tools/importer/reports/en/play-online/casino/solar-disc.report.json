@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/solar-disc.html",
+  "path": "en/play-online/casino/solar-disc",
+  "timestamp": "2026-10-19T19:51:57.812Z",
+  "title": "Solar Disc | Casino Slot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

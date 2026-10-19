@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/ghostbusters-spectral-search.html",
+  "path": "en/play-online/instant-win-games/ghostbusters-spectral-search",
+  "timestamp": "2026-10-19T20:59:03.150Z",
+  "title": "Ghostbusters Spectral Search",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

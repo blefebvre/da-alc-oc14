@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/american-roulette.html",
+  "path": "en/play-online/casino/american-roulette",
+  "timestamp": "2026-10-19T19:57:46.431Z",
+  "title": "American Roulette | Casino Table Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

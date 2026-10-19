@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/scarab-link.html",
+  "path": "en/play-online/casino/scarab-link",
+  "timestamp": "2026-10-19T20:37:52.330Z",
+  "title": "Scarab Link",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

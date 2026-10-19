@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/alc-monopoly-multiplier.html",
+  "path": "en/play-online/instant-win-games/alc-monopoly-multiplier",
+  "timestamp": "2026-10-19T20:26:52.102Z",
+  "title": "Monopoly Multiplier | Online Gambling Game Atlantic Canada | ALC",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

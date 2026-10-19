@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/alc-cb-breakopen.html",
+  "path": "en/play-online/instant-win-games/alc-cb-breakopen",
+  "timestamp": "2026-10-19T20:21:21.788Z",
+  "title": "Cash Buster Breakopen | Online Gambling Game Atlantic Canada | ALC",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/cleopatra-plus.html",
+  "path": "en/play-online/casino/cleopatra-plus",
+  "timestamp": "2026-10-19T20:02:17.354Z",
+  "title": "Cleopatra Plus | Casino Slot Game| Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

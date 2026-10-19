@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/sphinx-coin-boost.html",
+  "path": "en/play-online/casino/sphinx-coin-boost",
+  "timestamp": "2026-10-19T19:52:28.245Z",
+  "title": "Sphinx Coin Boost",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

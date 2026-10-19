@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/alc-flaming-7s.html",
+  "path": "en/play-online/instant-win-games/alc-flaming-7s",
+  "timestamp": "2026-10-19T20:22:58.249Z",
+  "title": "Flaming 7s | Online Gambling Game Atlantic Canada | ALC",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/ultimate-x-poker-triple-play.html",
+  "path": "en/play-online/casino/ultimate-x-poker-triple-play",
+  "timestamp": "2026-10-19T20:10:21.231Z",
+  "title": "Ultimate X Poker Triple Play | Casino Slot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

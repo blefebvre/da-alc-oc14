@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/silver-stars-supreme.html",
+  "path": "en/play-online/instant-win-games/silver-stars-supreme",
+  "timestamp": "2026-10-19T21:16:28.501Z",
+  "title": "Silver Stars Supreme",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

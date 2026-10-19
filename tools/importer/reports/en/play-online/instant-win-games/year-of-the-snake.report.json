@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/year-of-the-snake.html",
+  "path": "en/play-online/instant-win-games/year-of-the-snake",
+  "timestamp": "2026-10-19T21:26:17.433Z",
+  "title": "Year of the Snake",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

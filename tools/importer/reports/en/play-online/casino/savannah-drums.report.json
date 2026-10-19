@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/savannah-drums.html",
+  "path": "en/play-online/casino/savannah-drums",
+  "timestamp": "2026-10-19T19:48:51.658Z",
+  "title": "Savannah Drums",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/powerbucks-mega-stars-ultra.html",
+  "path": "en/play-online/casino/powerbucks-mega-stars-ultra",
+  "timestamp": "2026-10-19T20:16:53.441Z",
+  "title": "Powerbuck$ Mega Stars Ultra",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

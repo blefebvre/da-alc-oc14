@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/multiplier-jackpots.html",
+  "path": "en/play-online/instant-win-games/multiplier-jackpots",
+  "timestamp": "2026-10-19T20:51:13.532Z",
+  "title": "Multiplier Jackpots",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

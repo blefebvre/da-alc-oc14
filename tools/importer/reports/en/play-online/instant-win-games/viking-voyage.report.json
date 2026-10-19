@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/viking-voyage.html",
+  "path": "en/play-online/instant-win-games/viking-voyage",
+  "timestamp": "2026-10-19T21:23:11.858Z",
+  "title": "Viking Voyage | Online Gambling Game Atlantic Canada | ALC",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

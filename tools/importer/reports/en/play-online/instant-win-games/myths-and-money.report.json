@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/myths-and-money.html",
+  "path": "en/play-online/instant-win-games/myths-and-money",
+  "timestamp": "2026-10-19T21:09:02.717Z",
+  "title": "Myths & Money",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

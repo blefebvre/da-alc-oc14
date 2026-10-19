@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/fire-bird-sky-gods.html",
+  "path": "en/play-online/casino/fire-bird-sky-gods",
+  "timestamp": "2026-10-19T20:30:46.748Z",
+  "title": "Fire Bird Sky Gods",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

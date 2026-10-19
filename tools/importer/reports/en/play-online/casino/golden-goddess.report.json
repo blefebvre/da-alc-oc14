@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/golden-goddess.html",
+  "path": "en/play-online/casino/golden-goddess",
+  "timestamp": "2026-10-19T20:09:03.795Z",
+  "title": "Golden Goddess | Casino Slot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

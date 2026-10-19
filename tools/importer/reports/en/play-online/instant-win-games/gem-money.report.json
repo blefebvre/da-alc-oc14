@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/gem-money.html",
+  "path": "en/play-online/instant-win-games/gem-money",
+  "timestamp": "2026-10-19T20:58:32.806Z",
+  "title": "Gem Money",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

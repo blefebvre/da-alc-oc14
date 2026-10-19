@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/dan-marino-gunslinger.html",
+  "path": "en/play-online/casino/dan-marino-gunslinger",
+  "timestamp": "2026-10-19T20:29:48.137Z",
+  "title": "Dan Marino Gunslinger",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}
