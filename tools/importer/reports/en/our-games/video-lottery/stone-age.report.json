@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/video-lottery/stone-age.html",
+  "path": "en/our-games/video-lottery/stone-age",
+  "timestamp": "2026-10-19T19:39:49.843Z",
+  "title": "Stone Age",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

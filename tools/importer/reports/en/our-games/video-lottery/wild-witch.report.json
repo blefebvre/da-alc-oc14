@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/video-lottery/wild-witch.html",
+  "path": "en/our-games/video-lottery/wild-witch",
+  "timestamp": "2026-10-19T19:44:01.128Z",
+  "title": "Wild Witch",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

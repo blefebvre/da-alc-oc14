@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/video-lottery/thunder-stampede.html",
+  "path": "en/our-games/video-lottery/thunder-stampede",
+  "timestamp": "2026-10-19T19:42:50.848Z",
+  "title": "Thunder Stampede",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

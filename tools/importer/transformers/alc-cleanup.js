@@ -53,6 +53,22 @@ function fixImages(element) {
   });
 }
 
+// Application screens (account, cart, checkout, ticket configurators, game launchers, search,
+// responsible-gaming flows) need the alc.ca backend: they are not migrated and links point to alc.ca.
+// Keep in sync with migration-work/scripts/build-redirects.cjs.
+const APP_SCREEN_RE = new RegExp([
+  '^/content/alc/en/(cart|checkout|confirmation|login|search-results|payment-authorization-failed',
+  '|email-communications|interact-redirect|2chance-history-redirect|short-break-confirmation',
+  '|long-break-confirmation)\\.html$',
+  '|^/content/alc/en/(long-term-return-to-play|short-term-return-to-play|registration|game-configurator)(/.*)?\\.html$',
+  '|^/content/alc/en/rewards/(existing-account-confirmation|join-rewards|points-details)\\.html$',
+  '|^/content/alc/en/play-online/(casino|instant-win-games)/game\\.html$',
+  '|^/content/alc/en/play-online/lottomax\\.html$',
+  '|^/content/alc/en/corporate/about-atlantic-lottery/contact-us/send-a-message\\.html$',
+  '|^/content/alc/en/referenced-content/',
+].join(''));
+const isAppScreen = (path) => APP_SCREEN_RE.test(path);
+
 // Internal alc.ca links: strip "/content/alc" prefix and ".html" suffix, drop itm_* / utm_* params.
 // e.g. /content/alc/en/winning-numbers.html?itm_source=Homepage -> /en/winning-numbers
 function rewriteLink(href) {
@@ -74,7 +90,7 @@ function rewriteLink(href) {
   // App pages = game launchers (game.html?gameId=...) and anything outside /content/alc (e.g. /en/casino/game.html)
   const isAsset = path.startsWith('/content/dam/');
   const isGameLauncher = /\/game\.html$/.test(path) && url.searchParams.has('gameId');
-  if (isAsset || isGameLauncher || !path.startsWith('/content/alc')) {
+  if (isAsset || isGameLauncher || isAppScreen(path) || !path.startsWith('/content/alc')) {
     if (path.startsWith('/etc.clientlibs')) return href;
     return `${ORIGIN}${path}${url.search}${url.hash || ''}`;
   }

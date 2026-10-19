@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/radiant-gems-rapid-respin.html",
+  "path": "en/play-online/casino/radiant-gems-rapid-respin",
+  "timestamp": "2026-10-19T19:41:25.514Z",
+  "title": "Radiant Gems Rapid Respin",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/video-lottery/wild-yukon.html",
+  "path": "en/our-games/video-lottery/wild-yukon",
+  "timestamp": "2026-10-19T19:44:28.327Z",
+  "title": "Wild Yukon",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

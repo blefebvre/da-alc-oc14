@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/video-lottery/sunset-tusk.html",
+  "path": "en/our-games/video-lottery/sunset-tusk",
+  "timestamp": "2026-10-19T19:40:17.532Z",
+  "title": "Sunset Tusk",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

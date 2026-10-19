@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/pulled-from-the-deep-ultranudge.html",
+  "path": "en/play-online/casino/pulled-from-the-deep-ultranudge",
+  "timestamp": "2026-10-19T19:36:46.338Z",
+  "title": "Pulled From The Deep Ultranudge",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

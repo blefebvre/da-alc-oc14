@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/video-lottery/sizzling-phoenix.html",
+  "path": "en/our-games/video-lottery/sizzling-phoenix",
+  "timestamp": "2026-10-19T19:39:18.092Z",
+  "title": "Sizzling Phoenix",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

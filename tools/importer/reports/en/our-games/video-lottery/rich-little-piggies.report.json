@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/video-lottery/rich-little-piggies.html",
+  "path": "en/our-games/video-lottery/rich-little-piggies",
+  "timestamp": "2026-10-19T19:37:39.048Z",
+  "title": "Rich Little Piggies",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

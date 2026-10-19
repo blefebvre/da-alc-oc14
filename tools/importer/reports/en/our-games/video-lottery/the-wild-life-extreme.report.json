@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/video-lottery/the-wild-life-extreme.html",
+  "path": "en/our-games/video-lottery/the-wild-life-extreme",
+  "timestamp": "2026-10-19T19:41:56.647Z",
+  "title": "The Wild Life Extreme",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

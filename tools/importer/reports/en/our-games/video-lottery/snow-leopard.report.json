@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/video-lottery/snow-leopard.html",
+  "path": "en/our-games/video-lottery/snow-leopard",
+  "timestamp": "2026-10-19T19:39:38.333Z",
+  "title": "Snow Leopard",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

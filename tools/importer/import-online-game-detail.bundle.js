@@ -68,7 +68,44 @@ var CustomImportScript = (() => {
     }
     return p;
   }
+  function bgUrl(el) {
+    const style = el && el.getAttribute("style") || "";
+    const m = style.match(/background-image\s*:\s*url\(\s*['"]?([^'")]+)['"]?\s*\)/i);
+    return m ? m[1] : "";
+  }
+  function parseVltTeaser(element, document2) {
+    const cells = [];
+    let bg = bgUrl(element);
+    if (!bg) {
+      const styled = [...element.querySelectorAll('[style*="background-image"]')].find((el) => bgUrl(el));
+      bg = bgUrl(styled);
+    }
+    const title = element.getAttribute("data-gtm-variant") || "";
+    if (bg) {
+      const img = document2.createElement("img");
+      img.src = absolutize(bg);
+      img.alt = title;
+      cells.push([img]);
+    }
+    const logoEl = element.querySelector(".cmp-teaser__logo img, .cmp-teaser__content img, img");
+    if (logoEl && logoEl.getAttribute("src")) {
+      const logo = document2.createElement("img");
+      logo.src = absolutize(logoEl.getAttribute("src"));
+      logo.alt = logoEl.getAttribute("alt") || title;
+      cells.push([logo]);
+    }
+    if (!cells.length) {
+      element.remove();
+      return;
+    }
+    const block = WebImporter.Blocks.createBlock(document2, { name: "hero-game", cells });
+    element.replaceWith(block);
+  }
   function parse(element, { document: document2 }) {
+    if (element.classList.contains("alc-custom-teaser") && !element.querySelector(".alc-game-details-header__cta-wrapper")) {
+      parseVltTeaser(element, document2);
+      return;
+    }
     const cells = [];
     const imgEl = element.querySelector(".cmp-teaser__image img, .cmp-image img, img.cmp-image__image");
     if (imgEl && imgEl.getAttribute("src")) {
@@ -257,7 +294,7 @@ var CustomImportScript = (() => {
     if (v.startsWith("/")) return `${ORIGIN3}${v}`;
     return v;
   }
-  function bgUrl(el) {
+  function bgUrl2(el) {
     if (!el) return "";
     const style = el.getAttribute("style") || "";
     const m = style.match(/url\(\s*(?:&quot;|["'])?(.*?)(?:&quot;|["'])?\s*\)/i);
@@ -287,7 +324,7 @@ var CustomImportScript = (() => {
       const imageCell = [];
       const imgHolder = card.querySelector(".hyt-game-image");
       const imgEl = imgHolder && imgHolder.querySelector("img[src]");
-      const src = imgEl ? imgEl.getAttribute("src") : bgUrl(imgHolder);
+      const src = imgEl ? imgEl.getAttribute("src") : bgUrl2(imgHolder);
       if (src) {
         const img = document2.createElement("img");
         img.src = absolutize3(src);
@@ -342,7 +379,7 @@ var CustomImportScript = (() => {
       const content = tile.querySelector(".game-tile-content") || tile;
       const imageCell = [];
       const imgEl = imageContainer && imageContainer.querySelector("img[src]");
-      const src = imgEl ? imgEl.getAttribute("src") : bgUrl(imageContainer);
+      const src = imgEl ? imgEl.getAttribute("src") : bgUrl2(imageContainer);
       const titleEl = content.querySelector("h3.game-tile-title, .game-tile-title, h3, h2");
       const title = clean3(titleEl && titleEl.textContent);
       if (src) {
@@ -488,6 +525,18 @@ var CustomImportScript = (() => {
       if (next !== style) el.setAttribute("style", next);
     });
   }
+  var APP_SCREEN_RE = new RegExp([
+    "^/content/alc/en/(cart|checkout|confirmation|login|search-results|payment-authorization-failed",
+    "|email-communications|interact-redirect|2chance-history-redirect|short-break-confirmation",
+    "|long-break-confirmation)\\.html$",
+    "|^/content/alc/en/(long-term-return-to-play|short-term-return-to-play|registration|game-configurator)(/.*)?\\.html$",
+    "|^/content/alc/en/rewards/(existing-account-confirmation|join-rewards|points-details)\\.html$",
+    "|^/content/alc/en/play-online/(casino|instant-win-games)/game\\.html$",
+    "|^/content/alc/en/play-online/lottomax\\.html$",
+    "|^/content/alc/en/corporate/about-atlantic-lottery/contact-us/send-a-message\\.html$",
+    "|^/content/alc/en/referenced-content/"
+  ].join(""));
+  var isAppScreen = (path) => APP_SCREEN_RE.test(path);
   function rewriteLink(href) {
     if (!href) return href;
     const raw = href.trim();
@@ -503,7 +552,7 @@ var CustomImportScript = (() => {
     let path = url.pathname;
     const isAsset = path.startsWith("/content/dam/");
     const isGameLauncher = /\/game\.html$/.test(path) && url.searchParams.has("gameId");
-    if (isAsset || isGameLauncher || !path.startsWith("/content/alc")) {
+    if (isAsset || isGameLauncher || isAppScreen(path) || !path.startsWith("/content/alc")) {
       if (path.startsWith("/etc.clientlibs")) return href;
       return `${ORIGIN4}${path}${url.search}${url.hash || ""}`;
     }
@@ -528,8 +577,31 @@ var CustomImportScript = (() => {
     const query = params.toString();
     return `${path}${query ? `?${query}` : ""}${url.hash || ""}`;
   }
+  var DETAIL_PAGE_CHROME_SELECTORS = [
+    '[role="banner"]',
+    "div.xfpage",
+    "#loginFlow",
+    "header",
+    // Header parts that sit outside <header> (siblings of .xfpage in the cleaned snapshot):
+    // signed-in dashboard, top nav + off-canvas mobile nav, collapsible header promo.
+    ".logged-in-info-wrapper",
+    ".topnav",
+    "#nav-mobile",
+    "#collapsible-promo",
+    "footer.main-footer",
+    // Browser-upgrade modal (sibling of .common-modals on detail pages)
+    ".modal-browser-check",
+    // Site-wide alert/notification banners (<section data-bind="if: message"><div class="alert-area">)
+    'section[data-bind="if: message"]',
+    ".alert-area",
+    ".notification.section",
+    ".cmp-notification"
+  ];
   function isGameDetailPage(root) {
-    return !!root.querySelector("section.alc-game-details-header, div.digital-instants-info-page");
+    return !isVideoLotteryPage(root) && !!root.querySelector("section.alc-game-details-header, div.digital-instants-info-page");
+  }
+  function isVideoLotteryPage(root) {
+    return !!root.querySelector("div.video-lottery-info-page");
   }
   var PENDING_METADATA = /* @__PURE__ */ new WeakMap();
   function registerPageMetadata(main, extra) {
@@ -588,27 +660,7 @@ var CustomImportScript = (() => {
       wrapper.remove();
     });
     WebImporter.DOMUtils.remove(element, [
-      // Game pages have no div.experiencefragment wrapper: the global header is
-      // <div role="banner"><div class="xfpage page basicpage">...<header>...</header> (plus the
-      // #loginFlow MFA modal) and the footer is a bare <footer class="main-footer">.
-      '[role="banner"]',
-      "div.xfpage",
-      "#loginFlow",
-      "header",
-      // Header parts that sit outside <header> (siblings of .xfpage in the cleaned snapshot):
-      // signed-in dashboard, top nav + off-canvas mobile nav, collapsible header promo.
-      ".logged-in-info-wrapper",
-      ".topnav",
-      "#nav-mobile",
-      "#collapsible-promo",
-      "footer.main-footer",
-      // Browser-upgrade modal (sibling of .common-modals on game pages)
-      ".modal-browser-check",
-      // Site-wide alert/notification banners (<section data-bind="if: message"><div class="alert-area">)
-      'section[data-bind="if: message"]',
-      ".alert-area",
-      ".notification.section",
-      ".cmp-notification",
+      ...DETAIL_PAGE_CHROME_SELECTORS,
       // Live-casino lobby launch button + modal popup
       "#live-casino-component",
       "#live-casino-modal",
@@ -679,12 +731,147 @@ var CustomImportScript = (() => {
       title.replaceWith(h2);
     });
   }
+  function isTicketDetailPage(root) {
+    return !!root.querySelector("div.game-detail-scratch");
+  }
+  function cleanupTicketDetailPage(element) {
+    const doc = element.ownerDocument;
+    const scratch = element.querySelector("div.game-detail-scratch");
+    WebImporter.DOMUtils.remove(element, DETAIL_PAGE_CHROME_SELECTORS);
+    scratch.querySelectorAll("div.breadcrumb-container").forEach((bc) => {
+      const next = bc.nextSibling && bc.nextSibling.nodeType === 3 ? bc.nextSibling.nextSibling : bc.nextSibling;
+      if (next && next.nodeType === 8 && /breadcrumb-container/.test(next.nodeValue || "")) next.remove();
+      bc.remove();
+    });
+    WebImporter.DOMUtils.remove(scratch, [
+      "section.body-content > img",
+      "div.game-details-info > div.heading > img"
+    ]);
+    scratch.querySelectorAll("div.sidebar").forEach((sidebar) => {
+      if (!sidebar.textContent.trim() && !sidebar.querySelector("img, picture, video, iframe, a")) sidebar.remove();
+    });
+    scratch.querySelectorAll("div.game-details-info > div.heading").forEach((heading) => {
+      const text = (el) => el ? el.textContent.replace(/\s+/g, " ").trim() : "";
+      const nameEl = heading.querySelector("h1.name") || heading.querySelector("h1:not(.price)");
+      const name = text(nameEl);
+      const price = text(heading.querySelector(".price"));
+      const nodes = [];
+      if (name) {
+        const h1 = doc.createElement("h1");
+        h1.textContent = name;
+        nodes.push(h1);
+      }
+      if (price) {
+        const p = doc.createElement("p");
+        p.textContent = price;
+        nodes.push(p);
+      }
+      heading.replaceWith(...nodes);
+    });
+  }
+  var VLT_SUMMARY_HEADING = /^game summary:?$/i;
+  function normText(el) {
+    return (el ? el.textContent : "").replace(/[\s ]+/g, " ").trim();
+  }
+  function isEmptyContainer(el) {
+    return !normText(el) && !el.querySelector('img, picture, video, iframe, [style*="url"]');
+  }
+  function cleanupVideoLotteryPage(element) {
+    const doc = element.ownerDocument;
+    WebImporter.DOMUtils.remove(element, [
+      ...DETAIL_PAGE_CHROME_SELECTORS,
+      // Duplicate thumbnail strip: carousel-thumbnails parser only reads .slideshow-main
+      ".alc-carousel.slideshow-thumbnails",
+      // Empty tracking div
+      ".video-lottery-info-page .impress",
+      // Decorative background image and title-bar logo
+      "div.video-lottery-info-page > img",
+      ".alc-image-browser__heading > img"
+    ]);
+    element.querySelectorAll(".cmp-breadcrumb").forEach((bc) => {
+      const wrapper = bc.closest("section.hidden-xs") || bc.closest(".cmp-breadcrumb--alc") || bc;
+      wrapper.remove();
+    });
+    element.querySelectorAll("div.video-lottery-info-page").forEach((body) => {
+      if (/background|--bg/i.test(body.getAttribute("style") || "")) body.removeAttribute("style");
+    });
+    element.querySelectorAll("div.page-faqs").forEach((faqs) => {
+      WebImporter.DOMUtils.remove(faqs, ["meta", "link", "script", "noscript", "style", "title"]);
+      const text = normText(faqs);
+      if (!text || /^faqs?$/i.test(text)) {
+        faqs.remove();
+        return;
+      }
+      faqs.querySelectorAll("h1").forEach((h) => renameTag(h, "h2"));
+      const nodes = [...faqs.querySelectorAll("h2, h3, h4, h5, h6, p, ul, ol")].filter((n) => !n.parentElement.closest("p, ul, ol") && normText(n));
+      faqs.replaceWith(...nodes);
+    });
+    element.querySelectorAll(".video-lottery-info-page aside").forEach((aside) => {
+      if (isEmptyContainer(aside)) aside.remove();
+    });
+    element.querySelectorAll("section.alc-game-details-header--vlt").forEach((header) => {
+      if (!header.querySelector(".cmp-teaser") && isEmptyContainer(header)) header.remove();
+    });
+    element.querySelectorAll("div.alc-container.section, div.cfm.section").forEach((container) => {
+      if (isEmptyContainer(container)) container.remove();
+    });
+    element.querySelectorAll(".video-lottery-info-page .alc-image-browser__heading").forEach((heading) => {
+      const title = normText(heading.querySelector("h1"));
+      if (!title) {
+        heading.remove();
+        return;
+      }
+      const h1 = doc.createElement("h1");
+      h1.textContent = title;
+      heading.replaceWith(h1);
+    });
+    element.querySelectorAll(".video-lottery-game-summary").forEach((summary) => {
+      const outer = summary.closest("section.alc-game-details__summary") || summary;
+      const inner = summary.querySelector("#gameSummary") || summary.querySelector("section") || summary;
+      inner.querySelectorAll("b").forEach((b) => renameTag(b, "strong"));
+      inner.querySelectorAll("i").forEach((i) => renameTag(i, "em"));
+      inner.querySelectorAll(":scope > h1, :scope > h2, :scope > h3, :scope > h4, :scope > h5, :scope > h6, :scope > p").forEach((el) => {
+        if (VLT_SUMMARY_HEADING.test(normText(el))) {
+          const h2 = doc.createElement("h2");
+          h2.textContent = "Game Summary";
+          el.replaceWith(h2);
+        }
+      });
+      const nodes = [...inner.childNodes].filter((n) => n.nodeType === 1 || n.nodeType === 3 && n.textContent.trim());
+      outer.replaceWith(...nodes);
+    });
+  }
+  function fixSlugTitle(doc, h1Root, anyCase) {
+    const title = (doc.title || "").trim();
+    const slugRe = anyCase ? /^[a-z0-9]+(-[a-z0-9]+)*$/i : /^[a-z0-9]+(-[a-z0-9]+)*$/;
+    if (!slugRe.test(title)) return;
+    const ogTitle = doc.querySelector('meta[property="og:title"], meta[name="og:title"]');
+    const og = ogTitle ? (ogTitle.content || "").trim() : "";
+    const ogIsReal = og && og !== title && !/^\d+$/.test(og);
+    if (h1Root && !ogIsReal) {
+      const h1 = h1Root.querySelector("div.game-details-info h1.name") || h1Root.querySelector("h1");
+      const h1Text = h1 ? h1.textContent.replace(/\s+/g, " ").trim() : "";
+      if (h1Text) {
+        doc.title = h1Text;
+        if (ogTitle) ogTitle.setAttribute("content", h1Text);
+        return;
+      }
+    }
+    if (og) doc.title = og;
+  }
   function transform(hookName, element, payload) {
     if (hookName === TransformHook.beforeTransform) {
       const doc = payload && payload.document || document;
-      const ogTitle = doc.querySelector('meta[property="og:title"], meta[name="og:title"]');
-      if (ogTitle && /^[a-z0-9]+(-[a-z0-9]+)*$/.test((doc.title || "").trim()) && ogTitle.content.trim()) {
-        doc.title = ogTitle.content.trim();
+      if (isTicketDetailPage(element)) {
+        fixSlugTitle(doc, element.querySelector("div.game-detail-scratch"));
+        cleanupTicketDetailPage(element);
+        registerPageMetadata(element, { Breadcrumbs: "true" });
+      } else if (isVideoLotteryPage(element)) {
+        fixSlugTitle(doc, null, true);
+        cleanupVideoLotteryPage(element);
+        registerPageMetadata(element, { Breadcrumbs: "true" });
+      } else {
+        fixSlugTitle(doc, null);
       }
       if (isGameDetailPage(element)) {
         cleanupGameDetailPage(element);
@@ -759,7 +946,7 @@ var CustomImportScript = (() => {
   }
   function transform2(hookName, element, payload) {
     const sections = payload && payload.template && payload.template.sections || [];
-    if (sections.length < 2) return;
+    if (!sections.length) return;
     if (hookName === "beforeTransform") {
       for (let i = sections.length - 1; i >= 0; i -= 1) {
         const section = sections[i];

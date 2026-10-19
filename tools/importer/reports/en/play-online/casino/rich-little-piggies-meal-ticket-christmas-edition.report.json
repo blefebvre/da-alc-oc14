@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/rich-little-piggies-meal-ticket-christmas-edition.html",
+  "path": "en/play-online/casino/rich-little-piggies-meal-ticket-christmas-edition",
+  "timestamp": "2026-10-19T19:45:23.638Z",
+  "title": "Rich Little Piggies Meal Ticket Christmas Edition",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/quick-hit-link-fire.html",
+  "path": "en/play-online/casino/quick-hit-link-fire",
+  "timestamp": "2026-10-19T19:39:42.698Z",
+  "title": "Quick Hit Link Fire",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

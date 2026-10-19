@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/reign-of-the-mountain-king.html",
+  "path": "en/play-online/casino/reign-of-the-mountain-king",
+  "timestamp": "2026-10-19T19:44:08.798Z",
+  "title": "Reign of the Mountain King",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

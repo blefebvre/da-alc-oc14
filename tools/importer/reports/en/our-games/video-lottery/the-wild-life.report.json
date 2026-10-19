@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/video-lottery/the-wild-life.html",
+  "path": "en/our-games/video-lottery/the-wild-life",
+  "timestamp": "2026-10-19T19:42:20.387Z",
+  "title": "The Wild Life",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

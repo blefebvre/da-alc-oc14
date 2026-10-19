@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/video-lottery/triple-staxx.html",
+  "path": "en/our-games/video-lottery/triple-staxx",
+  "timestamp": "2026-10-19T19:43:06.435Z",
+  "title": "Triple Staxx",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/rich-little-hens-rule-the-roost.html",
+  "path": "en/play-online/casino/rich-little-hens-rule-the-roost",
+  "timestamp": "2026-10-19T19:44:44.147Z",
+  "title": "Rich Little Hens - Rule the Roost",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/quick-hit-blitz-blue.html",
+  "path": "en/play-online/casino/quick-hit-blitz-blue",
+  "timestamp": "2026-10-19T19:38:30.695Z",
+  "title": "Quick Hit Blitz Blue",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

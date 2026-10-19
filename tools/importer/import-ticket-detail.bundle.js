@@ -199,6 +199,18 @@ var CustomImportScript = (() => {
       if (next !== style) el.setAttribute("style", next);
     });
   }
+  var APP_SCREEN_RE = new RegExp([
+    "^/content/alc/en/(cart|checkout|confirmation|login|search-results|payment-authorization-failed",
+    "|email-communications|interact-redirect|2chance-history-redirect|short-break-confirmation",
+    "|long-break-confirmation)\\.html$",
+    "|^/content/alc/en/(long-term-return-to-play|short-term-return-to-play|registration|game-configurator)(/.*)?\\.html$",
+    "|^/content/alc/en/rewards/(existing-account-confirmation|join-rewards|points-details)\\.html$",
+    "|^/content/alc/en/play-online/(casino|instant-win-games)/game\\.html$",
+    "|^/content/alc/en/play-online/lottomax\\.html$",
+    "|^/content/alc/en/corporate/about-atlantic-lottery/contact-us/send-a-message\\.html$",
+    "|^/content/alc/en/referenced-content/"
+  ].join(""));
+  var isAppScreen = (path) => APP_SCREEN_RE.test(path);
   function rewriteLink(href) {
     if (!href) return href;
     const raw = href.trim();
@@ -214,7 +226,7 @@ var CustomImportScript = (() => {
     let path = url.pathname;
     const isAsset = path.startsWith("/content/dam/");
     const isGameLauncher = /\/game\.html$/.test(path) && url.searchParams.has("gameId");
-    if (isAsset || isGameLauncher || !path.startsWith("/content/alc")) {
+    if (isAsset || isGameLauncher || isAppScreen(path) || !path.startsWith("/content/alc")) {
       if (path.startsWith("/etc.clientlibs")) return href;
       return `${ORIGIN2}${path}${url.search}${url.hash || ""}`;
     }
@@ -260,7 +272,10 @@ var CustomImportScript = (() => {
     ".cmp-notification"
   ];
   function isGameDetailPage(root) {
-    return !!root.querySelector("section.alc-game-details-header, div.digital-instants-info-page");
+    return !isVideoLotteryPage(root) && !!root.querySelector("section.alc-game-details-header, div.digital-instants-info-page");
+  }
+  function isVideoLotteryPage(root) {
+    return !!root.querySelector("div.video-lottery-info-page");
   }
   var PENDING_METADATA = /* @__PURE__ */ new WeakMap();
   function registerPageMetadata(main, extra) {
@@ -428,9 +443,82 @@ var CustomImportScript = (() => {
       heading.replaceWith(...nodes);
     });
   }
-  function fixSlugTitle(doc, h1Root) {
+  var VLT_SUMMARY_HEADING = /^game summary:?$/i;
+  function normText(el) {
+    return (el ? el.textContent : "").replace(/[\s ]+/g, " ").trim();
+  }
+  function isEmptyContainer(el) {
+    return !normText(el) && !el.querySelector('img, picture, video, iframe, [style*="url"]');
+  }
+  function cleanupVideoLotteryPage(element) {
+    const doc = element.ownerDocument;
+    WebImporter.DOMUtils.remove(element, [
+      ...DETAIL_PAGE_CHROME_SELECTORS,
+      // Duplicate thumbnail strip: carousel-thumbnails parser only reads .slideshow-main
+      ".alc-carousel.slideshow-thumbnails",
+      // Empty tracking div
+      ".video-lottery-info-page .impress",
+      // Decorative background image and title-bar logo
+      "div.video-lottery-info-page > img",
+      ".alc-image-browser__heading > img"
+    ]);
+    element.querySelectorAll(".cmp-breadcrumb").forEach((bc) => {
+      const wrapper = bc.closest("section.hidden-xs") || bc.closest(".cmp-breadcrumb--alc") || bc;
+      wrapper.remove();
+    });
+    element.querySelectorAll("div.video-lottery-info-page").forEach((body) => {
+      if (/background|--bg/i.test(body.getAttribute("style") || "")) body.removeAttribute("style");
+    });
+    element.querySelectorAll("div.page-faqs").forEach((faqs) => {
+      WebImporter.DOMUtils.remove(faqs, ["meta", "link", "script", "noscript", "style", "title"]);
+      const text = normText(faqs);
+      if (!text || /^faqs?$/i.test(text)) {
+        faqs.remove();
+        return;
+      }
+      faqs.querySelectorAll("h1").forEach((h) => renameTag(h, "h2"));
+      const nodes = [...faqs.querySelectorAll("h2, h3, h4, h5, h6, p, ul, ol")].filter((n) => !n.parentElement.closest("p, ul, ol") && normText(n));
+      faqs.replaceWith(...nodes);
+    });
+    element.querySelectorAll(".video-lottery-info-page aside").forEach((aside) => {
+      if (isEmptyContainer(aside)) aside.remove();
+    });
+    element.querySelectorAll("section.alc-game-details-header--vlt").forEach((header) => {
+      if (!header.querySelector(".cmp-teaser") && isEmptyContainer(header)) header.remove();
+    });
+    element.querySelectorAll("div.alc-container.section, div.cfm.section").forEach((container) => {
+      if (isEmptyContainer(container)) container.remove();
+    });
+    element.querySelectorAll(".video-lottery-info-page .alc-image-browser__heading").forEach((heading) => {
+      const title = normText(heading.querySelector("h1"));
+      if (!title) {
+        heading.remove();
+        return;
+      }
+      const h1 = doc.createElement("h1");
+      h1.textContent = title;
+      heading.replaceWith(h1);
+    });
+    element.querySelectorAll(".video-lottery-game-summary").forEach((summary) => {
+      const outer = summary.closest("section.alc-game-details__summary") || summary;
+      const inner = summary.querySelector("#gameSummary") || summary.querySelector("section") || summary;
+      inner.querySelectorAll("b").forEach((b) => renameTag(b, "strong"));
+      inner.querySelectorAll("i").forEach((i) => renameTag(i, "em"));
+      inner.querySelectorAll(":scope > h1, :scope > h2, :scope > h3, :scope > h4, :scope > h5, :scope > h6, :scope > p").forEach((el) => {
+        if (VLT_SUMMARY_HEADING.test(normText(el))) {
+          const h2 = doc.createElement("h2");
+          h2.textContent = "Game Summary";
+          el.replaceWith(h2);
+        }
+      });
+      const nodes = [...inner.childNodes].filter((n) => n.nodeType === 1 || n.nodeType === 3 && n.textContent.trim());
+      outer.replaceWith(...nodes);
+    });
+  }
+  function fixSlugTitle(doc, h1Root, anyCase) {
     const title = (doc.title || "").trim();
-    if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(title)) return;
+    const slugRe = anyCase ? /^[a-z0-9]+(-[a-z0-9]+)*$/i : /^[a-z0-9]+(-[a-z0-9]+)*$/;
+    if (!slugRe.test(title)) return;
     const ogTitle = doc.querySelector('meta[property="og:title"], meta[name="og:title"]');
     const og = ogTitle ? (ogTitle.content || "").trim() : "";
     const ogIsReal = og && og !== title && !/^\d+$/.test(og);
@@ -451,6 +539,10 @@ var CustomImportScript = (() => {
       if (isTicketDetailPage(element)) {
         fixSlugTitle(doc, element.querySelector("div.game-detail-scratch"));
         cleanupTicketDetailPage(element);
+        registerPageMetadata(element, { Breadcrumbs: "true" });
+      } else if (isVideoLotteryPage(element)) {
+        fixSlugTitle(doc, null, true);
+        cleanupVideoLotteryPage(element);
         registerPageMetadata(element, { Breadcrumbs: "true" });
       } else {
         fixSlugTitle(doc, null);

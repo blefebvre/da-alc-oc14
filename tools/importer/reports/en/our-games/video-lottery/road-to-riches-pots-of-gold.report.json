@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/video-lottery/road-to-riches-pots-of-gold.html",
+  "path": "en/our-games/video-lottery/road-to-riches-pots-of-gold",
+  "timestamp": "2026-10-19T19:37:48.992Z",
+  "title": "Road to Riches Pots of Gold",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

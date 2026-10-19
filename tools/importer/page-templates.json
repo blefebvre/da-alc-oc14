@@ -97,28 +97,28 @@
     {
       "name": "tabbed-media-page",
       "urls": [
-        "https://www.alc.ca/content/alc/en/2chance-history-redirect.html",
         "https://www.alc.ca/content/alc/en/rewards.html"
       ],
       "coverageGaps": [],
       "description": "Tabbed content with embedded video",
-      "blocks": []
+      "blocks": [],
+      "excludedUrls": [
+        "https://www.alc.ca/content/alc/en/2chance-history-redirect.html"
+      ],
+      "excludedReason": "application screens stay on alc.ca (linked + redirected)"
     },
     {
       "name": "game-card-detail",
       "urls": [
-        "https://www.alc.ca/content/alc/en/cart.html",
         "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/career-opportunities.html",
         "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/retailers.html",
         "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/rules-and-regulations.html",
-        "https://www.alc.ca/content/alc/en/email-communications.html",
         "https://www.alc.ca/content/alc/en/legal/HealthyPlayPolicy.html",
         "https://www.alc.ca/content/alc/en/our-games.html",
         "https://www.alc.ca/content/alc/en/our-games/lotto.html",
         "https://www.alc.ca/content/alc/en/our-games/mega360.html",
         "https://www.alc.ca/content/alc/en/our-games/scratch-n-win.html",
         "https://www.alc.ca/content/alc/en/our-games/video-lottery.html",
-        "https://www.alc.ca/content/alc/en/payment-authorization-failed.html",
         "https://www.alc.ca/content/alc/en/play-online.html",
         "https://www.alc.ca/content/alc/en/play-online/casino/300-shields-extreme.html",
         "https://www.alc.ca/content/alc/en/play-online/casino/5-treasures.html",
@@ -235,8 +235,7 @@
         "https://www.alc.ca/content/alc/en/promos/archived/templates/campaignb-product.html",
         "https://www.alc.ca/content/alc/en/promos/funding2.html",
         "https://www.alc.ca/content/alc/en/promos/mobile-app-ticket-scanning-issue.html",
-        "https://www.alc.ca/content/alc/en/promos/vl-rules-of-play.html",
-        "https://www.alc.ca/content/alc/en/registration/aml-additional-information-needed.html"
+        "https://www.alc.ca/content/alc/en/promos/vl-rules-of-play.html"
       ],
       "coverageGaps": [],
       "description": "Breadcrumb over light background with a single game card (title, price, ticket image, prize details) plus how-to-play accordion; no hero",
@@ -321,18 +320,27 @@
             ".cmp-section-header--alc-green .cmp-section-header__title"
           ]
         }
-      ]
+      ],
+      "excludedUrls": [
+        "https://www.alc.ca/content/alc/en/cart.html",
+        "https://www.alc.ca/content/alc/en/email-communications.html",
+        "https://www.alc.ca/content/alc/en/payment-authorization-failed.html",
+        "https://www.alc.ca/content/alc/en/registration/aml-additional-information-needed.html"
+      ],
+      "excludedReason": "application screens stay on alc.ca (linked + redirected)"
     },
     {
       "name": "checkout-flow",
-      "urls": [
+      "urls": [],
+      "coverageGaps": [],
+      "description": "Transactional checkout/confirmation application screen",
+      "blocks": [],
+      "excludedUrls": [
         "https://www.alc.ca/content/alc/en/checkout.html",
         "https://www.alc.ca/content/alc/en/confirmation.html",
         "https://www.alc.ca/content/alc/en/login.html"
       ],
-      "coverageGaps": [],
-      "description": "Transactional checkout/confirmation application screen",
-      "blocks": []
+      "excludedReason": "application screens stay on alc.ca (linked + redirected)"
     },
     {
       "name": "text-article",
@@ -405,13 +413,6 @@
         "https://www.alc.ca/content/alc/en/corporate/playwise/risks-of-youth-gambling.html",
         "https://www.alc.ca/content/alc/en/corporate/playwise/self-exclusion.html",
         "https://www.alc.ca/content/alc/en/corporate/playwise/videos.html",
-        "https://www.alc.ca/content/alc/en/game-configurator/atlantic-49.html",
-        "https://www.alc.ca/content/alc/en/game-configurator/bucko.html",
-        "https://www.alc.ca/content/alc/en/game-configurator/daily-grand.html",
-        "https://www.alc.ca/content/alc/en/game-configurator/keno-atlantic.html",
-        "https://www.alc.ca/content/alc/en/game-configurator/lotto-649.html",
-        "https://www.alc.ca/content/alc/en/game-configurator/poker-lotto.html",
-        "https://www.alc.ca/content/alc/en/game-configurator/salsa-bingo.html",
         "https://www.alc.ca/content/alc/en/legal/site-map.html",
         "https://www.alc.ca/content/alc/en/legal/terms-and-conditions.html",
         "https://www.alc.ca/content/alc/en/our-games/abonnements-subscriptions.html",
@@ -443,22 +444,34 @@
         "https://www.alc.ca/content/alc/en/promos/new-template-conversions/sponsorships.html",
         "https://www.alc.ca/content/alc/en/promos/new-template-conversions/where-the-money-goes.html",
         "https://www.alc.ca/content/alc/en/promos/retail/wave8-lottery-terminals.html",
-        "https://www.alc.ca/content/alc/en/registration/register-id-scan.html",
-        "https://www.alc.ca/content/alc/en/search-results.html",
         "https://www.alc.ca/content/alc/en/winning-numbers.html"
       ],
       "coverageGaps": [],
       "description": "Blue breadcrumb bar then a single-column text body (date, headline, paragraphs, contact block) on light background",
-      "blocks": []
+      "blocks": [],
+      "excludedUrls": [
+        "https://www.alc.ca/content/alc/en/game-configurator/atlantic-49.html",
+        "https://www.alc.ca/content/alc/en/game-configurator/bucko.html",
+        "https://www.alc.ca/content/alc/en/game-configurator/daily-grand.html",
+        "https://www.alc.ca/content/alc/en/game-configurator/keno-atlantic.html",
+        "https://www.alc.ca/content/alc/en/game-configurator/lotto-649.html",
+        "https://www.alc.ca/content/alc/en/game-configurator/poker-lotto.html",
+        "https://www.alc.ca/content/alc/en/game-configurator/salsa-bingo.html",
+        "https://www.alc.ca/content/alc/en/registration/register-id-scan.html",
+        "https://www.alc.ca/content/alc/en/search-results.html"
+      ],
+      "excludedReason": "application screens stay on alc.ca (linked + redirected)"
     },
     {
       "name": "contact-form",
-      "urls": [
-        "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/contact-us/send-a-message.html"
-      ],
+      "urls": [],
       "coverageGaps": [],
       "description": "Contact form with tabbed sections",
-      "blocks": []
+      "blocks": [],
+      "excludedUrls": [
+        "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/contact-us/send-a-message.html"
+      ],
+      "excludedReason": "application screens stay on alc.ca (linked + redirected)"
     },
     {
       "name": "news-hub",
@@ -535,31 +548,37 @@
     },
     {
       "name": "game-configurator-index",
-      "urls": [
-        "https://www.alc.ca/content/alc/en/game-configurator.html"
-      ],
+      "urls": [],
       "coverageGaps": [],
       "description": "Configurator index application screen",
-      "blocks": []
+      "blocks": [],
+      "excludedUrls": [
+        "https://www.alc.ca/content/alc/en/game-configurator.html"
+      ],
+      "excludedReason": "application screens stay on alc.ca (linked + redirected)"
     },
     {
       "name": "game-configurator",
-      "urls": [
+      "urls": [],
+      "coverageGaps": [],
+      "description": "Ticket configurator application form for a lotto game",
+      "blocks": [],
+      "excludedUrls": [
         "https://www.alc.ca/content/alc/en/game-configurator/lottomax.html",
         "https://www.alc.ca/content/alc/en/play-online/lottomax.html"
       ],
-      "coverageGaps": [],
-      "description": "Ticket configurator application form for a lotto game",
-      "blocks": []
+      "excludedReason": "application screens stay on alc.ca (linked + redirected)"
     },
     {
       "name": "redirect-shell",
-      "urls": [
-        "https://www.alc.ca/content/alc/en/interact-redirect.html"
-      ],
+      "urls": [],
       "coverageGaps": [],
       "description": "Redirect/interstitial shell page with minimal content",
-      "blocks": []
+      "blocks": [],
+      "excludedUrls": [
+        "https://www.alc.ca/content/alc/en/interact-redirect.html"
+      ],
+      "excludedReason": "application screens stay on alc.ca (linked + redirected)"
     },
     {
       "name": "legal-tabs",
@@ -572,23 +591,27 @@
     },
     {
       "name": "break-confirmation",
-      "urls": [
+      "urls": [],
+      "coverageGaps": [],
+      "description": "Account break/return-to-play application confirmation screen",
+      "blocks": [],
+      "excludedUrls": [
         "https://www.alc.ca/content/alc/en/long-break-confirmation.html",
         "https://www.alc.ca/content/alc/en/long-term-return-to-play.html",
         "https://www.alc.ca/content/alc/en/short-term-return-to-play.html"
       ],
-      "coverageGaps": [],
-      "description": "Account break/return-to-play application confirmation screen",
-      "blocks": []
+      "excludedReason": "application screens stay on alc.ca (linked + redirected)"
     },
     {
       "name": "return-to-play-confirmation",
-      "urls": [
-        "https://www.alc.ca/content/alc/en/long-term-return-to-play/confirmation.html"
-      ],
+      "urls": [],
       "coverageGaps": [],
       "description": "Return-to-play application confirmation screen",
-      "blocks": []
+      "blocks": [],
+      "excludedUrls": [
+        "https://www.alc.ca/content/alc/en/long-term-return-to-play/confirmation.html"
+      ],
+      "excludedReason": "application screens stay on alc.ca (linked + redirected)"
     },
     {
       "name": "app-promo-landing",
@@ -1557,13 +1580,16 @@
       "name": "casino-game-simple",
       "urls": [
         "https://www.alc.ca/content/alc/en/play-online/casino/cash-money.html",
-        "https://www.alc.ca/content/alc/en/play-online/casino/game.html",
         "https://www.alc.ca/content/alc/en/play-online/casino/rising-rockets-empress.html",
         "https://www.alc.ca/content/alc/en/play-online/casino/tiki-infinity-reels-megaways.html"
       ],
       "coverageGaps": [],
       "description": "Minimal casino game page with game card content and no promotional banner",
-      "blocks": []
+      "blocks": [],
+      "excludedUrls": [
+        "https://www.alc.ca/content/alc/en/play-online/casino/game.html"
+      ],
+      "excludedReason": "application screens stay on alc.ca (linked + redirected)"
     },
     {
       "name": "online-game-detail-alt",
@@ -1586,12 +1612,15 @@
     {
       "name": "instant-game-launcher",
       "urls": [
-        "https://www.alc.ca/content/alc/en/play-online/instant-win-games/game.html",
         "https://www.alc.ca/content/alc/en/play-online/instant-win-games/juicy-loot.html"
       ],
       "coverageGaps": [],
       "description": "Game launcher shell page for instant win games",
-      "blocks": []
+      "blocks": [],
+      "excludedUrls": [
+        "https://www.alc.ca/content/alc/en/play-online/instant-win-games/game.html"
+      ],
+      "excludedReason": "application screens stay on alc.ca (linked + redirected)"
     },
     {
       "name": "lotto-games-index",
@@ -1706,103 +1735,125 @@
     },
     {
       "name": "registration-confirmation",
-      "urls": [
-        "https://www.alc.ca/content/alc/en/registration/account-confirmation.html"
-      ],
+      "urls": [],
       "coverageGaps": [],
       "description": "Registration confirmation screen with promo carousel",
-      "blocks": []
+      "blocks": [],
+      "excludedUrls": [
+        "https://www.alc.ca/content/alc/en/registration/account-confirmation.html"
+      ],
+      "excludedReason": "application screens stay on alc.ca (linked + redirected)"
     },
     {
       "name": "registration-success",
-      "urls": [
-        "https://www.alc.ca/content/alc/en/registration/aml-success-page.html"
-      ],
+      "urls": [],
       "coverageGaps": [],
       "description": "Registration success screen with hero",
-      "blocks": []
+      "blocks": [],
+      "excludedUrls": [
+        "https://www.alc.ca/content/alc/en/registration/aml-success-page.html"
+      ],
+      "excludedReason": "application screens stay on alc.ca (linked + redirected)"
     },
     {
       "name": "forgot-email-form",
-      "urls": [
-        "https://www.alc.ca/content/alc/en/registration/forgot-email.html"
-      ],
+      "urls": [],
       "coverageGaps": [],
       "description": "Account recovery form for forgotten email",
-      "blocks": []
+      "blocks": [],
+      "excludedUrls": [
+        "https://www.alc.ca/content/alc/en/registration/forgot-email.html"
+      ],
+      "excludedReason": "application screens stay on alc.ca (linked + redirected)"
     },
     {
       "name": "forgot-password-form",
-      "urls": [
-        "https://www.alc.ca/content/alc/en/registration/forgot-password.html"
-      ],
+      "urls": [],
       "coverageGaps": [],
       "description": "Account recovery form for forgotten password",
-      "blocks": []
+      "blocks": [],
+      "excludedUrls": [
+        "https://www.alc.ca/content/alc/en/registration/forgot-password.html"
+      ],
+      "excludedReason": "application screens stay on alc.ca (linked + redirected)"
     },
     {
       "name": "registration-index",
-      "urls": [
-        "https://www.alc.ca/content/alc/en/registration.html"
-      ],
+      "urls": [],
       "coverageGaps": [],
       "description": "Registration entry application screen",
-      "blocks": []
+      "blocks": [],
+      "excludedUrls": [
+        "https://www.alc.ca/content/alc/en/registration.html"
+      ],
+      "excludedReason": "application screens stay on alc.ca (linked + redirected)"
     },
     {
       "name": "register-account-form",
-      "urls": [
-        "https://www.alc.ca/content/alc/en/registration/register-account.html"
-      ],
+      "urls": [],
       "coverageGaps": [],
       "description": "Multi-step account registration form",
-      "blocks": []
+      "blocks": [],
+      "excludedUrls": [
+        "https://www.alc.ca/content/alc/en/registration/register-account.html"
+      ],
+      "excludedReason": "application screens stay on alc.ca (linked + redirected)"
     },
     {
       "name": "unverified-account",
-      "urls": [
-        "https://www.alc.ca/content/alc/en/registration/unverified-account.html"
-      ],
+      "urls": [],
       "coverageGaps": [],
       "description": "Account verification status screen with breadcrumb",
-      "blocks": []
+      "blocks": [],
+      "excludedUrls": [
+        "https://www.alc.ca/content/alc/en/registration/unverified-account.html"
+      ],
+      "excludedReason": "application screens stay on alc.ca (linked + redirected)"
     },
     {
       "name": "rewards-account-confirmation",
-      "urls": [
+      "urls": [],
+      "coverageGaps": [],
+      "description": "Rewards account application confirmation screen",
+      "blocks": [],
+      "excludedUrls": [
         "https://www.alc.ca/content/alc/en/rewards/existing-account-confirmation.html",
         "https://www.alc.ca/content/alc/en/rewards/join-rewards.html"
       ],
-      "coverageGaps": [],
-      "description": "Rewards account application confirmation screen",
-      "blocks": []
+      "excludedReason": "application screens stay on alc.ca (linked + redirected)"
     },
     {
       "name": "rewards-points-details",
-      "urls": [
-        "https://www.alc.ca/content/alc/en/rewards/points-details.html"
-      ],
+      "urls": [],
       "coverageGaps": [],
       "description": "Rewards points details with hero",
-      "blocks": []
+      "blocks": [],
+      "excludedUrls": [
+        "https://www.alc.ca/content/alc/en/rewards/points-details.html"
+      ],
+      "excludedReason": "application screens stay on alc.ca (linked + redirected)"
     },
     {
       "name": "short-break-confirmation",
-      "urls": [
-        "https://www.alc.ca/content/alc/en/short-break-confirmation.html"
-      ],
+      "urls": [],
       "coverageGaps": [],
       "description": "Short break application confirmation screen",
-      "blocks": []
+      "blocks": [],
+      "excludedUrls": [
+        "https://www.alc.ca/content/alc/en/short-break-confirmation.html"
+      ],
+      "excludedReason": "application screens stay on alc.ca (linked + redirected)"
     },
     {
       "name": "short-term-return-confirmation",
-      "urls": [
-        "https://www.alc.ca/content/alc/en/short-term-return-to-play/confirmation.html"
-      ],
+      "urls": [],
       "coverageGaps": [],
       "description": "Short-term return-to-play confirmation screen",
-      "blocks": []
+      "blocks": [],
+      "excludedUrls": [
+        "https://www.alc.ca/content/alc/en/short-term-return-to-play/confirmation.html"
+      ],
+      "excludedReason": "application screens stay on alc.ca (linked + redirected)"
     },
     {
       "name": "ticket-detail",
