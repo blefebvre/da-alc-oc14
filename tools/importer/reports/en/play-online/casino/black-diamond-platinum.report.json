@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/black-diamond-platinum.html",
+  "path": "en/play-online/casino/black-diamond-platinum",
+  "timestamp": "2026-10-20T19:54:16.028Z",
+  "title": "Black Diamond Platinum",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/5-dragons.html",
+  "path": "en/play-online/casino/5-dragons",
+  "timestamp": "2026-10-20T19:53:25.803Z",
+  "title": "5 Dragons",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

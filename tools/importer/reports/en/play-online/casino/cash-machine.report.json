@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/cash-machine.html",
+  "path": "en/play-online/casino/cash-machine",
+  "timestamp": "2026-10-20T19:54:04.643Z",
+  "title": "Cash Machine | Casino Slot Game | Atlantic Lottery",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

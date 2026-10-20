@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/black-diamond-deluxe.html",
+  "path": "en/play-online/casino/black-diamond-deluxe",
+  "timestamp": "2026-10-20T19:53:52.905Z",
+  "title": "Black Diamond deluxe",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}
