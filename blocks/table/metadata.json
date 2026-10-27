@@ -1,0 +1,23 @@
+{
+  "variantName": "table",
+  "baseBlock": "table",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "ALC blue header, light grey striped rows",
+    "density": "high",
+    "purpose": "data-table",
+    "imagePattern": "none",
+    "structure": "header row + data rows, horizontal scroll on small screens"
+  },
+  "contentPattern": "First row = header cells (one per column), following rows = data cells. Cells can hold text, links, bold text. A single-row block renders as data only. Option no-header renders every row as data.",
+  "options": [
+    { "class": "no-header", "label": "No header row" }
+  ],
+  "memberVariantIds": ["table"],
+  "usage": {
+    "pagesUsing": ["https://www.alc.ca/content/alc/en/corporate/playwise/player-tools.html"],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-27"
+  },
+  "reuseGuidance": "Use for tabular data such as top prizes remaining, odds, or schedules. Not for layout."
+}

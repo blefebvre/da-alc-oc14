@@ -1,0 +1,21 @@
+{
+  "variantName": "columns-contact",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "inherits section (light grey)",
+    "density": "minimal",
+    "purpose": "contact-strip",
+    "imagePattern": "none",
+    "structure": "1 row x N cells: bold label + phone number, centered (2-up tablet, 1-up mobile)"
+  },
+  "contentPattern": "One row, one cell per contact: '<p><strong>Province</strong><br>1-888-429-8167 (Mental Health and Addictions Crisis Line)</p>'. Phone numbers may be authored as tel: links; bare numbers are linked automatically. Empty cells are dropped.",
+  "options": [],
+  "memberVariantIds": ["columns-contact"],
+  "usage": {
+    "pagesUsing": ["https://www.alc.ca/content/alc/en/corporate/playwise/player-tools.html"],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-27"
+  },
+  "reuseGuidance": "Use for the Gambling Supports helpline strip (one cell per province) and similar short centered label + phone lists. Place in a light-grey, centered section after the heading."
+}

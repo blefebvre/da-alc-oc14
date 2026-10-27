@@ -1,0 +1,21 @@
+{
+  "variantName": "hero-banner",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light-blue pattern image, white text",
+    "density": "minimal",
+    "purpose": "page-title-banner",
+    "imagePattern": "full-width decorative background (cover), ~200px tall",
+    "structure": "background image + centered H1 (optional subheading)"
+  },
+  "contentPattern": "Row 1: background image (pattern or photo). Row 2: H1 (page title), optional paragraph subtitle. Either row may be omitted: image-only renders the banner without text, heading-only renders the H1 on the brand sky-blue fallback background.",
+  "options": [],
+  "memberVariantIds": ["hero-banner"],
+  "usage": {
+    "pagesUsing": ["https://www.alc.ca/content/alc/en/corporate/playwise/player-tools.html"],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-27"
+  },
+  "reuseGuidance": "Use as the first block of content pages for the full-width title banner (patterned or photo background with centered white H1). Not for promotional heroes with CTAs."
+}

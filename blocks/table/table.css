@@ -1,0 +1,38 @@
+/* responsive data table: horizontal scroll, brand header, striped rows */
+.table .table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table table {
+  width: 100%;
+  min-width: 480px;
+  border-collapse: collapse;
+  font-size: var(--body-font-size-s, 16px);
+}
+
+.table th,
+.table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--alc-grey-disabled);
+  text-align: left;
+  vertical-align: top;
+}
+
+.table thead th {
+  background-color: var(--alc-blue);
+  color: var(--background-color);
+  font-family: var(--heading-font-family);
+  font-weight: 500;
+  border-bottom: 0;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: var(--alc-grey-light);
+}
+
+.table .table-scroll:focus-visible {
+  outline: 2px solid var(--alc-sky);
+  outline-offset: 2px;
+}

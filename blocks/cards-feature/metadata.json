@@ -1,0 +1,22 @@
+{
+  "variantName": "cards-feature",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "white cards with drop shadow",
+    "density": "medium",
+    "purpose": "feature-highlights",
+    "imagePattern": "small centered icon (~60px) or full-bleed top photo",
+    "structure": "image/icon + H3 + description + optional link",
+    "columns": "3 (tile) / 2 (vertical-wide); 4 when 4+ cards on wide screens"
+  },
+  "contentPattern": "One row per card. Cell 1: optional image (an icon up to ~160px intrinsic width renders as a centered 60px icon; larger images render full-width on top). Cell 2: H3 title, description paragraphs and/or lists, optional link (plain link, or a YouTube URL for a video). Empty paragraphs are dropped. Column count follows the number of cards (1, 2, 3, or 4).",
+  "options": [],
+  "memberVariantIds": ["cards-feature"],
+  "usage": {
+    "pagesUsing": ["https://www.alc.ca/content/alc/en/corporate/playwise/player-tools.html"],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-27"
+  },
+  "reuseGuidance": "Use for teaser tiles/cards (icon or photo + title + text + optional link) that sit side by side and wrap. Use columns-media for image/text rows instead."
+}
