@@ -110,6 +110,155 @@ function buildPanel(document, panel) {
   return content;
 }
 
+const ORIGIN = 'https://www.alc.ca';
+const CONTAINER = '.alc-container, .cmp-container, .aem-Grid, .responsivegrid, .container, .xf-content-height, '
+  + '.experiencefragment, .cmp-experiencefragment';
+
+function absolutize(url) {
+  if (!url) return '';
+  const v = url.trim();
+  if (/^(https?:|mailto:|tel:|data:|#)/i.test(v)) return v;
+  if (v.startsWith('//')) return `https:${v}`;
+  if (v.startsWith('/')) return `${ORIGIN}${v}`;
+  return v;
+}
+
+function linkParagraph(document, href, text, strong) {
+  const p = document.createElement('p');
+  const a = document.createElement('a');
+  a.href = absolutize(href);
+  a.textContent = text;
+  if (strong) {
+    const s = document.createElement('strong');
+    s.append(a);
+    p.append(s);
+  } else {
+    p.append(a);
+  }
+  return p;
+}
+
+function imgFrom(document, imgEl) {
+  const src = imgEl && (imgEl.getAttribute('src') || '').trim();
+  if (!src) return null;
+  const img = document.createElement('img');
+  img.src = absolutize(src);
+  img.alt = imgEl.getAttribute('alt') || '';
+  return img;
+}
+
+function videoHref(el) {
+  const f = el.querySelector('iframe[src]');
+  if (f) {
+    const m = f.getAttribute('src').match(/youtube(?:-nocookie)?\.com\/embed\/([^?&/]+)/);
+    return m ? `https://www.youtube.com/watch?v=${m[1]}` : absolutize(f.getAttribute('src'));
+  }
+  if (/^[A-Za-z0-9_-]{11}$/.test(el.id || '') && !/^embed-/.test(el.id)) return `https://www.youtube.com/watch?v=${el.id}`;
+  return '';
+}
+
+/**
+ * Flatten AEM core-component panel content (containers, text, title, image, button, teaser,
+ * embed, nested accordion) into default content so no block/layout wrapper is nested in a cell.
+ */
+function flatten(document, root) {
+  const out = [];
+  // empty links (an icon <a> whose image was dropped, <a><br></a>) would import as "[](url)"
+  root.querySelectorAll('a').forEach((a) => {
+    if (!clean(a.textContent) && !a.querySelector('img')) a.remove();
+  });
+  const visit = (el) => {
+    if (el.nodeType === 3) {
+      if (clean(el.textContent)) {
+        const p = document.createElement('p');
+        p.textContent = clean(el.textContent);
+        out.push(p);
+      }
+      return;
+    }
+    if (el.nodeType !== 1) return;
+    if (el.matches('script, style, noscript, .separator, .cmp-separator, hr, .cmp-favourite-button')) return;
+    if (el.matches('.cmp-text')) {
+      [...el.children].forEach((c) => {
+        if (!clean(c.textContent) && !c.querySelector('img, table')) return;
+        out.push(...(c.tagName === 'P' ? convertBulletParagraph(document, c) : [c]));
+      });
+      return;
+    }
+    if (el.matches('.cmp-title')) {
+      const h = el.querySelector('h1, h2, h3, h4, h5, h6');
+      if (h && clean(h.textContent)) {
+        const nh = document.createElement(/^H[12]$/.test(h.tagName) ? 'h3' : h.tagName.toLowerCase());
+        nh.textContent = clean(h.textContent);
+        out.push(nh);
+      }
+      return;
+    }
+    if (el.matches('.cmp-image')) {
+      const img = imgFrom(document, el.querySelector('img'));
+      if (img) out.push(img);
+      return;
+    }
+    if (el.matches('.alc-button, .cmp-button, .dynamic-cta, .cmp-dynamic-cta')) {
+      el.querySelectorAll('a[href]').forEach((a) => {
+        const href = a.getAttribute('href');
+        const text = clean(a.textContent) || a.getAttribute('title');
+        if (href && href !== '#' && text) out.push(linkParagraph(document, href, text, true));
+      });
+      return;
+    }
+    if (el.matches('.cmp-teaser')) {
+      const img = imgFrom(document, el.querySelector('.cmp-teaser__image img'));
+      if (img) out.push(img);
+      const title = clean(el.querySelector('.cmp-teaser__title') && el.querySelector('.cmp-teaser__title').textContent);
+      if (title) {
+        const h = document.createElement('h4');
+        h.textContent = title;
+        out.push(h);
+      }
+      const desc = el.querySelector('.cmp-teaser__description');
+      if (desc) {
+        [...desc.children].forEach((c) => {
+          if (!clean(c.textContent) && !c.querySelector('img')) return;
+          out.push(...(c.tagName === 'P' ? convertBulletParagraph(document, c) : [c]));
+        });
+      }
+      el.querySelectorAll('.cmp-teaser__action-container a[href]').forEach((a) => {
+        const href = a.getAttribute('href');
+        if (href && href !== '#' && clean(a.textContent)) out.push(linkParagraph(document, href, clean(a.textContent), false));
+      });
+      return;
+    }
+    if (el.matches('.cmp-embed')) {
+      const href = videoHref(el);
+      if (href) out.push(linkParagraph(document, href, href, false));
+      return;
+    }
+    if (el.matches('.cmp-accordion')) {
+      el.querySelectorAll(':scope > .cmp-accordion__item').forEach((item) => {
+        const t = clean(item.querySelector('.cmp-accordion__title') && item.querySelector('.cmp-accordion__title').textContent);
+        if (t) {
+          const h = document.createElement('h4');
+          h.textContent = t;
+          out.push(h);
+        }
+        const panel = item.querySelector(':scope > .cmp-accordion__panel');
+        if (panel) [...panel.childNodes].forEach(visit);
+      });
+      return;
+    }
+    if (el.matches(CONTAINER) || (el.tagName === 'DIV' && el.children.length)) {
+      [...el.childNodes].forEach(visit);
+      return;
+    }
+    if (clean(el.textContent) || el.querySelector('img, table') || el.tagName === 'IMG') out.push(el);
+  };
+  [...root.childNodes].forEach(visit);
+  return out;
+}
+
+const CORE_CONTENT = '.alc-container, .cmp-container, .aem-Grid, .cmp-text, .cmp-teaser, .cmp-image, .cmp-embed, .cmp-accordion';
+
 export default function parse(element, { document }) {
   const cells = [];
 
@@ -121,7 +270,12 @@ export default function parse(element, { document }) {
   tabs.forEach((tab, i) => {
     const label = clean(tab.textContent);
     if (!label) return;
-    const content = buildPanel(document, panels[i]);
+    // Core-component panels (content pages) hold nested containers/components: flatten them.
+    // Game-detail panels (.cmp-tabs--alc rich text) keep the original paragraph handling.
+    const panel = panels[i];
+    const content = panel && panel.querySelector(CORE_CONTENT)
+      ? flatten(document, panel)
+      : buildPanel(document, panel);
     cells.push([label, content.length ? content : '']);
   });
 

@@ -115,7 +115,261 @@ function parseHaveYouTried(element, document) {
   return cells;
 }
 
+/**
+ * Landing-page game lobbies (content-page template). Selectors validated on live renders:
+ *   .browse-game-list .show-search-result  article.game-tile-nondraw.tile-digital-instants
+ *       .game-tile-header[style=bg], p.game-title, p.game-prize:not(.hidden), .description p (+ a Learn More),
+ *       .play-now-link a (Play now), a.try-now-link (Try Demo)
+ *   section.ko-scratch-list                 article.game-tile-nondraw.tile-scratch-breakopen
+ *       .game-tile-header[style=bg], p.scratch-name, p.top-prize-gametile, a.try-now-link (Learn More)
+ *   .di-featured-section > .row              section.alc-game-tile .alc-game-tile__container
+ *       .game-image[style=bg], .game-title, .game-prize, .game-description, .learn-more a, .game-cta a, .try-demo a
+ *   .games-wrapper                           article.lotto-category (our-games/lotto)
+ *       .game-logo-en[aria-label], .weekly-time, .lotto-game-description p + a.read-more,
+ *       .next-draw, .amounts-container, .lotto-footer .cta a, .see-numbers a
+ *   .buy-tickets__wrapper                    .buy-tickets__wrapper__container > a[title] > img logo + "Buy Now"
+ *   #casino-games (play-online/casino lobby grid inside #casino-wrapper, rendered client-side)
+ *   (any)                                    div.game-tile > .casino-game[style=bg] + .casino-game-title, a.casino-info-button
+ * Non-tile content inside the wrapper (lotto `.header h2`, casino `#rewards-banner-container`) is
+ * kept as default content before the block (see extraContent).
+ * Output: one row per game -> [image, h3 + facts + links (primary CTA bold)]
+ */
+const LOBBY_TILE = 'article.game-tile-nondraw, .alc-game-tile__container, article.lotto-category, '
+  + '.buy-tickets__wrapper__container, div.game-tile:has(> .casino-game)';
+
+function textParagraph(document, text) {
+  const p = document.createElement('p');
+  p.textContent = text;
+  return p;
+}
+
+function imageCellFrom(document, holder, alt) {
+  if (!holder) return '';
+  const imgEl = holder.matches('img') ? holder : holder.querySelector('img[src]:not(.cmp-favourite-button__icon)');
+  const src = imgEl ? imgEl.getAttribute('src') : bgUrl(holder);
+  if (!src) return '';
+  const img = document.createElement('img');
+  img.src = absolutize(src);
+  img.alt = (imgEl && imgEl.getAttribute('alt')) || alt || '';
+  return img;
+}
+
+function lobbyTileCells(document, tile) {
+  const body = [];
+  let image = '';
+  let title = '';
+  const addLink = (a, fallback, strong) => {
+    if (!a) return;
+    const href = a.getAttribute('href');
+    if (!href || href === '#') return;
+    const text = clean(a.textContent) || a.getAttribute('title') || fallback;
+    if (body.some((n) => n.querySelector && n.querySelector(`a[href="${href}"]`))) return;
+    body.push(linkParagraph(document, absolutize(href), text, strong));
+  };
+
+  if (tile.matches('article.lotto-category')) {
+    const logo = tile.querySelector('[class^="game-logo"], [class*=" game-logo"]');
+    title = clean((logo && logo.getAttribute('aria-label')) || tile.getAttribute('data-game'));
+    image = imageCellFrom(document, tile.querySelector('.lotto-image'), title);
+    if (title) {
+      const h3 = document.createElement('h3');
+      h3.textContent = title;
+      body.push(h3);
+    }
+    const draws = clean(tile.querySelector('.description-container .row-left') && tile.querySelector('.description-container .row-left').textContent);
+    if (draws) body.push(textParagraph(document, draws));
+    tile.querySelectorAll('.lotto-game-description p').forEach((p) => { if (clean(p.textContent)) body.push(textParagraph(document, clean(p.textContent))); });
+    const next = clean(tile.querySelector('.next-draw') && tile.querySelector('.next-draw').textContent);
+    if (next) body.push(textParagraph(document, next.replace(/\s*:\s*/, ': ')));
+    const amountEl = tile.querySelector('.amounts-container .prize-amount');
+    if (amountEl && clean(amountEl.textContent)) {
+      // digit groups are <span>s on the live page; after cleanup unwraps them only "30000000" is left
+      const rawDigits = [...amountEl.querySelectorAll('span')].map((s) => clean(s.textContent)).join(',') || clean(amountEl.textContent);
+      const digits = /^\$?\d{4,}$/.test(rawDigits) ? rawDigits.replace(/\B(?=(\d{3})+(?!\d))/g, ',') : rawDigits;
+      const est = clean(tile.querySelector('.amounts-container .est') && tile.querySelector('.amounts-container .est').textContent);
+      const p = document.createElement('p');
+      const strong = document.createElement('strong');
+      strong.textContent = `$${digits.replace(/^\$/, '')}${est ? ` ${est}` : ''}`;
+      // jackpot qualifiers around the amount: "$5M CLASSIC JACKPOT +" / "GOLD BALL JACKPOT" /
+      // "OR THE GUARANTEED $1M" / "+ INSTANT WINS" / "+ GUARANTEED PRIZE DRAW"
+      const infos = [...tile.querySelectorAll('.amounts-container .info-text')]
+        .filter((s) => !s.closest(EXTRA_SKIP) && clean(s.textContent));
+      // eslint-disable-next-line no-bitwise
+      const isBefore = (s) => !!(s.compareDocumentPosition(amountEl) & 4);
+      const before = infos.filter(isBefore).map((s) => clean(s.textContent));
+      const after = infos.filter((s) => !isBefore(s)).map((s) => clean(s.textContent));
+      if (before.length) p.append(document.createTextNode(`${before.join(' ')} `));
+      p.append(strong);
+      if (after.length) p.append(document.createTextNode(` ${after.join(' ')}`));
+      const extra = clean(tile.querySelector('.amounts-container .additional-prizes') && tile.querySelector('.amounts-container .additional-prizes').textContent);
+      if (extra) {
+        const em = document.createElement('em');
+        em.textContent = extra.replace(/\s*×\s*/g, ' × ').replace(/^\+\s*/, '+ ');
+        p.append(document.createTextNode(' '), em);
+      }
+      body.push(p);
+    }
+    addLink(tile.querySelector('.lotto-footer .cta a'), 'Get your ticket', true);
+    addLink(tile.querySelector('.lotto-game-description a.read-more'), 'Game Details', false);
+    addLink(tile.querySelector('.lotto-footer .see-numbers a'), 'See winning numbers & payouts', false);
+  } else if (tile.matches('.buy-tickets__wrapper__container')) {
+    const a = tile.querySelector('a[href]');
+    title = clean(a && a.getAttribute('title'));
+    image = imageCellFrom(document, tile.querySelector('img') || tile.querySelector('.buy-tickets__wrapper__container__bg'), title);
+    if (title) {
+      const h3 = document.createElement('h3');
+      h3.textContent = title;
+      body.push(h3);
+    }
+    if (a) body.push(linkParagraph(document, absolutize(a.getAttribute('href')), clean(tile.querySelector('.buy-tickets__wrapper__container__purchase') && tile.querySelector('.buy-tickets__wrapper__container__purchase').textContent) || 'Buy Now', true));
+  } else if (tile.matches('div.game-tile')) {
+    title = clean(tile.querySelector('.casino-game-title') && tile.querySelector('.casino-game-title').textContent);
+    image = imageCellFrom(document, tile.querySelector('.casino-game'), title);
+    const info = tile.querySelector('a.casino-info-button[href]');
+    if (title) {
+      const h3 = document.createElement('h3');
+      if (info) {
+        const a = document.createElement('a');
+        a.href = absolutize(info.getAttribute('href'));
+        a.textContent = title;
+        h3.append(a);
+      } else {
+        h3.textContent = title;
+      }
+      body.push(h3);
+    }
+  } else {
+    // game-tile-nondraw (instant win / scratch) and alc-game-tile featured containers
+    const titleEl = tile.querySelector('.game-title, .scratch-name');
+    title = clean(titleEl && titleEl.textContent);
+    image = imageCellFrom(document, tile.querySelector('.game-tile-header, .game-image'), title);
+    if (title) {
+      const h3 = document.createElement('h3');
+      h3.textContent = title;
+      body.push(h3);
+    }
+    const prizeEl = tile.querySelector('.game-prize:not(.hidden), .top-prize-gametile');
+    const prize = clean(prizeEl && [...prizeEl.childNodes].map((n) => n.textContent).join(' ').replace(/\s*-\s*/g, ' - '));
+    // price range from the live lobby: "$0.10 - $3"; collapse "$1 - $1" and drop unresolved "- $NaN"
+    const range = prize.replace(/(\$[\d.,]+)\s+(\$[\d.,]+)/, '$1 - $2').replace(/\s*-\s*\$NaN\b/g, '')
+      .replace(/^(\$[\d.,]+) - \1$/, '$1');
+    if (range) body.push(textParagraph(document, range));
+    const descEl = tile.querySelector('.description, .game-description');
+    if (descEl) {
+      const descClone = descEl.cloneNode(true);
+      descClone.querySelectorAll('a').forEach((a) => a.remove());
+      const desc = clean(descClone.textContent);
+      if (desc) body.push(textParagraph(document, desc));
+    }
+    addLink(tile.querySelector('.description a[href], .learn-more a[href], .game-tile-content > a.try-now-link[href]'), 'Learn More', false);
+    addLink(tile.querySelector('.play-now-link a[href], .game-cta a[href]'), 'Play now', true);
+    addLink(tile.querySelector('.try-now-group a.try-now-link[href], .try-demo a[href]'), 'Try Demo', false);
+  }
+
+  if (!image && !body.length) return null;
+  return { key: title || (image && image.src), row: [image || '', body.length ? body : ''] };
+}
+
+/**
+ * Non-tile content inside a lobby wrapper (e.g. our-games/lotto `.games-wrapper > .header h2`,
+ * play-online/casino `#casino-games > #rewards-banner-container`): rebuilt as plain default
+ * content (headings, paragraphs with inline links) so it survives the block replacement.
+ * Filters, search forms, hidden states and icon ligatures are skipped.
+ */
+const EXTRA_SKIP = 'form, select, input, button, label, link, script, style, noscript, .browse-search, .filter, '
+  + '.filters, .material-icons, .hidden, [hidden], [aria-hidden="true"], [style*="display: none"], [style*="display:none"]';
+const INLINE_TAGS = /^(A|B|STRONG|EM|I|U|SPAN|SMALL|SUP|SUB|BR)$/;
+
+function inlineClone(document, node) {
+  if (node.nodeType === 3) return document.createTextNode(node.textContent.replace(/ /g, ' '));
+  if (node.nodeType !== 1 || node.matches(EXTRA_SKIP)) return null;
+  if (node.tagName === 'BR') return document.createElement('br');
+  let out;
+  if (node.tagName === 'A') {
+    const href = node.getAttribute('href');
+    if (!href || href === '#' || !clean(node.textContent)) return document.createTextNode(clean(node.textContent));
+    out = document.createElement('a');
+    out.href = absolutize(href);
+  } else if (/^(B|STRONG)$/.test(node.tagName)) {
+    out = document.createElement('strong');
+  } else if (/^(EM|I)$/.test(node.tagName)) {
+    out = document.createElement('em');
+  } else {
+    out = document.createDocumentFragment();
+  }
+  [...node.childNodes].forEach((c) => {
+    const n = inlineClone(document, c);
+    if (n) out.append(n);
+  });
+  return out;
+}
+
+function extraContent(document, root, out = []) {
+  let line = [];
+  const flush = () => {
+    const p = document.createElement('p');
+    line.forEach((n) => { const c = inlineClone(document, n); if (c) p.append(c); });
+    line = [];
+    if (clean(p.textContent)) {
+      p.normalize();
+      if (p.firstChild && p.firstChild.nodeType === 3) p.firstChild.textContent = p.firstChild.textContent.replace(/^\s+/, '');
+      if (p.lastChild && p.lastChild.nodeType === 3) p.lastChild.textContent = p.lastChild.textContent.replace(/\s+$/, '');
+      out.push(p);
+    }
+  };
+  [...root.childNodes].forEach((child) => {
+    if (child.nodeType === 3) {
+      if (clean(child.textContent)) line.push(child);
+      return;
+    }
+    if (child.nodeType !== 1 || child.matches(EXTRA_SKIP) || child.matches(LOBBY_TILE)) return;
+    if (INLINE_TAGS.test(child.tagName) && !child.querySelector(LOBBY_TILE)) {
+      line.push(child);
+      return;
+    }
+    flush();
+    if (/^H[1-6]$/.test(child.tagName)) {
+      if (clean(child.textContent)) {
+        const h = document.createElement(child.tagName.toLowerCase());
+        h.textContent = clean(child.textContent);
+        out.push(h);
+      }
+      return;
+    }
+    if (!clean(child.textContent)) return;
+    extraContent(document, child, out);
+  });
+  flush();
+  return out;
+}
+
+function parseLobby(element, document) {
+  const tiles = [...element.querySelectorAll(LOBBY_TILE)].filter((t) => !t.parentElement.closest(LOBBY_TILE));
+  const seen = new Set();
+  const cells = [];
+  tiles.forEach((tile) => {
+    const r = lobbyTileCells(document, tile);
+    if (!r) return;
+    if (r.key && seen.has(r.key)) return;
+    seen.add(r.key);
+    cells.push(r.row);
+  });
+  return cells;
+}
+
 export default function parse(element, { document }) {
+  if (!element.querySelector('article.game-tile') && element.querySelector(LOBBY_TILE)) {
+    const lobbyCells = parseLobby(element, document);
+    if (!lobbyCells.length) {
+      element.remove();
+      return;
+    }
+    const extras = extraContent(document, element);
+    const lobbyBlock = WebImporter.Blocks.createBlock(document, { name: 'cards-game', cells: lobbyCells });
+    element.replaceWith(...extras, lobbyBlock);
+    return;
+  }
+
   if (element.matches('.alc-hyt') || (!element.querySelector('.game-tile') && element.querySelector('.alc-hyt__container'))) {
     const hytCells = parseHaveYouTried(element, document);
     if (!hytCells.length) {
