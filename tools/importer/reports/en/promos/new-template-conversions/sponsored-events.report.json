@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/sponsored-events.html",
+  "path": "en/promos/new-template-conversions/sponsored-events",
+  "timestamp": "2026-10-27T23:25:43.956Z",
+  "title": "Sponsored Events",
+  "template": "content-page",
+  "blocks": [
+    "accordion-bar"
+  ]
+}

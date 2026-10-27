@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-transparency/executive-expenses.html",
+  "path": "en/corporate/about-atlantic-lottery/corporate-transparency/executive-expenses",
+  "timestamp": "2026-10-27T23:16:02.653Z",
+  "title": "Executive Expenses | Atlantic Lottery Corporation",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "columns-media",
+    "accordion-bar"
+  ]
+}

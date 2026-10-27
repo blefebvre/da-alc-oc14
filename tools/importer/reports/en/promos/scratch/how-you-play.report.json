@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/promos/scratch/how-you-play.html",
+  "path": "en/promos/scratch/how-you-play",
+  "timestamp": "2026-10-27T23:28:12.068Z",
+  "title": "Scratch | It's How You Play",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "cards-feature",
+    "columns-media",
+    "embed"
+  ]
+}

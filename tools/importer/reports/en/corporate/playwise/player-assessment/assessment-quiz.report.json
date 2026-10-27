@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/corporate/playwise/player-assessment/assessment-quiz.html",
+  "path": "en/corporate/playwise/player-assessment/assessment-quiz",
+  "timestamp": "2026-10-27T23:07:23.169Z",
+  "title": "Assessment Quiz",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "columns-contact"
+  ]
+}

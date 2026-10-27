@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games.html",
+  "path": "en/play-online/instant-win-games",
+  "timestamp": "2026-10-27T22:57:14.784Z",
+  "title": "Play Instant Win Lotto Games Online | Atlantic Lottery",
+  "template": "content-page",
+  "blocks": [
+    "cards-game",
+    "cards-game",
+    "carousel-promo"
+  ]
+}

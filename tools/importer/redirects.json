@@ -1,6 +1,6 @@
 {
-  "total": 2993,
-  "limit": 2993,
+  "total": 2886,
+  "limit": 2886,
   "offset": 0,
   "data": [
     {
@@ -18,6 +18,534 @@
     {
       "Source": "/fr",
       "Destination": "https://www.alc.ca/content/alc/fr.html"
+    },
+    {
+      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-01-270",
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases"
+    },
+    {
+      "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-01-270.html",
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases"
+    },
+    {
+      "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-01-270",
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases"
+    },
+    {
+      "Source": "/en/promos/instant-wins/deposit-spend-get-oct",
+      "Destination": "/"
+    },
+    {
+      "Source": "/content/alc/en/promos/instant-wins/deposit-spend-get-oct.html",
+      "Destination": "/"
+    },
+    {
+      "Source": "/content/alc/en/promos/instant-wins/deposit-spend-get-oct",
+      "Destination": "/"
+    },
+    {
+      "Source": "/en/promos/new-template-conversions/sponsorships",
+      "Destination": "/"
+    },
+    {
+      "Source": "/content/alc/en/promos/new-template-conversions/sponsorships.html",
+      "Destination": "/"
+    },
+    {
+      "Source": "/content/alc/en/promos/new-template-conversions/sponsorships",
+      "Destination": "/"
+    },
+    {
+      "Source": "/en/promos/new-template-conversions/where-the-money-goes",
+      "Destination": "/"
+    },
+    {
+      "Source": "/content/alc/en/promos/new-template-conversions/where-the-money-goes.html",
+      "Destination": "/"
+    },
+    {
+      "Source": "/content/alc/en/promos/new-template-conversions/where-the-money-goes",
+      "Destination": "/"
+    },
+    {
+      "Source": "/en/promos/new-template-conversions/al-winners-publicity-policy",
+      "Destination": "/"
+    },
+    {
+      "Source": "/content/alc/en/promos/new-template-conversions/al-winners-publicity-policy.html",
+      "Destination": "/"
+    },
+    {
+      "Source": "/content/alc/en/promos/new-template-conversions/al-winners-publicity-policy",
+      "Destination": "/"
+    },
+    {
+      "Source": "/en/promos/new-template-conversions/legal-mockup",
+      "Destination": "/"
+    },
+    {
+      "Source": "/content/alc/en/promos/new-template-conversions/legal-mockup.html",
+      "Destination": "/"
+    },
+    {
+      "Source": "/content/alc/en/promos/new-template-conversions/legal-mockup",
+      "Destination": "/"
+    },
+    {
+      "Source": "/en/promos/new-template-conversions/executive-profiles",
+      "Destination": "/"
+    },
+    {
+      "Source": "/content/alc/en/promos/new-template-conversions/executive-profiles.html",
+      "Destination": "/"
+    },
+    {
+      "Source": "/content/alc/en/promos/new-template-conversions/executive-profiles",
+      "Destination": "/"
+    },
+    {
+      "Source": "/en/promos/new-template-conversions/board-profiles",
+      "Destination": "/"
+    },
+    {
+      "Source": "/content/alc/en/promos/new-template-conversions/board-profiles.html",
+      "Destination": "/"
+    },
+    {
+      "Source": "/content/alc/en/promos/new-template-conversions/board-profiles",
+      "Destination": "/"
+    },
+    {
+      "Source": "/en/play-online",
+      "Destination": "/"
+    },
+    {
+      "Source": "/content/alc/en/play-online",
+      "Destination": "/"
+    },
+    {
+      "Source": "/content/alc/en/play-online.html",
+      "Destination": "/"
+    },
+    {
+      "Source": "/en/our-games",
+      "Destination": "/"
+    },
+    {
+      "Source": "/content/alc/en/our-games",
+      "Destination": "/"
+    },
+    {
+      "Source": "/content/alc/en/our-games.html",
+      "Destination": "/"
+    },
+    {
+      "Source": "/en/play-online/lotto",
+      "Destination": "/en/play-online/lotto-games"
+    },
+    {
+      "Source": "/content/alc/en/play-online/lotto",
+      "Destination": "/en/play-online/lotto-games"
+    },
+    {
+      "Source": "/content/alc/en/play-online/lotto.html",
+      "Destination": "/en/play-online/lotto-games"
+    },
+    {
+      "Source": "/en/our-games/casino",
+      "Destination": "/en/play-online/casino"
+    },
+    {
+      "Source": "/content/alc/en/our-games/casino",
+      "Destination": "/en/play-online/casino"
+    },
+    {
+      "Source": "/content/alc/en/our-games/casino.html",
+      "Destination": "/en/play-online/casino"
+    },
+    {
+      "Source": "/en/our-games/instant-win-games",
+      "Destination": "/en/play-online/instant-win-games"
+    },
+    {
+      "Source": "/content/alc/en/our-games/instant-win-games",
+      "Destination": "/en/play-online/instant-win-games"
+    },
+    {
+      "Source": "/content/alc/en/our-games/instant-win-games.html",
+      "Destination": "/en/play-online/instant-win-games"
+    },
+    {
+      "Source": "/en/our-games/mobile",
+      "Destination": "/en/our-games/app"
+    },
+    {
+      "Source": "/content/alc/en/our-games/mobile",
+      "Destination": "/en/our-games/app"
+    },
+    {
+      "Source": "/content/alc/en/our-games/mobile.html",
+      "Destination": "/en/our-games/app"
+    },
+    {
+      "Source": "/en/play-online/app",
+      "Destination": "/en/our-games/app"
+    },
+    {
+      "Source": "/content/alc/en/play-online/app",
+      "Destination": "/en/our-games/app"
+    },
+    {
+      "Source": "/content/alc/en/play-online/app.html",
+      "Destination": "/en/our-games/app"
+    },
+    {
+      "Source": "/en/corporate",
+      "Destination": "/en/corporate/about-atlantic-lottery"
+    },
+    {
+      "Source": "/content/alc/en/corporate",
+      "Destination": "/en/corporate/about-atlantic-lottery"
+    },
+    {
+      "Source": "/content/alc/en/corporate.html",
+      "Destination": "/en/corporate/about-atlantic-lottery"
+    },
+    {
+      "Source": "/en/legal/privacy-policy",
+      "Destination": "/en/referenced/privacypolicy"
+    },
+    {
+      "Source": "/content/alc/en/legal/privacy-policy",
+      "Destination": "/en/referenced/privacypolicy"
+    },
+    {
+      "Source": "/content/alc/en/legal/privacy-policy.html",
+      "Destination": "/en/referenced/privacypolicy"
+    },
+    {
+      "Source": "/en/legal/healthyplaypolicy",
+      "Destination": "/en/referenced/healthyplaypolicy"
+    },
+    {
+      "Source": "/content/alc/en/legal/healthyplaypolicy",
+      "Destination": "/en/referenced/healthyplaypolicy"
+    },
+    {
+      "Source": "/content/alc/en/legal/healthyplaypolicy.html",
+      "Destination": "/en/referenced/healthyplaypolicy"
+    },
+    {
+      "Source": "/en/legal/HealthyPlayPolicy",
+      "Destination": "/en/referenced/healthyplaypolicy"
+    },
+    {
+      "Source": "/content/alc/en/legal/HealthyPlayPolicy",
+      "Destination": "/en/referenced/healthyplaypolicy"
+    },
+    {
+      "Source": "/content/alc/en/legal/HealthyPlayPolicy.html",
+      "Destination": "/en/referenced/healthyplaypolicy"
+    },
+    {
+      "Source": "/en/our-games/contests-and-promotions",
+      "Destination": "/en/our-games/contests"
+    },
+    {
+      "Source": "/content/alc/en/our-games/contests-and-promotions",
+      "Destination": "/en/our-games/contests"
+    },
+    {
+      "Source": "/content/alc/en/our-games/contests-and-promotions.html",
+      "Destination": "/en/our-games/contests"
+    },
+    {
+      "Source": "/en/play-online/subscriptions",
+      "Destination": "/en/our-games/lotto/subscription"
+    },
+    {
+      "Source": "/content/alc/en/play-online/subscriptions",
+      "Destination": "/en/our-games/lotto/subscription"
+    },
+    {
+      "Source": "/content/alc/en/play-online/subscriptions.html",
+      "Destination": "/en/our-games/lotto/subscription"
+    },
+    {
+      "Source": "/en/our-games/app-old",
+      "Destination": "/en/our-games/app"
+    },
+    {
+      "Source": "/content/alc/en/our-games/app-old",
+      "Destination": "/en/our-games/app"
+    },
+    {
+      "Source": "/content/alc/en/our-games/app-old.html",
+      "Destination": "/en/our-games/app"
+    },
+    {
+      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2024-03-28",
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases"
+    },
+    {
+      "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2024-03-28",
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases"
+    },
+    {
+      "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2024-03-28.html",
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases"
+    },
+    {
+      "Source": "/en/promos/coasters/coasters-grand-reopening",
+      "Destination": "/en/our-games/coasters"
+    },
+    {
+      "Source": "/content/alc/en/promos/coasters/coasters-grand-reopening",
+      "Destination": "/en/our-games/coasters"
+    },
+    {
+      "Source": "/content/alc/en/promos/coasters/coasters-grand-reopening.html",
+      "Destination": "/en/our-games/coasters"
+    },
+    {
+      "Source": "/en/play-online/ibingo",
+      "Destination": "/en/our-games/lotto/salsa-bingo"
+    },
+    {
+      "Source": "/content/alc/en/play-online/ibingo",
+      "Destination": "/en/our-games/lotto/salsa-bingo"
+    },
+    {
+      "Source": "/content/alc/en/play-online/ibingo.html",
+      "Destination": "/en/our-games/lotto/salsa-bingo"
+    },
+    {
+      "Source": "/en/promos/proline/proline-fall-multisport",
+      "Destination": "/en/promos/proline/fall-multisport"
+    },
+    {
+      "Source": "/content/alc/en/promos/proline/proline-fall-multisport",
+      "Destination": "/en/promos/proline/fall-multisport"
+    },
+    {
+      "Source": "/content/alc/en/promos/proline/proline-fall-multisport.html",
+      "Destination": "/en/promos/proline/fall-multisport"
+    },
+    {
+      "Source": "/en/promos/funding",
+      "Destination": "/en/promos/funding2"
+    },
+    {
+      "Source": "/content/alc/en/promos/funding",
+      "Destination": "/en/promos/funding2"
+    },
+    {
+      "Source": "/content/alc/en/promos/funding.html",
+      "Destination": "/en/promos/funding2"
+    },
+    {
+      "Source": "/en/play-online/lotto649",
+      "Destination": "https://www.alc.ca/content/alc/en/game-configurator/lotto-649.html"
+    },
+    {
+      "Source": "/content/alc/en/play-online/lotto649",
+      "Destination": "https://www.alc.ca/content/alc/en/game-configurator/lotto-649.html"
+    },
+    {
+      "Source": "/content/alc/en/play-online/lotto649.html",
+      "Destination": "https://www.alc.ca/content/alc/en/game-configurator/lotto-649.html"
+    },
+    {
+      "Source": "/en/play-online/dailygrand",
+      "Destination": "https://www.alc.ca/content/alc/en/game-configurator/daily-grand.html"
+    },
+    {
+      "Source": "/content/alc/en/play-online/dailygrand",
+      "Destination": "https://www.alc.ca/content/alc/en/game-configurator/daily-grand.html"
+    },
+    {
+      "Source": "/content/alc/en/play-online/dailygrand.html",
+      "Destination": "https://www.alc.ca/content/alc/en/game-configurator/daily-grand.html"
+    },
+    {
+      "Source": "/en/play-online/atlantic49",
+      "Destination": "https://www.alc.ca/content/alc/en/game-configurator/atlantic-49.html"
+    },
+    {
+      "Source": "/content/alc/en/play-online/atlantic49",
+      "Destination": "https://www.alc.ca/content/alc/en/game-configurator/atlantic-49.html"
+    },
+    {
+      "Source": "/content/alc/en/play-online/atlantic49.html",
+      "Destination": "https://www.alc.ca/content/alc/en/game-configurator/atlantic-49.html"
+    },
+    {
+      "Source": "/en/play-online/salsabingo",
+      "Destination": "https://www.alc.ca/content/alc/en/game-configurator/salsa-bingo.html"
+    },
+    {
+      "Source": "/content/alc/en/play-online/salsabingo",
+      "Destination": "https://www.alc.ca/content/alc/en/game-configurator/salsa-bingo.html"
+    },
+    {
+      "Source": "/content/alc/en/play-online/salsabingo.html",
+      "Destination": "https://www.alc.ca/content/alc/en/game-configurator/salsa-bingo.html"
+    },
+    {
+      "Source": "/en/play-online/bucko",
+      "Destination": "https://www.alc.ca/content/alc/en/game-configurator/bucko.html"
+    },
+    {
+      "Source": "/content/alc/en/play-online/bucko",
+      "Destination": "https://www.alc.ca/content/alc/en/game-configurator/bucko.html"
+    },
+    {
+      "Source": "/content/alc/en/play-online/bucko.html",
+      "Destination": "https://www.alc.ca/content/alc/en/game-configurator/bucko.html"
+    },
+    {
+      "Source": "/en/play-online/keno",
+      "Destination": "https://www.alc.ca/content/alc/en/game-configurator/keno-atlantic.html"
+    },
+    {
+      "Source": "/content/alc/en/play-online/keno",
+      "Destination": "https://www.alc.ca/content/alc/en/game-configurator/keno-atlantic.html"
+    },
+    {
+      "Source": "/content/alc/en/play-online/keno.html",
+      "Destination": "https://www.alc.ca/content/alc/en/game-configurator/keno-atlantic.html"
+    },
+    {
+      "Source": "/en/play-online/pokerlotto",
+      "Destination": "https://www.alc.ca/content/alc/en/game-configurator/poker-lotto.html"
+    },
+    {
+      "Source": "/content/alc/en/play-online/pokerlotto",
+      "Destination": "https://www.alc.ca/content/alc/en/game-configurator/poker-lotto.html"
+    },
+    {
+      "Source": "/content/alc/en/play-online/pokerlotto.html",
+      "Destination": "https://www.alc.ca/content/alc/en/game-configurator/poker-lotto.html"
+    },
+    {
+      "Source": "/en/our-games/abonnements-subscriptions",
+      "Destination": "/en/our-games/lotto/subscription"
+    },
+    {
+      "Source": "/content/alc/en/our-games/abonnements-subscriptions",
+      "Destination": "/en/our-games/lotto/subscription"
+    },
+    {
+      "Source": "/content/alc/en/our-games/abonnements-subscriptions.html",
+      "Destination": "/en/our-games/lotto/subscription"
+    },
+    {
+      "Source": "/en/corporate/playwise/responsible-gambling-community-partnership-program",
+      "Destination": "/en/corporate/playwise/get-support"
+    },
+    {
+      "Source": "/content/alc/en/corporate/playwise/responsible-gambling-community-partnership-program",
+      "Destination": "/en/corporate/playwise/get-support"
+    },
+    {
+      "Source": "/content/alc/en/corporate/playwise/responsible-gambling-community-partnership-program.html",
+      "Destination": "/en/corporate/playwise/get-support"
+    },
+    {
+      "Source": "/en/corporate/playwise/standards",
+      "Destination": "/en/corporate/playwise/our-promise"
+    },
+    {
+      "Source": "/content/alc/en/corporate/playwise/standards",
+      "Destination": "/en/corporate/playwise/our-promise"
+    },
+    {
+      "Source": "/content/alc/en/corporate/playwise/standards.html",
+      "Destination": "/en/corporate/playwise/our-promise"
+    },
+    {
+      "Source": "/en/corporate/playwise/how-games-work",
+      "Destination": "/en/corporate/playwise/know-the-facts"
+    },
+    {
+      "Source": "/content/alc/en/corporate/playwise/how-games-work",
+      "Destination": "/en/corporate/playwise/know-the-facts"
+    },
+    {
+      "Source": "/content/alc/en/corporate/playwise/how-games-work.html",
+      "Destination": "/en/corporate/playwise/know-the-facts"
+    },
+    {
+      "Source": "/en/corporate/playwise/self-exclusion",
+      "Destination": "/en/corporate/playwise/player-tools"
+    },
+    {
+      "Source": "/content/alc/en/corporate/playwise/self-exclusion",
+      "Destination": "/en/corporate/playwise/player-tools"
+    },
+    {
+      "Source": "/content/alc/en/corporate/playwise/self-exclusion.html",
+      "Destination": "/en/corporate/playwise/player-tools"
+    },
+    {
+      "Source": "/en/corporate/playwise/risks-of-youth-gambling",
+      "Destination": "/en/corporate/playwise/know-the-facts"
+    },
+    {
+      "Source": "/content/alc/en/corporate/playwise/risks-of-youth-gambling",
+      "Destination": "/en/corporate/playwise/know-the-facts"
+    },
+    {
+      "Source": "/content/alc/en/corporate/playwise/risks-of-youth-gambling.html",
+      "Destination": "/en/corporate/playwise/know-the-facts"
+    },
+    {
+      "Source": "/en/corporate/playwise/helpful-resources",
+      "Destination": "/en/corporate/playwise/get-support"
+    },
+    {
+      "Source": "/content/alc/en/corporate/playwise/helpful-resources",
+      "Destination": "/en/corporate/playwise/get-support"
+    },
+    {
+      "Source": "/content/alc/en/corporate/playwise/helpful-resources.html",
+      "Destination": "/en/corporate/playwise/get-support"
+    },
+    {
+      "Source": "/en/corporate/playwise/assess-your-gambling-behaviour",
+      "Destination": "/en/corporate/playwise/player-assessment"
+    },
+    {
+      "Source": "/content/alc/en/corporate/playwise/assess-your-gambling-behaviour",
+      "Destination": "/en/corporate/playwise/player-assessment"
+    },
+    {
+      "Source": "/content/alc/en/corporate/playwise/assess-your-gambling-behaviour.html",
+      "Destination": "/en/corporate/playwise/player-assessment"
+    },
+    {
+      "Source": "/en/corporate/playwise/available-responsible-gambling-materials",
+      "Destination": "/en/corporate/playwise/know-the-facts"
+    },
+    {
+      "Source": "/content/alc/en/corporate/playwise/available-responsible-gambling-materials",
+      "Destination": "/en/corporate/playwise/know-the-facts"
+    },
+    {
+      "Source": "/content/alc/en/corporate/playwise/available-responsible-gambling-materials.html",
+      "Destination": "/en/corporate/playwise/know-the-facts"
+    },
+    {
+      "Source": "/en/corporate/about-atlantic-lottery/theticket",
+      "Destination": "https://www.alc.ca/content/alc/en/referenced-content/external/the-ticket.html"
+    },
+    {
+      "Source": "/content/alc/en/corporate/about-atlantic-lottery/theticket",
+      "Destination": "https://www.alc.ca/content/alc/en/referenced-content/external/the-ticket.html"
+    },
+    {
+      "Source": "/content/alc/en/corporate/about-atlantic-lottery/theticket.html",
+      "Destination": "https://www.alc.ca/content/alc/en/referenced-content/external/the-ticket.html"
     },
     {
       "Source": "/en/2chance-history-redirect",
@@ -56,18 +584,6 @@
       "Destination": "https://www.alc.ca/content/alc/en/search-results.html"
     },
     {
-      "Source": "/en/play-online",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online.html"
-    },
-    {
-      "Source": "/content/alc/en/play-online.html",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online.html"
-    },
-    {
-      "Source": "/content/alc/en/play-online",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online.html"
-    },
-    {
       "Source": "/en/play-online/lottomax",
       "Destination": "https://www.alc.ca/content/alc/en/play-online/lottomax.html"
     },
@@ -80,52 +596,12 @@
       "Destination": "https://www.alc.ca/content/alc/en/play-online/lottomax.html"
     },
     {
-      "Source": "/en/play-online/lotto649",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/lotto649.html"
-    },
-    {
-      "Source": "/content/alc/en/play-online/lotto649.html",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/lotto649.html"
-    },
-    {
-      "Source": "/content/alc/en/play-online/lotto649",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/lotto649.html"
-    },
-    {
-      "Source": "/en/play-online/dailygrand",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/dailygrand.html"
-    },
-    {
-      "Source": "/content/alc/en/play-online/dailygrand.html",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/dailygrand.html"
-    },
-    {
-      "Source": "/content/alc/en/play-online/dailygrand",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/dailygrand.html"
-    },
-    {
-      "Source": "/en/play-online/lotto",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/lotto.html"
-    },
-    {
-      "Source": "/content/alc/en/play-online/lotto.html",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/lotto.html"
-    },
-    {
-      "Source": "/content/alc/en/play-online/lotto",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/lotto.html"
-    },
-    {
-      "Source": "/en/play-online/casino",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/casino.html"
-    },
-    {
       "Source": "/content/alc/en/play-online/casino.html",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/casino.html"
+      "Destination": "/en/play-online/casino"
     },
     {
       "Source": "/content/alc/en/play-online/casino",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/casino.html"
+      "Destination": "/en/play-online/casino"
     },
     {
       "Source": "/content/alc/en/play-online/casino/bloomin-bunnies.html",
@@ -1745,15 +2221,15 @@
     },
     {
       "Source": "/en/play-online/casino/tiki-infinity-reels-megaways",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/casino.html"
+      "Destination": "/en/play-online/casino"
     },
     {
       "Source": "/content/alc/en/play-online/casino/tiki-infinity-reels-megaways.html",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/casino.html"
+      "Destination": "/en/play-online/casino"
     },
     {
       "Source": "/content/alc/en/play-online/casino/tiki-infinity-reels-megaways",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/casino.html"
+      "Destination": "/en/play-online/casino"
     },
     {
       "Source": "/content/alc/en/play-online/casino/fortunes-of-egypt.html",
@@ -2581,15 +3057,15 @@
     },
     {
       "Source": "/en/play-online/casino/cash-money",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/casino.html"
+      "Destination": "/en/play-online/casino"
     },
     {
       "Source": "/content/alc/en/play-online/casino/cash-money.html",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/casino.html"
+      "Destination": "/en/play-online/casino"
     },
     {
       "Source": "/content/alc/en/play-online/casino/cash-money",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/casino.html"
+      "Destination": "/en/play-online/casino"
     },
     {
       "Source": "/content/alc/en/play-online/casino/gus-goes-fishin.html",
@@ -4217,15 +4693,15 @@
     },
     {
       "Source": "/en/play-online/casino/rising-rockets-empress",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/casino.html"
+      "Destination": "/en/play-online/casino"
     },
     {
       "Source": "/content/alc/en/play-online/casino/rising-rockets-empress.html",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/casino.html"
+      "Destination": "/en/play-online/casino"
     },
     {
       "Source": "/content/alc/en/play-online/casino/rising-rockets-empress",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/casino.html"
+      "Destination": "/en/play-online/casino"
     },
     {
       "Source": "/content/alc/en/play-online/casino/treasure-blast-fleet.html",
@@ -4808,16 +5284,12 @@
       "Destination": "https://www.alc.ca/content/alc/en/play-online/casino/game.html"
     },
     {
-      "Source": "/en/play-online/instant-win-games",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/instant-win-games.html"
-    },
-    {
       "Source": "/content/alc/en/play-online/instant-win-games.html",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/instant-win-games.html"
+      "Destination": "/en/play-online/instant-win-games"
     },
     {
       "Source": "/content/alc/en/play-online/instant-win-games",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/instant-win-games.html"
+      "Destination": "/en/play-online/instant-win-games"
     },
     {
       "Source": "/content/alc/en/play-online/instant-win-games/gme-show-retro.html",
@@ -5797,15 +6269,15 @@
     },
     {
       "Source": "/en/play-online/instant-win-games/juicy-loot",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/instant-win-games.html"
+      "Destination": "/en/play-online/instant-win-games"
     },
     {
       "Source": "/content/alc/en/play-online/instant-win-games/juicy-loot.html",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/instant-win-games.html"
+      "Destination": "/en/play-online/instant-win-games"
     },
     {
       "Source": "/content/alc/en/play-online/instant-win-games/juicy-loot",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/instant-win-games.html"
+      "Destination": "/en/play-online/instant-win-games"
     },
     {
       "Source": "/content/alc/en/play-online/instant-win-games/balloonies-swap-and-pop.html",
@@ -7828,124 +8300,20 @@
       "Destination": "https://www.alc.ca/content/alc/en/play-online/proline/stadium-bets.html"
     },
     {
-      "Source": "/en/play-online/subscriptions",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/subscriptions.html"
-    },
-    {
-      "Source": "/content/alc/en/play-online/subscriptions.html",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/subscriptions.html"
-    },
-    {
-      "Source": "/content/alc/en/play-online/subscriptions",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/subscriptions.html"
-    },
-    {
-      "Source": "/en/play-online/lotto-games",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/lotto-games.html"
-    },
-    {
       "Source": "/content/alc/en/play-online/lotto-games.html",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/lotto-games.html"
+      "Destination": "/en/play-online/lotto-games"
     },
     {
       "Source": "/content/alc/en/play-online/lotto-games",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/lotto-games.html"
-    },
-    {
-      "Source": "/en/play-online/atlantic49",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/atlantic49.html"
-    },
-    {
-      "Source": "/content/alc/en/play-online/atlantic49.html",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/atlantic49.html"
-    },
-    {
-      "Source": "/content/alc/en/play-online/atlantic49",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/atlantic49.html"
-    },
-    {
-      "Source": "/en/play-online/salsabingo",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/salsabingo.html"
-    },
-    {
-      "Source": "/content/alc/en/play-online/salsabingo.html",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/salsabingo.html"
-    },
-    {
-      "Source": "/content/alc/en/play-online/salsabingo",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/salsabingo.html"
-    },
-    {
-      "Source": "/en/play-online/bucko",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/bucko.html"
-    },
-    {
-      "Source": "/content/alc/en/play-online/bucko.html",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/bucko.html"
-    },
-    {
-      "Source": "/content/alc/en/play-online/bucko",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/bucko.html"
-    },
-    {
-      "Source": "/en/play-online/keno",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/keno.html"
-    },
-    {
-      "Source": "/content/alc/en/play-online/keno.html",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/keno.html"
-    },
-    {
-      "Source": "/content/alc/en/play-online/keno",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/keno.html"
-    },
-    {
-      "Source": "/en/play-online/pokerlotto",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/pokerlotto.html"
-    },
-    {
-      "Source": "/content/alc/en/play-online/pokerlotto.html",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/pokerlotto.html"
-    },
-    {
-      "Source": "/content/alc/en/play-online/pokerlotto",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/pokerlotto.html"
-    },
-    {
-      "Source": "/en/play-online/app",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/app.html"
-    },
-    {
-      "Source": "/content/alc/en/play-online/app.html",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/app.html"
-    },
-    {
-      "Source": "/content/alc/en/play-online/app",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/app.html"
-    },
-    {
-      "Source": "/en/our-games",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games.html"
-    },
-    {
-      "Source": "/content/alc/en/our-games.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games.html"
-    },
-    {
-      "Source": "/content/alc/en/our-games",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games.html"
-    },
-    {
-      "Source": "/en/our-games/scratch-n-win",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/scratch-n-win.html"
+      "Destination": "/en/play-online/lotto-games"
     },
     {
       "Source": "/content/alc/en/our-games/scratch-n-win.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/scratch-n-win.html"
+      "Destination": "/en/our-games/scratch-n-win"
     },
     {
       "Source": "/content/alc/en/our-games/scratch-n-win",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/scratch-n-win.html"
+      "Destination": "/en/our-games/scratch-n-win"
     },
     {
       "Source": "/content/alc/en/our-games/scratch-n-win/3370.html",
@@ -8076,40 +8444,36 @@
       "Destination": "/en/our-games/scratch-n-win/4091"
     },
     {
-      "Source": "/en/our-games/scratch-n-win/top-prizes-remaining",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/scratch-n-win/top-prizes-remaining.html"
-    },
-    {
       "Source": "/content/alc/en/our-games/scratch-n-win/top-prizes-remaining.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/scratch-n-win/top-prizes-remaining.html"
+      "Destination": "/en/our-games/scratch-n-win/top-prizes-remaining"
     },
     {
       "Source": "/content/alc/en/our-games/scratch-n-win/top-prizes-remaining",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/scratch-n-win/top-prizes-remaining.html"
+      "Destination": "/en/our-games/scratch-n-win/top-prizes-remaining"
     },
     {
       "Source": "/en/our-games/scratch-n-win/3302",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/scratch-n-win/3302.html"
+      "Destination": "/en/our-games/scratch-n-win"
     },
     {
       "Source": "/content/alc/en/our-games/scratch-n-win/3302.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/scratch-n-win/3302.html"
+      "Destination": "/en/our-games/scratch-n-win"
     },
     {
       "Source": "/content/alc/en/our-games/scratch-n-win/3302",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/scratch-n-win/3302.html"
+      "Destination": "/en/our-games/scratch-n-win"
     },
     {
       "Source": "/en/our-games/scratch-n-win/4087",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/scratch-n-win/4087.html"
+      "Destination": "/en/our-games/scratch-n-win"
     },
     {
       "Source": "/content/alc/en/our-games/scratch-n-win/4087.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/scratch-n-win/4087.html"
+      "Destination": "/en/our-games/scratch-n-win"
     },
     {
       "Source": "/content/alc/en/our-games/scratch-n-win/4087",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/scratch-n-win/4087.html"
+      "Destination": "/en/our-games/scratch-n-win"
     },
     {
       "Source": "/content/alc/en/our-games/scratch-n-win/4094.html",
@@ -8584,188 +8948,128 @@
       "Destination": "/en/our-games/scratch-n-win/3403"
     },
     {
-      "Source": "/en/our-games/lotto",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto.html"
-    },
-    {
       "Source": "/content/alc/en/our-games/lotto.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto.html"
+      "Destination": "/en/our-games/lotto"
     },
     {
       "Source": "/content/alc/en/our-games/lotto",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto.html"
-    },
-    {
-      "Source": "/en/our-games/lotto/lotto-max",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/lotto-max.html"
+      "Destination": "/en/our-games/lotto"
     },
     {
       "Source": "/content/alc/en/our-games/lotto/lotto-max.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/lotto-max.html"
+      "Destination": "/en/our-games/lotto/lotto-max"
     },
     {
       "Source": "/content/alc/en/our-games/lotto/lotto-max",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/lotto-max.html"
-    },
-    {
-      "Source": "/en/our-games/lotto/lotto-6-49",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/lotto-6-49.html"
+      "Destination": "/en/our-games/lotto/lotto-max"
     },
     {
       "Source": "/content/alc/en/our-games/lotto/lotto-6-49.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/lotto-6-49.html"
+      "Destination": "/en/our-games/lotto/lotto-6-49"
     },
     {
       "Source": "/content/alc/en/our-games/lotto/lotto-6-49",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/lotto-6-49.html"
-    },
-    {
-      "Source": "/en/our-games/lotto/atlantic-49",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/atlantic-49.html"
+      "Destination": "/en/our-games/lotto/lotto-6-49"
     },
     {
       "Source": "/content/alc/en/our-games/lotto/atlantic-49.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/atlantic-49.html"
+      "Destination": "/en/our-games/lotto/atlantic-49"
     },
     {
       "Source": "/content/alc/en/our-games/lotto/atlantic-49",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/atlantic-49.html"
-    },
-    {
-      "Source": "/en/our-games/lotto/bucko",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/bucko.html"
+      "Destination": "/en/our-games/lotto/atlantic-49"
     },
     {
       "Source": "/content/alc/en/our-games/lotto/bucko.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/bucko.html"
+      "Destination": "/en/our-games/lotto/bucko"
     },
     {
       "Source": "/content/alc/en/our-games/lotto/bucko",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/bucko.html"
-    },
-    {
-      "Source": "/en/our-games/lotto/salsa-bingo",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/salsa-bingo.html"
+      "Destination": "/en/our-games/lotto/bucko"
     },
     {
       "Source": "/content/alc/en/our-games/lotto/salsa-bingo.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/salsa-bingo.html"
+      "Destination": "/en/our-games/lotto/salsa-bingo"
     },
     {
       "Source": "/content/alc/en/our-games/lotto/salsa-bingo",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/salsa-bingo.html"
-    },
-    {
-      "Source": "/en/our-games/lotto/keno",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/keno.html"
+      "Destination": "/en/our-games/lotto/salsa-bingo"
     },
     {
       "Source": "/content/alc/en/our-games/lotto/keno.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/keno.html"
+      "Destination": "/en/our-games/lotto/keno"
     },
     {
       "Source": "/content/alc/en/our-games/lotto/keno",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/keno.html"
-    },
-    {
-      "Source": "/en/our-games/lotto/poker-lotto",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/poker-lotto.html"
+      "Destination": "/en/our-games/lotto/keno"
     },
     {
       "Source": "/content/alc/en/our-games/lotto/poker-lotto.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/poker-lotto.html"
+      "Destination": "/en/our-games/lotto/poker-lotto"
     },
     {
       "Source": "/content/alc/en/our-games/lotto/poker-lotto",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/poker-lotto.html"
-    },
-    {
-      "Source": "/en/our-games/lotto/subscription",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/subscription.html"
+      "Destination": "/en/our-games/lotto/poker-lotto"
     },
     {
       "Source": "/content/alc/en/our-games/lotto/subscription.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/subscription.html"
+      "Destination": "/en/our-games/lotto/subscription"
     },
     {
       "Source": "/content/alc/en/our-games/lotto/subscription",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/subscription.html"
-    },
-    {
-      "Source": "/en/our-games/lotto/tag",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/tag.html"
+      "Destination": "/en/our-games/lotto/subscription"
     },
     {
       "Source": "/content/alc/en/our-games/lotto/tag.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/tag.html"
+      "Destination": "/en/our-games/lotto/tag"
     },
     {
       "Source": "/content/alc/en/our-games/lotto/tag",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/tag.html"
-    },
-    {
-      "Source": "/en/our-games/lotto/twist",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/twist.html"
+      "Destination": "/en/our-games/lotto/tag"
     },
     {
       "Source": "/content/alc/en/our-games/lotto/twist.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/twist.html"
+      "Destination": "/en/our-games/lotto/twist"
     },
     {
       "Source": "/content/alc/en/our-games/lotto/twist",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/twist.html"
-    },
-    {
-      "Source": "/en/our-games/lotto/daily-grand",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/daily-grand.html"
+      "Destination": "/en/our-games/lotto/twist"
     },
     {
       "Source": "/content/alc/en/our-games/lotto/daily-grand.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/daily-grand.html"
+      "Destination": "/en/our-games/lotto/daily-grand"
     },
     {
       "Source": "/content/alc/en/our-games/lotto/daily-grand",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/daily-grand.html"
-    },
-    {
-      "Source": "/en/our-games/lotto/lotto4",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/Lotto4.html"
+      "Destination": "/en/our-games/lotto/daily-grand"
     },
     {
       "Source": "/content/alc/en/our-games/lotto/Lotto4.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/Lotto4.html"
+      "Destination": "/en/our-games/lotto/lotto4"
     },
     {
       "Source": "/content/alc/en/our-games/lotto/Lotto4",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/Lotto4.html"
+      "Destination": "/en/our-games/lotto/lotto4"
     },
     {
       "Source": "/en/our-games/lotto/Lotto4",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/Lotto4.html"
-    },
-    {
-      "Source": "/en/our-games/lotto/hitormiss",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/hitormiss.html"
+      "Destination": "/en/our-games/lotto/lotto4"
     },
     {
       "Source": "/content/alc/en/our-games/lotto/hitormiss.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/hitormiss.html"
+      "Destination": "/en/our-games/lotto/hitormiss"
     },
     {
       "Source": "/content/alc/en/our-games/lotto/hitormiss",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/lotto/hitormiss.html"
-    },
-    {
-      "Source": "/en/our-games/video-lottery",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/video-lottery.html"
+      "Destination": "/en/our-games/lotto/hitormiss"
     },
     {
       "Source": "/content/alc/en/our-games/video-lottery.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/video-lottery.html"
+      "Destination": "/en/our-games/video-lottery"
     },
     {
       "Source": "/content/alc/en/our-games/video-lottery",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/video-lottery.html"
+      "Destination": "/en/our-games/video-lottery"
     },
     {
       "Source": "/content/alc/en/our-games/video-lottery/swinging-bells.html",
@@ -9576,30 +9880,6 @@
       "Destination": "/en/our-games/video-lottery/mo-mummy"
     },
     {
-      "Source": "/en/our-games/casino",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/casino.html"
-    },
-    {
-      "Source": "/content/alc/en/our-games/casino.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/casino.html"
-    },
-    {
-      "Source": "/content/alc/en/our-games/casino",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/casino.html"
-    },
-    {
-      "Source": "/en/our-games/instant-win-games",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/instant-win-games.html"
-    },
-    {
-      "Source": "/content/alc/en/our-games/instant-win-games.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/instant-win-games.html"
-    },
-    {
-      "Source": "/content/alc/en/our-games/instant-win-games",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/instant-win-games.html"
-    },
-    {
       "Source": "/en/our-games/proline",
       "Destination": "https://www.alc.ca/content/alc/en/our-games/proline.html"
     },
@@ -9612,100 +9892,60 @@
       "Destination": "https://www.alc.ca/content/alc/en/our-games/proline.html"
     },
     {
-      "Source": "/en/our-games/abonnements-subscriptions",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/abonnements-subscriptions.html"
-    },
-    {
-      "Source": "/content/alc/en/our-games/abonnements-subscriptions.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/abonnements-subscriptions.html"
-    },
-    {
-      "Source": "/content/alc/en/our-games/abonnements-subscriptions",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/abonnements-subscriptions.html"
-    },
-    {
-      "Source": "/en/our-games/contests-and-promotions",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/contests-and-promotions.html"
-    },
-    {
-      "Source": "/content/alc/en/our-games/contests-and-promotions.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/contests-and-promotions.html"
-    },
-    {
-      "Source": "/content/alc/en/our-games/contests-and-promotions",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/contests-and-promotions.html"
-    },
-    {
-      "Source": "/en/our-games/mobile",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/mobile.html"
-    },
-    {
-      "Source": "/content/alc/en/our-games/mobile.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/mobile.html"
-    },
-    {
-      "Source": "/content/alc/en/our-games/mobile",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/mobile.html"
-    },
-    {
-      "Source": "/en/our-games/breakopen",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/breakopen.html"
-    },
-    {
       "Source": "/content/alc/en/our-games/breakopen.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/breakopen.html"
+      "Destination": "/en/our-games/breakopen"
     },
     {
       "Source": "/content/alc/en/our-games/breakopen",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/breakopen.html"
+      "Destination": "/en/our-games/breakopen"
     },
     {
       "Source": "/en/our-games/breakopen/7083",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/breakopen/7083.html"
+      "Destination": "/en/our-games/breakopen"
     },
     {
       "Source": "/content/alc/en/our-games/breakopen/7083.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/breakopen/7083.html"
+      "Destination": "/en/our-games/breakopen"
     },
     {
       "Source": "/content/alc/en/our-games/breakopen/7083",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/breakopen/7083.html"
+      "Destination": "/en/our-games/breakopen"
     },
     {
       "Source": "/en/our-games/breakopen/7092",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/breakopen/7092.html"
+      "Destination": "/en/our-games/breakopen"
     },
     {
       "Source": "/content/alc/en/our-games/breakopen/7092.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/breakopen/7092.html"
+      "Destination": "/en/our-games/breakopen"
     },
     {
       "Source": "/content/alc/en/our-games/breakopen/7092",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/breakopen/7092.html"
+      "Destination": "/en/our-games/breakopen"
     },
     {
       "Source": "/en/our-games/breakopen/7093",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/breakopen/7093.html"
+      "Destination": "/en/our-games/breakopen"
     },
     {
       "Source": "/content/alc/en/our-games/breakopen/7093.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/breakopen/7093.html"
+      "Destination": "/en/our-games/breakopen"
     },
     {
       "Source": "/content/alc/en/our-games/breakopen/7093",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/breakopen/7093.html"
+      "Destination": "/en/our-games/breakopen"
     },
     {
       "Source": "/en/our-games/breakopen/7097",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/breakopen/7097.html"
+      "Destination": "/en/our-games/breakopen"
     },
     {
       "Source": "/content/alc/en/our-games/breakopen/7097.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/breakopen/7097.html"
+      "Destination": "/en/our-games/breakopen"
     },
     {
       "Source": "/content/alc/en/our-games/breakopen/7097",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/breakopen/7097.html"
+      "Destination": "/en/our-games/breakopen"
     },
     {
       "Source": "/content/alc/en/our-games/breakopen/7104.html",
@@ -9725,15 +9965,15 @@
     },
     {
       "Source": "/en/our-games/breakopen/7103",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/breakopen/7103.html"
+      "Destination": "/en/our-games/breakopen"
     },
     {
       "Source": "/content/alc/en/our-games/breakopen/7103.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/breakopen/7103.html"
+      "Destination": "/en/our-games/breakopen"
     },
     {
       "Source": "/content/alc/en/our-games/breakopen/7103",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/breakopen/7103.html"
+      "Destination": "/en/our-games/breakopen"
     },
     {
       "Source": "/content/alc/en/our-games/breakopen/7111.html",
@@ -9745,15 +9985,15 @@
     },
     {
       "Source": "/en/our-games/breakopen/7107",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/breakopen/7107.html"
+      "Destination": "/en/our-games/breakopen"
     },
     {
       "Source": "/content/alc/en/our-games/breakopen/7107.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/breakopen/7107.html"
+      "Destination": "/en/our-games/breakopen"
     },
     {
       "Source": "/content/alc/en/our-games/breakopen/7107",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/breakopen/7107.html"
+      "Destination": "/en/our-games/breakopen"
     },
     {
       "Source": "/content/alc/en/our-games/breakopen/7109.html",
@@ -9924,1028 +10164,596 @@
       "Destination": "/en/our-games/breakopen/7132"
     },
     {
-      "Source": "/en/our-games/coasters",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/coasters.html"
-    },
-    {
       "Source": "/content/alc/en/our-games/coasters.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/coasters.html"
+      "Destination": "/en/our-games/coasters"
     },
     {
       "Source": "/content/alc/en/our-games/coasters",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/coasters.html"
-    },
-    {
-      "Source": "/en/our-games/red-shores",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/red-shores.html"
+      "Destination": "/en/our-games/coasters"
     },
     {
       "Source": "/content/alc/en/our-games/red-shores.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/red-shores.html"
+      "Destination": "/en/our-games/red-shores"
     },
     {
       "Source": "/content/alc/en/our-games/red-shores",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/red-shores.html"
-    },
-    {
-      "Source": "/en/our-games/group-lottery-play",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/group-lottery-play.html"
+      "Destination": "/en/our-games/red-shores"
     },
     {
       "Source": "/content/alc/en/our-games/group-lottery-play.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/group-lottery-play.html"
+      "Destination": "/en/our-games/group-lottery-play"
     },
     {
       "Source": "/content/alc/en/our-games/group-lottery-play",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/group-lottery-play.html"
-    },
-    {
-      "Source": "/en/our-games/app",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/app.html"
+      "Destination": "/en/our-games/group-lottery-play"
     },
     {
       "Source": "/content/alc/en/our-games/app.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/app.html"
+      "Destination": "/en/our-games/app"
     },
     {
       "Source": "/content/alc/en/our-games/app",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/app.html"
-    },
-    {
-      "Source": "/en/our-games/self-service-terminals",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/self-service-terminals.html"
+      "Destination": "/en/our-games/app"
     },
     {
       "Source": "/content/alc/en/our-games/self-service-terminals.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/self-service-terminals.html"
+      "Destination": "/en/our-games/self-service-terminals"
     },
     {
       "Source": "/content/alc/en/our-games/self-service-terminals",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/self-service-terminals.html"
-    },
-    {
-      "Source": "/en/our-games/mega360",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/mega360.html"
+      "Destination": "/en/our-games/self-service-terminals"
     },
     {
       "Source": "/content/alc/en/our-games/mega360.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/mega360.html"
+      "Destination": "/en/our-games/mega360"
     },
     {
       "Source": "/content/alc/en/our-games/mega360",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/mega360.html"
-    },
-    {
-      "Source": "/en/our-games/contests",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/contests.html"
+      "Destination": "/en/our-games/mega360"
     },
     {
       "Source": "/content/alc/en/our-games/contests.html",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/contests.html"
+      "Destination": "/en/our-games/contests"
     },
     {
       "Source": "/content/alc/en/our-games/contests",
-      "Destination": "https://www.alc.ca/content/alc/en/our-games/contests.html"
-    },
-    {
-      "Source": "/en/winning-numbers",
-      "Destination": "https://www.alc.ca/content/alc/en/winning-numbers.html"
+      "Destination": "/en/our-games/contests"
     },
     {
       "Source": "/content/alc/en/winning-numbers.html",
-      "Destination": "https://www.alc.ca/content/alc/en/winning-numbers.html"
+      "Destination": "/en/winning-numbers"
     },
     {
       "Source": "/content/alc/en/winning-numbers",
-      "Destination": "https://www.alc.ca/content/alc/en/winning-numbers.html"
-    },
-    {
-      "Source": "/en/legal/site-map",
-      "Destination": "https://www.alc.ca/content/alc/en/legal/site-map.html"
+      "Destination": "/en/winning-numbers"
     },
     {
       "Source": "/content/alc/en/legal/site-map.html",
-      "Destination": "https://www.alc.ca/content/alc/en/legal/site-map.html"
+      "Destination": "/en/legal/site-map"
     },
     {
       "Source": "/content/alc/en/legal/site-map",
-      "Destination": "https://www.alc.ca/content/alc/en/legal/site-map.html"
-    },
-    {
-      "Source": "/en/legal/privacy-policy",
-      "Destination": "https://www.alc.ca/content/alc/en/legal/privacy-policy.html"
-    },
-    {
-      "Source": "/content/alc/en/legal/privacy-policy.html",
-      "Destination": "https://www.alc.ca/content/alc/en/legal/privacy-policy.html"
-    },
-    {
-      "Source": "/content/alc/en/legal/privacy-policy",
-      "Destination": "https://www.alc.ca/content/alc/en/legal/privacy-policy.html"
-    },
-    {
-      "Source": "/en/legal/terms-and-conditions",
-      "Destination": "https://www.alc.ca/content/alc/en/legal/terms-and-conditions.html"
+      "Destination": "/en/legal/site-map"
     },
     {
       "Source": "/content/alc/en/legal/terms-and-conditions.html",
-      "Destination": "https://www.alc.ca/content/alc/en/legal/terms-and-conditions.html"
+      "Destination": "/en/legal/terms-and-conditions"
     },
     {
       "Source": "/content/alc/en/legal/terms-and-conditions",
-      "Destination": "https://www.alc.ca/content/alc/en/legal/terms-and-conditions.html"
-    },
-    {
-      "Source": "/en/legal/security",
-      "Destination": "https://www.alc.ca/content/alc/en/legal/security.html"
+      "Destination": "/en/legal/terms-and-conditions"
     },
     {
       "Source": "/content/alc/en/legal/security.html",
-      "Destination": "https://www.alc.ca/content/alc/en/legal/security.html"
+      "Destination": "/en/legal/security"
     },
     {
       "Source": "/content/alc/en/legal/security",
-      "Destination": "https://www.alc.ca/content/alc/en/legal/security.html"
-    },
-    {
-      "Source": "/en/legal/healthyplaypolicy",
-      "Destination": "https://www.alc.ca/content/alc/en/legal/HealthyPlayPolicy.html"
-    },
-    {
-      "Source": "/content/alc/en/legal/HealthyPlayPolicy.html",
-      "Destination": "https://www.alc.ca/content/alc/en/legal/HealthyPlayPolicy.html"
-    },
-    {
-      "Source": "/content/alc/en/legal/HealthyPlayPolicy",
-      "Destination": "https://www.alc.ca/content/alc/en/legal/HealthyPlayPolicy.html"
-    },
-    {
-      "Source": "/en/legal/HealthyPlayPolicy",
-      "Destination": "https://www.alc.ca/content/alc/en/legal/HealthyPlayPolicy.html"
-    },
-    {
-      "Source": "/en/corporate",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate.html"
-    },
-    {
-      "Source": "/content/alc/en/corporate.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate.html"
-    },
-    {
-      "Source": "/content/alc/en/corporate",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate.html"
-    },
-    {
-      "Source": "/en/corporate/are-you-a-winner",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/are-you-a-winner.html"
+      "Destination": "/en/legal/security"
     },
     {
       "Source": "/content/alc/en/corporate/are-you-a-winner.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/are-you-a-winner.html"
+      "Destination": "/en/corporate/are-you-a-winner"
     },
     {
       "Source": "/content/alc/en/corporate/are-you-a-winner",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/are-you-a-winner.html"
-    },
-    {
-      "Source": "/en/corporate/are-you-a-winner/buying-and-checking-your-tickets",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/are-you-a-winner/buying-and-checking-your-tickets.html"
+      "Destination": "/en/corporate/are-you-a-winner"
     },
     {
       "Source": "/content/alc/en/corporate/are-you-a-winner/buying-and-checking-your-tickets.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/are-you-a-winner/buying-and-checking-your-tickets.html"
+      "Destination": "/en/corporate/are-you-a-winner/buying-and-checking-your-tickets"
     },
     {
       "Source": "/content/alc/en/corporate/are-you-a-winner/buying-and-checking-your-tickets",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/are-you-a-winner/buying-and-checking-your-tickets.html"
-    },
-    {
-      "Source": "/en/corporate/are-you-a-winner/claiming-your-prize",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/are-you-a-winner/claiming-your-prize.html"
+      "Destination": "/en/corporate/are-you-a-winner/buying-and-checking-your-tickets"
     },
     {
       "Source": "/content/alc/en/corporate/are-you-a-winner/claiming-your-prize.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/are-you-a-winner/claiming-your-prize.html"
+      "Destination": "/en/corporate/are-you-a-winner/claiming-your-prize"
     },
     {
       "Source": "/content/alc/en/corporate/are-you-a-winner/claiming-your-prize",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/are-you-a-winner/claiming-your-prize.html"
-    },
-    {
-      "Source": "/en/corporate/are-you-a-winner/winners",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/are-you-a-winner/winners.html"
+      "Destination": "/en/corporate/are-you-a-winner/claiming-your-prize"
     },
     {
       "Source": "/content/alc/en/corporate/are-you-a-winner/winners.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/are-you-a-winner/winners.html"
+      "Destination": "/en/corporate/are-you-a-winner/winners"
     },
     {
       "Source": "/content/alc/en/corporate/are-you-a-winner/winners",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/are-you-a-winner/winners.html"
-    },
-    {
-      "Source": "/en/corporate/are-you-a-winner/al-winners-publicity-policy",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/are-you-a-winner/al-winners-publicity-policy.html"
+      "Destination": "/en/corporate/are-you-a-winner/winners"
     },
     {
       "Source": "/content/alc/en/corporate/are-you-a-winner/al-winners-publicity-policy.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/are-you-a-winner/al-winners-publicity-policy.html"
+      "Destination": "/en/corporate/are-you-a-winner/al-winners-publicity-policy"
     },
     {
       "Source": "/content/alc/en/corporate/are-you-a-winner/al-winners-publicity-policy",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/are-you-a-winner/al-winners-publicity-policy.html"
-    },
-    {
-      "Source": "/en/corporate/playwise",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise.html"
+      "Destination": "/en/corporate/are-you-a-winner/al-winners-publicity-policy"
     },
     {
       "Source": "/content/alc/en/corporate/playwise.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise.html"
+      "Destination": "/en/corporate/playwise"
     },
     {
       "Source": "/content/alc/en/corporate/playwise",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise.html"
-    },
-    {
-      "Source": "/en/corporate/playwise/player-tools",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/player-tools.html"
+      "Destination": "/en/corporate/playwise"
     },
     {
       "Source": "/content/alc/en/corporate/playwise/player-tools.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/player-tools.html"
+      "Destination": "/en/corporate/playwise/player-tools"
     },
     {
       "Source": "/content/alc/en/corporate/playwise/player-tools",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/player-tools.html"
-    },
-    {
-      "Source": "/en/corporate/playwise/player-assessment",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/player-assessment.html"
+      "Destination": "/en/corporate/playwise/player-tools"
     },
     {
       "Source": "/content/alc/en/corporate/playwise/player-assessment.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/player-assessment.html"
+      "Destination": "/en/corporate/playwise/player-assessment"
     },
     {
       "Source": "/content/alc/en/corporate/playwise/player-assessment",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/player-assessment.html"
-    },
-    {
-      "Source": "/en/corporate/playwise/player-assessment/assessment-quiz",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/player-assessment/assessment-quiz.html"
+      "Destination": "/en/corporate/playwise/player-assessment"
     },
     {
       "Source": "/content/alc/en/corporate/playwise/player-assessment/assessment-quiz.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/player-assessment/assessment-quiz.html"
+      "Destination": "/en/corporate/playwise/player-assessment/assessment-quiz"
     },
     {
       "Source": "/content/alc/en/corporate/playwise/player-assessment/assessment-quiz",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/player-assessment/assessment-quiz.html"
-    },
-    {
-      "Source": "/en/corporate/playwise/know-the-facts",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/know-the-facts.html"
+      "Destination": "/en/corporate/playwise/player-assessment/assessment-quiz"
     },
     {
       "Source": "/content/alc/en/corporate/playwise/know-the-facts.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/know-the-facts.html"
+      "Destination": "/en/corporate/playwise/know-the-facts"
     },
     {
       "Source": "/content/alc/en/corporate/playwise/know-the-facts",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/know-the-facts.html"
-    },
-    {
-      "Source": "/en/corporate/playwise/know-the-facts/understanding-the-risks-of-youth-gambling",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/know-the-facts/understanding-the-risks-of-youth-gambling.html"
+      "Destination": "/en/corporate/playwise/know-the-facts"
     },
     {
       "Source": "/content/alc/en/corporate/playwise/know-the-facts/understanding-the-risks-of-youth-gambling.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/know-the-facts/understanding-the-risks-of-youth-gambling.html"
+      "Destination": "/en/corporate/playwise/know-the-facts/understanding-the-risks-of-youth-gambling"
     },
     {
       "Source": "/content/alc/en/corporate/playwise/know-the-facts/understanding-the-risks-of-youth-gambling",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/know-the-facts/understanding-the-risks-of-youth-gambling.html"
-    },
-    {
-      "Source": "/en/corporate/playwise/know-the-facts/gambling-myths-and-facts",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/know-the-facts/gambling-myths-and-facts.html"
+      "Destination": "/en/corporate/playwise/know-the-facts/understanding-the-risks-of-youth-gambling"
     },
     {
       "Source": "/content/alc/en/corporate/playwise/know-the-facts/gambling-myths-and-facts.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/know-the-facts/gambling-myths-and-facts.html"
+      "Destination": "/en/corporate/playwise/know-the-facts/gambling-myths-and-facts"
     },
     {
       "Source": "/content/alc/en/corporate/playwise/know-the-facts/gambling-myths-and-facts",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/know-the-facts/gambling-myths-and-facts.html"
-    },
-    {
-      "Source": "/en/corporate/playwise/get-support",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/get-support.html"
+      "Destination": "/en/corporate/playwise/know-the-facts/gambling-myths-and-facts"
     },
     {
       "Source": "/content/alc/en/corporate/playwise/get-support.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/get-support.html"
+      "Destination": "/en/corporate/playwise/get-support"
     },
     {
       "Source": "/content/alc/en/corporate/playwise/get-support",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/get-support.html"
-    },
-    {
-      "Source": "/en/corporate/playwise/our-promise",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/our-promise.html"
+      "Destination": "/en/corporate/playwise/get-support"
     },
     {
       "Source": "/content/alc/en/corporate/playwise/our-promise.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/our-promise.html"
+      "Destination": "/en/corporate/playwise/our-promise"
     },
     {
       "Source": "/content/alc/en/corporate/playwise/our-promise",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/our-promise.html"
-    },
-    {
-      "Source": "/en/corporate/playwise/responsible-gambling-community-partnership-program",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/responsible-gambling-community-partnership-program.html"
-    },
-    {
-      "Source": "/content/alc/en/corporate/playwise/responsible-gambling-community-partnership-program.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/responsible-gambling-community-partnership-program.html"
-    },
-    {
-      "Source": "/content/alc/en/corporate/playwise/responsible-gambling-community-partnership-program",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/responsible-gambling-community-partnership-program.html"
-    },
-    {
-      "Source": "/en/corporate/playwise/standards",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/standards.html"
-    },
-    {
-      "Source": "/content/alc/en/corporate/playwise/standards.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/standards.html"
-    },
-    {
-      "Source": "/content/alc/en/corporate/playwise/standards",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/standards.html"
-    },
-    {
-      "Source": "/en/corporate/playwise/how-games-work",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/how-games-work.html"
-    },
-    {
-      "Source": "/content/alc/en/corporate/playwise/how-games-work.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/how-games-work.html"
-    },
-    {
-      "Source": "/content/alc/en/corporate/playwise/how-games-work",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/how-games-work.html"
-    },
-    {
-      "Source": "/en/corporate/playwise/self-exclusion",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/self-exclusion.html"
-    },
-    {
-      "Source": "/content/alc/en/corporate/playwise/self-exclusion.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/self-exclusion.html"
-    },
-    {
-      "Source": "/content/alc/en/corporate/playwise/self-exclusion",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/self-exclusion.html"
-    },
-    {
-      "Source": "/en/corporate/playwise/risks-of-youth-gambling",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/risks-of-youth-gambling.html"
-    },
-    {
-      "Source": "/content/alc/en/corporate/playwise/risks-of-youth-gambling.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/risks-of-youth-gambling.html"
-    },
-    {
-      "Source": "/content/alc/en/corporate/playwise/risks-of-youth-gambling",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/risks-of-youth-gambling.html"
-    },
-    {
-      "Source": "/en/corporate/playwise/helpful-resources",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/helpful-resources.html"
-    },
-    {
-      "Source": "/content/alc/en/corporate/playwise/helpful-resources.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/helpful-resources.html"
-    },
-    {
-      "Source": "/content/alc/en/corporate/playwise/helpful-resources",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/helpful-resources.html"
-    },
-    {
-      "Source": "/en/corporate/playwise/assess-your-gambling-behaviour",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/assess-your-gambling-behaviour.html"
-    },
-    {
-      "Source": "/content/alc/en/corporate/playwise/assess-your-gambling-behaviour.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/assess-your-gambling-behaviour.html"
-    },
-    {
-      "Source": "/content/alc/en/corporate/playwise/assess-your-gambling-behaviour",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/assess-your-gambling-behaviour.html"
-    },
-    {
-      "Source": "/en/corporate/playwise/available-responsible-gambling-materials",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/available-responsible-gambling-materials.html"
-    },
-    {
-      "Source": "/content/alc/en/corporate/playwise/available-responsible-gambling-materials.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/available-responsible-gambling-materials.html"
-    },
-    {
-      "Source": "/content/alc/en/corporate/playwise/available-responsible-gambling-materials",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/available-responsible-gambling-materials.html"
+      "Destination": "/en/corporate/playwise/our-promise"
     },
     {
       "Source": "/en/corporate/playwise/videos",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/videos.html"
+      "Destination": "/en/corporate/playwise"
     },
     {
       "Source": "/content/alc/en/corporate/playwise/videos.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/videos.html"
+      "Destination": "/en/corporate/playwise"
     },
     {
       "Source": "/content/alc/en/corporate/playwise/videos",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/videos.html"
+      "Destination": "/en/corporate/playwise"
     },
     {
       "Source": "/en/corporate/playwise/quizzes",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/quizzes.html"
+      "Destination": "/en/corporate/playwise"
     },
     {
       "Source": "/content/alc/en/corporate/playwise/quizzes.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/quizzes.html"
+      "Destination": "/en/corporate/playwise"
     },
     {
       "Source": "/content/alc/en/corporate/playwise/quizzes",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/playwise/quizzes.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery.html"
+      "Destination": "/en/corporate/playwise"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery.html"
+      "Destination": "/en/corporate/about-atlantic-lottery"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/who-is-al",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/who-is-al.html"
+      "Destination": "/en/corporate/about-atlantic-lottery"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/who-is-al.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/who-is-al.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/who-is-al"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/who-is-al",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/who-is-al.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/who-is-al/executive-profiles",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/who-is-al/executive-profiles.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/who-is-al"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/who-is-al/executive-profiles.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/who-is-al/executive-profiles.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/who-is-al/executive-profiles"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/who-is-al/executive-profiles",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/who-is-al/executive-profiles.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/who-is-al/annual-reports",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/who-is-al/annual-reports.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/who-is-al/executive-profiles"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/who-is-al/annual-reports.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/who-is-al/annual-reports.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/who-is-al/annual-reports"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/who-is-al/annual-reports",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/who-is-al/annual-reports.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/who-is-al/board-profiles",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/who-is-al/board-profiles.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/who-is-al/annual-reports"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/who-is-al/board-profiles.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/who-is-al/board-profiles.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/who-is-al/board-profiles"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/who-is-al/board-profiles",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/who-is-al/board-profiles.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/who-is-al/board-profiles"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2024-10-01",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2024-10-01.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2024-10-01.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2024-10-01.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2024-10-01"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2024-10-01",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2024-10-01.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2024-10-23",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2024-10-23.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2024-10-01"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2024-10-23.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2024-10-23.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2024-10-23"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2024-10-23",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2024-10-23.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2024-11-26",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2024-11-26.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2024-10-23"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2024-11-26.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2024-11-26.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2024-11-26"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2024-11-26",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2024-11-26.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-01-02",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-01-02.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2024-11-26"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-01-02.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-01-02.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-01-02"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-01-02",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-01-02.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-01-09",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-01-09.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-01-02"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-01-09.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-01-09.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-01-09"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-01-09",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-01-09.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-01-27",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-01-27.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-01-09"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-01-27.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-01-27.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-01-27"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-01-27",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-01-27.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-01-270",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-01-270.html"
-    },
-    {
-      "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-01-270.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-01-270.html"
-    },
-    {
-      "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-01-270",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-01-270.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-02-14",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-02-14.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-01-27"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-02-14.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-02-14.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-02-14"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-02-14",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-02-14.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-04",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-04.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-02-14"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-04.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-04.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-04"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-04",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-04.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-08",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-08.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-04"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-08.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-08.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-08"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-08",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-08.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-15",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-15.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-08"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-15.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-15.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-15"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-15",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-15.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-22",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-22.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-15"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-22.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-22.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-22"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-22",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-22.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-24",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-24.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-22"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-24.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-24.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-24"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-24",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-24.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-08-21",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-08-21.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-04-24"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-08-21.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-08-21.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-08-21"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-08-21",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-08-21.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-09-26",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-09-26.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-08-21"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-09-26.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-09-26.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-09-26"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-09-26",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-09-26.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-08",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-08.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-09-26"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-08.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-08.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-08"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-08",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-08.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-10a",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-10a.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-08"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-10a.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-10a.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-10a"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-10a",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-10a.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-10b",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-10b.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-10a"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-10b.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-10b.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-10b"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-10b",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-10b.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-16",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-16.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-10b"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-16.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-16.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-16"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-16",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-16.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-17",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-17.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-16"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-17.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-17.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-17"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-17",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-17.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-21",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-21.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-17"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-21.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-21.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-21"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-21",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-21.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-24",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-24.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-21"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-24.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-24.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-24"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-24",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-24.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-12-05",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-12-05.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-10-24"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-12-05.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-12-05.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-12-05"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-12-05",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-12-05.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-12-11",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-12-11.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-12-05"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-12-11.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-12-11.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-12-11"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-12-11",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2025-12-11.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2026-01-13",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-01-13.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2025-12-11"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-01-13.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-01-13.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2026-01-13"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-01-13",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-01-13.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2026-02-13",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-02-13.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2026-01-13"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-02-13.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-02-13.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2026-02-13"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-02-13",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-02-13.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2026-02-23",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-02-23.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2026-02-13"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-02-23.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-02-23.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2026-02-23"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-02-23",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-02-23.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2026-04-14",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-04-14.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2026-02-23"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-04-14.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-04-14.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2026-04-14"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-04-14",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-04-14.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2026-05-11",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-05-11.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2026-04-14"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-05-11.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-05-11.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2026-05-11"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-05-11",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-05-11.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2026-05-29",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-05-29.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2026-05-11"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-05-29.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-05-29.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2026-05-29"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-05-29",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-05-29.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2026-07-10",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-07-10.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2026-05-29"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-07-10.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-07-10.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2026-07-10"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-07-10",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-07-10.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2026-07-29",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-07-29.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2026-07-10"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-07-29.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-07-29.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2026-07-29"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-07-29",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-07-29.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2026-09-03",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-09-03.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2026-07-29"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-09-03.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-09-03.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2026-09-03"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-09-03",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-09-03.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2026-09-28",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-09-28.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2026-09-03"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-09-28.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-09-28.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2026-09-28"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-09-28",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-09-28.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-releases/2026-10-07",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-10-07.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2026-09-28"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-10-07.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-10-07.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2026-10-07"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-10-07",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-10-07.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/integrity-and-compliance",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/integrity-and-compliance.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-releases/2026-10-07"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/integrity-and-compliance.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/integrity-and-compliance.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/integrity-and-compliance"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/integrity-and-compliance",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/integrity-and-compliance.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-transparency",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-transparency.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/integrity-and-compliance"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-transparency.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-transparency.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-transparency"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-transparency",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-transparency.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/corporate-transparency/executive-expenses",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-transparency/executive-expenses.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-transparency"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-transparency/executive-expenses.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-transparency/executive-expenses.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-transparency/executive-expenses"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/corporate-transparency/executive-expenses",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-transparency/executive-expenses.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/career-opportunities",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/career-opportunities.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/corporate-transparency/executive-expenses"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/career-opportunities.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/career-opportunities.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/career-opportunities"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/career-opportunities",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/career-opportunities.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/retailers",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/retailers.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/career-opportunities"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/retailers.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/retailers.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/retailers"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/retailers",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/retailers.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/contact-us",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/contact-us.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/retailers"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/contact-us.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/contact-us.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/contact-us"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/contact-us",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/contact-us.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/contact-us"
     },
     {
       "Source": "/en/corporate/about-atlantic-lottery/contact-us/send-a-message",
@@ -10960,136 +10768,84 @@
       "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/contact-us/send-a-message.html"
     },
     {
-      "Source": "/en/corporate/about-atlantic-lottery/contact-us/success",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/contact-us/success.html"
-    },
-    {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/contact-us/success.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/contact-us/success.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/contact-us/success"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/contact-us/success",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/contact-us/success.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/media-room",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/media-room.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/contact-us/success"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/media-room.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/media-room.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/media-room"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/media-room",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/media-room.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/theticket",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/theticket.html"
-    },
-    {
-      "Source": "/content/alc/en/corporate/about-atlantic-lottery/theticket.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/theticket.html"
-    },
-    {
-      "Source": "/content/alc/en/corporate/about-atlantic-lottery/theticket",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/theticket.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/supply-chain-management",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/supply-chain-management.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/media-room"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/supply-chain-management.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/supply-chain-management.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/supply-chain-management"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/supply-chain-management",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/supply-chain-management.html"
-    },
-    {
-      "Source": "/en/corporate/about-atlantic-lottery/rules-and-regulations",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/rules-and-regulations.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/supply-chain-management"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/rules-and-regulations.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/rules-and-regulations.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/rules-and-regulations"
     },
     {
       "Source": "/content/alc/en/corporate/about-atlantic-lottery/rules-and-regulations",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/rules-and-regulations.html"
-    },
-    {
-      "Source": "/en/corporate/giving-back",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/giving-back.html"
+      "Destination": "/en/corporate/about-atlantic-lottery/rules-and-regulations"
     },
     {
       "Source": "/content/alc/en/corporate/giving-back.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/giving-back.html"
+      "Destination": "/en/corporate/giving-back"
     },
     {
       "Source": "/content/alc/en/corporate/giving-back",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/giving-back.html"
-    },
-    {
-      "Source": "/en/corporate/giving-back/where-the-money-goes",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/giving-back/where-the-money-goes.html"
+      "Destination": "/en/corporate/giving-back"
     },
     {
       "Source": "/content/alc/en/corporate/giving-back/where-the-money-goes.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/giving-back/where-the-money-goes.html"
+      "Destination": "/en/corporate/giving-back/where-the-money-goes"
     },
     {
       "Source": "/content/alc/en/corporate/giving-back/where-the-money-goes",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/giving-back/where-the-money-goes.html"
-    },
-    {
-      "Source": "/en/corporate/giving-back/corporate-social-responsibility",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/giving-back/corporate-social-responsibility.html"
+      "Destination": "/en/corporate/giving-back/where-the-money-goes"
     },
     {
       "Source": "/content/alc/en/corporate/giving-back/corporate-social-responsibility.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/giving-back/corporate-social-responsibility.html"
+      "Destination": "/en/corporate/giving-back/corporate-social-responsibility"
     },
     {
       "Source": "/content/alc/en/corporate/giving-back/corporate-social-responsibility",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/giving-back/corporate-social-responsibility.html"
-    },
-    {
-      "Source": "/en/corporate/giving-back/sponsorships",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/giving-back/sponsorships.html"
+      "Destination": "/en/corporate/giving-back/corporate-social-responsibility"
     },
     {
       "Source": "/content/alc/en/corporate/giving-back/sponsorships.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/giving-back/sponsorships.html"
+      "Destination": "/en/corporate/giving-back/sponsorships"
     },
     {
       "Source": "/content/alc/en/corporate/giving-back/sponsorships",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/giving-back/sponsorships.html"
-    },
-    {
-      "Source": "/en/corporate/giving-back/100-percent-legal",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/giving-back/100-percent-legal.html"
+      "Destination": "/en/corporate/giving-back/sponsorships"
     },
     {
       "Source": "/content/alc/en/corporate/giving-back/100-percent-legal.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/giving-back/100-percent-legal.html"
+      "Destination": "/en/corporate/giving-back/100-percent-legal"
     },
     {
       "Source": "/content/alc/en/corporate/giving-back/100-percent-legal",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/giving-back/100-percent-legal.html"
-    },
-    {
-      "Source": "/en/corporate/giving-back/sponsored-events",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/giving-back/sponsored-events.html"
+      "Destination": "/en/corporate/giving-back/100-percent-legal"
     },
     {
       "Source": "/content/alc/en/corporate/giving-back/sponsored-events.html",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/giving-back/sponsored-events.html"
+      "Destination": "/en/corporate/giving-back/sponsored-events"
     },
     {
       "Source": "/content/alc/en/corporate/giving-back/sponsored-events",
-      "Destination": "https://www.alc.ca/content/alc/en/corporate/giving-back/sponsored-events.html"
+      "Destination": "/en/corporate/giving-back/sponsored-events"
     },
     {
       "Source": "/en/registration",
@@ -11368,16 +11124,12 @@
       "Destination": "https://www.alc.ca/content/alc/en/game-configurator/poker-lotto.html"
     },
     {
-      "Source": "/en/rewards",
-      "Destination": "https://www.alc.ca/content/alc/en/rewards.html"
-    },
-    {
       "Source": "/content/alc/en/rewards.html",
-      "Destination": "https://www.alc.ca/content/alc/en/rewards.html"
+      "Destination": "/en/rewards"
     },
     {
       "Source": "/content/alc/en/rewards",
-      "Destination": "https://www.alc.ca/content/alc/en/rewards.html"
+      "Destination": "/en/rewards"
     },
     {
       "Source": "/en/rewards/join-rewards",
@@ -11417,451 +11169,255 @@
     },
     {
       "Source": "/en/promos",
-      "Destination": "https://www.alc.ca/content/alc/en/promos.html"
+      "Destination": "/"
     },
     {
       "Source": "/content/alc/en/promos.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos.html"
+      "Destination": "/"
     },
     {
       "Source": "/content/alc/en/promos",
-      "Destination": "https://www.alc.ca/content/alc/en/promos.html"
-    },
-    {
-      "Source": "/en/promos/mobile-app-ticket-scanning-issue",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/mobile-app-ticket-scanning-issue.html"
+      "Destination": "/"
     },
     {
       "Source": "/content/alc/en/promos/mobile-app-ticket-scanning-issue.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/mobile-app-ticket-scanning-issue.html"
+      "Destination": "/en/promos/mobile-app-ticket-scanning-issue"
     },
     {
       "Source": "/content/alc/en/promos/mobile-app-ticket-scanning-issue",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/mobile-app-ticket-scanning-issue.html"
-    },
-    {
-      "Source": "/en/promos/ask-away",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/ask-away.html"
+      "Destination": "/en/promos/mobile-app-ticket-scanning-issue"
     },
     {
       "Source": "/content/alc/en/promos/ask-away.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/ask-away.html"
+      "Destination": "/en/promos/ask-away"
     },
     {
       "Source": "/content/alc/en/promos/ask-away",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/ask-away.html"
-    },
-    {
-      "Source": "/en/promos/healthyplay",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/healthyplay.html"
+      "Destination": "/en/promos/ask-away"
     },
     {
       "Source": "/content/alc/en/promos/healthyplay.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/healthyplay.html"
+      "Destination": "/en/promos/healthyplay"
     },
     {
       "Source": "/content/alc/en/promos/healthyplay",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/healthyplay.html"
+      "Destination": "/en/promos/healthyplay"
     },
     {
       "Source": "/en/promos/archived",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/archived.html"
+      "Destination": "/"
     },
     {
       "Source": "/content/alc/en/promos/archived.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/archived.html"
+      "Destination": "/"
     },
     {
       "Source": "/content/alc/en/promos/archived",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/archived.html"
-    },
-    {
-      "Source": "/en/promos/archived/lotto/thenewlotto649",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/archived/lotto/TheNewLotto649.html"
+      "Destination": "/"
     },
     {
       "Source": "/content/alc/en/promos/archived/lotto/TheNewLotto649.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/archived/lotto/TheNewLotto649.html"
+      "Destination": "/en/promos/archived/lotto/thenewlotto649"
     },
     {
       "Source": "/content/alc/en/promos/archived/lotto/TheNewLotto649",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/archived/lotto/TheNewLotto649.html"
+      "Destination": "/en/promos/archived/lotto/thenewlotto649"
     },
     {
       "Source": "/en/promos/archived/lotto/TheNewLotto649",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/archived/lotto/TheNewLotto649.html"
-    },
-    {
-      "Source": "/en/promos/archived/other/multi-factor-authentication",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/archived/other/multi-factor-authentication.html"
+      "Destination": "/en/promos/archived/lotto/thenewlotto649"
     },
     {
       "Source": "/content/alc/en/promos/archived/other/multi-factor-authentication.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/archived/other/multi-factor-authentication.html"
+      "Destination": "/en/promos/archived/other/multi-factor-authentication"
     },
     {
       "Source": "/content/alc/en/promos/archived/other/multi-factor-authentication",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/archived/other/multi-factor-authentication.html"
-    },
-    {
-      "Source": "/en/promos/archived/templates/campaigna-product",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/archived/templates/campaigna-product.html"
+      "Destination": "/en/promos/archived/other/multi-factor-authentication"
     },
     {
       "Source": "/content/alc/en/promos/archived/templates/campaigna-product.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/archived/templates/campaigna-product.html"
+      "Destination": "/en/promos/archived/templates/campaigna-product"
     },
     {
       "Source": "/content/alc/en/promos/archived/templates/campaigna-product",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/archived/templates/campaigna-product.html"
-    },
-    {
-      "Source": "/en/promos/archived/templates/campaignb-product",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/archived/templates/campaignb-product.html"
+      "Destination": "/en/promos/archived/templates/campaigna-product"
     },
     {
       "Source": "/content/alc/en/promos/archived/templates/campaignb-product.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/archived/templates/campaignb-product.html"
+      "Destination": "/en/promos/archived/templates/campaignb-product"
     },
     {
       "Source": "/content/alc/en/promos/archived/templates/campaignb-product",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/archived/templates/campaignb-product.html"
-    },
-    {
-      "Source": "/en/promos/funding2",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/funding2.html"
+      "Destination": "/en/promos/archived/templates/campaignb-product"
     },
     {
       "Source": "/content/alc/en/promos/funding2.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/funding2.html"
+      "Destination": "/en/promos/funding2"
     },
     {
       "Source": "/content/alc/en/promos/funding2",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/funding2.html"
-    },
-    {
-      "Source": "/en/promos/new2alc",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new2alc.html"
+      "Destination": "/en/promos/funding2"
     },
     {
       "Source": "/content/alc/en/promos/new2alc.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new2alc.html"
+      "Destination": "/en/promos/new2alc"
     },
     {
       "Source": "/content/alc/en/promos/new2alc",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new2alc.html"
-    },
-    {
-      "Source": "/en/promos/vl-rules-of-play",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/vl-rules-of-play.html"
+      "Destination": "/en/promos/new2alc"
     },
     {
       "Source": "/content/alc/en/promos/vl-rules-of-play.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/vl-rules-of-play.html"
+      "Destination": "/en/promos/vl-rules-of-play"
     },
     {
       "Source": "/content/alc/en/promos/vl-rules-of-play",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/vl-rules-of-play.html"
-    },
-    {
-      "Source": "/en/promos/proline/fall-multisport",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/proline/fall-multisport.html"
+      "Destination": "/en/promos/vl-rules-of-play"
     },
     {
       "Source": "/content/alc/en/promos/proline/fall-multisport.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/proline/fall-multisport.html"
+      "Destination": "/en/promos/proline/fall-multisport"
     },
     {
       "Source": "/content/alc/en/promos/proline/fall-multisport",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/proline/fall-multisport.html"
-    },
-    {
-      "Source": "/en/promos/igames/cleopatra-games",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/igames/cleopatra-games.html"
+      "Destination": "/en/promos/proline/fall-multisport"
     },
     {
       "Source": "/content/alc/en/promos/igames/cleopatra-games.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/igames/cleopatra-games.html"
+      "Destination": "/en/promos/igames/cleopatra-games"
     },
     {
       "Source": "/content/alc/en/promos/igames/cleopatra-games",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/igames/cleopatra-games.html"
-    },
-    {
-      "Source": "/en/promos/instant-wins/deposit-spend-get-october",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/instant-wins/deposit-spend-get-october.html"
+      "Destination": "/en/promos/igames/cleopatra-games"
     },
     {
       "Source": "/content/alc/en/promos/instant-wins/deposit-spend-get-october.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/instant-wins/deposit-spend-get-october.html"
+      "Destination": "/en/promos/instant-wins/deposit-spend-get-october"
     },
     {
       "Source": "/content/alc/en/promos/instant-wins/deposit-spend-get-october",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/instant-wins/deposit-spend-get-october.html"
-    },
-    {
-      "Source": "/en/promos/instant-wins/deposit-spend-get-oct",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/instant-wins/deposit-spend-get-oct.html"
-    },
-    {
-      "Source": "/content/alc/en/promos/instant-wins/deposit-spend-get-oct.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/instant-wins/deposit-spend-get-oct.html"
-    },
-    {
-      "Source": "/content/alc/en/promos/instant-wins/deposit-spend-get-oct",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/instant-wins/deposit-spend-get-oct.html"
-    },
-    {
-      "Source": "/en/promos/casino/megavault-prize-drop",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/casino/megavault-prize-drop.html"
+      "Destination": "/en/promos/instant-wins/deposit-spend-get-october"
     },
     {
       "Source": "/content/alc/en/promos/casino/megavault-prize-drop.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/casino/megavault-prize-drop.html"
+      "Destination": "/en/promos/casino/megavault-prize-drop"
     },
     {
       "Source": "/content/alc/en/promos/casino/megavault-prize-drop",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/casino/megavault-prize-drop.html"
-    },
-    {
-      "Source": "/en/promos/casino/everi-games-decommissioning",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/casino/everi-games-decommissioning.html"
+      "Destination": "/en/promos/casino/megavault-prize-drop"
     },
     {
       "Source": "/content/alc/en/promos/casino/everi-games-decommissioning.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/casino/everi-games-decommissioning.html"
+      "Destination": "/en/promos/casino/everi-games-decommissioning"
     },
     {
       "Source": "/content/alc/en/promos/casino/everi-games-decommissioning",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/casino/everi-games-decommissioning.html"
-    },
-    {
-      "Source": "/en/promos/live-casino",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/live-casino.html"
+      "Destination": "/en/promos/casino/everi-games-decommissioning"
     },
     {
       "Source": "/content/alc/en/promos/live-casino.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/live-casino.html"
+      "Destination": "/en/promos/live-casino"
     },
     {
       "Source": "/content/alc/en/promos/live-casino",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/live-casino.html"
-    },
-    {
-      "Source": "/en/promos/retail/wave8-lottery-terminals",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/retail/wave8-lottery-terminals.html"
+      "Destination": "/en/promos/live-casino"
     },
     {
       "Source": "/content/alc/en/promos/retail/wave8-lottery-terminals.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/retail/wave8-lottery-terminals.html"
+      "Destination": "/en/promos/retail/wave8-lottery-terminals"
     },
     {
       "Source": "/content/alc/en/promos/retail/wave8-lottery-terminals",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/retail/wave8-lottery-terminals.html"
-    },
-    {
-      "Source": "/en/promos/new-template-conversions/reports-and-disclosures",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/reports-and-disclosures.html"
+      "Destination": "/en/promos/retail/wave8-lottery-terminals"
     },
     {
       "Source": "/content/alc/en/promos/new-template-conversions/reports-and-disclosures.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/reports-and-disclosures.html"
+      "Destination": "/en/promos/new-template-conversions/reports-and-disclosures"
     },
     {
       "Source": "/content/alc/en/promos/new-template-conversions/reports-and-disclosures",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/reports-and-disclosures.html"
-    },
-    {
-      "Source": "/en/promos/new-template-conversions/mobile-app-2",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/mobile-app-2.html"
+      "Destination": "/en/promos/new-template-conversions/reports-and-disclosures"
     },
     {
       "Source": "/content/alc/en/promos/new-template-conversions/mobile-app-2.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/mobile-app-2.html"
+      "Destination": "/en/promos/new-template-conversions/mobile-app-2"
     },
     {
       "Source": "/content/alc/en/promos/new-template-conversions/mobile-app-2",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/mobile-app-2.html"
-    },
-    {
-      "Source": "/en/promos/new-template-conversions/sponsored-events",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/sponsored-events.html"
+      "Destination": "/en/promos/new-template-conversions/mobile-app-2"
     },
     {
       "Source": "/content/alc/en/promos/new-template-conversions/sponsored-events.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/sponsored-events.html"
+      "Destination": "/en/promos/new-template-conversions/sponsored-events"
     },
     {
       "Source": "/content/alc/en/promos/new-template-conversions/sponsored-events",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/sponsored-events.html"
-    },
-    {
-      "Source": "/en/promos/new-template-conversions/sponsorships",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/sponsorships.html"
-    },
-    {
-      "Source": "/content/alc/en/promos/new-template-conversions/sponsorships.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/sponsorships.html"
-    },
-    {
-      "Source": "/content/alc/en/promos/new-template-conversions/sponsorships",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/sponsorships.html"
-    },
-    {
-      "Source": "/en/promos/new-template-conversions/where-the-money-goes",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/where-the-money-goes.html"
-    },
-    {
-      "Source": "/content/alc/en/promos/new-template-conversions/where-the-money-goes.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/where-the-money-goes.html"
-    },
-    {
-      "Source": "/content/alc/en/promos/new-template-conversions/where-the-money-goes",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/where-the-money-goes.html"
-    },
-    {
-      "Source": "/en/promos/new-template-conversions/al-winners-publicity-policy",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/al-winners-publicity-policy.html"
-    },
-    {
-      "Source": "/content/alc/en/promos/new-template-conversions/al-winners-publicity-policy.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/al-winners-publicity-policy.html"
-    },
-    {
-      "Source": "/content/alc/en/promos/new-template-conversions/al-winners-publicity-policy",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/al-winners-publicity-policy.html"
-    },
-    {
-      "Source": "/en/promos/new-template-conversions/legal-mockup",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/legal-mockup.html"
-    },
-    {
-      "Source": "/content/alc/en/promos/new-template-conversions/legal-mockup.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/legal-mockup.html"
-    },
-    {
-      "Source": "/content/alc/en/promos/new-template-conversions/legal-mockup",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/legal-mockup.html"
-    },
-    {
-      "Source": "/en/promos/new-template-conversions/lottosubscriptions",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/lottosubscriptions.html"
+      "Destination": "/en/promos/new-template-conversions/sponsored-events"
     },
     {
       "Source": "/content/alc/en/promos/new-template-conversions/lottosubscriptions.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/lottosubscriptions.html"
+      "Destination": "/en/promos/new-template-conversions/lottosubscriptions"
     },
     {
       "Source": "/content/alc/en/promos/new-template-conversions/lottosubscriptions",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/lottosubscriptions.html"
-    },
-    {
-      "Source": "/en/promos/new-template-conversions/annual-reports",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/annual-reports.html"
+      "Destination": "/en/promos/new-template-conversions/lottosubscriptions"
     },
     {
       "Source": "/content/alc/en/promos/new-template-conversions/annual-reports.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/annual-reports.html"
+      "Destination": "/en/promos/new-template-conversions/annual-reports"
     },
     {
       "Source": "/content/alc/en/promos/new-template-conversions/annual-reports",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/annual-reports.html"
-    },
-    {
-      "Source": "/en/promos/new-template-conversions/executive-profiles",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/executive-profiles.html"
-    },
-    {
-      "Source": "/content/alc/en/promos/new-template-conversions/executive-profiles.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/executive-profiles.html"
-    },
-    {
-      "Source": "/content/alc/en/promos/new-template-conversions/executive-profiles",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/executive-profiles.html"
-    },
-    {
-      "Source": "/en/promos/new-template-conversions/board-profiles",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/board-profiles.html"
-    },
-    {
-      "Source": "/content/alc/en/promos/new-template-conversions/board-profiles.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/board-profiles.html"
-    },
-    {
-      "Source": "/content/alc/en/promos/new-template-conversions/board-profiles",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/board-profiles.html"
-    },
-    {
-      "Source": "/en/promos/new-template-conversions/who-is-al-combined",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/who-is-al-combined.html"
+      "Destination": "/en/promos/new-template-conversions/annual-reports"
     },
     {
       "Source": "/content/alc/en/promos/new-template-conversions/who-is-al-combined.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/who-is-al-combined.html"
+      "Destination": "/en/promos/new-template-conversions/who-is-al-combined"
     },
     {
       "Source": "/content/alc/en/promos/new-template-conversions/who-is-al-combined",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/who-is-al-combined.html"
-    },
-    {
-      "Source": "/en/promos/playwise-promotion",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/playwise-promotion.html"
+      "Destination": "/en/promos/new-template-conversions/who-is-al-combined"
     },
     {
       "Source": "/content/alc/en/promos/playwise-promotion.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/playwise-promotion.html"
+      "Destination": "/en/promos/playwise-promotion"
     },
     {
       "Source": "/content/alc/en/promos/playwise-promotion",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/playwise-promotion.html"
-    },
-    {
-      "Source": "/en/promos/scratch/celebrate-share",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/scratch/celebrate-share.html"
+      "Destination": "/en/promos/playwise-promotion"
     },
     {
       "Source": "/content/alc/en/promos/scratch/celebrate-share.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/scratch/celebrate-share.html"
+      "Destination": "/en/promos/scratch/celebrate-share"
     },
     {
       "Source": "/content/alc/en/promos/scratch/celebrate-share",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/scratch/celebrate-share.html"
-    },
-    {
-      "Source": "/en/promos/scratch/how-you-play",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/scratch/how-you-play.html"
+      "Destination": "/en/promos/scratch/celebrate-share"
     },
     {
       "Source": "/content/alc/en/promos/scratch/how-you-play.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/scratch/how-you-play.html"
+      "Destination": "/en/promos/scratch/how-you-play"
     },
     {
       "Source": "/content/alc/en/promos/scratch/how-you-play",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/scratch/how-you-play.html"
-    },
-    {
-      "Source": "/en/promos/social-purpose",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/social-purpose.html"
+      "Destination": "/en/promos/scratch/how-you-play"
     },
     {
       "Source": "/content/alc/en/promos/social-purpose.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/social-purpose.html"
+      "Destination": "/en/promos/social-purpose"
     },
     {
       "Source": "/content/alc/en/promos/social-purpose",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/social-purpose.html"
-    },
-    {
-      "Source": "/en/promos/new2al",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new2al.html"
+      "Destination": "/en/promos/social-purpose"
     },
     {
       "Source": "/content/alc/en/promos/new2al.html",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new2al.html"
+      "Destination": "/en/promos/new2al"
     },
     {
       "Source": "/content/alc/en/promos/new2al",
-      "Destination": "https://www.alc.ca/content/alc/en/promos/new2al.html"
+      "Destination": "/en/promos/new2al"
     },
     {
       "Source": "/en/long-break-confirmation",
@@ -11961,19 +11517,35 @@
     },
     {
       "Source": "/en/play-online/casino/thor-infinity",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/casino.html"
+      "Destination": "/en/play-online/casino"
     },
     {
       "Source": "/en/play-online/instant-win-games/bison-stampede",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/instant-win-games.html"
+      "Destination": "/en/play-online/instant-win-games"
     },
     {
       "Source": "/en/play-online/instant-win-games/blazing-luck",
-      "Destination": "https://www.alc.ca/content/alc/en/play-online/instant-win-games.html"
+      "Destination": "/en/play-online/instant-win-games"
     },
     {
-      "Source": "/en/referenced/cookie-policy",
-      "Destination": "https://www.alc.ca/content/alc/en/referenced/cookie-policy.html"
+      "Source": "/en/our-games/scratch-n-win/2899",
+      "Destination": "/en/our-games/scratch-n-win"
+    },
+    {
+      "Source": "/en/our-games/scratch-n-win/3203",
+      "Destination": "/en/our-games/scratch-n-win"
+    },
+    {
+      "Source": "/en/our-games/scratch-n-win/2931",
+      "Destination": "/en/our-games/scratch-n-win"
+    },
+    {
+      "Source": "/en/our-games/scratch-n-win/2964",
+      "Destination": "/en/our-games/scratch-n-win"
+    },
+    {
+      "Source": "/en/our-games/scratch-n-win/4046",
+      "Destination": "/en/our-games/scratch-n-win"
     }
   ],
   ":type": "sheet",

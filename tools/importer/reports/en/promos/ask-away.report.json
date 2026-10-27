@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/promos/ask-away.html",
+  "path": "en/promos/ask-away",
+  "timestamp": "2026-10-27T23:19:36.305Z",
+  "title": "Ask Away",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "accordion-bar",
+    "embed",
+    "embed",
+    "embed"
+  ]
+}

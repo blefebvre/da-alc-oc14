@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/lotto/twist.html",
+  "path": "en/our-games/lotto/twist",
+  "timestamp": "2026-10-27T23:01:24.447Z",
+  "title": "Twist | Winning Numbers & Game Details | Atlantic Lottery",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "accordion-bar"
+  ]
+}

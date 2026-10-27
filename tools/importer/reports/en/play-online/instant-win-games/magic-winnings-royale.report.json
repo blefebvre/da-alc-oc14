@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/instant-win-games/magic-winnings-royale.html",
+  "path": "en/play-online/instant-win-games/magic-winnings-royale",
+  "timestamp": "2026-10-27T23:30:33.460Z",
+  "title": "Magic Winnings Royale",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

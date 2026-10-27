@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/self-service-terminals.html",
+  "path": "en/our-games/self-service-terminals",
+  "timestamp": "2026-10-27T23:05:10.783Z",
+  "title": "Self Service Terminals",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "accordion-bar",
+    "embed"
+  ]
+}

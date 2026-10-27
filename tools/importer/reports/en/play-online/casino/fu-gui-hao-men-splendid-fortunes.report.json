@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/fu-gui-hao-men-splendid-fortunes.html",
+  "path": "en/play-online/casino/fu-gui-hao-men-splendid-fortunes",
+  "timestamp": "2026-10-27T23:30:54.914Z",
+  "title": "Fu Gui Hao Men Splendid Fortunes",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

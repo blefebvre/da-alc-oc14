@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/lotto/tag.html",
+  "path": "en/our-games/lotto/tag",
+  "timestamp": "2026-10-27T23:01:15.159Z",
+  "title": "TAG | Winning Numbers & Game Details | Atlantic Lottery",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "accordion-bar"
+  ]
+}

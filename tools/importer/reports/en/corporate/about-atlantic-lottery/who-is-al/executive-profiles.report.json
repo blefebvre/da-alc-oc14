@@ -1,0 +1,22 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/who-is-al/executive-profiles.html",
+  "path": "en/corporate/about-atlantic-lottery/who-is-al/executive-profiles",
+  "timestamp": "2026-10-27T23:09:45.153Z",
+  "title": "Executive Profiles | Atlantic Lottery Corporation",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "columns-media",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar"
+  ]
+}

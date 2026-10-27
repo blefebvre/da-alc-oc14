@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/promos/vl-rules-of-play.html",
+  "path": "en/promos/vl-rules-of-play",
+  "timestamp": "2026-10-27T23:22:35.970Z",
+  "title": "VL | Promo | Rules of Play",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner"
+  ]
+}

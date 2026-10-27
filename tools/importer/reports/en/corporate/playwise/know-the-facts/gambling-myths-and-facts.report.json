@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/corporate/playwise/know-the-facts/gambling-myths-and-facts.html",
+  "path": "en/corporate/playwise/know-the-facts/gambling-myths-and-facts",
+  "timestamp": "2026-10-27T23:08:36.910Z",
+  "title": "Gambling Myths and Facts",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "columns-contact"
+  ]
+}

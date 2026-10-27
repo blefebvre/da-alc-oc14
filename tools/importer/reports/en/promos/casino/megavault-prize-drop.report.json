@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/promos/casino/megavault-prize-drop.html",
+  "path": "en/promos/casino/megavault-prize-drop",
+  "timestamp": "2026-10-27T23:24:03.929Z",
+  "title": "MegaVault Prize Drop",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "cards-feature",
+    "accordion-bar"
+  ]
+}

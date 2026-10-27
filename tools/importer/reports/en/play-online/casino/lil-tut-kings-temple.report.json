@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/lil-tut-kings-temple.html",
+  "path": "en/play-online/casino/lil-tut-kings-temple",
+  "timestamp": "2026-10-27T23:31:17.466Z",
+  "title": "Lil Tut: King's Temple",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

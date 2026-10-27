@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/breakopen.html",
+  "path": "en/our-games/breakopen",
+  "timestamp": "2026-10-27T23:02:45.153Z",
+  "title": "Break Open Tickets | Atlantic Lottery",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "cards-game"
+  ]
+}

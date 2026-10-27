@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/lotto/daily-grand.html",
+  "path": "en/our-games/lotto/daily-grand",
+  "timestamp": "2026-10-27T23:01:34.072Z",
+  "title": "Daily Grand | Winning Numbers & Game Details | Atlantic Lottery",
+  "template": "content-page",
+  "blocks": [
+    "accordion-bar",
+    "embed"
+  ]
+}

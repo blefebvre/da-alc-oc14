@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/mobile-app-2.html",
+  "path": "en/promos/new-template-conversions/mobile-app-2",
+  "timestamp": "2026-10-27T23:25:35.311Z",
+  "title": "Mobile App 2.0",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "cards-feature",
+    "cards-feature",
+    "cards-feature"
+  ]
+}

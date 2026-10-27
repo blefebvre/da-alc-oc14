@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/annual-reports.html",
+  "path": "en/promos/new-template-conversions/annual-reports",
+  "timestamp": "2026-10-27T23:26:49.161Z",
+  "title": "Annual Reports",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "cards-feature"
+  ]
+}

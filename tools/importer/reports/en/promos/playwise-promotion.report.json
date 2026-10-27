@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/promos/playwise-promotion.html",
+  "path": "en/promos/playwise-promotion",
+  "timestamp": "2026-10-27T23:27:09.196Z",
+  "title": "Playwise Promotion",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner"
+  ]
+}

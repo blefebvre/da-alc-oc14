@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/promos/healthyplay.html",
+  "path": "en/promos/healthyplay",
+  "timestamp": "2026-10-27T23:19:47.014Z",
+  "title": "Healthy Play Tools | Atlantic Lottery",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "carousel-promo"
+  ]
+}

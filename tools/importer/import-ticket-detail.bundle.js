@@ -133,7 +133,152 @@ var CustomImportScript = (() => {
   function clean2(text) {
     return (text || "").replace(/[​-‍﻿]/g, "").replace(/ /g, " ").replace(/\s+/g, " ").trim();
   }
+  var ORIGIN2 = "https://www.alc.ca";
+  var CONTAINER = ".alc-container, .cmp-container, .aem-Grid, .responsivegrid, .container, .xf-content-height, .experiencefragment, .cmp-experiencefragment";
+  function absolutize2(url) {
+    if (!url) return "";
+    const v = url.trim();
+    if (/^(https?:|mailto:|tel:|data:|#)/i.test(v)) return v;
+    if (v.startsWith("//")) return `https:${v}`;
+    if (v.startsWith("/")) return `${ORIGIN2}${v}`;
+    return v;
+  }
+  function strongLinkParagraph(document2, a) {
+    const href = a.getAttribute("href");
+    const text = clean2(a.textContent) || a.getAttribute("title") || "";
+    if (!href || href === "#" || !text) return null;
+    const p = document2.createElement("p");
+    const strong = document2.createElement("strong");
+    const link = document2.createElement("a");
+    link.href = absolutize2(href);
+    link.textContent = text;
+    strong.append(link);
+    p.append(strong);
+    return p;
+  }
+  function imgFrom(document2, imgEl) {
+    const src = imgEl && (imgEl.getAttribute("src") || "").trim();
+    if (!src) return null;
+    const img = document2.createElement("img");
+    img.src = absolutize2(src);
+    img.alt = imgEl.getAttribute("alt") || "";
+    return img;
+  }
+  function flatten(document2, root) {
+    const out = [];
+    root.querySelectorAll("a").forEach((a) => {
+      if (!clean2(a.textContent) && !a.querySelector("img")) a.remove();
+    });
+    const visit = (el) => {
+      if (el.nodeType === 3) {
+        if (clean2(el.textContent)) {
+          const p = document2.createElement("p");
+          p.textContent = clean2(el.textContent);
+          out.push(p);
+        }
+        return;
+      }
+      if (el.nodeType !== 1) return;
+      if (el.matches("script, style, noscript, .separator, .cmp-separator, hr")) return;
+      if (el.matches(".cmp-text, .text-area")) {
+        [...el.children].forEach((c) => {
+          if (!clean2(c.textContent) && !c.querySelector("img, table")) return;
+          out.push(c);
+        });
+        return;
+      }
+      if (el.matches(".cmp-title")) {
+        const h = el.querySelector("h1, h2, h3, h4, h5, h6");
+        if (h && clean2(h.textContent)) {
+          const nh = document2.createElement(/^H[12]$/.test(h.tagName) ? "h3" : h.tagName.toLowerCase());
+          nh.textContent = clean2(h.textContent);
+          out.push(nh);
+        }
+        return;
+      }
+      if (el.matches(".cmp-image, .image")) {
+        const img = imgFrom(document2, el.querySelector("img"));
+        if (img) out.push(img);
+        return;
+      }
+      if (el.matches(".alc-button, .cmp-button, .dynamic-cta, .cmp-dynamic-cta")) {
+        el.querySelectorAll("a[href]").forEach((a) => {
+          const p = strongLinkParagraph(document2, a);
+          if (p) out.push(p);
+        });
+        return;
+      }
+      if (el.matches(".cmp-teaser")) {
+        const img = imgFrom(document2, el.querySelector(".cmp-teaser__image img"));
+        if (img) out.push(img);
+        const title = clean2(el.querySelector(".cmp-teaser__title") && el.querySelector(".cmp-teaser__title").textContent);
+        if (title) {
+          const h = document2.createElement("h4");
+          h.textContent = title;
+          out.push(h);
+        }
+        const desc = el.querySelector(".cmp-teaser__description");
+        if (desc) [...desc.children].forEach((c) => {
+          if (clean2(c.textContent)) out.push(c);
+        });
+        el.querySelectorAll(".cmp-teaser__action-container a[href]").forEach((a) => {
+          const href = a.getAttribute("href");
+          if (!href || href === "#" || !clean2(a.textContent)) return;
+          const p = document2.createElement("p");
+          const link = document2.createElement("a");
+          link.href = absolutize2(href);
+          link.textContent = clean2(a.textContent);
+          p.append(link);
+          out.push(p);
+        });
+        return;
+      }
+      if (el.matches(".cmp-embed")) {
+        const f = el.querySelector("iframe[src]");
+        const m = f && f.getAttribute("src").match(/youtube(?:-nocookie)?\.com\/embed\/([^?&/]+)/);
+        const href = m ? `https://www.youtube.com/watch?v=${m[1]}` : f ? absolutize2(f.getAttribute("src")) : "";
+        if (href) {
+          const p = document2.createElement("p");
+          const a = document2.createElement("a");
+          a.href = href;
+          a.textContent = href;
+          p.append(a);
+          out.push(p);
+        }
+        return;
+      }
+      if (el.matches(CONTAINER) || el.tagName === "DIV" && el.children.length && !el.matches("p")) {
+        [...el.childNodes].forEach(visit);
+        return;
+      }
+      if (clean2(el.textContent) || el.querySelector("img, table") || el.tagName === "IMG") out.push(el);
+    };
+    [...root.childNodes].forEach(visit);
+    return out;
+  }
+  function parseCoreAccordion(element, document2) {
+    const cells = [];
+    [...element.querySelectorAll(":scope > .cmp-accordion__item")].forEach((item) => {
+      const titleEl = item.querySelector(":scope > .cmp-accordion__header .cmp-accordion__title") || item.querySelector(".cmp-accordion__title, .cmp-accordion__button");
+      const title = clean2(titleEl && titleEl.textContent);
+      if (!title) return;
+      const panel = item.querySelector(":scope > .cmp-accordion__panel") || item.querySelector(".cmp-accordion__panel");
+      const body = panel ? flatten(document2, panel) : [];
+      cells.push([title, body.length ? body : ""]);
+    });
+    return cells;
+  }
   function parse2(element, { document: document2 }) {
+    if (element.matches(".cmp-accordion")) {
+      const coreCells = parseCoreAccordion(element, document2);
+      if (!coreCells.length) {
+        element.remove();
+        return;
+      }
+      const coreBlock = WebImporter.Blocks.createBlock(document2, { name: "accordion-bar", cells: coreCells });
+      element.replaceWith(coreBlock);
+      return;
+    }
     const cells = [];
     const panels = [...element.querySelectorAll(":scope > .panel")];
     panels.forEach((panel) => {
@@ -165,13 +310,13 @@ var CustomImportScript = (() => {
 
   // tools/importer/transformers/alc-cleanup.js
   var TransformHook = { beforeTransform: "beforeTransform", afterTransform: "afterTransform" };
-  var ORIGIN2 = "https://www.alc.ca";
+  var ORIGIN3 = "https://www.alc.ca";
   var ALC_HOSTS = ["www.alc.ca", "alc.ca"];
   function absolutizeUrl(value) {
     if (!value) return value;
     const v = value.trim();
     if (v.startsWith("//")) return `https:${v}`;
-    if (v.startsWith("/")) return `${ORIGIN2}${v}`;
+    if (v.startsWith("/")) return `${ORIGIN3}${v}`;
     return v;
   }
   function absolutizeSrcset(srcset) {
@@ -203,7 +348,7 @@ var CustomImportScript = (() => {
     "^/content/alc/en/(cart|checkout|confirmation|login|search-results|payment-authorization-failed",
     "|email-communications|interact-redirect|2chance-history-redirect|short-break-confirmation",
     "|long-break-confirmation)\\.html$",
-    "|^/content/alc/en/(long-term-return-to-play|short-term-return-to-play|registration|game-configurator)(/.*)?\\.html$",
+    "|^/content/alc/en/(long-term-return-to-play|short-term-return-to-play|registration|game-configurator|my-account)(/.*)?\\.html$",
     "|^/content/alc/en/rewards/(existing-account-confirmation|join-rewards|points-details)\\.html$",
     "|^/content/alc/en/play-online/(casino|instant-win-games)/game\\.html$",
     "|^/content/alc/en/play-online/lottomax\\.html$",
@@ -217,21 +362,25 @@ var CustomImportScript = (() => {
     if (raw.startsWith("#") || /^(mailto|tel|javascript):/i.test(raw)) return href;
     let url;
     try {
-      url = new URL(raw, ORIGIN2);
+      url = new URL(raw, ORIGIN3);
     } catch (e) {
       return href;
     }
     const isRelative = raw.startsWith("/") && !raw.startsWith("//");
     if (!isRelative && !ALC_HOSTS.includes(url.hostname)) return href;
     let path = url.pathname;
+    if (/^\/[^/@]+@[a-z0-9.-]+$/i.test(path)) return `mailto:${path.slice(1)}`;
+    const shortGame = path.match(/^\/en\/(casino|instant-win-games)\/([^/]+)\.html$/);
+    if (shortGame && shortGame[2] !== "game") path = `/content/alc/en/play-online/${shortGame[1]}/${shortGame[2]}.html`;
+    if (path === "/" && !isRelative) return "/";
     const isAsset = path.startsWith("/content/dam/");
     const isGameLauncher = /\/game\.html$/.test(path) && url.searchParams.has("gameId");
     if (isAsset || isGameLauncher || isAppScreen(path) || !path.startsWith("/content/alc")) {
       if (path.startsWith("/etc.clientlibs")) return href;
-      return `${ORIGIN2}${path}${url.search}${url.hash || ""}`;
+      return `${ORIGIN3}${path}${url.search}${url.hash || ""}`;
     }
     path = path.replace(/^\/content\/alc/, "") || "/";
-    path = path.replace(/\.html$/, "");
+    path = path.replace(/\.html?$/, "");
     if (path === "" || path === "/en" || path === "/en/") path = "/";
     if (path !== "/") {
       path = path.split("/").map((seg) => {
@@ -515,6 +664,328 @@ var CustomImportScript = (() => {
       outer.replaceWith(...nodes);
     });
   }
+  var CONTENT_PAGES = /* @__PURE__ */ new WeakSet();
+  function isHomepageUrl(url) {
+    if (!url) return false;
+    try {
+      const { pathname } = new URL(url, ORIGIN3);
+      return /^\/(content\/alc\/en(\.html)?|en(\.html)?)?\/?$/.test(pathname);
+    } catch (e) {
+      return false;
+    }
+  }
+  function isContentPage(root, payload) {
+    if (isTicketDetailPage(root) || isVideoLotteryPage(root) || isGameDetailPage(root)) return false;
+    const template = payload && payload.template;
+    if (template && template.name) return template.name === "content-page";
+    const url = payload && (payload.params && payload.params.originalURL || payload.url) || "";
+    return !!url && !isHomepageUrl(url);
+  }
+  var CONTENT_PAGE_CHROME_SELECTORS = [
+    // Source breadcrumbs (AEM .breadcrumb component in the title banner; legacy
+    // section#page-breadcrumb > .breadcrumb-container). Auto-generated in EDS ("Breadcrumbs: true").
+    "section#page-breadcrumb",
+    ".breadcrumb-container",
+    ".breadcrumb",
+    ".cmp-breadcrumb",
+    // Legacy "Explore: ..." corporate sub-navigation dropdown (div.hero > [id^=corpmenu] > .corp-menu-container)
+    ".corp-menu-container",
+    ".cq-dd-pages",
+    // Live chat (div.livechat > .alc-livechat > #livechat) and the CXone chat launcher
+    ".livechat",
+    ".alc-livechat",
+    "#cxone-guide-container",
+    // ShareThis helper
+    "#stcpDiv",
+    // App-only "Download our App" mobile banners (div.banner.section > .alc-mobile-banner)
+    // (the emptied div.banner.section / .digital-instants-intro wrappers go with the empty spacers)
+    ".alc-mobile-banner",
+    // Alert bars / outage messages / hidden "Bonus Offer" rewards banner / checkout sign-in banner
+    'section[id^="alert-"]',
+    "#live-casino-outage-message",
+    ".rewards-banner",
+    "#direct-checkout-banner",
+    // Live-casino lobby launcher + its game modal
+    "#live-casino-component",
+    "#live-casino-modal",
+    // Hidden client-side states ("0 results", "Temporarily Unavailable")
+    ".winners-error",
+    ".jackpot-temp-unavailable.hidden",
+    // Mobile-only filter toggles (the filter panels themselves stay with the game lists)
+    "a.scratch-mobile-filter-expand",
+    "p.filter.visible-xs",
+    ".filters-collapse.visible-xs",
+    // Homepage-only mobile "Check winning numbers" banner (homepage clones /en/our-games, /en/play-online)
+    ".html-promo"
+  ];
+  var CONTENT_HERO_SELECTOR = ".alc-container.cmp-container--pw-content-hero-padding, .alc-container.cmp-container--pw-landing-hero-padding, div.hero";
+  function cleanText(text) {
+    return (text || "").replace(/[​-‍﻿]/g, "").replace(/[\s ]+/g, " ").trim();
+  }
+  function renameTagKeepAttrs(el, tagName) {
+    const next = el.ownerDocument.createElement(tagName);
+    [...el.attributes].forEach((attr) => next.setAttribute(attr.name, attr.value));
+    next.append(...el.childNodes);
+    el.replaceWith(next);
+    return next;
+  }
+  function videoWatchUrl(src) {
+    if (!src) return "";
+    const abs = absolutizeUrl(src);
+    const yt = abs.match(/youtube(?:-nocookie)?\.com\/embed\/([^?&/#]+)/i);
+    if (yt) return `https://www.youtube.com/watch?v=${yt[1]}`;
+    const short = abs.match(/youtu\.be\/([^?&/#]+)/i);
+    if (short) return `https://www.youtube.com/watch?v=${short[1]}`;
+    const vm = abs.match(/player\.vimeo\.com\/video\/(\d+)/i);
+    if (vm) return `https://vimeo.com/${vm[1]}`;
+    if (/youtube\.com\/watch|vimeo\.com\/\d+/i.test(abs)) return abs;
+    return "";
+  }
+  function videoUrlsIn(scope) {
+    const urls = [];
+    scope.querySelectorAll("iframe[src], iframe[data-src], [data-video-url], [data-embed-url]").forEach((el) => {
+      ["src", "data-src", "data-video-url", "data-embed-url"].forEach((attr) => {
+        const u = videoWatchUrl(el.getAttribute(attr));
+        if (u) urls.push(u);
+      });
+    });
+    return [...new Set(urls)];
+  }
+  var TRACKING_SRC_RE = /doubleclick|adsrvr|adservice|adnxs|reddit|facebook\.com\/tr|googletagmanager|evolutionGame/i;
+  var MODAL_SELECTOR = ".modal-xf, .cmp-modal, .alc-modal, .modal";
+  function fixModalVideoLinks(root) {
+    const doc = root.ownerDocument;
+    const modals = [...root.querySelectorAll(MODAL_SELECTOR)];
+    const allModalVideos = [...new Set(modals.flatMap((m) => videoUrlsIn(m)))];
+    root.querySelectorAll("a").forEach((a) => {
+      if (a.closest(MODAL_SELECTOR)) return;
+      const href = (a.getAttribute("href") || "").trim();
+      if (href && href !== "#" && !/^javascript:/i.test(href)) return;
+      const target = a.getAttribute("data-target") || a.getAttribute("data-bs-target") || "";
+      const opensModal = /modal/i.test(a.getAttribute("data-toggle") || a.getAttribute("data-bs-toggle") || "") || !!target;
+      if (!opensModal && !/video|watch/i.test(cleanText(a.textContent))) return;
+      let urls = [];
+      if (target && target.startsWith("#")) {
+        const modal = doc.getElementById(target.slice(1));
+        if (modal) urls = videoUrlsIn(modal);
+      }
+      if (!urls.length) urls = allModalVideos;
+      if (urls.length === 1) a.setAttribute("href", urls[0]);
+    });
+  }
+  function similarText(a, b) {
+    if (!a || !b) return false;
+    if (a === b) return true;
+    const wa = new Set(a.toLowerCase().split(/\W+/).filter(Boolean));
+    const wb = new Set(b.toLowerCase().split(/\W+/).filter(Boolean));
+    if (!wa.size || !wb.size) return false;
+    let common = 0;
+    wa.forEach((w) => {
+      if (wb.has(w)) common += 1;
+    });
+    return common / Math.max(wa.size, wb.size) >= 0.6;
+  }
+  function imageKeys(el) {
+    return [...el.querySelectorAll("img[src]")].map((i) => (i.getAttribute("src") || "").split("?")[0].split("/").pop()).filter(Boolean);
+  }
+  var MOBILE_ONLY_SELECTOR = ".aem-GridColumn--default--hide, .visible-xs, .visible-xs-block";
+  var ALL_BREAKPOINTS_HIDDEN = ["xs", "sm", "md", "default"].map((bp) => `aem-GridColumn--${bp}--hide`);
+  function removeHiddenDuplicates(root) {
+    const hidden = [...root.querySelectorAll(MOBILE_ONLY_SELECTOR)];
+    const hiddenSet = new Set(hidden);
+    const kept = /* @__PURE__ */ new Set();
+    const isPresent = (el) => {
+      for (let p = el; p && p !== root; p = p.parentElement) {
+        if (hiddenSet.has(p) && !kept.has(p)) return false;
+      }
+      return true;
+    };
+    hidden.forEach((el) => {
+      if (!el.isConnected) return;
+      if (isEmptyContainer(el) || ALL_BREAKPOINTS_HIDDEN.every((c) => el.classList.contains(c))) {
+        el.remove();
+        return;
+      }
+      const type = (el.classList[0] || el.tagName).toString();
+      const text = cleanText(el.textContent);
+      const imgs = imageKeys(el);
+      const peers = [...root.getElementsByClassName(type)].filter((p) => p !== el && p.isConnected && !p.contains(el) && !el.contains(p) && isPresent(p));
+      const desktopTwin = el.classList.contains("aem-GridColumn--default--hide") ? peers.some((p) => p.parentElement === el.parentElement && p.classList.contains("aem-GridColumn--xs--hide")) : peers.some((p) => p.parentElement === el.parentElement && p.classList.contains("hidden-xs"));
+      const hasEquivalent = desktopTwin || peers.some((p) => {
+        const pt = cleanText(p.textContent);
+        if (text) return similarText(text, pt);
+        const pi = imageKeys(p);
+        return imgs.length && imgs.every((k) => pi.includes(k));
+      });
+      if (hasEquivalent) el.remove();
+      else kept.add(el);
+    });
+  }
+  function ctaParagraph(doc, href, text) {
+    const p = doc.createElement("p");
+    const strong = doc.createElement("strong");
+    const a = doc.createElement("a");
+    a.setAttribute("href", href);
+    a.textContent = text;
+    strong.append(a);
+    p.append(strong);
+    return p;
+  }
+  function buttonHref(button) {
+    if ((button.getAttribute("data-ga4-event") || "") === "rewards_join" || (button.getAttribute("data-ga4-param-user-flow") || "") === "join_rewards") {
+      return "/content/alc/en/rewards/join-rewards.html";
+    }
+    const href = (button.getAttribute("href") || "").trim();
+    return href && href !== "#" ? href : "";
+  }
+  function convertCtas(root) {
+    const doc = root.ownerDocument;
+    const outsideHero = (el) => !el.closest(CONTENT_HERO_SELECTOR) && !el.closest(".cmp-teaser");
+    root.querySelectorAll(".dynamic-cta").forEach((wrapper) => {
+      if (!outsideHero(wrapper)) return;
+      const cta = wrapper.querySelector(".cmp-dynamic-cta") || wrapper;
+      const nodes = [];
+      const button = cta.querySelector("a.cmp-dynamic-cta__button");
+      const text = cleanText(button ? button.textContent : cta.getAttribute("data-unauth-button-text"));
+      const href = button && button.getAttribute("href") || cta.getAttribute("data-unauth-button-link") || "";
+      if (text && href) nodes.push(ctaParagraph(doc, href, text));
+      let desc = cta.querySelector(".cmp-dynamic-cta__description");
+      if (!desc && cta.getAttribute("data-unauth-description")) {
+        desc = doc.createElement("div");
+        desc.innerHTML = cta.getAttribute("data-unauth-description").replace(/&nbsp;/g, " ");
+      }
+      if (desc && cleanText(desc.textContent)) {
+        desc.querySelectorAll("b").forEach((b) => renameTag(b, "strong"));
+        desc.querySelectorAll("u").forEach((u) => u.replaceWith(...u.childNodes));
+        desc.querySelectorAll("br").forEach((br) => br.remove());
+        const p = doc.createElement("p");
+        p.append(...desc.childNodes);
+        nodes.push(p);
+      }
+      if (nodes.length) wrapper.replaceWith(...nodes);
+      else wrapper.remove();
+    });
+    const buttons = [
+      ...root.querySelectorAll(".alc-button"),
+      ...[...root.querySelectorAll("a.cmp-button")].filter((a) => !a.closest(".alc-button"))
+    ];
+    buttons.forEach((el) => {
+      if (!el.isConnected || !outsideHero(el)) return;
+      const links = el.matches("a") ? [el] : [...el.querySelectorAll("a[href], button")];
+      const nodes = links.map((link) => {
+        const text = cleanText(link.textContent);
+        const href = link.matches("button") ? buttonHref(link) : (link.getAttribute("href") || "").trim();
+        return text && href && href !== "#" ? ctaParagraph(doc, href, text) : null;
+      }).filter(Boolean);
+      const holder = el.matches("a") && el.parentElement && el.parentElement.matches("div.button") && el.parentElement.children.length === 1 ? el.parentElement : el;
+      if (nodes.length) holder.replaceWith(...nodes);
+      else holder.remove();
+    });
+  }
+  var EMPTY_SPACER_SELECTOR = [
+    ".text",
+    ".title",
+    ".image",
+    ".teaser",
+    ".alc-container",
+    ".cfm",
+    ".responsivegrid",
+    ".contributions",
+    ".social-responsibility",
+    "div.events",
+    "div.promo",
+    ".promo-holder",
+    ".faq-promo",
+    "div.sidebar",
+    "aside",
+    "div.banner.section",
+    ".digital-instants-intro"
+  ].join(", ");
+  var KEEP_HIDDEN_SELECTOR = ".cmp-tabs, .cmp-accordion, .panel-group, .alc-carousel, .carousel, .slick-slider, .cmp-container--game-tiles, section.alc-hyt, .di-featured-section, .browse-game-list, section.ko-scratch-list, .games-wrapper, .buy-tickets__wrapper";
+  function isEmptyHeading(h) {
+    return !normText(h) && !h.querySelector("img, picture");
+  }
+  function cleanupContentPage(element, doc) {
+    const pageTitle = doc.title;
+    element.querySelectorAll("title").forEach((t) => t.remove());
+    if (pageTitle && doc.title !== pageTitle) doc.title = pageTitle;
+    fixModalVideoLinks(element);
+    WebImporter.DOMUtils.remove(element, [
+      ...DETAIL_PAGE_CHROME_SELECTORS,
+      ...CONTENT_PAGE_CHROME_SELECTORS,
+      MODAL_SELECTOR,
+      "script",
+      "noscript",
+      "style"
+    ]);
+    element.querySelectorAll('[style*="display: none"], [style*="display:none"]').forEach((el) => {
+      if (el.isConnected && !el.closest(KEEP_HIDDEN_SELECTOR)) el.remove();
+    });
+    WebImporter.DOMUtils.remove(element, [".material-icons", ".material-icons-outlined", ".material-symbols-outlined"]);
+    element.querySelectorAll(".social").forEach((el) => {
+      if (/^share\b/i.test(normText(el))) el.remove();
+    });
+    WebImporter.DOMUtils.remove(element, [".separator", ".cmp-separator", "hr"]);
+    removeHiddenDuplicates(element);
+    [...element.querySelectorAll(EMPTY_SPACER_SELECTOR)].reverse().forEach((el) => {
+      if (el.isConnected && isEmptyContainer(el)) el.remove();
+    });
+    element.querySelectorAll("p").forEach((p) => {
+      if (isEmptyContainer(p)) p.remove();
+    });
+    element.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach((h) => {
+      if (isEmptyHeading(h)) h.remove();
+    });
+    element.querySelectorAll("h1.cmp-teaser__title").forEach((h) => {
+      if (!h.closest(CONTENT_HERO_SELECTOR)) renameTagKeepAttrs(h, "h3");
+    });
+    convertCtas(element);
+    fixSlugTitle(doc, element);
+  }
+  var DECORATIVE_BG_RE = /(^|[/_-])(bg|background|pattern|texture)[^/]*\.(jpe?g|png|gif|svg|webp)|[a-z]bg\.(jpe?g|png)|alc-images\/|\/casinoWrapper\/|\/TM-[A-Za-z]+_(en|fr)\.png/i;
+  function cssUnescapeUrl(value) {
+    return value.replace(/\\([0-9a-fA-F]{1,6})\s?/g, (m, hex) => String.fromCodePoint(parseInt(hex, 16)));
+  }
+  function cleanupContentDefaultContent(root) {
+    const outside = (el) => !el.closest("table");
+    root.querySelectorAll("label").forEach((label) => {
+      if (outside(label) && (label.hasAttribute("for") || label.querySelector("input, select, textarea"))) label.remove();
+    });
+    root.querySelectorAll("select, input, textarea, button").forEach((el) => {
+      if (el.isConnected && outside(el)) el.remove();
+    });
+    root.querySelectorAll("form").forEach((form) => {
+      if (outside(form)) form.replaceWith(...form.childNodes);
+    });
+    const isHashLink = (a) => (a.getAttribute("href") || "").trim() === "#";
+    root.querySelectorAll("ul, ol").forEach((list) => {
+      if (!outside(list)) return;
+      const items = [...list.children];
+      if (items.length && items.every((li) => {
+        const links = [...li.querySelectorAll("a")];
+        return links.length && links.every(isHashLink) && normText(li) === links.map((a) => normText(a)).join(" ").trim();
+      })) list.remove();
+    });
+    root.querySelectorAll("a").forEach((a) => {
+      if (!outside(a)) return;
+      if (!normText(a) && !a.querySelector("img, picture")) a.remove();
+      else if (isHashLink(a)) a.replaceWith(...a.childNodes);
+    });
+    root.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach((h) => {
+      if (outside(h) && isEmptyHeading(h)) h.remove();
+    });
+  }
+  function stripDecorativeBackgrounds(root) {
+    root.querySelectorAll('[style*="url"]').forEach((el) => {
+      if (el.closest("table")) return;
+      const style = el.getAttribute("style") || "";
+      const m = style.match(/background(?:-image)?\s*:[^;]*url\(\s*(['"]?)([^'")]+)\1\s*\)/i);
+      if (!m || !DECORATIVE_BG_RE.test(cssUnescapeUrl(m[2]))) return;
+      const next = style.replace(/background(?:-image)?\s*:[^;]*url\([^)]*\)[^;]*;?/gi, "").trim();
+      if (next) el.setAttribute("style", next);
+      else el.removeAttribute("style");
+    });
+  }
   function fixSlugTitle(doc, h1Root, anyCase) {
     const title = (doc.title || "").trim();
     const slugRe = anyCase ? /^[a-z0-9]+(-[a-z0-9]+)*$/i : /^[a-z0-9]+(-[a-z0-9]+)*$/;
@@ -544,8 +1015,20 @@ var CustomImportScript = (() => {
         fixSlugTitle(doc, null, true);
         cleanupVideoLotteryPage(element);
         registerPageMetadata(element, { Breadcrumbs: "true" });
+      } else if (isContentPage(element, payload)) {
+        CONTENT_PAGES.add(element);
+        cleanupContentPage(element, doc);
+        registerPageMetadata(element, { Breadcrumbs: "true" });
       } else {
         fixSlugTitle(doc, null);
+      }
+      const contentPage = CONTENT_PAGES.has(element);
+      if (contentPage) {
+        element.querySelectorAll("div.experiencefragment").forEach((xf) => {
+          const named = [...xf.querySelectorAll(".cmp-experiencefragment")].some((c) => !c.matches(".cmp-experiencefragment--header, .cmp-experiencefragment--footer"));
+          const chrome = xf.querySelector('header, footer, [role="banner"], .topnav, #nav-mobile, .cmp-experiencefragment--header, .cmp-experiencefragment--footer, .modal');
+          if (named && !chrome && !xf.closest(".common-modals, .modal-xf")) xf.classList.replace("experiencefragment", "alc-xf-content");
+        });
       }
       if (isGameDetailPage(element)) {
         cleanupGameDetailPage(element);
@@ -569,9 +1052,17 @@ var CustomImportScript = (() => {
         "#ZN_3Eu2u7P45FmpwJ5",
         // Countdown timers inside hero carousel slides
         ".next-draw-timer",
-        // Tracking iframes (doubleclick, adsrvr "TTD Universal Pixel")
-        "iframe"
+        // Tracking iframes (doubleclick, adsrvr "TTD Universal Pixel"). Content pages keep their
+        // video / embed iframes for the embed, accordion-bar and tabs-boxed parsers (see below).
+        ...contentPage ? [] : ["iframe"]
       ]);
+      if (contentPage) {
+        element.querySelectorAll("iframe").forEach((frame) => {
+          const src = frame.getAttribute("src") || frame.getAttribute("data-src") || "";
+          const isEmbed = frame.closest(".cmp-embed, .embed") || videoWatchUrl(src);
+          if (!isEmbed || TRACKING_SRC_RE.test(src)) frame.remove();
+        });
+      }
       fixImages(element);
     }
     if (hookName === TransformHook.afterTransform) {
@@ -598,6 +1089,10 @@ var CustomImportScript = (() => {
       element.querySelectorAll(".cq-dd-paragraph").forEach((wrapper) => {
         wrapper.replaceWith(...wrapper.childNodes);
       });
+      if (CONTENT_PAGES.has(element)) {
+        stripDecorativeBackgrounds(element);
+        cleanupContentDefaultContent(element);
+      }
       fixImages(element);
       element.querySelectorAll("a[href]").forEach((a) => {
         const href = a.getAttribute("href");

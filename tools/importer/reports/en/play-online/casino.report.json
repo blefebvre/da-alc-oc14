@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino.html",
+  "path": "en/play-online/casino",
+  "timestamp": "2026-10-27T22:57:02.770Z",
+  "title": "Play Online Casino Games In Atlantic Canada | Atlantic Lottery",
+  "template": "content-page",
+  "blocks": [
+    "cards-game",
+    "carousel-promo"
+  ]
+}

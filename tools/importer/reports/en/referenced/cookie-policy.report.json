@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/referenced/cookie-policy.html",
+  "path": "en/referenced/cookie-policy",
+  "timestamp": "2026-10-27T23:32:29.553Z",
+  "title": "Cookie Policy",
+  "template": "content-page",
+  "blocks": [
+    "table"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery.html",
+  "path": "en/corporate/about-atlantic-lottery",
+  "timestamp": "2026-10-27T23:09:23.843Z",
+  "title": "About | Atlantic Lottery",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner"
+  ]
+}

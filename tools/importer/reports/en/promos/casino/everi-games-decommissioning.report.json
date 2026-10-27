@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/promos/casino/everi-games-decommissioning.html",
+  "path": "en/promos/casino/everi-games-decommissioning",
+  "timestamp": "2026-10-27T23:24:13.655Z",
+  "title": "Everi Games Decommissioning",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "cards-feature",
+    "cards-feature"
+  ]
+}

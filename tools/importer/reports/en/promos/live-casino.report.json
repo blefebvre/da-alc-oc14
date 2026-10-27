@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/promos/live-casino.html",
+  "path": "en/promos/live-casino",
+  "timestamp": "2026-10-27T23:24:22.406Z",
+  "title": "Live Casino",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "cards-feature",
+    "accordion-bar",
+    "accordion-bar"
+  ]
+}

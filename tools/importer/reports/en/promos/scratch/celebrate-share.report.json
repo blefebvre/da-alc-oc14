@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/promos/scratch/celebrate-share.html",
+  "path": "en/promos/scratch/celebrate-share",
+  "timestamp": "2026-10-27T23:28:01.962Z",
+  "title": "Scratch | Celebrate and Share",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "columns-media",
+    "accordion-bar",
+    "embed",
+    "table"
+  ]
+}

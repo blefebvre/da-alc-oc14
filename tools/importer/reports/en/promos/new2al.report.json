@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/promos/new2al.html",
+  "path": "en/promos/new2al",
+  "timestamp": "2026-10-27T23:29:16.738Z",
+  "title": "New 2 AL",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "cards-feature",
+    "columns-media",
+    "accordion-bar",
+    "accordion-bar",
+    "tabs-boxed"
+  ]
+}

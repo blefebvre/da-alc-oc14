@@ -60,7 +60,7 @@ const APP_SCREEN_RE = new RegExp([
   '^/content/alc/en/(cart|checkout|confirmation|login|search-results|payment-authorization-failed',
   '|email-communications|interact-redirect|2chance-history-redirect|short-break-confirmation',
   '|long-break-confirmation)\\.html$',
-  '|^/content/alc/en/(long-term-return-to-play|short-term-return-to-play|registration|game-configurator)(/.*)?\\.html$',
+  '|^/content/alc/en/(long-term-return-to-play|short-term-return-to-play|registration|game-configurator|my-account)(/.*)?\\.html$',
   '|^/content/alc/en/rewards/(existing-account-confirmation|join-rewards|points-details)\\.html$',
   '|^/content/alc/en/play-online/(casino|instant-win-games)/game\\.html$',
   '|^/content/alc/en/play-online/lottomax\\.html$',
@@ -86,6 +86,13 @@ function rewriteLink(href) {
   if (!isRelative && !ALC_HOSTS.includes(url.hostname)) return href; // other domains untouched
 
   let path = url.pathname;
+  // "https://www.alc.ca/name@alc.ca" (missing mailto:) on some press releases
+  if (/^\/[^/@]+@[a-z0-9.-]+$/i.test(path)) return `mailto:${path.slice(1)}`;
+  // Short game URLs (/en/casino/<game>.html) are the casino game pages
+  const shortGame = path.match(/^\/en\/(casino|instant-win-games)\/([^/]+)\.html$/);
+  if (shortGame && shortGame[2] !== 'game') path = `/content/alc/en/play-online/${shortGame[1]}/${shortGame[2]}.html`;
+  // Site root on alc.ca is the English homepage
+  if (path === '/' && !isRelative) return '/';
   // Assets (PDFs, images) and app pages stay on alc.ca: link to them absolutely.
   // App pages = game launchers (game.html?gameId=...) and anything outside /content/alc (e.g. /en/casino/game.html)
   const isAsset = path.startsWith('/content/dam/');
@@ -95,7 +102,7 @@ function rewriteLink(href) {
     return `${ORIGIN}${path}${url.search}${url.hash || ''}`;
   }
   path = path.replace(/^\/content\/alc/, '') || '/';
-  path = path.replace(/\.html$/, '');
+  path = path.replace(/\.html?$/, '');
   // English homepage is the site root
   if (path === '' || path === '/en' || path === '/en/') path = '/';
   // Match the importer's document paths (WebImporter.FileUtils.sanitizePath):
@@ -937,6 +944,18 @@ export default function transform(hookName, element, payload) {
       fixSlugTitle(doc, null);
     }
     const contentPage = CONTENT_PAGES.has(element);
+    // Content pages: an experience fragment that is not the global header / footer is page
+    // content (e.g. cmp-experiencefragment--adam on promo landing pages, --contact-us, --games).
+    // Drop its experiencefragment class so the chrome removal below keeps it.
+    if (contentPage) {
+      element.querySelectorAll('div.experiencefragment').forEach((xf) => {
+        const named = [...xf.querySelectorAll('.cmp-experiencefragment')]
+          .some((c) => !c.matches('.cmp-experiencefragment--header, .cmp-experiencefragment--footer'));
+        const chrome = xf.querySelector('header, footer, [role="banner"], .topnav, #nav-mobile, '
+          + '.cmp-experiencefragment--header, .cmp-experiencefragment--footer, .modal');
+        if (named && !chrome && !xf.closest('.common-modals, .modal-xf')) xf.classList.replace('experiencefragment', 'alc-xf-content');
+      });
+    }
     // Online game detail pages (guarded; no-op on the homepage)
     if (isGameDetailPage(element)) {
       cleanupGameDetailPage(element);

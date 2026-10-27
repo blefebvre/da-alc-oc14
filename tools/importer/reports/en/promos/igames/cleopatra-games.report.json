@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/promos/igames/cleopatra-games.html",
+  "path": "en/promos/igames/cleopatra-games",
+  "timestamp": "2026-10-27T23:22:58.921Z",
+  "title": "Cleopatra Games",
+  "template": "content-page",
+  "blocks": [
+    "cards-feature"
+  ]
+}

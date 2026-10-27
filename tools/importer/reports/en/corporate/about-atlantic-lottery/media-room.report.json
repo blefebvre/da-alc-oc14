@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/media-room.html",
+  "path": "en/corporate/about-atlantic-lottery/media-room",
+  "timestamp": "2026-10-27T23:16:50.722Z",
+  "title": "News Room | Atlantic Lottery Corporation",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "table"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/corporate/are-you-a-winner.html",
+  "path": "en/corporate/are-you-a-winner",
+  "timestamp": "2026-10-27T23:06:19.341Z",
+  "title": "Won the Lottery? | Atlantic Lottery",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/reports-and-disclosures.html",
+  "path": "en/promos/new-template-conversions/reports-and-disclosures",
+  "timestamp": "2026-10-27T23:25:24.809Z",
+  "title": "Reports and Disclosures",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "tabs-boxed"
+  ]
+}

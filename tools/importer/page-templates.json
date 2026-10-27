@@ -1329,7 +1329,14 @@
         "https://www.alc.ca/content/alc/en/play-online/instant-win-games/x-the-money.html",
         "https://www.alc.ca/content/alc/en/play-online/instant-win-games/year-of-the-snake.html",
         "https://www.alc.ca/content/alc/en/play-online/instant-win-games/yetis-wild-wins.html",
-        "https://www.alc.ca/content/alc/en/play-online/instant-win-games/zombieville.html"
+        "https://www.alc.ca/content/alc/en/play-online/instant-win-games/zombieville.html",
+        "https://www.alc.ca/content/alc/en/play-online/instant-win-games/magic-winnings-royale.html",
+        "https://www.alc.ca/content/alc/en/play-online/instant-win-games/prize-decoder.html",
+        "https://www.alc.ca/content/alc/en/play-online/casino/fu-gui-hao-men-splendid-fortunes.html",
+        "https://www.alc.ca/content/alc/en/play-online/casino/wolf-riches-hold-n-spin.html",
+        "https://www.alc.ca/content/alc/en/play-online/casino/lil-tut-kings-temple.html",
+        "https://www.alc.ca/content/alc/en/play-online/casino/ultimate-fire-link-triple-nova-desert-nights.html",
+        "https://www.alc.ca/content/alc/en/play-online/casino/lucky-8-megaways.html"
       ],
       "coverageGaps": [],
       "description": "Online casino / instant-win game detail: game banner with CTA bar, screenshot carousel, game summary, how-to-play/prizes tabs, and Have you tried rail",
@@ -1727,7 +1734,10 @@
         "https://www.alc.ca/content/alc/en/our-games/breakopen/7103.html",
         "https://www.alc.ca/content/alc/en/our-games/breakopen/7107.html",
         "https://www.alc.ca/content/alc/en/our-games/scratch-n-win/3302.html",
-        "https://www.alc.ca/content/alc/en/our-games/scratch-n-win/4087.html"
+        "https://www.alc.ca/content/alc/en/our-games/scratch-n-win/4087.html",
+        "https://www.alc.ca/content/alc/en/our-games/scratch-n-win/2931.html",
+        "https://www.alc.ca/content/alc/en/our-games/scratch-n-win/2964.html",
+        "https://www.alc.ca/content/alc/en/our-games/scratch-n-win/4046.html"
       ]
     },
     {
@@ -2025,7 +2035,11 @@
         "https://www.alc.ca/content/alc/en/promos/social-purpose.html",
         "https://www.alc.ca/content/alc/en/promos/new2al.html",
         "https://www.alc.ca/content/alc/en/referenced/HealthyPlayPolicy.html",
-        "https://www.alc.ca/content/alc/en/referenced/PrivacyPolicy.html"
+        "https://www.alc.ca/content/alc/en/referenced/PrivacyPolicy.html",
+        "https://www.alc.ca/content/alc/en/referenced/cookie-policy.html",
+        "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-releases/2026-10-21.html",
+        "https://www.alc.ca/content/alc/en/referenced/healthy-play-contest-terms.html",
+        "https://www.alc.ca/content/alc/en/our-games/lotto/poker-lotto-coming-soon.html"
       ],
       "representativeUrl": "https://www.alc.ca/content/alc/en/corporate/playwise/player-tools.html",
       "blocks": [

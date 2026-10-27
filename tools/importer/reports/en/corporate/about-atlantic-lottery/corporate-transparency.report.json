@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery/corporate-transparency.html",
+  "path": "en/corporate/about-atlantic-lottery/corporate-transparency",
+  "timestamp": "2026-10-27T23:15:52.620Z",
+  "title": "Corporate Transparency | Atlantic Lottery Corporation",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "accordion-bar"
+  ]
+}

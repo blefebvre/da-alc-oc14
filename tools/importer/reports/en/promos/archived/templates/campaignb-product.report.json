@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/promos/archived/templates/campaignb-product.html",
+  "path": "en/promos/archived/templates/campaignb-product",
+  "timestamp": "2026-10-27T23:21:23.811Z",
+  "title": "Campaign B - Product",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "cards-feature",
+    "embed"
+  ]
+}

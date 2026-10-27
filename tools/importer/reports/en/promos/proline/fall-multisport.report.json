@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/promos/proline/fall-multisport.html",
+  "path": "en/promos/proline/fall-multisport",
+  "timestamp": "2026-10-27T23:22:45.603Z",
+  "title": "PRO•LINE Fall Multi-Sport",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "cards-feature",
+    "embed",
+    "embed",
+    "embed"
+  ]
+}
