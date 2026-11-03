@@ -6,8 +6,8 @@ const path = require('path');
 
 const redirectsFile = process.argv[2] || 'tools/importer/redirects.json';
 const redirects = new Map(JSON.parse(fs.readFileSync(redirectsFile, 'utf8')).data.map((r) => [r.Source, r.Destination]));
-const shells = new Set(fs.existsSync('migration-work/empty-shells.txt')
-  ? fs.readFileSync('migration-work/empty-shells.txt', 'utf8').split('\n').filter(Boolean) : []);
+const shells = new Set(fs.existsSync('tools/importer/data/empty-shells.txt')
+  ? fs.readFileSync('tools/importer/data/empty-shells.txt', 'utf8').split('\n').filter(Boolean) : []);
 
 const walk = (d, o = []) => {
   fs.readdirSync(d, { withFileTypes: true }).forEach((e) => {
