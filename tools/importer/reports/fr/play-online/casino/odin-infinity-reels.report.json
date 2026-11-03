@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/odin-infinity-reels.html",
+  "path": "fr/play-online/casino/odin-infinity-reels",
+  "timestamp": "2026-11-03T19:34:48.576Z",
+  "title": "Odin Infinity Reels",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/video-lottery/egyptian-sevens.html",
+  "path": "fr/our-games/video-lottery/egyptian-sevens",
+  "timestamp": "2026-11-03T17:50:18.591Z",
+  "title": "Egyptian Sevens",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

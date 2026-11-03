@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/video-lottery/cash-m-if-you-can.html",
+  "path": "fr/our-games/video-lottery/cash-m-if-you-can",
+  "timestamp": "2026-11-03T17:40:15.876Z",
+  "title": "Cash'M If You Can",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

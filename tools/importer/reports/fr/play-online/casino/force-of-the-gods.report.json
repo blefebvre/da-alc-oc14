@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/force-of-the-gods.html",
+  "path": "fr/play-online/casino/force-of-the-gods",
+  "timestamp": "2026-11-03T20:03:11.344Z",
+  "title": "Force of the Gods",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

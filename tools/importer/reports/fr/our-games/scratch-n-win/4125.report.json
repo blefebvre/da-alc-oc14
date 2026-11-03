@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/scratch-n-win/4125.html",
+  "path": "fr/our-games/scratch-n-win/4125",
+  "timestamp": "2026-11-03T18:10:13.380Z",
+  "title": "Super Multiplicateur",
+  "template": "ticket-detail",
+  "blocks": [
+    "columns-ticket",
+    "accordion-bar"
+  ]
+}

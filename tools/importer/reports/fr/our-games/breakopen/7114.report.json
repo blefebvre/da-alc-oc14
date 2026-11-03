@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/breakopen/7114.html",
+  "path": "fr/our-games/breakopen/7114",
+  "timestamp": "2026-11-03T18:14:36.908Z",
+  "title": "Croisillons",
+  "template": "ticket-detail",
+  "blocks": [
+    "columns-ticket",
+    "accordion-bar"
+  ]
+}

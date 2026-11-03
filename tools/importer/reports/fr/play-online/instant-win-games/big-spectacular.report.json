@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/big-spectacular.html",
+  "path": "fr/play-online/instant-win-games/big-spectacular",
+  "timestamp": "2026-11-03T17:44:27.188Z",
+  "title": "Big Winner Spectacular",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

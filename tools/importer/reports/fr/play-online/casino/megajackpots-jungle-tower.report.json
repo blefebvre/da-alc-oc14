@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/megajackpots-jungle-tower.html",
+  "path": "fr/play-online/casino/megajackpots-jungle-tower",
+  "timestamp": "2026-11-03T19:12:01.391Z",
+  "title": "MegaJackpots Jungle Tower",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

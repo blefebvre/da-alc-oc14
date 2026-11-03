@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/treasure-hunt.html",
+  "path": "fr/play-online/casino/treasure-hunt",
+  "timestamp": "2026-11-03T19:19:19.770Z",
+  "title": "Treasure Hunt",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

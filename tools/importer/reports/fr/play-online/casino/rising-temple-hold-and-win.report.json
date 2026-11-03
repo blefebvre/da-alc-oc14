@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/rising-temple-hold-and-win.html",
+  "path": "fr/play-online/casino/rising-temple-hold-and-win",
+  "timestamp": "2026-11-03T19:54:47.084Z",
+  "title": "Rising Temple Hold & Win",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

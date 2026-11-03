@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/coin-trio-piggy-burst.html",
+  "path": "fr/play-online/casino/coin-trio-piggy-burst",
+  "timestamp": "2026-11-03T19:11:39.896Z",
+  "title": "Coin Trio Piggy Burst",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

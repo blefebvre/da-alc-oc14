@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/blazin-hot-7s-big-bonus.html",
+  "path": "fr/play-online/casino/blazin-hot-7s-big-bonus",
+  "timestamp": "2026-11-03T19:17:45.553Z",
+  "title": "Blazin Hot 7s Big Bonus",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

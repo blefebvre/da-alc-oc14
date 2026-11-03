@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/powerbucks-cleopatra-grand.html",
+  "path": "fr/play-online/casino/powerbucks-cleopatra-grand",
+  "timestamp": "2026-11-03T20:08:45.167Z",
+  "title": "Powerbucks Cleopatra Grand",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

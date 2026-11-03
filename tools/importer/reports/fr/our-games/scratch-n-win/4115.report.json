@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/scratch-n-win/4115.html",
+  "path": "fr/our-games/scratch-n-win/4115",
+  "timestamp": "2026-11-03T18:01:15.583Z",
+  "title": "Blowout D'Argent",
+  "template": "ticket-detail",
+  "blocks": [
+    "columns-ticket",
+    "accordion-bar"
+  ]
+}

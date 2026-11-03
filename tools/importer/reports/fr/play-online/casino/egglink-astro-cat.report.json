@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/egglink-astro-cat.html",
+  "path": "fr/play-online/casino/egglink-astro-cat",
+  "timestamp": "2026-11-03T20:18:43.387Z",
+  "title": "Egglink Astro Cat",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/the-wild-life-extreme.html",
+  "path": "fr/play-online/casino/the-wild-life-extreme",
+  "timestamp": "2026-11-03T20:01:37.141Z",
+  "title": "The Wild Life Extreme",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/spartacus-super-colossal-reels.html",
+  "path": "fr/play-online/casino/spartacus-super-colossal-reels",
+  "timestamp": "2026-11-03T18:30:13.874Z",
+  "title": "Spartacus Super Colossal Reels | Jeu de machine à sous de casino | Loto Atlantique",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

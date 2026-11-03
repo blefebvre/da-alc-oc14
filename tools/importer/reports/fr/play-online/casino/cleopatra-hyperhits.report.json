@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/cleopatra-hyperhits.html",
+  "path": "fr/play-online/casino/cleopatra-hyperhits",
+  "timestamp": "2026-11-03T20:22:43.746Z",
+  "title": "Cleopatra HyperHits",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

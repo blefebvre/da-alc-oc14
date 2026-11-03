@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/video-lottery/cherry-rain.html",
+  "path": "fr/our-games/video-lottery/cherry-rain",
+  "timestamp": "2026-11-03T17:40:49.673Z",
+  "title": "Cherry Rain",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

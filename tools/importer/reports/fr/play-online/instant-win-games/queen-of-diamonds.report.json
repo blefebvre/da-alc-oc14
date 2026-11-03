@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/queen-of-diamonds.html",
+  "path": "fr/play-online/instant-win-games/queen-of-diamonds",
+  "timestamp": "2026-11-03T17:57:40.952Z",
+  "title": "Queen of Diamonds",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

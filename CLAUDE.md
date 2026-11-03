@@ -85,5 +85,17 @@ Preview: https://main--da-alc-oc14--blefebvre.aem.page/ — content is previewed
   links to the same page in the other language.
 - Redirects: `build-redirects.cjs` covers both languages (alc.ca 302s mirrored for `/fr/...` too, French status
   checks in `data/unmigrated-status-fr.txt`).
+- French alias URLs often redirect to French slugs that are 404 on alc.ca (`self-exclusion` ->
+  `outils-pour-les-joueurs`): the redirects builder uses the English mapping for those, follows alias chains,
+  and lists the French-only dead slugs explicitly. A page that is an empty shell in English is treated as one in
+  French. French pages that link to an English page which exists in French are pointed at the French page
+  (`fix-links.cjs`).
+- The French fragments live in `/fr/`, so their images use `../images/` (root images folder);
+  `publish-to-da.sh` maps both forms to the DA images folder. New fragment images (`content/images/fr-*`) must be
+  uploaded to DA `images/` once (`POST https://admin.da.live/source/<org>/<repo>/images/<file>`).
+- Import status 2026-11-03: 1,311 French pages imported (homepage, 979 games, 103 tickets, 94 VLT, 135 content);
+  1,274 have the same block structure as their English page, the rest differ because alc.ca differs (e.g. the
+  French Astro Portals page has no "Have you tried" rail). 4 French pages are empty / soft-404 on alc.ca and are
+  shells.
 - Found while inventorying French: 37 live English pages (31 casino games, others) were not in the original
   catalog and are now in the English URL lists.

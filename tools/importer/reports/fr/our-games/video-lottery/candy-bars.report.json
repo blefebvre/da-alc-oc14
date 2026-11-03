@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/video-lottery/candy-bars.html",
+  "path": "fr/our-games/video-lottery/candy-bars",
+  "timestamp": "2026-11-03T17:45:17.577Z",
+  "title": "Candy Bars",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

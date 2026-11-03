@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/scratch-n-win/3404.html",
+  "path": "fr/our-games/scratch-n-win/3404",
+  "timestamp": "2026-11-03T18:11:26.304Z",
+  "title": "70s",
+  "template": "ticket-detail",
+  "blocks": [
+    "columns-ticket",
+    "accordion-bar"
+  ]
+}

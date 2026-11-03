@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/dragons-of-the-north.html",
+  "path": "fr/play-online/casino/dragons-of-the-north",
+  "timestamp": "2026-11-03T20:06:20.272Z",
+  "title": "Dragons of the North",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

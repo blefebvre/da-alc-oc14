@@ -8,7 +8,8 @@ const seg = (s) => decodeURIComponent(s).toLowerCase().normalize('NFD').replace(
   .replace(/[^a-z0-9]+/g, '-')
   .replace(/^-|-$/g, '');
 const target = (pathname) => {
-  const p = pathname.replace(/^\/content\/alc/, '').replace(/\/$/, '').replace(/\.html?$/, '');
+  // (alc.ca sometimes redirects to "x.html.html")
+  const p = pathname.replace(/^\/content\/alc/, '').replace(/\/$/, '').replace(/(\.html?)+$/, '');
   if (p === '' || p === '/en') return '/';
   if (p === '/fr') return '/fr/';
   return `/${p.split('/').filter(Boolean).map(seg).join('/')}`;
@@ -48,7 +49,9 @@ const walk = (d, o = []) => {
   return o;
 };
 const shells = new Set((fs.existsSync('tools/importer/data/empty-shells.txt')
-  ? fs.readFileSync('tools/importer/data/empty-shells.txt', 'utf8').split('\n').filter(Boolean) : []).map((s) => `/${s}`));
+  ? fs.readFileSync('tools/importer/data/empty-shells.txt', 'utf8').split('\n').filter(Boolean) : [])
+  // a page that is an empty shell in English is one in French too (not imported in French)
+  .flatMap((s) => (s.startsWith('en/') ? [s, `fr/${s.slice(3)}`] : [s])).map((s) => `/${s}`));
 const migrated = new Set(walk('content').map((f) => `/${path.relative('content', f).replace(/\.plain\.html$/, '')}`)
   .map((p) => (p === '/index' ? '/' : p)).map((p) => (p === '/fr/index' ? '/fr/' : p))
   .filter((p) => p !== '/en' && !shells.has(p)));
@@ -94,6 +97,14 @@ const SOURCE_REDIRECTS = {
   '/en/play-online/ibingo': '/en/our-games/lotto/salsa-bingo',
   '/en/promos/proline/proline-fall-multisport': '/en/promos/proline/fall-multisport',
   '/en/promos/funding': '/en/promos/funding2',
+  // French-only slugs of dead links
+  '/fr/corporate/playwise/connaissez-les-faits': '/fr/corporate/playwise/know-the-facts',
+  '/fr/promos/coasters/grande-reouverture-coasters': '/fr/our-games/coasters',
+  '/fr/promos/proligne/coup-denvoi-saison': '/fr/our-games/contests',
+  '/fr/promos/proline/proline-fall-multisport': '/fr/promos/proligne/multisport-automne',
+  // French alias targets that are 404 on alc.ca
+  '/fr/corporate/playwise/notre-promesse': '/fr/corporate/playwise/our-promise',
+  '/fr/corporate/playwise/outils-pour-les-joueurs': '/fr/corporate/playwise/player-tools',
 };
 // the same alc.ca redirects exist for the French pages
 const toFr = (p) => (p === '/' ? '/fr/' : p.replace(/^\/en\//, '/fr/'));
@@ -109,12 +120,26 @@ STATUS.forEach(([code, to, from]) => {
   const f = target(new URL(from).pathname);
   if (!SOURCE_REDIRECTS[f] && !migrated.has(f)) SOURCE_REDIRECTS[f] = target(new URL(to).pathname);
 });
+// French aliases often redirect to a French slug that is itself an alias (self-exclusion ->
+// outils-pour-les-joueurs): use the English mapping when the French target is not a migrated page
+Object.entries(SOURCE_REDIRECTS).forEach(([from, to]) => {
+  if (!from.startsWith('/en/')) return;
+  const frFrom = toFr(from);
+  const current = SOURCE_REDIRECTS[frFrom];
+  if (!current || (current !== '/fr/' && !migrated.has(current))) SOURCE_REDIRECTS[frFrom] = toFr(to);
+});
 // pages that are broken on alc.ca itself (404 / 500): send visitors to the nearest category page
 STATUS.forEach(([code, url]) => {
   if (!/^(404|500)$/.test(code) || !ALC_PAGE.test(url || '')) return;
   const { pathname } = new URL(url);
   const dest = categoryOf(target(pathname));
   [target(pathname), pathname, pathname.replace(/\.html?$/, '')].forEach((s2) => add(s2, dest));
+});
+// follow alias chains (French slug -> French slug -> page)
+Object.keys(SOURCE_REDIRECTS).forEach((from) => {
+  let to = SOURCE_REDIRECTS[from];
+  for (let i = 0; i < 5 && SOURCE_REDIRECTS[to] && !migrated.has(to); i += 1) to = SOURCE_REDIRECTS[to];
+  SOURCE_REDIRECTS[from] = to;
 });
 Object.entries(SOURCE_REDIRECTS).forEach(([from, to]) => {
   const alc = to === '/fr/' ? 'https://www.alc.ca/content/alc/fr.html' : `https://www.alc.ca/content/alc${to}.html`;

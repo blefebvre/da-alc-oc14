@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/bravo-mission-first-strike.html",
+  "path": "fr/play-online/casino/bravo-mission-first-strike",
+  "timestamp": "2026-11-03T20:13:39.111Z",
+  "title": "Bravo Mission First Strike",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

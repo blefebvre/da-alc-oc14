@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/wild-cat-multiplier-jackpots.html",
+  "path": "fr/play-online/instant-win-games/wild-cat-multiplier-jackpots",
+  "timestamp": "2026-11-03T17:42:06.448Z",
+  "title": "Wild Cat Multiplier Jackpots",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

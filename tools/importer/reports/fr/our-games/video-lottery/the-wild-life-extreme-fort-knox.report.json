@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/video-lottery/the-wild-life-extreme-fort-knox.html",
+  "path": "fr/our-games/video-lottery/the-wild-life-extreme-fort-knox",
+  "timestamp": "2026-11-03T17:52:15.683Z",
+  "title": "The Wild Life Extreme Fort Knox",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

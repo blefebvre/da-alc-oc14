@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/hot-hot-blazing-lock.html",
+  "path": "fr/play-online/casino/hot-hot-blazing-lock",
+  "timestamp": "2026-11-03T20:21:29.095Z",
+  "title": "Hot Hot Blazing Lock",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

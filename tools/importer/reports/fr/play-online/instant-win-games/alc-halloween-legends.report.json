@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/alc-halloween-legends.html",
+  "path": "fr/play-online/instant-win-games/alc-halloween-legends",
+  "timestamp": "2026-11-03T19:29:20.787Z",
+  "title": "Légendes de l'Halloween | Jeux de hasard en ligne au Canada atlantique | ALC",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/video-lottery/huff-n-puff.html",
+  "path": "fr/our-games/video-lottery/huff-n-puff",
+  "timestamp": "2026-11-03T17:53:10.276Z",
+  "title": "Huff N Puff",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

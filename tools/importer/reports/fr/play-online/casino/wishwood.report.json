@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/wishwood.html",
+  "path": "fr/play-online/casino/wishwood",
+  "timestamp": "2026-11-03T18:20:13.648Z",
+  "title": "Wishwood | Jeu de machine à sous de casino | Loto Atlantique",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

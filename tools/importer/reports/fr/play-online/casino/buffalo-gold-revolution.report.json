@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/buffalo-gold-revolution.html",
+  "path": "fr/play-online/casino/buffalo-gold-revolution",
+  "timestamp": "2026-11-03T19:18:35.198Z",
+  "title": "Buffalo Gold Revolution",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

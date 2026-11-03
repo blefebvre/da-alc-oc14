@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/3-pot-surge.html",
+  "path": "fr/play-online/casino/3-pot-surge",
+  "timestamp": "2026-11-03T19:16:30.856Z",
+  "title": "3 Pot Surge",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/scratch-n-win/3409.html",
+  "path": "fr/our-games/scratch-n-win/3409",
+  "timestamp": "2026-11-03T18:11:59.274Z",
+  "title": "Boule$ de Neige",
+  "template": "ticket-detail",
+  "blocks": [
+    "columns-ticket",
+    "accordion-bar"
+  ]
+}

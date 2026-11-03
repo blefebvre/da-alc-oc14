@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/scratch-n-win/3373.html",
+  "path": "fr/our-games/scratch-n-win/3373",
+  "timestamp": "2026-11-03T18:03:56.583Z",
+  "title": "Mega 360",
+  "template": "ticket-detail",
+  "blocks": [
+    "columns-ticket",
+    "accordion-bar"
+  ]
+}

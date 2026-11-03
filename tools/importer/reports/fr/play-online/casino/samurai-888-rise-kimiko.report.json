@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/samurai-888-rise-kimiko.html",
+  "path": "fr/play-online/casino/samurai-888-rise-kimiko",
+  "timestamp": "2026-11-03T19:15:02.004Z",
+  "title": "Samurai 888 Rise Kimiko",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

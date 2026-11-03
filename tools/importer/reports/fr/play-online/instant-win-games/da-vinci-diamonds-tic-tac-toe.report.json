@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/da-vinci-diamonds-tic-tac-toe.html",
+  "path": "fr/play-online/instant-win-games/da-vinci-diamonds-tic-tac-toe",
+  "timestamp": "2026-11-03T18:11:31.502Z",
+  "title": "Da Vinci Diamonds Tic Tac Toe | Jeux de hasard en ligne au Canada atlantique | ALC",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

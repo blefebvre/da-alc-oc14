@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/video-lottery/big-city-5s-keno.html",
+  "path": "fr/our-games/video-lottery/big-city-5s-keno",
+  "timestamp": "2026-11-03T17:52:24.903Z",
+  "title": "Big City 5's Keno",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

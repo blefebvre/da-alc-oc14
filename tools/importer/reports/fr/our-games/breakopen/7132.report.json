@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/breakopen/7132.html",
+  "path": "fr/our-games/breakopen/7132",
+  "timestamp": "2026-11-03T18:17:23.877Z",
+  "title": "Menthe poivrée",
+  "template": "ticket-detail",
+  "blocks": [
+    "columns-ticket",
+    "accordion-bar"
+  ]
+}

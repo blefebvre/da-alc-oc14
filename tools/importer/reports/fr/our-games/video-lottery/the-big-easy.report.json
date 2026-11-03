@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/video-lottery/the-big-easy.html",
+  "path": "fr/our-games/video-lottery/the-big-easy",
+  "timestamp": "2026-11-03T17:40:32.275Z",
+  "title": "The Big Easy",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

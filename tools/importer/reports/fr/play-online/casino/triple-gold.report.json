@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/triple-gold.html",
+  "path": "fr/play-online/casino/triple-gold",
+  "timestamp": "2026-11-03T19:01:45.771Z",
+  "title": "Triple Gold",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

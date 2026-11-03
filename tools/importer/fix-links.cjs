@@ -44,6 +44,9 @@ const fix = (href, fromFr) => {
     const p = `/${m[1]}/play-online/${m[2]}/${m[3].toLowerCase()}`;
     return pages.has(p) ? p : href;
   }
+  // relative app-screen links on alc.ca (e.g. "mobile/fr/my-account/my-limits")
+  m = amp.match(/^(?:mobile\/)?(en|fr)\/(my-account\/[^?#]*)(.*)$/);
+  if (m) return `https://www.alc.ca/content/alc/${m[1]}/${m[2]}.html${m[3]}`.replace(/&/g, '&amp;');
   if (!amp.startsWith('/') || amp.startsWith('//')) return href;
   const [, p, rest] = amp.match(/^([^?#]*)(.*)$/);
   // French pages linking to an English page (alc.ca does this, e.g. the homepage mobile banner):
@@ -56,7 +59,7 @@ const fix = (href, fromFr) => {
   // (empty-shell pages have a content file but redirect to their category page)
   if ((pages.has(p) && !redirects.has(p)) || p === '/') return href;
   // ".htm" links that the importer turned into a "-htm" segment
-  if (/-htm$/.test(p) && pages.has(p.replace(/-htm$/, ''))) return `${p.replace(/-htm$/, '')}${rest}`;
+  if (/-html?$/.test(p) && pages.has(p.replace(/-html?$/, ''))) return `${p.replace(/-html?$/, '')}${rest}`;
   if (APP_ONLY.test(p)) return `https://www.alc.ca/content/alc${p}.html${rest}`;
   const dest = resolve(p);
   if (dest === p) return href;

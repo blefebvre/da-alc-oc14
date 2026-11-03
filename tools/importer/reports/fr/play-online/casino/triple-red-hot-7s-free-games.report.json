@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/triple-red-hot-7s-free-games.html",
+  "path": "fr/play-online/casino/triple-red-hot-7s-free-games",
+  "timestamp": "2026-11-03T19:33:12.902Z",
+  "title": "Triple Red Hot 7s Free Games",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

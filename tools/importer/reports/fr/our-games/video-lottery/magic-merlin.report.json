@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/video-lottery/magic-merlin.html",
+  "path": "fr/our-games/video-lottery/magic-merlin",
+  "timestamp": "2026-11-03T17:41:46.090Z",
+  "title": "Magic Merlin",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

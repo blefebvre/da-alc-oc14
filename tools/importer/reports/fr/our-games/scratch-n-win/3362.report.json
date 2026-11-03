@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/scratch-n-win/3362.html",
+  "path": "fr/our-games/scratch-n-win/3362",
+  "timestamp": "2026-11-03T17:58:50.181Z",
+  "title": "2X BLITZ",
+  "template": "ticket-detail",
+  "blocks": [
+    "columns-ticket",
+    "accordion-bar"
+  ]
+}

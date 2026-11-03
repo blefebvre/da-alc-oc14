@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/powerbucks-wheel-of-fortune-hawaiian-getaway.html",
+  "path": "fr/play-online/casino/powerbucks-wheel-of-fortune-hawaiian-getaway",
+  "timestamp": "2026-11-03T18:53:19.602Z",
+  "title": "POWERBUCK$ Wheel of Fortune Hawaiian Getaway | Jeu de gros lot de casino | Loto Atlantique",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

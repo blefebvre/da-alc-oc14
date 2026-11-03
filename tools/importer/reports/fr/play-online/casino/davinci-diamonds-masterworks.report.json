@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/davinci-diamonds-masterworks.html",
+  "path": "fr/play-online/casino/davinci-diamonds-masterworks",
+  "timestamp": "2026-11-03T18:19:03.949Z",
+  "title": "DaVinci Diamonds Masterworks | Jeu de machine à sous de casino | Loto Atlantique",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

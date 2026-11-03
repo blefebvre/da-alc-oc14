@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/blackjack-lucky-lucky-lucky-ladies-and-buster-blackjack.html",
+  "path": "fr/play-online/casino/blackjack-lucky-lucky-lucky-ladies-and-buster-blackjack",
+  "timestamp": "2026-11-03T20:03:44.663Z",
+  "title": "Blackjack Lucky Lucky, Lucky Ladies and Buster Blackjack",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

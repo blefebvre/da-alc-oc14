@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/scratch-n-win/3389.html",
+  "path": "fr/our-games/scratch-n-win/3389",
+  "timestamp": "2026-11-03T18:07:41.578Z",
+  "title": "Fortune Chanceuse",
+  "template": "ticket-detail",
+  "blocks": [
+    "columns-ticket",
+    "accordion-bar"
+  ]
+}

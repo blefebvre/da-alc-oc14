@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/quick-hit-ultra-pays-wolf-mountain.html",
+  "path": "fr/play-online/casino/quick-hit-ultra-pays-wolf-mountain",
+  "timestamp": "2026-11-03T19:40:29.438Z",
+  "title": "Quick Hit Ultra Pays Wolf Mountain",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

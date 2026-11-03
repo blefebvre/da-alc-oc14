@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/scratch-n-win/3388.html",
+  "path": "fr/our-games/scratch-n-win/3388",
+  "timestamp": "2026-11-03T18:05:45.676Z",
+  "title": "Explosion de Fruits",
+  "template": "ticket-detail",
+  "blocks": [
+    "columns-ticket",
+    "accordion-bar"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/game-king.html",
+  "path": "fr/play-online/casino/game-king",
+  "timestamp": "2026-11-03T18:45:54.673Z",
+  "title": "Game King | Jeu de vidéo poker de casino | Loto Atlantique",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/scratch-n-win/3333.html",
+  "path": "fr/our-games/scratch-n-win/3333",
+  "timestamp": "2026-11-03T17:56:50.975Z",
+  "title": "Mots Cachés Supreme",
+  "template": "ticket-detail",
+  "blocks": [
+    "columns-ticket",
+    "accordion-bar"
+  ]
+}

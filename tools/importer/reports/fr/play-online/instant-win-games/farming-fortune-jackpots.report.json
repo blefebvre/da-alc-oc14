@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/farming-fortune-jackpots.html",
+  "path": "fr/play-online/instant-win-games/farming-fortune-jackpots",
+  "timestamp": "2026-11-03T17:57:53.090Z",
+  "title": "Farming Fortune Jackpots",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

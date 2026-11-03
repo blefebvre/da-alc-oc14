@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/gold-fish-feeding-time-treasure.html",
+  "path": "fr/play-online/casino/gold-fish-feeding-time-treasure",
+  "timestamp": "2026-11-03T19:36:13.789Z",
+  "title": "Gold Fish Feeding Time Treasure | Jeu de machine à sous de casino | Loto Atlantique",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

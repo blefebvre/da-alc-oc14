@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/deal-or-no-deal-keno-fortune-box.html",
+  "path": "fr/play-online/casino/deal-or-no-deal-keno-fortune-box",
+  "timestamp": "2026-11-03T19:37:13.433Z",
+  "title": "Deal or No Deal Keno Fortune Box",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

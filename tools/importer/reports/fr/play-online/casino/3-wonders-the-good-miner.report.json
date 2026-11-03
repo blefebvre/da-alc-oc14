@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/3-wonders-the-good-miner.html",
+  "path": "fr/play-online/casino/3-wonders-the-good-miner",
+  "timestamp": "2026-11-03T19:32:53.294Z",
+  "title": "3 Wonders The Good Miner",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

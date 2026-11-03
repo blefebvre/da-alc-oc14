@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/super-dragon.html",
+  "path": "fr/play-online/casino/super-dragon",
+  "timestamp": "2026-11-03T19:24:14.191Z",
+  "title": "Super Dragon",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

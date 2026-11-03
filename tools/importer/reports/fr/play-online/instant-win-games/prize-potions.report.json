@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/prize-potions.html",
+  "path": "fr/play-online/instant-win-games/prize-potions",
+  "timestamp": "2026-11-03T17:47:13.700Z",
+  "title": "Prize Potions",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

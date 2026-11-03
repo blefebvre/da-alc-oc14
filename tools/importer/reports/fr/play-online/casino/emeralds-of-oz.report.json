@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/emeralds-of-oz.html",
+  "path": "fr/play-online/casino/emeralds-of-oz",
+  "timestamp": "2026-11-03T20:31:42.002Z",
+  "title": "Emeralds of Oz",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

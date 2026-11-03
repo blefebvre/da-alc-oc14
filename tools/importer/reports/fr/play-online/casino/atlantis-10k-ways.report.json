@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/atlantis-10k-ways.html",
+  "path": "fr/play-online/casino/atlantis-10k-ways",
+  "timestamp": "2026-11-03T19:30:13.896Z",
+  "title": "Atlantis 10k Ways",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

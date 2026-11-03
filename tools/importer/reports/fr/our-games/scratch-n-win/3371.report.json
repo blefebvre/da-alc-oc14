@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/scratch-n-win/3371.html",
+  "path": "fr/our-games/scratch-n-win/3371",
+  "timestamp": "2026-11-03T18:04:07.877Z",
+  "title": "Bingo",
+  "template": "ticket-detail",
+  "blocks": [
+    "columns-ticket",
+    "accordion-bar"
+  ]
+}

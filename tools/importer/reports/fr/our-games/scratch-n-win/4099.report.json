@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/scratch-n-win/4099.html",
+  "path": "fr/our-games/scratch-n-win/4099",
+  "timestamp": "2026-11-03T17:58:27.375Z",
+  "title": "Gagnant à Vie",
+  "template": "ticket-detail",
+  "blocks": [
+    "columns-ticket",
+    "accordion-bar"
+  ]
+}

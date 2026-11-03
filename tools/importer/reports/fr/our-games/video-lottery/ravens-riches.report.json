@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/video-lottery/ravens-riches.html",
+  "path": "fr/our-games/video-lottery/ravens-riches",
+  "timestamp": "2026-11-03T17:51:09.252Z",
+  "title": "Ravens Riches",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

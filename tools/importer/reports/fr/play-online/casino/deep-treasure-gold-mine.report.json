@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/deep-treasure-gold-mine.html",
+  "path": "fr/play-online/casino/deep-treasure-gold-mine",
+  "timestamp": "2026-11-03T19:27:55.487Z",
+  "title": "Deep Treasure Gold Mine",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

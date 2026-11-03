@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/mystery-block-instants.html",
+  "path": "fr/play-online/instant-win-games/mystery-block-instants",
+  "timestamp": "2026-11-03T17:41:44.396Z",
+  "title": "Mystery in Moneytown",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

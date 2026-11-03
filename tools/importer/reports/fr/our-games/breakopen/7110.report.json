@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/breakopen/7110.html",
+  "path": "fr/our-games/breakopen/7110",
+  "timestamp": "2026-11-03T18:15:01.303Z",
+  "title": "Boni 10 Barre",
+  "template": "ticket-detail",
+  "blocks": [
+    "columns-ticket",
+    "accordion-bar"
+  ]
+}

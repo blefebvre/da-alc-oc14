@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/jokrz-wild-jackpot.html",
+  "path": "fr/play-online/casino/jokrz-wild-jackpot",
+  "timestamp": "2026-11-03T20:15:45.179Z",
+  "title": "Jokrz Wild Jackpot",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

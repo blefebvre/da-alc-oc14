@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/megajackpots-ocean-spirit.html",
+  "path": "fr/play-online/casino/megajackpots-ocean-spirit",
+  "timestamp": "2026-11-03T19:32:28.222Z",
+  "title": "MegaJackpots Ocean Spirit",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

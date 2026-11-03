@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/live-blackjack.html",
+  "path": "fr/play-online/casino/live-blackjack",
+  "timestamp": "2026-11-03T20:06:37.522Z",
+  "title": "Live Blackjack",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

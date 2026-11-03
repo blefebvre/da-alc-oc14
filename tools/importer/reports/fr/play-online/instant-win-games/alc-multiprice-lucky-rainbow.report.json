@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/alc-multiprice-lucky-rainbow.html",
+  "path": "fr/play-online/instant-win-games/alc-multiprice-lucky-rainbow",
+  "timestamp": "2026-11-03T18:16:53.265Z",
+  "title": "Arc-en-ciel chanceux | Jeux de hasard en ligne au Canada atlantique | ALC",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

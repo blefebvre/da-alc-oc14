@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/video-lottery/pick-em-poker.html",
+  "path": "fr/our-games/video-lottery/pick-em-poker",
+  "timestamp": "2026-11-03T17:39:06.471Z",
+  "title": "Pick'Em Poker",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

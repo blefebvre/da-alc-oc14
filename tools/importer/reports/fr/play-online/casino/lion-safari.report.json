@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/lion-safari.html",
+  "path": "fr/play-online/casino/lion-safari",
+  "timestamp": "2026-11-03T20:05:37.195Z",
+  "title": "Lion Safari",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/icy-wilds.html",
+  "path": "fr/play-online/casino/icy-wilds",
+  "timestamp": "2026-11-03T19:17:57.901Z",
+  "title": "Icy Wilds | Jeu de machine à sous de casino | Loto Atlantique",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

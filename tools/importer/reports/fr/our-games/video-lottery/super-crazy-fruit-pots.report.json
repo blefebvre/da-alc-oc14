@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/video-lottery/super-crazy-fruit-pots.html",
+  "path": "fr/our-games/video-lottery/super-crazy-fruit-pots",
+  "timestamp": "2026-11-03T17:43:02.668Z",
+  "title": "Super Crazy Fruit Pots",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

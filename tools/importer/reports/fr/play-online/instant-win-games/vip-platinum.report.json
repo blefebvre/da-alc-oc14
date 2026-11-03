@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/vip-platinum.html",
+  "path": "fr/play-online/instant-win-games/vip-platinum",
+  "timestamp": "2026-11-03T17:53:05.178Z",
+  "title": "VIP Platinum",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

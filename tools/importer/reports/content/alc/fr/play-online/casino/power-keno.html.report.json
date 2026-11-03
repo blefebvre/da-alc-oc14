@@ -1,0 +1,8 @@
+{
+  "status": "failed",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/power-keno.html",
+  "path": "content/alc/fr/play-online/casino/power-keno.html",
+  "timestamp": "2026-11-03T20:28:44.794Z",
+  "error": "page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://www.alc.ca/content/alc/fr/play-online/casino/power-keno.html\", waiting until \"domcontentloaded\"\n",
+  "errorStack": "page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://www.alc.ca/content/alc/fr/play-online/casino/power-keno.html\", waiting until \"domcontentloaded\"\n\n    at processUrl (/home/node/.excat-marketplaces/excat-marketplace/excat/skills/excat-content-import/scripts/run-bulk-import.js:603:20)\n    at async main (/home/node/.excat-marketplaces/excat-marketplace/excat/skills/excat-content-import/scripts/run-bulk-import.js:950:22)"
+}

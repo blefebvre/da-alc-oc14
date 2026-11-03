@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/breakopen/7112.html",
+  "path": "fr/our-games/breakopen/7112",
+  "timestamp": "2026-11-03T18:14:25.901Z",
+  "title": "7's Enflammés",
+  "template": "ticket-detail",
+  "blocks": [
+    "columns-ticket",
+    "accordion-bar"
+  ]
+}

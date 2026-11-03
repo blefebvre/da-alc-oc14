@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/alc-rainbow-fortunes.html",
+  "path": "fr/play-online/instant-win-games/alc-rainbow-fortunes",
+  "timestamp": "2026-11-03T19:30:25.470Z",
+  "title": "fortunes de l'arc-en-ciel | Jeux de hasard en ligne au Canada atlantique | ALC",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

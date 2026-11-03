@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/money-megaways.html",
+  "path": "fr/play-online/casino/money-megaways",
+  "timestamp": "2026-11-03T20:31:44.878Z",
+  "title": "Money Megaways",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

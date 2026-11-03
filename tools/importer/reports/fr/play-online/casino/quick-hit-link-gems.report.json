@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/quick-hit-link-gems.html",
+  "path": "fr/play-online/casino/quick-hit-link-gems",
+  "timestamp": "2026-11-03T19:19:44.492Z",
+  "title": "Quick Hit Link Gems",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

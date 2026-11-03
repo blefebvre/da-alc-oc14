@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/fast-buck-lucky.html",
+  "path": "fr/play-online/instant-win-games/fast-buck-lucky",
+  "timestamp": "2026-11-03T19:32:14.890Z",
+  "title": "Fortune Facile | Jeux de hasard en ligne au Canada atlantique | ALC",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -221,7 +221,8 @@ def localize(html, text_map, href_map, img_map, link_text, missing):
             tag = tag.replace(f'src="{src}"', f'src="{local}"')
         if alt:
             tag = tag.replace(f'alt="{alt}"', f'alt="{tr(alt)}"')
-        return tag
+        # the French fragments live in /fr/: images are in the root images folder
+        return tag.replace('src="images/', 'src="../images/')
 
     for en_html, fr_html in HTML_FIXES:
         html = html.replace(en_html, fr_html)

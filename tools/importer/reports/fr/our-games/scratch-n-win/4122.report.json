@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/scratch-n-win/4122.html",
+  "path": "fr/our-games/scratch-n-win/4122",
+  "timestamp": "2026-11-03T18:10:38.990Z",
+  "title": "Extra Lignes Chanceuses",
+  "template": "ticket-detail",
+  "blocks": [
+    "columns-ticket",
+    "accordion-bar"
+  ]
+}

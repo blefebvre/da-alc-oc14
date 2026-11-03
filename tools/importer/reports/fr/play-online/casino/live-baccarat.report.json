@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/live-baccarat.html",
+  "path": "fr/play-online/casino/live-baccarat",
+  "timestamp": "2026-11-03T20:07:09.581Z",
+  "title": "Live Baccarat",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

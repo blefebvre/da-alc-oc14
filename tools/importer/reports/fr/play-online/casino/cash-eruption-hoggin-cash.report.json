@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/cash-eruption-hoggin-cash.html",
+  "path": "fr/play-online/casino/cash-eruption-hoggin-cash",
+  "timestamp": "2026-11-03T20:17:45.623Z",
+  "title": "Cash Eruption Hoggin Cash",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

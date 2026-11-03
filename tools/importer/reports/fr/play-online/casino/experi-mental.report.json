@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/experi-mental.html",
+  "path": "fr/play-online/casino/experi-mental",
+  "timestamp": "2026-11-03T20:21:43.570Z",
+  "title": "Experi Mental",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

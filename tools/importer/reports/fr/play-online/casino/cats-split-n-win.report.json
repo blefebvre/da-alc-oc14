@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/cats-split-n-win.html",
+  "path": "fr/play-online/casino/cats-split-n-win",
+  "timestamp": "2026-11-03T19:30:29.215Z",
+  "title": "Cats Split N Win",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

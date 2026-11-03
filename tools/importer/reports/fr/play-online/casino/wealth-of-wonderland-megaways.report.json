@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/wealth-of-wonderland-megaways.html",
+  "path": "fr/play-online/casino/wealth-of-wonderland-megaways",
+  "timestamp": "2026-11-03T19:58:20.267Z",
+  "title": "Wealth of Wonderland Megaways",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/regal-riches.html",
+  "path": "fr/play-online/casino/regal-riches",
+  "timestamp": "2026-11-03T19:39:45.258Z",
+  "title": "Regal Riches",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

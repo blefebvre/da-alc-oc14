@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/the-wild-life-clusters.html",
+  "path": "fr/play-online/instant-win-games/the-wild-life-clusters",
+  "timestamp": "2026-11-03T17:49:40.293Z",
+  "title": "The Wild Life Clusters",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

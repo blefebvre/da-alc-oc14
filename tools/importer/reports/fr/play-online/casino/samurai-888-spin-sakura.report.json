@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/samurai-888-spin-sakura.html",
+  "path": "fr/play-online/casino/samurai-888-spin-sakura",
+  "timestamp": "2026-11-03T19:58:35.908Z",
+  "title": "Samurai 888 Spin Sakura",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

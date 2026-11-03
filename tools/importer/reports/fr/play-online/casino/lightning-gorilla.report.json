@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/lightning-gorilla.html",
+  "path": "fr/play-online/casino/lightning-gorilla",
+  "timestamp": "2026-11-03T19:14:32.097Z",
+  "title": "Lightning Gorilla | Jeu de machine à sous de casino | Loto Atlantique",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

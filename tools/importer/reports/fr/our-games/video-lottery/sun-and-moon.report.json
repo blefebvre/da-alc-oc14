@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/video-lottery/sun-and-moon.html",
+  "path": "fr/our-games/video-lottery/sun-and-moon",
+  "timestamp": "2026-11-03T17:49:55.209Z",
+  "title": "Sun And Moon",
+  "template": "video-lottery-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails"
+  ]
+}

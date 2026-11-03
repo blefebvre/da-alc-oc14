@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/jade-king.html",
+  "path": "fr/play-online/casino/jade-king",
+  "timestamp": "2026-11-03T20:22:11.833Z",
+  "title": "Jade King",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

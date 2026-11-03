@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/alc-blackjack-6.html",
+  "path": "fr/play-online/casino/alc-blackjack-6",
+  "timestamp": "2026-11-03T20:11:46.976Z",
+  "title": "ALC Blackjack 6",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

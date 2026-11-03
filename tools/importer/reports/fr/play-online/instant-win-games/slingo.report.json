@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/slingo.html",
+  "path": "fr/play-online/instant-win-games/slingo",
+  "timestamp": "2026-11-03T19:34:46.392Z",
+  "title": "Jeux de lots instantanés | Gros Lot Slingo | Société des loteries de l'Atlantique",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

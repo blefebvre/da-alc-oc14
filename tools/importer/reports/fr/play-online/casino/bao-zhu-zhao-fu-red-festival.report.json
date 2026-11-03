@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino/bao-zhu-zhao-fu-red-festival.html",
+  "path": "fr/play-online/casino/bao-zhu-zhao-fu-red-festival",
+  "timestamp": "2026-11-03T19:24:06.075Z",
+  "title": "Bao Zhu Zhao Fu Red Festival",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}
