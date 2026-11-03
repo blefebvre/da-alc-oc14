@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/corporate/giving-back/where-the-money-goes.html",
+  "path": "fr/corporate/giving-back/where-the-money-goes",
+  "timestamp": "2026-11-03T17:31:56.692Z",
+  "title": "Où va l'argent?",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "columns-media"
+  ]
+}

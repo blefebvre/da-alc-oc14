@@ -19,7 +19,7 @@ const walk = (d, o = []) => {
 };
 const files = walk('content');
 const pages = new Set(files.map((f) => `/${path.relative('content', f).replace(/\.plain\.html$/, '')}`)
-  .map((p) => (p === '/index' ? '/' : p)));
+  .map((p) => (p === '/index' ? '/' : p)).map((p) => (p === '/fr/index' ? '/fr/' : p)));
 const APP_ONLY = /^\/en\/my-account(\/|$)/;
 
 const resolve = (p) => {
@@ -34,18 +34,25 @@ const resolve = (p) => {
   return cur;
 };
 
-const fix = (href) => {
+const fix = (href, fromFr) => {
   const amp = href.replace(/&amp;/g, '&');
   let m = amp.match(/^https?:\/\/www\.alc\.ca\/([^/@?#]+@[a-z0-9.-]+)$/i);
   if (m) return `mailto:${m[1]}`;
   if (/^https?:\/\/www\.alc\.ca\/?$/i.test(amp)) return '/';
-  m = amp.match(/^https?:\/\/www\.alc\.ca\/en\/(casino|instant-win-games)\/([a-z0-9-]+)\.html$/i);
-  if (m && m[2] !== 'game') {
-    const p = `/en/play-online/${m[1]}/${m[2].toLowerCase()}`;
+  m = amp.match(/^https?:\/\/www\.alc\.ca\/(en|fr)\/(casino|instant-win-games)\/([a-z0-9-]+)\.html$/i);
+  if (m && m[3] !== 'game') {
+    const p = `/${m[1]}/play-online/${m[2]}/${m[3].toLowerCase()}`;
     return pages.has(p) ? p : href;
   }
   if (!amp.startsWith('/') || amp.startsWith('//')) return href;
   const [, p, rest] = amp.match(/^([^?#]*)(.*)$/);
+  // French pages linking to an English page (alc.ca does this, e.g. the homepage mobile banner):
+  // use the French page when it exists
+  // (a bare "/" is the English toggle in the French nav: kept)
+  if (fromFr && p.startsWith('/en/')) {
+    const frPath = `/fr/${p.slice(4)}`;
+    if (pages.has(frPath)) return fix(`${frPath}${rest}`.replace(/&/g, '&amp;'), fromFr);
+  }
   // (empty-shell pages have a content file but redirect to their category page)
   if ((pages.has(p) && !redirects.has(p)) || p === '/') return href;
   // ".htm" links that the importer turned into a "-htm" segment
@@ -62,14 +69,15 @@ const fix = (href) => {
 let changed = 0;
 files.forEach((f) => {
   const src = fs.readFileSync(f, 'utf8');
+  const fromFr = path.relative('content', f).startsWith('fr/');
   const out = src.replace(/href="([^"]+)"/g, (all, h) => {
-    const n = fix(h);
+    const n = fix(h, fromFr);
     return n === h ? all : `href="${n}"`;
   });
   if (out !== src) {
     changed += 1;
-    const diff = [...src.matchAll(/href="([^"]+)"/g)].map((x) => x[1]).filter((h) => fix(h) !== h);
-    console.log(f, [...new Set(diff)].map((h) => `${h} -> ${fix(h)}`).join(' | ').slice(0, 300));
+    const diff = [...src.matchAll(/href="([^"]+)"/g)].map((x) => x[1]).filter((h) => fix(h, fromFr) !== h);
+    console.log(f, [...new Set(diff)].map((h) => `${h} -> ${fix(h, fromFr)}`).join(' | ').slice(0, 300));
     if (!DRY) fs.writeFileSync(f, out);
   }
 });

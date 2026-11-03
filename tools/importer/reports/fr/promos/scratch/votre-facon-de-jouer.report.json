@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/promos/scratch/votre-facon-de-jouer.html",
+  "path": "fr/promos/scratch/votre-facon-de-jouer",
+  "timestamp": "2026-11-03T17:06:58.659Z",
+  "title": "Scratch | Votre facon de jouer",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "cards-feature",
+    "columns-media"
+  ]
+}

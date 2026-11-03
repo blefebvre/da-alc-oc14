@@ -1,0 +1,24 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/corporate/about-atlantic-lottery/who-is-al/board-profiles.html",
+  "path": "fr/corporate/about-atlantic-lottery/who-is-al/board-profiles",
+  "timestamp": "2026-11-03T17:19:18.883Z",
+  "title": "conseil d'administration | Atlantic Lottery Corporation",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar"
+  ]
+}

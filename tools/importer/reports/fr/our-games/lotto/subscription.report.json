@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/lotto/subscription.html",
+  "path": "fr/our-games/lotto/subscription",
+  "timestamp": "2026-11-03T17:11:11.314Z",
+  "title": "Abonnements à des jeux | Société des loteries de l'Atlantique",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "accordion-bar",
+    "embed"
+  ]
+}

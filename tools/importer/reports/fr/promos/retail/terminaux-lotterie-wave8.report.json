@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/promos/retail/terminaux-lotterie-wave8.html",
+  "path": "fr/promos/retail/terminaux-lotterie-wave8",
+  "timestamp": "2026-11-03T17:06:24.957Z",
+  "title": "Terminaux de lotterie Wave 8",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "embed"
+  ]
+}

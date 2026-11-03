@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/corporate/about-atlantic-lottery/integrity-and-compliance.html",
+  "path": "fr/corporate/about-atlantic-lottery/integrity-and-compliance",
+  "timestamp": "2026-11-03T17:29:31.696Z",
+  "title": "Intégrité et conformité | Société des loteries de l'Atlantique",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "accordion-bar"
+  ]
+}

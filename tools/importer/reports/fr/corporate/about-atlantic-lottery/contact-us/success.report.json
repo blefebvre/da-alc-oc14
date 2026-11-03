@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/corporate/about-atlantic-lottery/contact-us/success.html",
+  "path": "fr/corporate/about-atlantic-lottery/contact-us/success",
+  "timestamp": "2026-11-03T17:31:34.996Z",
+  "title": "Confirmation",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "cards-feature",
+    "columns-contact"
+  ]
+}

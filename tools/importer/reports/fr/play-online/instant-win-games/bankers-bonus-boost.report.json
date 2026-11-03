@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/bankers-bonus-boost.html",
+  "path": "fr/play-online/instant-win-games/bankers-bonus-boost",
+  "timestamp": "2026-11-03T17:04:23.789Z",
+  "title": "Banker's Bonus Boost",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

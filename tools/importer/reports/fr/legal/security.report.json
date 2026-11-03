@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/legal/security.html",
+  "path": "fr/legal/security",
+  "timestamp": "2026-11-03T17:16:01.211Z",
+  "title": "Sécurité | Société des loteries de l'Atlantique",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "tabs-boxed"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/prospectors-gold-mine-run.html",
+  "path": "fr/play-online/instant-win-games/prospectors-gold-mine-run",
+  "timestamp": "2026-11-03T17:00:09.115Z",
+  "title": "Prospector's Gold Mine Run",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/promos/regles-des-jeux-lv.html",
+  "path": "fr/promos/regles-des-jeux-lv",
+  "timestamp": "2026-11-03T17:03:58.767Z",
+  "title": "Promotion | Regles des jeux lv",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/group-lottery-play.html",
+  "path": "fr/our-games/group-lottery-play",
+  "timestamp": "2026-11-03T17:14:13.111Z",
+  "title": "Jouer à la loterie en groupe | Société des loteries de l'Atlantique",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "accordion-bar"
+  ]
+}

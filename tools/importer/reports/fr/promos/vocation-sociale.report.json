@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/promos/vocation-sociale.html",
+  "path": "fr/promos/vocation-sociale",
+  "timestamp": "2026-11-03T17:07:35.911Z",
+  "title": "Vocation Sociale",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "cards-feature",
+    "accordion-bar",
+    "accordion-bar",
+    "embed"
+  ]
+}

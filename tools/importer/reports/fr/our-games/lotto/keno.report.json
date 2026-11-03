@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/lotto/keno.html",
+  "path": "fr/our-games/lotto/keno",
+  "timestamp": "2026-11-03T17:11:38.630Z",
+  "title": "Keno Atlantique | Numéros gagnants et renseignements | Loto Atlantique",
+  "template": "content-page",
+  "blocks": [
+    "accordion-bar"
+  ]
+}

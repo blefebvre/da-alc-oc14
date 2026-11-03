@@ -3022,6 +3022,7 @@ var CustomImportScript = (() => {
       const { document: document2, url, params } = payload;
       const main = document2.body;
       executeTransformers("beforeTransform", main, payload);
+      main.querySelectorAll("table").forEach((t) => t.setAttribute("data-alc-src-table", ""));
       const pageBlocks = findBlocksOnPage(document2, PAGE_TEMPLATE);
       pageBlocks.forEach((block) => {
         if (!block.element.parentNode) return;
@@ -3036,6 +3037,15 @@ var CustomImportScript = (() => {
           console.warn(`No parser found for block: ${block.name}`);
         }
       });
+      main.querySelectorAll("table[data-alc-src-table]").forEach((t) => {
+        if (!t.parentNode || t.parentElement && t.parentElement.closest("table")) return;
+        try {
+          parse9(t, { document: document2, url, params });
+        } catch (e) {
+          console.error("Failed to parse leftover table:", e);
+        }
+      });
+      main.querySelectorAll("[data-alc-src-table]").forEach((t) => t.removeAttribute("data-alc-src-table"));
       executeTransformers("afterTransform", main, payload);
       const hr = document2.createElement("hr");
       main.appendChild(hr);

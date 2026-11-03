@@ -29,7 +29,7 @@ walk('content').forEach((f) => {
 walk('content').forEach((f) => {
   const doc = path.relative('content', f).replace(/\.plain\.html$/, '');
   if (doc === 'en' || shells.has(doc)) return;
-  const p = doc === 'index' ? '/' : `/${doc}`;
+  const p = doc === 'index' ? '/' : `/${doc.replace(/(^|\/)index$/, '$1')}`;
   if (!targets.has(p)) targets.set(p, '(page)');
 });
 

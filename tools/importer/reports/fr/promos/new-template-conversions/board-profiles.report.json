@@ -1,0 +1,24 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/promos/new-template-conversions/board-profiles.html",
+  "path": "fr/promos/new-template-conversions/board-profiles",
+  "timestamp": "2026-11-03T17:07:24.113Z",
+  "title": "Board Profiles",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar"
+  ]
+}

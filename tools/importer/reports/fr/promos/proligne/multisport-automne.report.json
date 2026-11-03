@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/promos/proligne/multisport-automne.html",
+  "path": "fr/promos/proligne/multisport-automne",
+  "timestamp": "2026-11-03T17:05:20.064Z",
+  "title": "PRO•LINE Multi-Sport Autonome",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "cards-feature",
+    "embed",
+    "embed",
+    "embed"
+  ]
+}

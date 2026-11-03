@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/coasters.html",
+  "path": "fr/our-games/coasters",
+  "timestamp": "2026-11-03T17:13:50.931Z",
+  "title": "Coasters",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "cards-feature",
+    "cards-feature",
+    "columns-media",
+    "columns-media",
+    "columns-media",
+    "columns-media",
+    "accordion-bar"
+  ]
+}

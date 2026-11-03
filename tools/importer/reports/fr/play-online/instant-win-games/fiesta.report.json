@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/fiesta.html",
+  "path": "fr/play-online/instant-win-games/fiesta",
+  "timestamp": "2026-11-03T17:08:36.009Z",
+  "title": "Fiesta",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

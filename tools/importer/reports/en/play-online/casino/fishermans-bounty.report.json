@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/fishermans-bounty.html",
+  "path": "en/play-online/casino/fishermans-bounty",
+  "timestamp": "2026-11-03T16:54:51.009Z",
+  "title": "Fishermans Bounty",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

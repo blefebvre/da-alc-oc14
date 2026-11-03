@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/contests.html",
+  "path": "fr/our-games/contests",
+  "timestamp": "2026-11-03T17:15:03.567Z",
+  "title": "Concours et Promotions",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "columns-media",
+    "accordion-bar",
+    "accordion-bar"
+  ]
+}

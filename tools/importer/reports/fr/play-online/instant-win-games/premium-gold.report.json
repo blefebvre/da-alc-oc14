@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/premium-gold.html",
+  "path": "fr/play-online/instant-win-games/premium-gold",
+  "timestamp": "2026-11-03T17:00:34.561Z",
+  "title": "Premium Gold",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

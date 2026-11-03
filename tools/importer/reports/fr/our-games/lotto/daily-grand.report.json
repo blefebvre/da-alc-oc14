@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/lotto/daily-grand.html",
+  "path": "fr/our-games/lotto/daily-grand",
+  "timestamp": "2026-11-03T17:12:06.260Z",
+  "title": "Grand Vie | Numéros gagnants et renseignements | Loto Atlantique",
+  "template": "content-page",
+  "blocks": [
+    "accordion-bar"
+  ]
+}

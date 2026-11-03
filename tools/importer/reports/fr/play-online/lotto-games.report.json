@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/lotto-games.html",
+  "path": "fr/play-online/lotto-games",
+  "timestamp": "2026-11-03T17:08:35.253Z",
+  "title": "Jouer en ligne | Sélectionner un jeu | Société des loteries de l'Atlantique",
+  "template": "content-page",
+  "blocks": [
+    "cards-game"
+  ]
+}

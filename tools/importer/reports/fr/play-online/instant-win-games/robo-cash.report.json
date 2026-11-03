@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/robo-cash.html",
+  "path": "fr/play-online/instant-win-games/robo-cash",
+  "timestamp": "2026-11-03T17:29:17.472Z",
+  "title": "Robo Cash",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

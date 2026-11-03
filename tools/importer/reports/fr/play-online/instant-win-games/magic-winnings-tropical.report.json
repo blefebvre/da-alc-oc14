@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/magic-winnings-tropical.html",
+  "path": "fr/play-online/instant-win-games/magic-winnings-tropical",
+  "timestamp": "2026-11-03T17:16:12.557Z",
+  "title": "Magic Winnings Tropical",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

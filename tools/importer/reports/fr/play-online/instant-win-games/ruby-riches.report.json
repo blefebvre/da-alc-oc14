@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/ruby-riches.html",
+  "path": "fr/play-online/instant-win-games/ruby-riches",
+  "timestamp": "2026-11-03T17:02:43.524Z",
+  "title": "Ruby Riches",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

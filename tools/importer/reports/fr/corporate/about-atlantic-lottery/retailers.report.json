@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/corporate/about-atlantic-lottery/retailers.html",
+  "path": "fr/corporate/about-atlantic-lottery/retailers",
+  "timestamp": "2026-11-03T17:30:37.001Z",
+  "title": "Détaillants | Société des loteries de l'Atlantique",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "accordion-bar",
+    "tabs-boxed"
+  ]
+}

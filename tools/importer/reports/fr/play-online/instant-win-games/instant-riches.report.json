@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/instant-riches.html",
+  "path": "fr/play-online/instant-win-games/instant-riches",
+  "timestamp": "2026-11-03T17:00:46.579Z",
+  "title": "Instant Riches",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/testing/executive-profiles.html",
+  "path": "en/promos/new-template-conversions/testing/executive-profiles",
+  "timestamp": "2026-11-03T17:02:41.477Z",
+  "title": "Executive Profiles",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "columns-media",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar"
+  ]
+}

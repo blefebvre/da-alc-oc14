@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/legal/site-map.html",
+  "path": "fr/legal/site-map",
+  "timestamp": "2026-11-03T17:15:34.269Z",
+  "title": "Carte du site | Société des loteries de l'Atlantique",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner"
+  ]
+}

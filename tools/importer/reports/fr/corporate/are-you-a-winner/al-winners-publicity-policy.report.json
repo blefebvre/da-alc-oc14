@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/corporate/are-you-a-winner/al-winners-publicity-policy.html",
+  "path": "fr/corporate/are-you-a-winner/al-winners-publicity-policy",
+  "timestamp": "2026-11-03T17:17:02.567Z",
+  "title": "Politique de publicité de Loto Atlantique",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "tabs-boxed"
+  ]
+}

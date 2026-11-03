@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/corporate/are-you-a-winner/buying-and-checking-your-tickets.html",
+  "path": "fr/corporate/are-you-a-winner/buying-and-checking-your-tickets",
+  "timestamp": "2026-11-03T17:16:26.420Z",
+  "title": "Acheter et vérifier des billets | Société des loteries de l'Atlantique",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner"
+  ]
+}

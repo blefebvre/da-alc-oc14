@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/vip-elite.html",
+  "path": "fr/play-online/instant-win-games/vip-elite",
+  "timestamp": "2026-11-03T16:57:55.370Z",
+  "title": "VIP Elite",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

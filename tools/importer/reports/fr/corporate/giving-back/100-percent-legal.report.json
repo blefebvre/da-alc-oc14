@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/corporate/giving-back/100-percent-legal.html",
+  "path": "fr/corporate/giving-back/100-percent-legal",
+  "timestamp": "2026-11-03T17:32:31.866Z",
+  "title": "100 Percent Legal",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner"
+  ]
+}

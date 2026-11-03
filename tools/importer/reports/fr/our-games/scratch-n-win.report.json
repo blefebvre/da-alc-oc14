@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/scratch-n-win.html",
+  "path": "fr/our-games/scratch-n-win",
+  "timestamp": "2026-11-03T17:08:47.057Z",
+  "title": "Nos jeux | Billets Gagnez à la Grattouille | Société des loteries de l'Atlantique",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "cards-game"
+  ]
+}

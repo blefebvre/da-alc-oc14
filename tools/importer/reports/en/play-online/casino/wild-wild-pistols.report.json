@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/wild-wild-pistols.html",
+  "path": "en/play-online/casino/wild-wild-pistols",
+  "timestamp": "2026-11-03T17:00:42.565Z",
+  "title": "Wild Wild Pistols",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

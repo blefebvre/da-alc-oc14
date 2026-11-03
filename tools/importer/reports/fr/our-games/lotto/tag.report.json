@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/lotto/tag.html",
+  "path": "fr/our-games/lotto/tag",
+  "timestamp": "2026-11-03T17:12:20.327Z",
+  "title": "TAG | Numéros gagnants et renseignements | Loto Atlantique",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "accordion-bar"
+  ]
+}

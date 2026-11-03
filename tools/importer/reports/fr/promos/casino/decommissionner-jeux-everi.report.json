@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/promos/casino/decommissionner-jeux-everi.html",
+  "path": "fr/promos/casino/decommissionner-jeux-everi",
+  "timestamp": "2026-11-03T17:05:58.873Z",
+  "title": "Décommissionner Jeux Everi",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "cards-feature",
+    "cards-feature"
+  ]
+}

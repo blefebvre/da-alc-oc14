@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/corporate/giving-back/sponsorships.html",
+  "path": "fr/corporate/giving-back/sponsorships",
+  "timestamp": "2026-11-03T17:32:19.278Z",
+  "title": "Commandites",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "columns-media",
+    "accordion-bar"
+  ]
+}

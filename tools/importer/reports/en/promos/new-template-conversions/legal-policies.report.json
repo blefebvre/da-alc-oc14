@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/promos/new-template-conversions/legal-policies.html",
+  "path": "en/promos/new-template-conversions/legal-policies",
+  "timestamp": "2026-11-03T17:01:57.579Z",
+  "title": "Legal and Policies",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "cards-feature",
+    "cards-feature",
+    "cards-feature"
+  ]
+}

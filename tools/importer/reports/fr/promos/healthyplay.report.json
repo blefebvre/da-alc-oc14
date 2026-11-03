@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/promos/healthyplay.html",
+  "path": "fr/promos/healthyplay",
+  "timestamp": "2026-11-03T17:04:22.165Z",
+  "title": "Outils de jeu sain | Loto Atlantique",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "carousel-promo"
+  ]
+}

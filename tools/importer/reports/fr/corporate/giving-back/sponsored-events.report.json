@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/corporate/giving-back/sponsored-events.html",
+  "path": "fr/corporate/giving-back/sponsored-events",
+  "timestamp": "2026-11-03T17:32:46.194Z",
+  "title": "Initiatives communautaires  | Société des loteries de l'Atlantique",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "accordion-bar"
+  ]
+}

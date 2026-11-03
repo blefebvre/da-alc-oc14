@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/promos/casino/chute-de-lots-megavault-backup.html",
+  "path": "fr/promos/casino/chute-de-lots-megavault-backup",
+  "timestamp": "2026-11-03T17:05:34.426Z",
+  "title": "Chute de lots MegaVault",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "cards-feature",
+    "accordion-bar"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/video-lottery.html",
+  "path": "fr/our-games/video-lottery",
+  "timestamp": "2026-11-03T17:13:24.448Z",
+  "title": "Loterie vidéo",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "hero-banner",
+    "tabs-boxed",
+    "carousel-promo"
+  ]
+}

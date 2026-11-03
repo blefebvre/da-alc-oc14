@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/the-wolf-trail.html",
+  "path": "fr/play-online/instant-win-games/the-wolf-trail",
+  "timestamp": "2026-11-03T17:18:19.278Z",
+  "title": "The Wolf Trail",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

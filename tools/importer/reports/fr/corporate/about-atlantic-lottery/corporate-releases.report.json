@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/corporate/about-atlantic-lottery/corporate-releases.html",
+  "path": "fr/corporate/about-atlantic-lottery/corporate-releases",
+  "timestamp": "2026-11-03T17:19:34.752Z",
+  "title": "Communiqués au sujet de l'entreprise | Société des loteries de l'Atlantique",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner"
+  ]
+}

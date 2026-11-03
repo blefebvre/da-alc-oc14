@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/sushi-splash.html",
+  "path": "fr/play-online/instant-win-games/sushi-splash",
+  "timestamp": "2026-11-03T16:55:08.926Z",
+  "title": "Sushi Splash",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

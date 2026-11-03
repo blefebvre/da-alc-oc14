@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/atlantic-cash-depot.html",
+  "path": "fr/play-online/instant-win-games/atlantic-cash-depot",
+  "timestamp": "2026-11-03T16:57:09.757Z",
+  "title": "Atlantic Cash Depot",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

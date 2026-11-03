@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/double-green.html",
+  "path": "fr/play-online/instant-win-games/double-green",
+  "timestamp": "2026-11-03T16:57:32.758Z",
+  "title": "Double Green",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

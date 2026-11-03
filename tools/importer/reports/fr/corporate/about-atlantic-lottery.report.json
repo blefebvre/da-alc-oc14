@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/corporate/about-atlantic-lottery.html",
+  "path": "fr/corporate/about-atlantic-lottery",
+  "timestamp": "2026-11-03T17:18:41.756Z",
+  "title": "À propos de Loto Atlantique | Société des loteries de l'Atlantique",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner"
+  ]
+}

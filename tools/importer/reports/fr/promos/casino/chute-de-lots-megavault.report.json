@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/promos/casino/chute-de-lots-MegaVault.html",
+  "path": "fr/promos/casino/chute-de-lots-megavault",
+  "timestamp": "2026-11-03T17:05:47.054Z",
+  "title": "MegaVault Prize Drop",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "cards-feature",
+    "accordion-bar"
+  ]
+}

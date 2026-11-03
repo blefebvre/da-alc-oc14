@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/lotto/HitorMiss-coming-soon.html",
+  "path": "fr/our-games/lotto/hitormiss-coming-soon",
+  "timestamp": "2026-11-03T17:12:59.016Z",
+  "title": "HitorMiss-coming-soon",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "accordion-bar"
+  ]
+}

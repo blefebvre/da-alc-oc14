@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/promos/new2al.html",
+  "path": "fr/promos/new2al",
+  "timestamp": "2026-11-03T17:07:49.873Z",
+  "title": "Nouveau à LA",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "cards-feature",
+    "columns-media",
+    "accordion-bar",
+    "accordion-bar",
+    "tabs-boxed"
+  ]
+}

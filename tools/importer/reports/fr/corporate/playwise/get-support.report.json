@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/corporate/playwise/get-support.html",
+  "path": "fr/corporate/playwise/get-support",
+  "timestamp": "2026-11-03T17:18:21.026Z",
+  "title": "Obtenez de l’aide",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "cards-feature",
+    "columns-contact",
+    "columns-contact",
+    "accordion-bar"
+  ]
+}

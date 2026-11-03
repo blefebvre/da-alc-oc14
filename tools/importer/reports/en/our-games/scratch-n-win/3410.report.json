@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/our-games/scratch-n-win/3410.html",
+  "path": "en/our-games/scratch-n-win/3410",
+  "timestamp": "2026-11-03T17:01:29.357Z",
+  "title": "Crossword Deluxe",
+  "template": "ticket-detail",
+  "blocks": [
+    "columns-ticket",
+    "accordion-bar"
+  ]
+}

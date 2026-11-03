@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/wizard-of-all.html",
+  "path": "fr/play-online/instant-win-games/wizard-of-all",
+  "timestamp": "2026-11-03T17:02:31.858Z",
+  "title": "Wizard of All",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

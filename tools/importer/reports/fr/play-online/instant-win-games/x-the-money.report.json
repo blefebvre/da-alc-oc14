@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/x-the-money.html",
+  "path": "fr/play-online/instant-win-games/x-the-money",
+  "timestamp": "2026-11-03T17:01:40.465Z",
+  "title": "X the Money",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

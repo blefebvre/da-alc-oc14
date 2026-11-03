@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/red-shores.html",
+  "path": "fr/our-games/red-shores",
+  "timestamp": "2026-11-03T17:14:01.887Z",
+  "title": "Red Shores Hippodrome & Casino | Société des loteries de l'Atlantique",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "columns-media"
+  ]
+}

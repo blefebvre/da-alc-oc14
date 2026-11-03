@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/northern-wilds.html",
+  "path": "fr/play-online/instant-win-games/northern-wilds",
+  "timestamp": "2026-11-03T17:26:57.097Z",
+  "title": "Northern Wilds",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

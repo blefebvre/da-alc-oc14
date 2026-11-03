@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/mega360.html",
+  "path": "fr/our-games/mega360",
+  "timestamp": "2026-11-03T17:14:53.068Z",
+  "title": "Mega 360",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "cards-feature",
+    "embed",
+    "embed",
+    "embed",
+    "embed"
+  ]
+}

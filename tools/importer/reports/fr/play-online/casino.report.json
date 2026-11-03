@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/casino.html",
+  "path": "fr/play-online/casino",
+  "timestamp": "2026-11-03T17:08:08.063Z",
+  "title": "Casino",
+  "template": "content-page",
+  "blocks": [
+    "cards-game",
+    "carousel-promo"
+  ]
+}

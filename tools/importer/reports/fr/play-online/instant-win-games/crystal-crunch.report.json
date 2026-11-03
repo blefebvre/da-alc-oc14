@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/crystal-crunch.html",
+  "path": "fr/play-online/instant-win-games/crystal-crunch",
+  "timestamp": "2026-11-03T17:10:41.333Z",
+  "title": "Crystal Crunch",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/corporate/about-atlantic-lottery/supply-chain-management.html",
+  "path": "fr/corporate/about-atlantic-lottery/supply-chain-management",
+  "timestamp": "2026-11-03T17:30:28.381Z",
+  "title": "Gestion de la chaîne d'approvisionnement | Société des loteries de l'Atlantique",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner"
+  ]
+}

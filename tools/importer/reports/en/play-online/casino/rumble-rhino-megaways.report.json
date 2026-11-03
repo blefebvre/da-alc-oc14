@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/rumble-rhino-megaways.html",
+  "path": "en/play-online/casino/rumble-rhino-megaways",
+  "timestamp": "2026-11-03T16:58:38.651Z",
+  "title": "Rumble Rhino Megaways",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

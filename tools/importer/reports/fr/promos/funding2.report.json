@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/promos/funding2.html",
+  "path": "fr/promos/funding2",
+  "timestamp": "2026-11-03T17:04:11.013Z",
+  "title": "ALC Funding",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner"
+  ]
+}

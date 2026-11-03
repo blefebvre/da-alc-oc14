@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/outlaw.html",
+  "path": "fr/play-online/instant-win-games/outlaw",
+  "timestamp": "2026-11-03T17:29:01.211Z",
+  "title": "Outlaw",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

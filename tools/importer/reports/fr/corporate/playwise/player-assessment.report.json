@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/corporate/playwise/player-assessment.html",
+  "path": "fr/corporate/playwise/player-assessment",
+  "timestamp": "2026-11-03T17:17:23.214Z",
+  "title": "Évaluation du joueur",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "columns-media",
+    "columns-contact"
+  ]
+}

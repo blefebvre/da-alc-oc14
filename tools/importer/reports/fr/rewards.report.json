@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/rewards.html",
+  "path": "fr/rewards",
+  "timestamp": "2026-11-03T17:33:49.087Z",
+  "title": "Récompenses",
+  "template": "content-page",
+  "blocks": [
+    "accordion-bar",
+    "accordion-bar",
+    "tabs-boxed",
+    "embed"
+  ]
+}

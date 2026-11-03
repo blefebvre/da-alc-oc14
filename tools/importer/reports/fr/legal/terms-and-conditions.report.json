@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/legal/terms-and-conditions.html",
+  "path": "fr/legal/terms-and-conditions",
+  "timestamp": "2026-11-03T17:15:46.610Z",
+  "title": "Conditions générales | Société des loteries de l'Atlantique",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner"
+  ]
+}

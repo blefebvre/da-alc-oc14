@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/stallion-fortunes.html",
+  "path": "en/play-online/casino/stallion-fortunes",
+  "timestamp": "2026-11-03T16:59:42.050Z",
+  "title": "Stallion Fortunes",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

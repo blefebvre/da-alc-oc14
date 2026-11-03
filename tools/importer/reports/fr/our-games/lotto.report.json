@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/lotto.html",
+  "path": "fr/our-games/lotto",
+  "timestamp": "2026-11-03T17:09:15.969Z",
+  "title": "Jeux de loterie | Jeux de loterie au Canada | Loto Atlantique",
+  "template": "content-page",
+  "blocks": [
+    "cards-game"
+  ]
+}

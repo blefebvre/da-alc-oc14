@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/corporate/about-atlantic-lottery/contact-us.html",
+  "path": "fr/corporate/about-atlantic-lottery/contact-us",
+  "timestamp": "2026-11-03T17:31:21.563Z",
+  "title": "Communiquez avec nous",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "cards-feature",
+    "cards-feature",
+    "columns-contact"
+  ]
+}

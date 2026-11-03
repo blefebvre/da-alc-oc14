@@ -1,0 +1,21 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/corporate/about-atlantic-lottery/who-is-al/executive-profiles.html",
+  "path": "fr/corporate/about-atlantic-lottery/who-is-al/executive-profiles",
+  "timestamp": "2026-11-03T17:18:59.967Z",
+  "title": "Profils des cadres supérieurs | Société des loteries de l'Atlantique",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar"
+  ]
+}

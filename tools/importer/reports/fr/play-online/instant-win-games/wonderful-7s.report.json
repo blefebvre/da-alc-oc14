@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/wonderful-7s.html",
+  "path": "fr/play-online/instant-win-games/wonderful-7s",
+  "timestamp": "2026-11-03T17:17:50.949Z",
+  "title": "Wonderful 7s",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

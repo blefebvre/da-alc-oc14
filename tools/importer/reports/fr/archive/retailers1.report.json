@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/archive/retailers1.html",
+  "path": "fr/archive/retailers1",
+  "timestamp": "2026-11-03T17:34:00.503Z",
+  "title": "Détaillants | Société des loteries de l'Atlantique",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "accordion-bar",
+    "tabs-boxed"
+  ]
+}

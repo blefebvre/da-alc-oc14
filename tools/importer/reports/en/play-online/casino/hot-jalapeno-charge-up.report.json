@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/en/play-online/casino/hot-jalapeno-charge-up.html",
+  "path": "en/play-online/casino/hot-jalapeno-charge-up",
+  "timestamp": "2026-11-03T16:56:05.520Z",
+  "title": "Hot Jalapeno Charge Up",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

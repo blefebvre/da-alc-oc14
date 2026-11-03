@@ -10,6 +10,7 @@ const seg = (s) => decodeURIComponent(s).toLowerCase().normalize('NFD').replace(
 const toDoc = (pathname) => {
   const p = pathname.replace(/^\/content\/alc/, '').replace(/\/$/, '').replace(/\.html?$/, '');
   if (p === '' || p === '/en') return '/';
+  if (p === '/fr') return '/fr/';
   return `/${p.split('/').filter(Boolean).map(seg).join('/')}`;
 };
 const src = fs.readFileSync('tools/importer/transformers/alc-cleanup.js', 'utf8');
@@ -29,7 +30,7 @@ const walk = (d, o = []) => {
   return o;
 };
 const files = walk('content');
-const docOf = (f) => { const d = `/${path.relative('content', f).replace(/\.plain\.html$/, '')}`; return d === '/index' ? '/' : d; };
+const docOf = (f) => { const d = `/${path.relative('content', f).replace(/\.plain\.html$/, '')}`; if (d === '/fr/index') return '/fr/'; return d === '/index' ? '/' : d; };
 const imported = new Set(files.map(docOf).filter((d) => d !== '/en' && !shells.has(d)));
 
 const buckets = {}; // kind -> Map(target -> {refs:Set, example})

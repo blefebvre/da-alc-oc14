@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/cosmic-pop.html",
+  "path": "fr/play-online/instant-win-games/cosmic-pop",
+  "timestamp": "2026-11-03T17:02:05.559Z",
+  "title": "Cosmic Pop",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

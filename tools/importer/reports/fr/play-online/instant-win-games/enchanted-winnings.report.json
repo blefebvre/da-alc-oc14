@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/enchanted-winnings.html",
+  "path": "fr/play-online/instant-win-games/enchanted-winnings",
+  "timestamp": "2026-11-03T17:02:15.971Z",
+  "title": "Enchanted Winnings",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

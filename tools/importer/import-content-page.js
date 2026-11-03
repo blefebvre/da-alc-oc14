@@ -187,6 +187,10 @@ export default {
     // 1. beforeTransform (cleanup, section breaks)
     executeTransformers('beforeTransform', main, payload);
 
+    // Source data tables, so the ones no parser handled can become table blocks below
+    // (a bare <table> would otherwise become a block named after its first cell, e.g. "match")
+    main.querySelectorAll('table').forEach((t) => t.setAttribute('data-alc-src-table', ''));
+
     // 2. Find blocks on page
     const pageBlocks = findBlocksOnPage(document, PAGE_TEMPLATE);
 
@@ -204,6 +208,17 @@ export default {
         console.warn(`No parser found for block: ${block.name}`);
       }
     });
+
+    // 3b. Remaining source tables (lotto prize payouts, careers, release tables) -> table blocks
+    main.querySelectorAll('table[data-alc-src-table]').forEach((t) => {
+      if (!t.parentNode || (t.parentElement && t.parentElement.closest('table'))) return;
+      try {
+        tableParser(t, { document, url, params });
+      } catch (e) {
+        console.error('Failed to parse leftover table:', e);
+      }
+    });
+    main.querySelectorAll('[data-alc-src-table]').forEach((t) => t.removeAttribute('data-alc-src-table'));
 
     // 4. afterTransform (final cleanup, section metadata)
     executeTransformers('afterTransform', main, payload);

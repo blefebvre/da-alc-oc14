@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/corporate/are-you-a-winner/claiming-your-prize.html",
+  "path": "fr/corporate/are-you-a-winner/claiming-your-prize",
+  "timestamp": "2026-11-03T17:16:37.724Z",
+  "title": "Pour réclamer un lot | Société des loteries de l'Atlantique",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar"
+  ]
+}

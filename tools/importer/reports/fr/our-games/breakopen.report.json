@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/breakopen.html",
+  "path": "fr/our-games/breakopen",
+  "timestamp": "2026-11-03T17:13:36.478Z",
+  "title": "Nos jeux | Billets à languettes | Société des loteries de l'Atlantique",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "cards-game"
+  ]
+}

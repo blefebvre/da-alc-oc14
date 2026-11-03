@@ -27,7 +27,7 @@ while read -r path; do
   tmp="/tmp/da-upload-$$.html"
   { echo '<body><header></header><main>'; sed "s#src=\"images/#src=\"https://content.da.live/$ORG/$REPO/images/#g" "$src"; echo '</main><footer></footer></body>'; } > "$tmp"
   up=$(post "https://admin.da.live/source/$ORG/$REPO/$path.html" -F "data=@$tmp;type=text/html")
-  webpath="$path"; [ "$path" = "index" ] && webpath=""
+  webpath="$path"; [ "$path" = "index" ] && webpath=""; [[ "$path" == */index ]] && webpath="${path%index}"
   pv=$(post "https://admin.hlx.page/preview/$ORG/$REPO/main/$webpath")
   echo "$path upload=$up preview=$pv" >> "$LOG"
   if [[ "$up" == 2* && "$pv" == 2* ]]; then ok=$((ok + 1)); else fail=$((fail + 1)); fi

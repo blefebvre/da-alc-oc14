@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/promos/archived/other/20-ans-jeu-en-ligne.html",
+  "path": "fr/promos/archived/other/20-ans-jeu-en-ligne",
+  "timestamp": "2026-11-03T17:03:35.590Z",
+  "title": "20 ans jeu en ligne",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "cards-feature"
+  ]
+}

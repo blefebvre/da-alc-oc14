@@ -2,7 +2,7 @@ see @AGENTS.md
 
 # alc.ca migration notes
 
-Migration of https://www.alc.ca/content/alc/en.html (English only) to this DA project.
+Migration of https://www.alc.ca/content/alc/en.html (English, then French: see "French" below) to this DA project.
 Preview: https://main--da-alc-oc14--blefebvre.aem.page/ — content is previewed on aem.page only, never published live.
 
 ## URLs
@@ -26,7 +26,6 @@ Preview: https://main--da-alc-oc14--blefebvre.aem.page/ — content is previewed
   are purchase screens on alc.ca (`/en/play-online/lottomax` -> alc.ca game configurator). They intentionally
   redirect to alc.ca. The on-site info pages are `/en/our-games/lotto/*`. Accepted as-is.
 - PROLINE Stadium (`/en/our-games/proline`, `/en/play-online/proline/*`) is a separate alc.ca product: it stays on alc.ca.
-- French (`/fr`) is out of scope for now and goes to the live French site.
 - Assets (`/content/dam/...` PDFs and images) are linked from www.alc.ca, not copied.
 
 ## Templates and import
@@ -41,6 +40,9 @@ Preview: https://main--da-alc-oc14--blefebvre.aem.page/ — content is previewed
 - Publish: `tools/importer/publish-to-da.sh <paths-file> <log>` (DA upload + aem.page preview). Find pages missing
   or outdated on aem.page with `node tools/importer/preview-diff.mjs <out-file>`. Check links on aem.page with
   `node tools/importer/live-link-check.mjs`. Scripts write reports to `migration-work/` (local, not committed).
+- Content pages: source `<table>`s that no parser handles (lotto prize payouts in `.payout-tables`, careers, some
+  releases) are converted to `table` blocks at the end of `import-content-page.js`. Otherwise the importer turns
+  them into a block named after the first cell (e.g. "match"). Check for unknown block names after an import.
 - Empty shells on alc.ca (retired games / tickets, `tools/importer/data/empty-shells.txt`) are imported but never
   published. They redirect to their category page.
 

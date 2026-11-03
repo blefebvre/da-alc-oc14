@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/daily-streak-expander.html",
+  "path": "fr/play-online/instant-win-games/daily-streak-expander",
+  "timestamp": "2026-11-03T16:56:54.670Z",
+  "title": "Daily Streak Expander",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

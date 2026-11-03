@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/corporate/playwise/our-promise.html",
+  "path": "fr/corporate/playwise/our-promise",
+  "timestamp": "2026-11-03T17:18:33.714Z",
+  "title": "Notre promesse",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "columns-contact",
+    "tabs-boxed"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/high-stakes-hotel.html",
+  "path": "fr/play-online/instant-win-games/high-stakes-hotel",
+  "timestamp": "2026-11-03T17:09:59.153Z",
+  "title": "High Stakes Hotel",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

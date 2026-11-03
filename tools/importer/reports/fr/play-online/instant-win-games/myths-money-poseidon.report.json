@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/myths-money-poseidon.html",
+  "path": "fr/play-online/instant-win-games/myths-money-poseidon",
+  "timestamp": "2026-11-03T17:06:45.122Z",
+  "title": "Myths & Money: Poseidon",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

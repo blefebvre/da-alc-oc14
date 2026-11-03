@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/lotto/hitormiss.html",
+  "path": "fr/our-games/lotto/hitormiss",
+  "timestamp": "2026-11-03T17:13:12.057Z",
+  "title": "Tout ou Rien | Numéros gagnants et renseignements | Loto Atlantique",
+  "template": "content-page",
+  "blocks": [
+    "accordion-bar",
+    "embed"
+  ]
+}
