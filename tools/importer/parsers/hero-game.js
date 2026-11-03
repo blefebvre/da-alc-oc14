@@ -26,7 +26,9 @@
  *   Output: row 1 = background banner image; row 2 = logo image only (no CTAs). No logo -> row 1 only.
  */
 const ORIGIN = 'https://www.alc.ca';
-const LIVE_CASINO_LOBBY = '/content/alc/en/play-online/casino.html#live-casino';
+// Page language from <html lang> (alc.ca serves lang="fr" on /content/alc/fr pages)
+const langOf = (document) => (/^fr/i.test((document.documentElement && document.documentElement.getAttribute('lang')) || '') ? 'fr' : 'en');
+const liveCasinoLobby = (lang) => `/content/alc/${lang}/play-online/casino.html#live-casino`;
 
 function absolutize(url) {
   if (!url) return '';
@@ -123,13 +125,14 @@ export default function parse(element, { document }) {
   const playText = clean(playEl && playEl.textContent) || (playEl && playEl.getAttribute('title')) || '';
 
   const ctas = [];
-  if (playEl && /browse games/i.test(playText)) {
+  const lang = langOf(document);
+  if (playEl && /browse games|parcourir les jeux/i.test(playText)) {
     // Live casino: the button opens the live-casino lobby modal
-    ctas.push(linkParagraph(document, LIVE_CASINO_LOBBY, playText, true));
+    ctas.push(linkParagraph(document, liveCasinoLobby(lang), playText, true));
   } else {
     const base = isInstant
-      ? '/content/alc/en/play-online/instant-win-games/game.html'
-      : '/en/casino/game.html';
+      ? `/content/alc/${lang}/play-online/instant-win-games/game.html`
+      : `/${lang}/casino/game.html`;
     const modes = isInstant ? ['M', 'D'] : ['real', 'demo'];
     const build = (mode) => `${base}?gameId=${encodeURIComponent(gameId)}&playMode=${mode}`;
 

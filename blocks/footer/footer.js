@@ -1,4 +1,5 @@
 import { normalizeFragment } from '../../scripts/fragment-utils.js';
+import { getLanguagePrefix } from '../../scripts/i18n.js';
 
 /*
  * Footer block (content-first).
@@ -23,8 +24,9 @@ const MOBILE_QUERY = '(width < 1200px)';
  * @returns {Promise<HTMLElement|null>}
  */
 async function fetchFooterFragment() {
-  let resp = await fetch('/content/footer.plain.html');
-  if (!resp.ok) resp = await fetch('/footer.plain.html');
+  const prefix = getLanguagePrefix();
+  let resp = await fetch(`/content${prefix}/footer.plain.html`);
+  if (!resp.ok) resp = await fetch(`${prefix}/footer.plain.html`);
   if (!resp.ok) return null;
   const root = document.createElement('div');
   root.innerHTML = await resp.text();

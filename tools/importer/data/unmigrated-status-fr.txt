@@ -1,0 +1,142 @@
+302 https://2chancefr.alc.ca/default.aspx?p=c_2ch21_home https://www.alc.ca/content/alc/fr/2chance-history-redirect.html
+200  https://www.alc.ca/content/alc/fr/promos/application-mobile-probleme-de-balayage-des-billets.html
+200  https://www.alc.ca/content/alc/fr/promos/demandez-nous.html
+200  https://www.alc.ca/content/alc/fr/promos/playwise.html
+200  https://www.alc.ca/content/alc/fr/promos/archived/other/20-ans-jeu-en-ligne.html
+200  https://www.alc.ca/content/alc/fr/promos/archived/other/authentification-multifacteur.html
+200  https://www.alc.ca/content/alc/fr/promos/regles-des-jeux-lv.html
+200  https://www.alc.ca/content/alc/fr/promos/proligne/multisport-automne.html
+200  https://www.alc.ca/content/alc/fr/promos/casino/chute-de-lots-megavault-backup.html
+200  https://www.alc.ca/content/alc/fr/promos/casino/chute-de-lots-MegaVault.html
+200  https://www.alc.ca/content/alc/fr/promos/casino/decommissionner-jeux-everi.html
+200  https://www.alc.ca/content/alc/fr/promos/retail/terminaux-lotterie-wave8.html
+200  https://www.alc.ca/content/alc/fr/promos/scratch/celebrer-partager.html
+200  https://www.alc.ca/content/alc/fr/promos/scratch/votre-facon-de-jouer.html
+200  https://www.alc.ca/content/alc/fr/promos/new-template-conversions/executive-profiles.html
+200  https://www.alc.ca/content/alc/fr/promos/new-template-conversions/board-profiles.html
+200  https://www.alc.ca/content/alc/fr/promos/vocation-sociale.html
+200  https://www.alc.ca/content/alc/fr/search-results.html
+302 https://www.alc.ca/content/alc/fr.html https://www.alc.ca/content/alc/fr/play-online.html
+302 https://www.alc.ca/content/alc/fr/game-configurator/lottomax.html.html https://www.alc.ca/content/alc/fr/play-online/lotto-max.html
+302 https://www.alc.ca/content/alc/fr/game-configurator/lotto-649.html https://www.alc.ca/content/alc/fr/play-online/lotto-6-49.html
+302 https://www.alc.ca/content/alc/fr/game-configurator/daily-grand.html https://www.alc.ca/content/alc/fr/play-online/dailygrand.html
+302 https://www.alc.ca/content/alc/fr/play-online/lotto-games.html https://www.alc.ca/content/alc/fr/play-online/lotto.html
+302 https://www.alc.ca/content/alc/fr/game-configurator/atlantic-49.html https://www.alc.ca/content/alc/fr/play-online/lotto/atlantic-49.html
+302 https://www.alc.ca/content/alc/fr/game-configurator/bucko.html https://www.alc.ca/content/alc/fr/play-online/lotto/bucko.html
+302 https://www.alc.ca/content/alc/fr/game-configurator/salsa-bingo.html https://www.alc.ca/content/alc/fr/play-online/lotto/salsa-bingo.html
+302 https://www.alc.ca/content/alc/fr/our-games/lotto/tag.html https://www.alc.ca/content/alc/fr/play-online/lotto/tag.html
+302 https://www.alc.ca/content/alc/fr/our-games/lotto/twist.html https://www.alc.ca/content/alc/fr/play-online/lotto/twist.html
+302 https://www.alc.ca/content/alc/fr/game-configurator/keno-atlantic.html https://www.alc.ca/content/alc/fr/play-online/lotto/keno.html
+302 https://www.alc.ca/content/alc/fr/game-configurator/lottomax.html https://www.alc.ca/content/alc/fr/play-online/lotto/lotto-max.html
+302 https://www.alc.ca/content/alc/fr/game-configurator/lotto-649.html https://www.alc.ca/content/alc/fr/play-online/lotto/lotto-6-49.html
+200  https://www.alc.ca/content/alc/fr/play-online/casino/rumble-rhino.html
+200  https://www.alc.ca/content/alc/fr/play-online/casino/phoenix-kingdom.html
+200  https://www.alc.ca/content/alc/fr/play-online/casino/spirit-of-mustang.html
+200  https://www.alc.ca/content/alc/fr/play-online/casino/flamin-7s.html
+200  https://www.alc.ca/content/alc/fr/play-online/casino/ice-ice-hockey.html
+200  https://www.alc.ca/content/alc/fr/play-online/casino/jackpot-fortunes.html
+200  https://www.alc.ca/content/alc/fr/play-online/casino/gods-of-kemet.html
+200  https://www.alc.ca/content/alc/fr/play-online/casino/stallion-fortunes.html
+200  https://www.alc.ca/content/alc/fr/play-online/casino/force-of-the-gods.html
+200  https://www.alc.ca/content/alc/fr/play-online/casino/dragons-of-the-north.html
+200  https://www.alc.ca/content/alc/fr/play-online/casino/king-of-the-trident.html
+200  https://www.alc.ca/content/alc/fr/play-online/casino/fishermans-bounty.html
+200  https://www.alc.ca/content/alc/fr/play-online/casino/king-kokos-quest.html
+200  https://www.alc.ca/content/alc/fr/play-online/casino/12-super-hot-diamonds.html
+200  https://www.alc.ca/content/alc/fr/play-online/casino/fishermans-bounty-deluxe.html
+200  https://www.alc.ca/content/alc/fr/play-online/casino/wolf-riches.html
+200  https://www.alc.ca/content/alc/fr/play-online/casino/alice-riches.html
+200  https://www.alc.ca/content/alc/fr/play-online/casino/jade-king.html
+200  https://www.alc.ca/content/alc/fr/play-online/casino/dragons-of-the-north-deluxe.html
+200  https://www.alc.ca/content/alc/fr/play-online/casino/tiger-emperor.html
+200  https://www.alc.ca/content/alc/fr/play-online/casino/12-super-hot-diamonds-extreme.html
+200  https://www.alc.ca/content/alc/fr/play-online/casino/emeralds-of-oz.html
+200  https://www.alc.ca/content/alc/fr/play-online/casino/wild-wild-pistols.html
+200  https://www.alc.ca/content/alc/fr/play-online/casino/super-hot-joker.html
+200  https://www.alc.ca/content/alc/fr/play-online/casino/rumble-rhino-megaways.html
+200  https://www.alc.ca/content/alc/fr/play-online/casino/chicken-burst.html
+200  https://www.alc.ca/content/alc/fr/play-online/casino/fortune-tree-of-wealth.html
+200  https://www.alc.ca/content/alc/fr/play-online/casino/sugar-storm.html
+200  https://www.alc.ca/content/alc/fr/play-online/casino/samurai-888-rise-kimiko.html
+200  https://www.alc.ca/content/alc/fr/play-online/casino/hot-jalapeno-charge-up.html
+200  https://www.alc.ca/content/alc/fr/play-online/casino/buffalo-triple-power.html
+302 https://www.alc.ca/content/alc/fr/login.html?redirectUrl=%2Fcontent%2Falc%2Ffr%2Fplay-online%2Fcasino%2Fgame.html%3Fnull https://www.alc.ca/content/alc/fr/play-online/casino/game.html
+302 https://www.alc.ca/content/alc/fr/login.html?redirectUrl=%2Fcontent%2Falc%2Ffr%2Fplay-online%2Finstant-win-games%2Fgame.html%3Fnull https://www.alc.ca/content/alc/fr/play-online/instant-win-games/game.html
+200  https://www.alc.ca/content/alc/fr/play-online/instant-win-games/the-claw5.html
+200  https://www.alc.ca/content/alc/fr/play-online/instant-win-games/sushi-splash.html
+302 https://www.alc.ca/content/proline-stadium/fr.html https://www.alc.ca/content/alc/fr/play-online/stade-proligne.html
+302 https://www.alc.ca/content/proline-stadium/fr/games/proline.html https://www.alc.ca/content/alc/fr/play-online/stade-proligne/proline.html
+302 https://www.alc.ca/content/proline-stadium/fr/games/fantasy.html https://www.alc.ca/content/alc/fr/play-online/stade-proligne/fantasy.html
+302 https://www.alc.ca/content/proline-stadium/fr/games/futures.html https://www.alc.ca/content/alc/fr/play-online/stade-proligne/futures.html
+302 https://www.alc.ca/content/proline-stadium/fr/games/stadium-bets.html https://www.alc.ca/content/alc/fr/play-online/stade-proligne/stadium-bets.html
+302 https://www.alc.ca/content/alc/fr/our-games/lotto/subscription.html https://www.alc.ca/content/alc/fr/play-online/subscriptions.html
+302 https://www.alc.ca/content/alc/fr/game-configurator/atlantic-49.html https://www.alc.ca/content/alc/fr/play-online/atlantic49.html
+302 https://www.alc.ca/content/alc/fr/game-configurator/salsa-bingo.html https://www.alc.ca/content/alc/fr/play-online/salsabingo.html
+302 https://www.alc.ca/content/alc/fr/game-configurator/bucko.html https://www.alc.ca/content/alc/fr/play-online/bucko.html
+302 https://www.alc.ca/content/alc/fr/game-configurator/keno-atlantic.html https://www.alc.ca/content/alc/fr/play-online/keno.html
+302 https://www.alc.ca/content/alc/fr/game-configurator/poker-lotto.html https://www.alc.ca/content/alc/fr/play-online/pokerlotto.html
+302 https://www.alc.ca/content/alc/fr/our-games/app.html https://www.alc.ca/content/alc/fr/play-online/app.html
+302 https://www.alc.ca/content/alc/fr.html https://www.alc.ca/content/alc/fr/our-games.html
+200  https://www.alc.ca/content/alc/fr/our-games/scratch-n-win/9585.html
+200  https://www.alc.ca/content/alc/fr/our-games/scratch-n-win/4072.html
+200  https://www.alc.ca/content/alc/fr/our-games/scratch-n-win/3289.html
+200  https://www.alc.ca/content/alc/fr/our-games/scratch-n-win/3410.html
+200  https://www.alc.ca/content/alc/fr/our-games/lotto/HitorMiss-coming-soon.html
+200  https://www.alc.ca/content/alc/fr/our-games/video-lottery/huff-n-puff.html
+302 https://www.alc.ca/content/alc/fr/play-online/casino.html https://www.alc.ca/content/alc/fr/our-games/casino.html
+302 https://www.alc.ca/content/alc/fr/play-online/instant-win-games.html https://www.alc.ca/content/alc/fr/our-games/instant-win-games.html
+302 https://www.alc.ca/content/proline-stadium/fr.html https://www.alc.ca/content/alc/fr/our-games/proline.html
+302 https://www.alc.ca/content/alc/fr/our-games/lotto/subscription.html https://www.alc.ca/content/alc/fr/our-games/abonnements-subscriptions.html
+302 https://www.alc.ca/content/alc/fr/our-games/contests.html https://www.alc.ca/content/alc/fr/our-games/concours-et-promotions.html
+302 https://www.alc.ca/content/alc/fr/our-games/app.html https://www.alc.ca/content/alc/fr/our-games/mobile.html
+302 https://www.alc.ca/content/alc/fr/referenced/HealthyPlayPolicy.html https://www.alc.ca/content/alc/fr/legal/HealthyPlayPolicy.html
+302 https://www.alc.ca/content/alc/fr/referenced/PrivacyPolicy.html https://www.alc.ca/content/alc/fr/legal/privacy-policy.html
+302 https://www.alc.ca/content/alc/fr/corporate/about-atlantic-lottery.html https://www.alc.ca/content/alc/fr/corporate.html
+302 https://www.alc.ca/content/alc/fr/corporate/playwise/notre-promesse.html https://www.alc.ca/content/alc/fr/corporate/playwise/playwise-notre-engagement.html
+302 https://www.alc.ca/content/alc/fr/corporate/playwise/obtenez-de-laide.html https://www.alc.ca/content/alc/fr/corporate/playwise/responsible-gambling-community-partnership-program.html
+302 https://www.alc.ca/content/alc/fr/corporate/playwise/notre-promesse.html https://www.alc.ca/content/alc/fr/corporate/playwise/standards.html
+302 https://www.alc.ca/content/alc/fr/corporate/playwise/connaissez-les-faits.html https://www.alc.ca/content/alc/fr/corporate/playwise/how-games-work.html
+302 https://www.alc.ca/content/alc/fr/corporate/playwise/outils-pour-les-joueurs.html https://www.alc.ca/content/alc/fr/corporate/playwise/self-exclusion.html
+302 https://www.alc.ca/content/alc/fr/corporate/playwise/connaissez-les-faits.html https://www.alc.ca/content/alc/fr/corporate/playwise/risks-of-youth-gambling.html
+302 https://www.alc.ca/content/alc/fr/corporate/playwise/obtenez-de-laide.html https://www.alc.ca/content/alc/fr/corporate/playwise/helpful-resources.html
+302 https://www.alc.ca/content/alc/fr/corporate/playwise/evaluation-du-joueur.html https://www.alc.ca/content/alc/fr/corporate/playwise/assess-your-gambling-behaviour.html
+302 https://www.alc.ca/content/alc/fr/corporate/playwise/connaissez-les-faits.html https://www.alc.ca/content/alc/fr/corporate/playwise/available-responsible-gambling-materials.html
+200  https://www.alc.ca/content/alc/fr/corporate/about-atlantic-lottery/corporate-releases/2025-01-270.html
+200  https://www.alc.ca/content/alc/fr/corporate/about-atlantic-lottery/corporate-releases/2026-10-29.html
+302 https://www.alc.ca/content/alc/fr/referenced-content/external/the-ticket.html https://www.alc.ca/content/alc/fr/corporate/about-atlantic-lottery/theticket.html
+200  https://www.alc.ca/content/alc/fr/corporate/about-atlantic-lottery/contact-us/send-a-message.html
+200  https://www.alc.ca/content/alc/fr/registration.html
+200  https://www.alc.ca/content/alc/fr/registration/forgot-password.html
+200  https://www.alc.ca/content/alc/fr/registration/forgot-email.html
+200  https://www.alc.ca/content/alc/fr/registration/account-confirmation.html
+200  https://www.alc.ca/content/alc/fr/registration/aml-success-page.html
+200  https://www.alc.ca/content/alc/fr/registration/aml-additional-information-needed.html
+200  https://www.alc.ca/content/alc/fr/registration/register-account.html
+200  https://www.alc.ca/content/alc/fr/registration/register-id-scan.html
+200  https://www.alc.ca/content/alc/fr/registration/unverified-account.html
+200  https://www.alc.ca/content/alc/fr/login.html
+200  https://www.alc.ca/content/alc/fr/cart.html
+200  https://www.alc.ca/content/alc/fr/email-communications.html
+302 https://www.alc.ca/content/alc/fr/login.html?redirectUrl=%2Fcontent%2Falc%2Ffr%2Fcheckout.html%3Fnull https://www.alc.ca/content/alc/fr/checkout.html
+302 https://www.alc.ca/content/alc/fr/login.html?redirectUrl=%2Fcontent%2Falc%2Ffr%2Fconfirmation.html%3Fnull https://www.alc.ca/content/alc/fr/confirmation.html
+200  https://www.alc.ca/content/alc/fr/game-configurator.html
+200  https://www.alc.ca/content/alc/fr/game-configurator/lottomax.html
+200  https://www.alc.ca/content/alc/fr/game-configurator/lotto-649.html
+200  https://www.alc.ca/content/alc/fr/game-configurator/daily-grand.html
+200  https://www.alc.ca/content/alc/fr/game-configurator/atlantic-49.html
+200  https://www.alc.ca/content/alc/fr/game-configurator/salsa-bingo.html
+200  https://www.alc.ca/content/alc/fr/game-configurator/bucko.html
+200  https://www.alc.ca/content/alc/fr/game-configurator/keno-atlantic.html
+200  https://www.alc.ca/content/alc/fr/game-configurator/poker-lotto.html
+302 https://www.alc.ca/content/alc/fr/login.html?redirectUrl=%2Fcontent%2Falc%2Ffr%2Frewards%2Fjoin-rewards.html%3Fnull https://www.alc.ca/content/alc/fr/rewards/join-rewards.html
+302 https://www.alc.ca/content/alc/fr/login.html?redirectUrl=%2Fcontent%2Falc%2Ffr%2Frewards%2Fexisting-account-confirmation.html%3Fnull https://www.alc.ca/content/alc/fr/rewards/existing-account-confirmation.html
+200  https://www.alc.ca/content/alc/fr/rewards/points-details.html
+200  https://www.alc.ca/content/alc/fr/interact-redirect.html
+200  https://www.alc.ca/content/alc/fr/archive/retailers1.html
+200  https://www.alc.ca/content/alc/fr/long-break-confirmation.html
+200  https://www.alc.ca/content/alc/fr/short-break-confirmation.html
+200  https://www.alc.ca/content/alc/fr/long-term-return-to-play.html
+302 https://www.alc.ca/content/alc/fr/login.html?redirectUrl=%2Fcontent%2Falc%2Ffr%2Flong-term-return-to-play%2Fconfirmation.html%3Fnull https://www.alc.ca/content/alc/fr/long-term-return-to-play/confirmation.html
+200  https://www.alc.ca/content/alc/fr/short-term-return-to-play.html
+302 https://www.alc.ca/content/alc/fr/login.html?redirectUrl=%2Fcontent%2Falc%2Ffr%2Fshort-term-return-to-play%2Fconfirmation.html%3Fnull https://www.alc.ca/content/alc/fr/short-term-return-to-play/confirmation.html
+200  https://www.alc.ca/content/alc/fr/payment-authorization-failed.html

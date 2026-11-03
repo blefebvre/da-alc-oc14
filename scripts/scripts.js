@@ -15,6 +15,7 @@ import {
   toCamelCase,
   toClassName,
 } from './aem.js';
+import { getHomePath, getLanguage, t } from './i18n.js';
 
 if (window.trustedTypes && window.trustedTypes.createPolicy) {
   const innerTT = window.trustedTypes.createPolicy('tt-inner', {
@@ -197,12 +198,34 @@ function decorateRailSections(main) {
 
 // Display names for URL segments whose label can't be derived from the slug
 const BREADCRUMB_LABELS = {
-  'scratch-n-win': "Scratch 'N Win",
-  'instant-win-games': 'Instant Win Games',
-  'about-atlantic-lottery': 'About Atlantic Lottery',
-  'are-you-a-winner': 'Are You a Winner?',
-  playwise: 'PlayWise',
-  proline: 'PROLINE',
+  en: {
+    'scratch-n-win': "Scratch 'N Win",
+    'instant-win-games': 'Instant Win Games',
+    'about-atlantic-lottery': 'About Atlantic Lottery',
+    'are-you-a-winner': 'Are You a Winner?',
+    playwise: 'PlayWise',
+    proline: 'PROLINE',
+  },
+  // labels used by the alc.ca French breadcrumbs
+  fr: {
+    'our-games': 'Nos jeux',
+    'play-online': 'Jouer en ligne',
+    casino: 'Casino',
+    'instant-win-games': 'Lots Instantanés',
+    'video-lottery': 'Loterie vidéo',
+    'scratch-n-win': 'Gagnez à la Grattouille',
+    breakopen: 'Billets à languettes',
+    lotto: 'Lotto',
+    corporate: 'Entreprise',
+    'about-atlantic-lottery': 'À propos de la SLA',
+    'corporate-releases': 'Communiqués',
+    playwise: 'JeuSensé',
+    'giving-back': 'Redonner à la collectivité',
+    'are-you-a-winner': 'Avez-vous gagné?',
+    promos: 'Promos',
+    legal: 'Légal',
+    proline: 'PRO•LIGNE',
+  },
 };
 
 /**
@@ -219,18 +242,19 @@ function buildBreadcrumbs(main) {
   const segments = window.location.pathname.split('/').filter(Boolean);
   const offset = segments[0] === 'content' ? 1 : 0;
   const locale = segments[offset];
-  const crumbs = [{ label: 'Home', href: '/' }];
+  const labels = BREADCRUMB_LABELS[getLanguage()];
+  const crumbs = [{ label: t('Home'), href: getHomePath() }];
   let href = `/${locale}`;
   segments.slice(offset + 1, -1).forEach((seg) => {
     href += `/${seg}`;
-    crumbs.push({ label: BREADCRUMB_LABELS[seg] || seg.replace(/-/g, ' '), href });
+    crumbs.push({ label: labels[seg] || seg.replace(/-/g, ' '), href });
   });
   const h1 = main.querySelector('h1');
   crumbs.push({ label: (h1 ? h1.textContent : document.title).trim() });
 
   const nav = document.createElement('nav');
   nav.className = 'breadcrumbs';
-  nav.setAttribute('aria-label', 'Breadcrumb');
+  nav.setAttribute('aria-label', t('Breadcrumb'));
   const ol = document.createElement('ol');
   crumbs.forEach((crumb) => {
     const li = document.createElement('li');
@@ -274,7 +298,7 @@ export function decorateMain(main) {
  * @param {Element} doc The container element
  */
 async function loadEager(doc) {
-  document.documentElement.lang = 'en';
+  document.documentElement.lang = getLanguage();
   decorateTemplateAndTheme();
   const main = doc.querySelector('main');
   if (main) {

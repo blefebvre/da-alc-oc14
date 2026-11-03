@@ -1,4 +1,5 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
+import { t } from '../../scripts/i18n.js';
 
 const BADGE_PATTERN = /^new!?$/i;
 
@@ -111,8 +112,8 @@ function decorateControls(block, ul) {
     return button;
   };
 
-  const prev = makeButton('cards-game-prev', 'Previous game');
-  const next = makeButton('cards-game-next', 'Next game');
+  const prev = makeButton('cards-game-prev', t('Previous game'));
+  const next = makeButton('cards-game-next', t('Next game'));
   const dots = document.createElement('div');
   dots.className = 'cards-game-dots';
   cards.forEach((card, i) => {

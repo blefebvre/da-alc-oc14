@@ -17,6 +17,7 @@ docpaths() {
     const doc = (u) => {
       const p = new URL(u).pathname.replace(/^\/content\/alc/, "").replace(/\/$/, "").replace(/\.html?$/, "");
       if (p === "" || p === "/en") return "index";
+      if (p === "/fr") return "fr/index";
       return p.split("/").filter(Boolean).map(seg).join("/");
     };
     const urls = fs.readFileSync(process.argv[1], "utf8").split("\n").filter(Boolean);

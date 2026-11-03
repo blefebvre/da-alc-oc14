@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/play-online/instant-win-games/100x-the-money.html",
+  "path": "fr/play-online/instant-win-games/100x-the-money",
+  "timestamp": "2026-11-03T16:50:23.135Z",
+  "title": "100x the Money",
+  "template": "online-game-detail",
+  "blocks": [
+    "hero-game",
+    "carousel-thumbnails",
+    "tabs-boxed",
+    "cards-game"
+  ]
+}

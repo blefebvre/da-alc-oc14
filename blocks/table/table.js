@@ -1,3 +1,4 @@
+import { t } from '../../scripts/i18n.js';
 /**
  * Table: first row = header cells, remaining rows = data rows.
  * Wrapped in a horizontally scrollable container. A block with a single row renders it
@@ -38,7 +39,7 @@ export default function decorate(block) {
   wrapper.tabIndex = 0;
   wrapper.setAttribute('role', 'region');
   const label = block.closest('.section')?.querySelector('h2, h3')?.textContent.trim();
-  wrapper.setAttribute('aria-label', label || 'Table');
+  wrapper.setAttribute('aria-label', label || t('Table'));
   wrapper.append(table);
   block.replaceChildren(wrapper);
 }

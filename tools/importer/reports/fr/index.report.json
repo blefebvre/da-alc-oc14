@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr.html",
+  "path": "fr/index",
+  "timestamp": "2026-11-03T16:49:47.614Z",
+  "title": "Loto Atlantique | Achat de billets en ligne, numéros gagnants et autres",
+  "template": "homepage",
+  "blocks": [
+    "carousel-promo",
+    "carousel-winners",
+    "cards-game",
+    "cards-promo",
+    "cards-promo"
+  ]
+}

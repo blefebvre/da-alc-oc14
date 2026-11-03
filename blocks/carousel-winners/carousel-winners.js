@@ -1,12 +1,13 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
+import { t } from '../../scripts/i18n.js';
 
 const LABELS = {
-  roleDescription: 'Carousel',
-  controls: 'Winner Slide Controls',
-  previous: 'Previous Winner',
-  next: 'Next Winner',
-  showSlide: 'Show Winner',
-  of: 'of',
+  roleDescription: t('Carousel'),
+  controls: t('Winner Slide Controls'),
+  previous: t('Previous Winner'),
+  next: t('Next Winner'),
+  showSlide: t('Show Winner'),
+  of: t('of'),
 };
 
 let carouselId = 0;

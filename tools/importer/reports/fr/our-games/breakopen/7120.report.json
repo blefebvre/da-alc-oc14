@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/our-games/breakopen/7120.html",
+  "path": "fr/our-games/breakopen/7120",
+  "timestamp": "2026-11-03T16:50:39.125Z",
+  "title": "Rubis",
+  "template": "ticket-detail",
+  "blocks": [
+    "columns-ticket",
+    "accordion-bar"
+  ]
+}

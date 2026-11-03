@@ -43,7 +43,8 @@ var CustomImportScript = (() => {
 
   // tools/importer/parsers/hero-game.js
   var ORIGIN = "https://www.alc.ca";
-  var LIVE_CASINO_LOBBY = "/content/alc/en/play-online/casino.html#live-casino";
+  var langOf = (document2) => /^fr/i.test(document2.documentElement && document2.documentElement.getAttribute("lang") || "") ? "fr" : "en";
+  var liveCasinoLobby = (lang) => `/content/alc/${lang}/play-online/casino.html#live-casino`;
   function absolutize(url) {
     if (!url) return "";
     const v = url.trim();
@@ -123,10 +124,11 @@ var CustomImportScript = (() => {
     const demoEl = element.querySelector(".alc-game-details-header__demo a, .alc-game-details-header__demo button");
     const playText = clean(playEl && playEl.textContent) || playEl && playEl.getAttribute("title") || "";
     const ctas = [];
-    if (playEl && /browse games/i.test(playText)) {
-      ctas.push(linkParagraph(document2, LIVE_CASINO_LOBBY, playText, true));
+    const lang = langOf(document2);
+    if (playEl && /browse games|parcourir les jeux/i.test(playText)) {
+      ctas.push(linkParagraph(document2, liveCasinoLobby(lang), playText, true));
     } else {
-      const base = isInstant ? "/content/alc/en/play-online/instant-win-games/game.html" : "/en/casino/game.html";
+      const base = isInstant ? `/content/alc/${lang}/play-online/instant-win-games/game.html` : `/${lang}/casino/game.html`;
       const modes = isInstant ? ["M", "D"] : ["real", "demo"];
       const build = (mode) => `${base}?gameId=${encodeURIComponent(gameId)}&playMode=${mode}`;
       if (playEl) {
@@ -185,6 +187,7 @@ var CustomImportScript = (() => {
   // tools/importer/transformers/alc-cleanup.js
   var TransformHook = { beforeTransform: "beforeTransform", afterTransform: "afterTransform" };
   var ORIGIN3 = "https://www.alc.ca";
+  var pageLang = "en";
   var ALC_HOSTS = ["www.alc.ca", "alc.ca"];
   function absolutizeUrl(value) {
     if (!value) return value;
@@ -219,15 +222,15 @@ var CustomImportScript = (() => {
     });
   }
   var APP_SCREEN_RE = new RegExp([
-    "^/content/alc/en/(cart|checkout|confirmation|login|search-results|payment-authorization-failed",
+    "^/content/alc/(?:en|fr)/(cart|checkout|confirmation|login|search-results|payment-authorization-failed",
     "|email-communications|interact-redirect|2chance-history-redirect|short-break-confirmation",
     "|long-break-confirmation)\\.html$",
-    "|^/content/alc/en/(long-term-return-to-play|short-term-return-to-play|registration|game-configurator|my-account)(/.*)?\\.html$",
-    "|^/content/alc/en/rewards/(existing-account-confirmation|join-rewards|points-details)\\.html$",
-    "|^/content/alc/en/play-online/(casino|instant-win-games)/game\\.html$",
-    "|^/content/alc/en/play-online/lottomax\\.html$",
-    "|^/content/alc/en/corporate/about-atlantic-lottery/contact-us/send-a-message\\.html$",
-    "|^/content/alc/en/referenced-content/"
+    "|^/content/alc/(?:en|fr)/(long-term-return-to-play|short-term-return-to-play|registration|game-configurator|my-account)(/.*)?\\.html$",
+    "|^/content/alc/(?:en|fr)/rewards/(existing-account-confirmation|join-rewards|points-details)\\.html$",
+    "|^/content/alc/(?:en|fr)/play-online/(casino|instant-win-games)/game\\.html$",
+    "|^/content/alc/(?:en|fr)/play-online/lottomax\\.html$",
+    "|^/content/alc/(?:en|fr)/corporate/about-atlantic-lottery/contact-us/send-a-message\\.html$",
+    "|^/content/alc/(?:en|fr)/referenced-content/"
   ].join(""));
   var isAppScreen = (path) => APP_SCREEN_RE.test(path);
   function rewriteLink(href) {
@@ -244,8 +247,8 @@ var CustomImportScript = (() => {
     if (!isRelative && !ALC_HOSTS.includes(url.hostname)) return href;
     let path = url.pathname;
     if (/^\/[^/@]+@[a-z0-9.-]+$/i.test(path)) return `mailto:${path.slice(1)}`;
-    const shortGame = path.match(/^\/en\/(casino|instant-win-games)\/([^/]+)\.html$/);
-    if (shortGame && shortGame[2] !== "game") path = `/content/alc/en/play-online/${shortGame[1]}/${shortGame[2]}.html`;
+    const shortGame = path.match(/^\/(en|fr)\/(casino|instant-win-games)\/([^/]+)\.html$/);
+    if (shortGame && shortGame[3] !== "game") path = `/content/alc/${shortGame[1]}/play-online/${shortGame[2]}/${shortGame[3]}.html`;
     if (path === "/" && !isRelative) return "/";
     const isAsset = path.startsWith("/content/dam/");
     const isGameLauncher = /\/game\.html$/.test(path) && url.searchParams.has("gameId");
@@ -256,6 +259,7 @@ var CustomImportScript = (() => {
     path = path.replace(/^\/content\/alc/, "") || "/";
     path = path.replace(/\.html?$/, "");
     if (path === "" || path === "/en" || path === "/en/") path = "/";
+    if (path === "/fr" || path === "/fr/") return `/fr/${url.hash || ""}`;
     if (path !== "/") {
       path = path.split("/").map((seg) => {
         if (!seg) return seg;
@@ -402,7 +406,7 @@ var CustomImportScript = (() => {
       const nodes = [...inner.childNodes].filter((n) => n.nodeType === 1 || n.nodeType === 3 && n.textContent.trim());
       if (!nodes.some((n) => n.nodeType === 1 && /^H[1-6]$/.test(n.tagName))) {
         const h2 = doc.createElement("h2");
-        h2.textContent = "Game Summary";
+        h2.textContent = pageLang === "fr" ? "R\xE9sum\xE9 du jeu" : "Game Summary";
         nodes.unshift(h2);
       }
       summary.replaceWith(...nodes);
@@ -466,7 +470,7 @@ var CustomImportScript = (() => {
       heading.replaceWith(...nodes);
     });
   }
-  var VLT_SUMMARY_HEADING = /^game summary:?$/i;
+  var VLT_SUMMARY_HEADING = /^(game summary|r[ée]sum[ée] du jeu)\s*:?$/i;
   function normText(el) {
     return (el ? el.textContent : "").replace(/[\s ]+/g, " ").trim();
   }
@@ -530,7 +534,7 @@ var CustomImportScript = (() => {
       inner.querySelectorAll(":scope > h1, :scope > h2, :scope > h3, :scope > h4, :scope > h5, :scope > h6, :scope > p").forEach((el) => {
         if (VLT_SUMMARY_HEADING.test(normText(el))) {
           const h2 = doc.createElement("h2");
-          h2.textContent = "Game Summary";
+          h2.textContent = pageLang === "fr" ? "R\xE9sum\xE9 du jeu" : "Game Summary";
           el.replaceWith(h2);
         }
       });
@@ -543,7 +547,7 @@ var CustomImportScript = (() => {
     if (!url) return false;
     try {
       const { pathname } = new URL(url, ORIGIN3);
-      return /^\/(content\/alc\/en(\.html)?|en(\.html)?)?\/?$/.test(pathname);
+      return /^\/(content\/alc\/(en|fr)(\.html)?|(en|fr)(\.html)?)?\/?$/.test(pathname);
     } catch (e) {
       return false;
     }
@@ -707,7 +711,7 @@ var CustomImportScript = (() => {
   }
   function buttonHref(button) {
     if ((button.getAttribute("data-ga4-event") || "") === "rewards_join" || (button.getAttribute("data-ga4-param-user-flow") || "") === "join_rewards") {
-      return "/content/alc/en/rewards/join-rewards.html";
+      return `/content/alc/${pageLang}/rewards/join-rewards.html`;
     }
     const href = (button.getAttribute("href") || "").trim();
     return href && href !== "#" ? href : "";
@@ -879,6 +883,9 @@ var CustomImportScript = (() => {
     if (og) doc.title = og;
   }
   function transform(hookName, element, payload) {
+    const srcUrl = payload && (payload.params && payload.params.originalURL || payload.url) || "";
+    const docLang = element.ownerDocument && element.ownerDocument.documentElement && element.ownerDocument.documentElement.getAttribute("lang") || "";
+    pageLang = /\/content\/alc\/fr([./]|$)/.test(srcUrl) || /^fr/i.test(docLang) ? "fr" : "en";
     if (hookName === TransformHook.beforeTransform) {
       const doc = payload && payload.document || document;
       if (isTicketDetailPage(element)) {
@@ -1119,6 +1126,7 @@ var CustomImportScript = (() => {
   function toDocumentPath(originalURL) {
     const rawPath = new URL(originalURL).pathname.replace(/^\/content\/alc/, "").replace(/\/$/, "").replace(/\.html?$/, "");
     if (rawPath === "" || rawPath === "/en") return "/index";
+    if (rawPath === "/fr") return "/fr/index";
     return WebImporter.FileUtils.sanitizePath(rawPath);
   }
   var import_video_lottery_detail_default = {

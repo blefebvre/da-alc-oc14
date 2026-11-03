@@ -123,6 +123,8 @@ function toDocumentPath(originalURL) {
     .replace(/\.html?$/, '');
   // English homepage is the site root
   if (rawPath === '' || rawPath === '/en') return '/index';
+  // French homepage is /fr/ (document fr/index)
+  if (rawPath === '/fr') return '/fr/index';
   return WebImporter.FileUtils.sanitizePath(rawPath);
 }
 

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/corporate/playwise/player-tools.html",
+  "path": "fr/corporate/playwise/player-tools",
+  "timestamp": "2026-11-03T16:51:07.714Z",
+  "title": "Outils pour les joueurs",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "cards-feature",
+    "cards-feature",
+    "columns-media",
+    "columns-contact"
+  ]
+}

@@ -1,3 +1,5 @@
+import { t } from '../../scripts/i18n.js';
+
 function youtubeId(url) {
   if (/(^|\.)youtu\.be$/.test(url.hostname)) return url.pathname.split('/')[1];
   if (/(^|\.)youtube(-nocookie)?\.com$/.test(url.hostname)) {
@@ -44,7 +46,7 @@ function buildIframe(src, title) {
   wrapper.className = 'embed-frame';
   const iframe = document.createElement('iframe');
   iframe.src = src;
-  iframe.title = title || 'Embedded video';
+  iframe.title = title || t('Embedded video');
   iframe.loading = 'lazy';
   iframe.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media; clipboard-write';
   wrapper.append(iframe);
@@ -78,7 +80,7 @@ export default function decorate(block) {
     const poster = document.createElement('button');
     poster.type = 'button';
     poster.className = 'embed-poster';
-    poster.setAttribute('aria-label', title ? `Play video: ${title}` : 'Play video');
+    poster.setAttribute('aria-label', title ? `${t('Play video')}: ${title}` : t('Play video'));
     poster.append(picture);
     poster.addEventListener('click', () => {
       poster.replaceWith(buildIframe(getEmbedSrc(link.href, true), title));

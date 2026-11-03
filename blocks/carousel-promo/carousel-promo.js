@@ -1,12 +1,13 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
+import { t } from '../../scripts/i18n.js';
 
 const LABELS = {
-  roleDescription: 'Carousel',
-  controls: 'Carousel Slide Controls',
-  previous: 'Previous Slide',
-  next: 'Next Slide',
-  showSlide: 'Show Slide',
-  of: 'of',
+  roleDescription: t('Carousel'),
+  controls: t('Carousel Slide Controls'),
+  previous: t('Previous Slide'),
+  next: t('Next Slide'),
+  showSlide: t('Show Slide'),
+  of: t('of'),
 };
 
 const AUTOPLAY_INTERVAL = 6000;

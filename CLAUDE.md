@@ -55,8 +55,33 @@ Preview: https://main--da-alc-oc14--blefebvre.aem.page/ — content is previewed
 - `en/promos/funding2` and `en/promos/archived/lotto/thenewlotto649`: their markup on alc.ca is malformed, so the
   sections were repaired by hand (local copy, then uploaded to DA). Re-apply the fixes after re-importing those pages.
 
-## Known gaps
-- Content-page blocks (hero-banner, cards-feature, columns-media, columns-contact, embed, table) have structural CSS only.
-- The `/en/play-online/casino` game grid is client-rendered from an API and was not captured.
-- Lotto tiles have no images (CSS sprites on alc.ca). Jackpot amounts are static.
+## Still open
+- Design pass for the content-page blocks (hero-banner, cards-feature, columns-media, columns-contact, embed, table)
+  and the light-blue / light-grey / centered section styles: they have structural CSS only.
+- Re-import `/en/play-online/casino`: its game grid is client-rendered from an API and was not captured.
+- Lotto tiles have no images (CSS sprites on alc.ca).
+- Jackpot amounts are static (imported text, not live data).
 - Video Lottery landing keeps its sort/filter labels as text.
+
+## French (in progress, started 2026-11-03)
+- Paths mirror English: `/content/alc/fr/x.html` -> `/fr/x` (alc.ca uses the English slugs for almost every
+  French page). French homepage: `/fr/` (document `fr/index`); `/fr` and `/content/alc/fr.html` redirect to it.
+- URL lists: `tools/importer/urls-fr-<template>.txt`, built from the alc.ca French sitemap
+  (`data/urls-fr-sitemap.txt`) by giving each French page the template of its English counterpart; French-only
+  pages (e.g. `/fr/promos/demandez-nous`) get one by path. Same templates, parsers and transformers as English.
+- Importer language handling: `alc-cleanup.js` (`pageLang`, from the source URL / `<html lang>`), APP_SCREEN_RE
+  matches `en|fr`, `hero-game.js` launchers (`/fr/casino/game.html`, French live-casino lobby), inserted headings
+  ("Résumé du jeu") and the homepage mobile banner label.
+- Nav / footer: `content/fr/nav.plain.html` and `content/fr/footer.plain.html` are generated from the English
+  fragments by `tools/importer/build-fr-fragments.py`. It pairs the alc.ca EN and FR header / footer pieces (same
+  structure, footer lists in a different order, so link texts are matched by target) and downloads the French nav
+  tiles and footer logos (`content/images/fr-*`). The sign-in panel wording differs, so its texts are listed by
+  hand in the script (`SIGN_IN`). Regenerate after editing the English nav or footer.
+- Site code: `scripts/i18n.js` (`getLanguage()`, `t()` UI strings, `getAlternatePath()`). Header and footer load
+  `/fr/nav` and `/fr/footer` on French pages; `<html lang>` follows the path; breadcrumbs use French labels
+  (`BREADCRUMB_LABELS.fr` in `scripts/scripts.js`, taken from alc.ca's French breadcrumbs); the FR / EN toggle
+  links to the same page in the other language.
+- Redirects: `build-redirects.cjs` covers both languages (alc.ca 302s mirrored for `/fr/...` too, French status
+  checks in `data/unmigrated-status-fr.txt`).
+- Found while inventorying French: 37 live English pages (31 casino games, others) were not in the original
+  catalog and are now in the English URL lists.

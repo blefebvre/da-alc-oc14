@@ -9,6 +9,8 @@
 const TransformHook = { beforeTransform: 'beforeTransform', afterTransform: 'afterTransform' };
 
 const ORIGIN = 'https://www.alc.ca';
+// Language of the page being imported ('en' | 'fr'), set at the start of each transform
+let pageLang = 'en';
 const ALC_HOSTS = ['www.alc.ca', 'alc.ca'];
 
 // Make relative image URLs (/content/alc/..., /etc.clientlibs/...) absolute against www.alc.ca.
@@ -57,15 +59,15 @@ function fixImages(element) {
 // responsible-gaming flows) need the alc.ca backend: they are not migrated and links point to alc.ca.
 // Keep in sync with migration-work/scripts/build-redirects.cjs.
 const APP_SCREEN_RE = new RegExp([
-  '^/content/alc/en/(cart|checkout|confirmation|login|search-results|payment-authorization-failed',
+  '^/content/alc/(?:en|fr)/(cart|checkout|confirmation|login|search-results|payment-authorization-failed',
   '|email-communications|interact-redirect|2chance-history-redirect|short-break-confirmation',
   '|long-break-confirmation)\\.html$',
-  '|^/content/alc/en/(long-term-return-to-play|short-term-return-to-play|registration|game-configurator|my-account)(/.*)?\\.html$',
-  '|^/content/alc/en/rewards/(existing-account-confirmation|join-rewards|points-details)\\.html$',
-  '|^/content/alc/en/play-online/(casino|instant-win-games)/game\\.html$',
-  '|^/content/alc/en/play-online/lottomax\\.html$',
-  '|^/content/alc/en/corporate/about-atlantic-lottery/contact-us/send-a-message\\.html$',
-  '|^/content/alc/en/referenced-content/',
+  '|^/content/alc/(?:en|fr)/(long-term-return-to-play|short-term-return-to-play|registration|game-configurator|my-account)(/.*)?\\.html$',
+  '|^/content/alc/(?:en|fr)/rewards/(existing-account-confirmation|join-rewards|points-details)\\.html$',
+  '|^/content/alc/(?:en|fr)/play-online/(casino|instant-win-games)/game\\.html$',
+  '|^/content/alc/(?:en|fr)/play-online/lottomax\\.html$',
+  '|^/content/alc/(?:en|fr)/corporate/about-atlantic-lottery/contact-us/send-a-message\\.html$',
+  '|^/content/alc/(?:en|fr)/referenced-content/',
 ].join(''));
 const isAppScreen = (path) => APP_SCREEN_RE.test(path);
 
@@ -89,8 +91,8 @@ function rewriteLink(href) {
   // "https://www.alc.ca/name@alc.ca" (missing mailto:) on some press releases
   if (/^\/[^/@]+@[a-z0-9.-]+$/i.test(path)) return `mailto:${path.slice(1)}`;
   // Short game URLs (/en/casino/<game>.html) are the casino game pages
-  const shortGame = path.match(/^\/en\/(casino|instant-win-games)\/([^/]+)\.html$/);
-  if (shortGame && shortGame[2] !== 'game') path = `/content/alc/en/play-online/${shortGame[1]}/${shortGame[2]}.html`;
+  const shortGame = path.match(/^\/(en|fr)\/(casino|instant-win-games)\/([^/]+)\.html$/);
+  if (shortGame && shortGame[3] !== 'game') path = `/content/alc/${shortGame[1]}/play-online/${shortGame[2]}/${shortGame[3]}.html`;
   // Site root on alc.ca is the English homepage
   if (path === '/' && !isRelative) return '/';
   // Assets (PDFs, images) and app pages stay on alc.ca: link to them absolutely.
@@ -105,6 +107,8 @@ function rewriteLink(href) {
   path = path.replace(/\.html?$/, '');
   // English homepage is the site root
   if (path === '' || path === '/en' || path === '/en/') path = '/';
+  // French homepage is /fr/ (document fr/index)
+  if (path === '/fr' || path === '/fr/') return `/fr/${url.hash || ''}`;
   // Match the importer's document paths (WebImporter.FileUtils.sanitizePath):
   // lowercase, strip accents, non-alphanumerics -> '-' per segment
   if (path !== '/') {
@@ -290,7 +294,7 @@ function cleanupGameDetailPage(element) {
     const nodes = [...inner.childNodes].filter((n) => n.nodeType === 1 || (n.nodeType === 3 && n.textContent.trim()));
     if (!nodes.some((n) => n.nodeType === 1 && /^H[1-6]$/.test(n.tagName))) {
       const h2 = doc.createElement('h2');
-      h2.textContent = 'Game Summary';
+      h2.textContent = pageLang === 'fr' ? 'Résumé du jeu' : 'Game Summary';
       nodes.unshift(h2);
     }
     summary.replaceWith(...nodes);
@@ -389,7 +393,7 @@ function cleanupTicketDetailPage(element) {
  * the hero-game parser); only the decorative body background (--bg) is stripped.
  * ---------------------------------------------------------------------------------------- */
 
-const VLT_SUMMARY_HEADING = /^game summary:?$/i;
+const VLT_SUMMARY_HEADING = /^(game summary|r[ée]sum[ée] du jeu)\s*:?$/i;
 
 function normText(el) {
   return (el ? el.textContent : '').replace(/[\s ]+/g, ' ').trim();
@@ -476,7 +480,7 @@ function cleanupVideoLotteryPage(element) {
       .forEach((el) => {
         if (VLT_SUMMARY_HEADING.test(normText(el))) {
           const h2 = doc.createElement('h2');
-          h2.textContent = 'Game Summary';
+          h2.textContent = pageLang === 'fr' ? 'Résumé du jeu' : 'Game Summary';
           el.replaceWith(h2);
         }
       });
@@ -505,7 +509,7 @@ function isHomepageUrl(url) {
   if (!url) return false;
   try {
     const { pathname } = new URL(url, ORIGIN);
-    return /^\/(content\/alc\/en(\.html)?|en(\.html)?)?\/?$/.test(pathname);
+    return /^\/(content\/alc\/(en|fr)(\.html)?|(en|fr)(\.html)?)?\/?$/.test(pathname);
   } catch (e) {
     return false;
   }
@@ -706,7 +710,7 @@ function ctaParagraph(doc, href, text) {
 function buttonHref(button) {
   if ((button.getAttribute('data-ga4-event') || '') === 'rewards_join'
     || (button.getAttribute('data-ga4-param-user-flow') || '') === 'join_rewards') {
-    return '/content/alc/en/rewards/join-rewards.html';
+    return `/content/alc/${pageLang}/rewards/join-rewards.html`;
   }
   const href = (button.getAttribute('href') || '').trim();
   return href && href !== '#' ? href : '';
@@ -924,6 +928,10 @@ function fixSlugTitle(doc, h1Root, anyCase) {
 }
 
 export default function transform(hookName, element, payload) {
+  const srcUrl = (payload && ((payload.params && payload.params.originalURL) || payload.url)) || '';
+  const docLang = (element.ownerDocument && element.ownerDocument.documentElement
+    && element.ownerDocument.documentElement.getAttribute('lang')) || '';
+  pageLang = /\/content\/alc\/fr([./]|$)/.test(srcUrl) || /^fr/i.test(docLang) ? 'fr' : 'en';
   if (hookName === TransformHook.beforeTransform) {
     const doc = (payload && payload.document) || document;
     // Ticket detail pages: title from H1 must be read before the header chrome (which has

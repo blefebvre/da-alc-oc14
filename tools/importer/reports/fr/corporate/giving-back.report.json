@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.alc.ca/content/alc/fr/corporate/giving-back.html",
+  "path": "fr/corporate/giving-back",
+  "timestamp": "2026-11-03T16:51:26.674Z",
+  "title": "Redonner à la collectivité",
+  "template": "content-page",
+  "blocks": [
+    "hero-banner",
+    "cards-feature",
+    "cards-feature",
+    "columns-media"
+  ]
+}

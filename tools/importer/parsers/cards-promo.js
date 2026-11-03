@@ -77,7 +77,8 @@ function parseHtmlPromo(element, document) {
   const rawSrc = (byName && byName.src) || (smallest && smallest.src) || bgUrl(bgEl) || (imgEl && imgEl.getAttribute('src')) || '';
   const src = toMobile(rawSrc);
 
-  const label = 'Check winning numbers';
+  const fr = /^fr/i.test((document.documentElement && document.documentElement.getAttribute('lang')) || '');
+  const label = fr ? 'Vérifier les numéros gagnants' : 'Check winning numbers';
   const cells = [];
   const imageCell = [];
   if (src) {

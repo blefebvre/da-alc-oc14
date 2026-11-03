@@ -1,12 +1,13 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
+import { t } from '../../scripts/i18n.js';
 
 const LABELS = {
-  roleDescription: 'Carousel',
-  thumbnails: 'Choose screenshot',
-  previous: 'Previous screenshot',
-  next: 'Next screenshot',
-  show: 'Show screenshot',
-  of: 'of',
+  roleDescription: t('Carousel'),
+  thumbnails: t('Choose screenshot'),
+  previous: t('Previous screenshot'),
+  next: t('Next screenshot'),
+  show: t('Show screenshot'),
+  of: t('of'),
 };
 
 let carouselId = 0;

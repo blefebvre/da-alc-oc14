@@ -1,6 +1,7 @@
-// Builds the DA "redirects" sheet: old alc.ca paths (/content/alc/en/...) -> migrated paths (/en/...).
+// Builds the DA "redirects" sheet: old alc.ca paths (/content/alc/en|fr/...) -> migrated paths (/en|fr/...).
 // usage: node build-redirects.cjs <out.json>
-// Source URLs come from tools/importer/data/urls-all.json (all discovered English pages).
+// Source URLs: tools/importer/data/urls-all.json (site catalog) + the alc.ca EN / FR sitemaps
+// (data/urls-en-sitemap.txt, data/urls-fr-sitemap.txt).
 const fs = require('fs');
 
 const seg = (s) => decodeURIComponent(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
@@ -9,26 +10,33 @@ const seg = (s) => decodeURIComponent(s).toLowerCase().normalize('NFD').replace(
 const target = (pathname) => {
   const p = pathname.replace(/^\/content\/alc/, '').replace(/\/$/, '').replace(/\.html?$/, '');
   if (p === '' || p === '/en') return '/';
+  if (p === '/fr') return '/fr/';
   return `/${p.split('/').filter(Boolean).map(seg).join('/')}`;
 };
 
 // Application screens stay on alc.ca (keep in sync with tools/importer/transformers/alc-cleanup.js)
 const APP_SCREEN_RE = new RegExp([
-  '^/content/alc/en/(cart|checkout|confirmation|login|search-results|payment-authorization-failed',
+  '^/content/alc/(?:en|fr)/(cart|checkout|confirmation|login|search-results|payment-authorization-failed',
   '|email-communications|interact-redirect|2chance-history-redirect|short-break-confirmation',
   '|long-break-confirmation)\\.html$',
-  '|^/content/alc/en/(long-term-return-to-play|short-term-return-to-play|registration|game-configurator|my-account)(/.*)?\\.html$',
-  '|^/content/alc/en/rewards/(existing-account-confirmation|join-rewards|points-details)\\.html$',
-  '|^/content/alc/en/play-online/(casino|instant-win-games)/game\\.html$',
-  '|^/content/alc/en/play-online/lottomax\\.html$',
-  '|^/content/alc/en/corporate/about-atlantic-lottery/contact-us/send-a-message\\.html$',
-  '|^/content/alc/en/referenced-content/',
+  '|^/content/alc/(?:en|fr)/(long-term-return-to-play|short-term-return-to-play|registration|game-configurator|my-account)(/.*)?\\.html$',
+  '|^/content/alc/(?:en|fr)/rewards/(existing-account-confirmation|join-rewards|points-details)\\.html$',
+  '|^/content/alc/(?:en|fr)/play-online/(casino|instant-win-games)/game\\.html$',
+  '|^/content/alc/(?:en|fr)/play-online/lottomax\\.html$',
+  '|^/content/alc/(?:en|fr)/corporate/about-atlantic-lottery/contact-us/send-a-message\\.html$',
+  '|^/content/alc/(?:en|fr)/referenced-content/',
 ].join(''));
 
-const urls = JSON.parse(fs.readFileSync('tools/importer/data/urls-all.json', 'utf8'))['analysis-urls-all'].urls.map((u) => u.url);
+const readList = (f) => (fs.existsSync(f)
+  ? fs.readFileSync(f, 'utf8').split('\n').map((l) => l.trim()).filter(Boolean) : []);
+const urls = [...new Set([
+  ...JSON.parse(fs.readFileSync('tools/importer/data/urls-all.json', 'utf8'))['analysis-urls-all'].urls.map((u) => u.url),
+  ...readList('tools/importer/data/urls-en-sitemap.txt'),
+  ...readList('tools/importer/data/urls-fr-sitemap.txt'),
+])];
 // links already in migrated content (nav/footer and imported pages) that point at app screens
-const extraAppPaths = ['/content/alc/en/referenced-content/external/help-redirect.html', '/content/alc/en/cart.html',
-  '/content/alc/en/registration/register-account.html'];
+const extraAppPaths = ['en', 'fr'].flatMap((l) => [`/content/alc/${l}/referenced-content/external/help-redirect.html`,
+  `/content/alc/${l}/cart.html`, `/content/alc/${l}/registration/register-account.html`]);
 // migrated pages = content files (doc path with leading slash; index -> /)
 const path = require('path');
 
@@ -42,14 +50,18 @@ const walk = (d, o = []) => {
 const shells = new Set((fs.existsSync('tools/importer/data/empty-shells.txt')
   ? fs.readFileSync('tools/importer/data/empty-shells.txt', 'utf8').split('\n').filter(Boolean) : []).map((s) => `/${s}`));
 const migrated = new Set(walk('content').map((f) => `/${path.relative('content', f).replace(/\.plain\.html$/, '')}`)
-  .map((p) => (p === '/index' ? '/' : p)).filter((p) => p !== '/en' && !shells.has(p)));
+  .map((p) => (p === '/index' ? '/' : p)).map((p) => (p === '/fr/index' ? '/fr/' : p))
+  .filter((p) => p !== '/en' && !shells.has(p)));
 const EXTRA = 'tools/importer/data/link-extra-check.txt';
 // category page for a game/ticket path, e.g. /en/play-online/casino/x -> casino landing on alc.ca
 // (nearest migrated ancestor; the homepage when there is none)
 const categoryOf = (p) => {
+  const fr = p.startsWith('/fr/');
+  const root = fr ? '/fr' : '/en';
   let parent = p.split('/').slice(0, -1).join('/');
-  while (parent && parent !== '/en' && !migrated.has(parent)) parent = parent.split('/').slice(0, -1).join('/');
-  return parent && parent !== '/en' ? parent : '/';
+  while (parent && parent !== root && !migrated.has(parent)) parent = parent.split('/').slice(0, -1).join('/');
+  if (parent && parent !== root) return parent;
+  return fr ? '/fr/' : '/';
 };
 let notMigrated = 0;
 const rows = new Map();
@@ -57,8 +69,9 @@ const add = (source, destination) => { if (source !== destination && !rows.has(s
 add('/content/alc/en', '/');
 add('/content/alc/en.html', '/');
 add('/en', '/');
-// French is out of scope for now: the language toggle goes to the live French site
-add('/fr', 'https://www.alc.ca/content/alc/fr.html');
+add('/content/alc/fr', '/fr/');
+add('/content/alc/fr.html', '/fr/');
+add('/fr', '/fr/');
 // pages that alc.ca itself redirects (302) to another page: mirror them on-site
 const SOURCE_REDIRECTS = {
   '/en/play-online': '/',
@@ -82,28 +95,30 @@ const SOURCE_REDIRECTS = {
   '/en/promos/proline/proline-fall-multisport': '/en/promos/proline/fall-multisport',
   '/en/promos/funding': '/en/promos/funding2',
 };
-if (fs.existsSync('tools/importer/data/unmigrated-status.txt')) {
-  // "<code> <final url> <requested url>" lines from checking alc.ca
-  fs.readFileSync('tools/importer/data/unmigrated-status.txt', 'utf8').split('\n').filter(Boolean).forEach((l) => {
-    const [code, to, from] = l.split(/\s+/);
-    if (code !== '302' || !from || !/^https:\/\/www\.alc\.ca\/content\/alc\/en[./]/.test(from)) return;
-    if (!/^https:\/\/www\.alc\.ca\/content\/alc\/en[./]/.test(to)) return;
-    const f = target(new URL(from).pathname);
-    if (!SOURCE_REDIRECTS[f] && !migrated.has(f)) SOURCE_REDIRECTS[f] = target(new URL(to).pathname);
-  });
-}
-// pages that are broken on alc.ca itself (404 / 500): send visitors to the nearest category page
-if (fs.existsSync('tools/importer/data/unmigrated-status.txt')) {
-  fs.readFileSync('tools/importer/data/unmigrated-status.txt', 'utf8').split('\n').filter(Boolean).forEach((l) => {
-    const [code, url] = l.split(/\s+/);
-    if (!/^(404|500)$/.test(code) || !/^https:\/\/www\.alc\.ca\/content\/alc\/en\//.test(url || '')) return;
-    const { pathname } = new URL(url);
-    const dest = categoryOf(target(pathname));
-    [target(pathname), pathname, pathname.replace(/\.html?$/, '')].forEach((s2) => add(s2, dest));
-  });
-}
+// the same alc.ca redirects exist for the French pages
+const toFr = (p) => (p === '/' ? '/fr/' : p.replace(/^\/en\//, '/fr/'));
 Object.entries(SOURCE_REDIRECTS).forEach(([from, to]) => {
-  const dest = (to === '/' || migrated.has(to)) ? to : `https://www.alc.ca/content/alc${to}.html`;
+  if (!SOURCE_REDIRECTS[toFr(from)]) SOURCE_REDIRECTS[toFr(from)] = toFr(to);
+});
+// "<code> <final url> <requested url>" lines from checking alc.ca
+const STATUS = ['tools/importer/data/unmigrated-status.txt', 'tools/importer/data/unmigrated-status-fr.txt']
+  .flatMap(readList).map((l) => l.split(/\s+/));
+const ALC_PAGE = /^https:\/\/www\.alc\.ca\/content\/alc\/(en|fr)[./]/;
+STATUS.forEach(([code, to, from]) => {
+  if (code !== '302' || !from || !ALC_PAGE.test(from) || !ALC_PAGE.test(to)) return;
+  const f = target(new URL(from).pathname);
+  if (!SOURCE_REDIRECTS[f] && !migrated.has(f)) SOURCE_REDIRECTS[f] = target(new URL(to).pathname);
+});
+// pages that are broken on alc.ca itself (404 / 500): send visitors to the nearest category page
+STATUS.forEach(([code, url]) => {
+  if (!/^(404|500)$/.test(code) || !ALC_PAGE.test(url || '')) return;
+  const { pathname } = new URL(url);
+  const dest = categoryOf(target(pathname));
+  [target(pathname), pathname, pathname.replace(/\.html?$/, '')].forEach((s2) => add(s2, dest));
+});
+Object.entries(SOURCE_REDIRECTS).forEach(([from, to]) => {
+  const alc = to === '/fr/' ? 'https://www.alc.ca/content/alc/fr.html' : `https://www.alc.ca/content/alc${to}.html`;
+  const dest = (to === '/' || migrated.has(to)) ? to : alc;
   const old = `/content/alc${from}`;
   [from, old, `${old}.html`].forEach((s) => add(s, dest));
 });

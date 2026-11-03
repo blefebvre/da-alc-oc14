@@ -1,4 +1,5 @@
 import { normalizeFragment } from '../../scripts/fragment-utils.js';
+import { getAlternatePath, getLanguagePrefix, t } from '../../scripts/i18n.js';
 
 /*
  * Header block
@@ -78,8 +79,9 @@ function stripWhitespace(parent) {
  */
 async function fetchNav() {
   // metadata-independent: /content first (localhost), then root (DA/EDS prod)
-  let resp = await fetch('/content/nav.plain.html');
-  if (!resp.ok) resp = await fetch('/nav.plain.html');
+  const prefix = getLanguagePrefix();
+  let resp = await fetch(`/content${prefix}/nav.plain.html`);
+  if (!resp.ok) resp = await fetch(`${prefix}/nav.plain.html`);
   if (!resp.ok) return null;
   const template = document.createElement('template');
   template.innerHTML = await resp.text();
@@ -310,7 +312,7 @@ function buildDialog(sections, id) {
     });
     body.append(col);
   });
-  const close = el('button', { type: 'button', className: 'nav-dialog-close', 'aria-label': 'Close' });
+  const close = el('button', { type: 'button', className: 'nav-dialog-close', 'aria-label': t('Close') });
   close.addEventListener('click', () => dialog.close());
   dialog.append(close, body);
   if (footerSection) {
@@ -345,7 +347,7 @@ function buildSearch(section) {
     el('input', {
       type: 'text', name: 'q', placeholder, 'aria-label': placeholder, maxlength: '2048', autocomplete: 'off',
     }),
-    el('button', { type: 'submit', className: 'nav-search-submit', 'aria-label': 'Search' }),
+    el('button', { type: 'submit', className: 'nav-search-submit', 'aria-label': t('Search') }),
   );
   wrapper.append(form);
   return wrapper;
@@ -396,7 +398,7 @@ function toggleMenu(nav, force) {
   const button = nav.querySelector('.nav-hamburger button');
   const expanded = force !== undefined ? force : button.getAttribute('aria-expanded') !== 'true';
   button.setAttribute('aria-expanded', String(expanded));
-  button.setAttribute('aria-label', expanded ? 'Close navigation' : 'Open navigation');
+  button.setAttribute('aria-label', expanded ? t('Close navigation') : t('Open navigation'));
   nav.classList.toggle('is-menu-open', expanded);
   document.body.classList.toggle('header-menu-open', expanded);
   document.body.style.overflowY = expanded && !isDesktop.matches ? 'hidden' : '';
@@ -464,13 +466,18 @@ function resetState(nav) {
 export default async function decorate(block) {
   const fragment = await fetchNav();
   if (!fragment) return;
+  // language toggle (Français / FR on English pages, English / EN on French pages): same page in
+  // the other language instead of the other homepage
+  fragment.querySelectorAll('a[href]').forEach((a) => {
+    if (/^(Français|FR|English|EN)$/.test(a.textContent.trim())) a.setAttribute('href', getAlternatePath());
+  });
   const sections = [...fragment.children].filter((child) => child.tagName === 'DIV');
   const [brandSection, searchSection, toolsSection, navSection, ...rest] = sections;
   const mobileSection = rest[0]?.firstElementChild?.tagName === 'UL' ? rest.shift() : null;
   const dialogSections = rest;
 
   block.textContent = '';
-  const nav = el('nav', { id: 'nav', 'aria-label': 'Main navigation' });
+  const nav = el('nav', { id: 'nav', 'aria-label': t('Main navigation') });
 
   // dialog (sign in) from trailing sections
   const hashLink = toolsSection?.querySelector('a[href^="#"]');
@@ -485,7 +492,7 @@ export default async function decorate(block) {
   const hamburger = el('div', { className: 'nav-hamburger' }, el(
     'button',
     {
-      type: 'button', 'aria-controls': 'nav-drawer', 'aria-expanded': 'false', 'aria-label': 'Open navigation',
+      type: 'button', 'aria-controls': 'nav-drawer', 'aria-expanded': 'false', 'aria-label': t('Open navigation'),
     },
     el(
       'span',
