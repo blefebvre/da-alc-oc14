@@ -3037,6 +3037,17 @@ var CustomImportScript = (() => {
           console.warn(`No parser found for block: ${block.name}`);
         }
       });
+      [...main.querySelectorAll("table[data-alc-src-table] table[data-alc-src-table]")].reverse().forEach((inner) => {
+        const flat = document2.createElement("div");
+        [...inner.rows].forEach((tr) => {
+          const parts = [...tr.cells].map((c) => c.innerHTML.trim()).filter((h) => h.replace(/<[^>]+>/g, "").trim());
+          if (!parts.length) return;
+          const para = document2.createElement("p");
+          para.innerHTML = parts.join(" \u2013 ");
+          flat.append(para);
+        });
+        inner.replaceWith(...flat.childNodes);
+      });
       main.querySelectorAll("table[data-alc-src-table]").forEach((t) => {
         if (!t.parentNode || t.parentElement && t.parentElement.closest("table")) return;
         try {

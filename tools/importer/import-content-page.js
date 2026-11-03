@@ -209,7 +209,20 @@ export default {
       }
     });
 
-    // 3b. Remaining source tables (lotto prize payouts, careers, release tables) -> table blocks
+    // 3b. Remaining source tables (lotto prize payouts, careers, release tables) -> table blocks.
+    // Nested tables (Gold Ball draw results) cannot live in a block cell: flatten them first, one
+    // paragraph per row, innermost first.
+    [...main.querySelectorAll('table[data-alc-src-table] table[data-alc-src-table]')].reverse().forEach((inner) => {
+      const flat = document.createElement('div');
+      [...inner.rows].forEach((tr) => {
+        const parts = [...tr.cells].map((c) => c.innerHTML.trim()).filter((h) => h.replace(/<[^>]+>/g, '').trim());
+        if (!parts.length) return;
+        const para = document.createElement('p');
+        para.innerHTML = parts.join(' – ');
+        flat.append(para);
+      });
+      inner.replaceWith(...flat.childNodes);
+    });
     main.querySelectorAll('table[data-alc-src-table]').forEach((t) => {
       if (!t.parentNode || (t.parentElement && t.parentElement.closest('table'))) return;
       try {
