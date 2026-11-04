@@ -65,7 +65,7 @@ Preview: https://main--da-alc-oc14--blefebvre.aem.page/ — content is previewed
 - Jackpot amounts are static (imported text, not live data).
 - Video Lottery landing keeps its sort/filter labels as text.
 
-## French (in progress, started 2026-11-03)
+## French (migrated 2026-11-03/04; uploaded to DA and previewed on aem.page, not live)
 - Paths mirror English: `/content/alc/fr/x.html` -> `/fr/x` (alc.ca uses the English slugs for almost every
   French page). French homepage: `/fr/` (document `fr/index`); `/fr` and `/content/alc/fr.html` redirect to it.
 - URL lists: `tools/importer/urls-fr-<template>.txt`, built from the alc.ca French sitemap
@@ -97,5 +97,7 @@ Preview: https://main--da-alc-oc14--blefebvre.aem.page/ — content is previewed
   1,274 have the same block structure as their English page, the rest differ because alc.ca differs (e.g. the
   French Astro Portals page has no "Have you tried" rail). 4 French pages are empty / soft-404 on alc.ca and are
   shells.
+- Validation on aem.page (2026-11-04): every imported page (2,638, both languages) is previewed and matches
+  its local copy; all 2,740 internal link targets resolve (`live-link-check.mjs`: 0 bad).
 - Found while inventorying French: 37 live English pages (31 casino games, others) were not in the original
   catalog and are now in the English URL lists.
